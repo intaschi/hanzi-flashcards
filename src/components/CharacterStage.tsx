@@ -10,6 +10,31 @@ function inkColor(): string {
   return v || '#17140f'
 }
 
+// hanzi-writer scales every character into the same fixed 1024x1024 glyph
+// grid, but individual characters' strokes rarely fill that grid evenly —
+// most sit off-center within their own box (e.g. toward the top-left),
+// which is only visible once real ink is on screen, not from the grid math.
+// Measuring the rendered stroke paths' actual on-screen bounds and nudging
+// the whole svg to re-center THAT within the canvas works for every
+// character, unlike a single fixed offset tuned for one glyph.
+function recenterGlyph(container: HTMLDivElement) {
+  const svg = container.querySelector('svg')
+  if (!svg) return
+  const paths = Array.from(svg.querySelectorAll('path')).filter((p) => !p.closest('defs'))
+  const rects = paths
+    .map((p) => p.getBoundingClientRect())
+    .filter((r) => r.width > 0 || r.height > 0)
+  if (!rects.length) return
+  const inkLeft = Math.min(...rects.map((r) => r.left))
+  const inkRight = Math.max(...rects.map((r) => r.right))
+  const inkTop = Math.min(...rects.map((r) => r.top))
+  const inkBottom = Math.max(...rects.map((r) => r.bottom))
+  const canvasRect = container.getBoundingClientRect()
+  const dx = (canvasRect.left + canvasRect.right) / 2 - (inkLeft + inkRight) / 2
+  const dy = (canvasRect.top + canvasRect.bottom) / 2 - (inkTop + inkBottom) / 2
+  svg.style.transform = `translate(${dx}px, ${dy}px)`
+}
+
 // hanzi-writer is an imperative library: it mounts a writer instance against a DOM
 // node and has no framework binding of its own. We own the mount/dispose lifecycle
 // here so a rapid card-to-card transition never leaks a stale writer instance.
@@ -35,6 +60,12 @@ export function CharacterStage({ character }: Props) {
         strokeColor: inkColor(),
         strokeAnimationSpeed: 1,
         delayBetweenStrokes: 180,
+        // Stroke data loads async (fetched per-character from a CDN), so the
+        // svg has no <path>s to measure yet at the moment create() returns —
+        // recentering has to wait for this callback instead. The callback
+        // itself still fires a tick before hanzi-writer turns that data into
+        // actual <path> elements, so wait one more frame past it too.
+        onLoadCharDataSuccess: () => requestAnimationFrame(() => recenterGlyph(el)),
       })
       writerRef.current.animateCharacter()
     }
@@ -47,7 +78,15 @@ export function CharacterStage({ character }: Props) {
     const observer = new MutationObserver(mount)
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
 
+    // The recentering offset is measured in pixels against the canvas's
+    // current size, so a resize (rotation, breakpoint change) that doesn't
+    // remount the writer would otherwise leave the old, now-mismatched
+    // offset in place.
+    const resizeObserver = new ResizeObserver(() => recenterGlyph(el))
+    resizeObserver.observe(el)
+
     return () => {
+      resizeObserver.disconnect()
       observer.disconnect()
       writerRef.current = null
       container.innerHTML = ''

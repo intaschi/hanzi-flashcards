@@ -98,18 +98,6 @@
   box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
-  .app-navbar {
-    gap: 10px;
-    padding: 10px 10px;
-  }
-
-  .navbar-nav button {
-    padding: 8px 10px;
-    font-size: 13px;
-  }
-}
-
 .navbar-nav {
   display: flex;
   gap: 6px;
@@ -131,6 +119,40 @@
   border-color: var(--accent);
   color: #fdf6ec;
   font-weight: 600;
+}
+
+/* This must come AFTER the unconditional .navbar-nav/.navbar-nav button
+   rules above — equal specificity, so whichever is later in source order
+   wins regardless of the media condition. Having this block first (as it
+   was originally) meant every one of these mobile overrides was silently
+   losing to the desktop values above, on every phone, the whole time. */
+@media (max-width: 600px) {
+  .app-navbar {
+    gap: 10px;
+    padding: 8px 6px;
+  }
+
+  .navbar-nav {
+    gap: 2px;
+    /* Five labels at any comfortable size are tight on a narrow phone —
+       tuned to fit without clipping down to ~360px, but an even narrower
+       device (or a bigger font-size setting) scrolls horizontally rather
+       than silently cutting off "Browse"/"Settings" like a fixed layout
+       would. */
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .navbar-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar-nav button {
+    padding: 7px 8px;
+    font-size: 12px;
+    flex: none;
+  }
 }
 
 .progress-badge {
@@ -227,7 +249,18 @@
 
 @media (max-width: 480px) {
   .app-main {
-    padding: 20px 16px 32px;
+    padding: 12px 16px 8px;
+  }
+
+  /* 84px was sized as navbar-height + a scroll-safety buffer for the
+     page-level scroll fallback the review screen used to need — with
+     .card-view now filling exactly the space available instead (see the
+     .card-view/.card-scene rules further down), nothing scrolls the page
+     on mobile any more, so that buffer is just dead space stealing height
+     the card could use. ~59px is the mobile navbar's own real height at
+     its tighter padding/font-size. */
+  .app-content {
+    padding-bottom: 62px;
   }
 }
 
@@ -387,6 +420,7 @@
   backface-visibility: hidden;
   width: 100%;
   min-width: 0;
+  cursor: pointer;
 }
 
 .card-face--back {
@@ -465,19 +499,19 @@
   gap: 10px;
 }
 
-@media (max-width: 480px) {
-  /* Vertically centering on the card's full height looks fine when that
-     height is stable, but a mobile card can get tall (stacked meanings,
-     scrollable component strip, etc.) and centered controls end up
-     floating next to whatever content happens to be at the midpoint
-     instead of sitting at a predictable spot. Anchor to the bottom
-     instead. */
-  .card-controls {
-    top: auto;
-    bottom: 20px;
-    transform: none;
-  }
-}
+/* Vertically centering .card-controls on the card's full height looks
+   fine when that height is stable, but a mobile card can get tall and
+   centered controls end up floating next to whatever content happens to
+   be at the midpoint instead of sitting at a predictable spot. Moved
+   below, along with the rest of the mobile-only card layout, to AFTER
+   .card-back/.card-tabs/.card-pager's own unconditional rules further
+   down the file — same specificity, so whichever comes later in source
+   order wins regardless of the media condition. Having this block here,
+   ahead of those, meant every one of its overrides for those three
+   selectors was silently losing (see the identical navbar bug fixed
+   earlier), which is exactly what made Meaning and Example render
+   grid-stacked (i.e. on top of each other) on a phone instead of side by
+   side in the swipeable pager. */
 
 .card-controls .audio-btn {
   width: 48px;
@@ -567,14 +601,9 @@
   text-align: left;
 }
 
-/* Character + pinyin sit in their own fixed-width column so the meanings
-   can run alongside to the right instead of stacking underneath. */
-.card-back-summary {
-  display: flex;
-  align-items: flex-start;
-  gap: 22px;
-}
-
+/* Just the glyph + pinyin now — Meaning moved into the pager below as a
+   page of its own (see .card-pager), so this is a small fixed header
+   rather than half of a head+meanings row. */
 .card-back-head {
   display: flex;
   flex-direction: column;
@@ -598,9 +627,7 @@
   margin: 0;
 }
 
-.card-back-summary .meanings {
-  flex: 1;
-  min-width: 0;
+.meanings {
   padding-top: 2px;
 }
 
@@ -680,6 +707,13 @@
   opacity: 0.55;
 }
 
+.word-char-meaning {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
 /* Shared small-caps section-label treatment — one rule so MEANINGS and the
    FUN FACT sub-label read as the same kind of thing at a glance. Components
    and Example are tabbed instead of headed (the tab button itself is the
@@ -728,20 +762,169 @@
   color: var(--accent);
 }
 
-/* Both tab panels render at once, stacked in the same grid cell, so the
-   card sizes to whichever panel is TALLER rather than whichever is active
-   — otherwise switching tabs resizes the card the same way flipping used
-   to before that was fixed the same way. */
-.card-tab-panels {
+/* Desktop: every page renders at once, stacked in the same grid cell, so
+   the card sizes to whichever page is TALLEST rather than whichever is
+   active — otherwise switching tabs resizes the card the same way
+   flipping used to before that was fixed the same way. Mobile turns this
+   into an actual horizontally swipeable pager instead (see the
+   max-width:480px rules) — the same reason the visibility-hiding rule
+   below is scoped to NOT apply there: every page needs to stay visible to
+   swipe across, only one grid cell's worth of the desktop trick makes
+   sense at a time. */
+.card-pager {
   display: grid;
 }
 
-.card-tab-panels > * {
+.card-pager > .card-page {
   grid-area: 1 / 1;
+  min-width: 0;
 }
 
-.card-tab-panels > [aria-hidden='true'] {
-  visibility: hidden;
+@media (min-width: 481px) {
+  .card-pager > .card-page[aria-hidden='true'] {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  /* The actual fix for "the card + grade buttons must always fit on
+     screen": rather than let the card grow to fit its tallest possible
+     content and fall back on scrolling the whole page to reach the grade
+     row, .card-view now fills exactly whatever height .review-view has
+     left after the char strip. The grade row and its scroll-bottom-spacer
+     are siblings of .card-scene, so they're never inside the card and are
+     always on screen without needing the page itself to scroll. */
+  .card-view {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  /* The visual "card" (bg/border/radius/shadow/padding) moves here, off
+     .card-surface, so .card-controls can be a normal in-flow footer
+     inside the SAME card as whichever face is showing, rather than an
+     absolutely-positioned overlay that drifted on top of text once the
+     card's content varied in height. Desktop keeps the original design
+     (each face carries its own full card styling, so the whole card
+     looks like it physically flips in 3D) — this only reads as one
+     option below this width. */
+  .card-scene {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-paper);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+    padding: 24px 22px 16px;
+    gap: 12px;
+  }
+
+  .card-flip {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .card-face {
+    height: 100%;
+  }
+
+  .card-surface {
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    height: 100%;
+    min-height: 0;
+  }
+
+  /* A real footer row, part of the card's own flex column — not
+     position:absolute floating on top of the content, which is what let
+     it drift over example text or a long meanings list. */
+  .card-controls {
+    position: static;
+    transform: none;
+    flex: none;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* The 58px right padding on .card-back exists only to keep text clear of
+     .card-controls floating over it — but .card-controls just became a
+     static footer row above, no longer floating over anything, so that
+     padding is now dead space narrowing every mobile card for no reason. */
+  .card-back {
+    padding-right: 0;
+  }
+
+  /* Pinyin reads naturally beside the character it belongs to, not
+     stacked underneath taking a second line for no reason. */
+  .card-back-head {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  /* One scroll region per card, not several nested ones fighting for
+     finger gestures — .card-back-head and .card-tabs stay fixed and tiny,
+     and .card-pager is the single thing that scrolls, in whichever
+     direction its content actually needs: sideways between Meaning/
+     Components/Example, and downward within whichever page is too tall
+     to fit (the meanings page on a card with an unusually long gloss, the
+     example page on a long fact, etc). */
+  .card-back {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .card-back-head,
+  .card-tabs {
+    flex: none;
+  }
+
+  .card-pager {
+    flex: 1 1 auto;
+    min-height: 0;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -webkit-overflow-scrolling: touch;
+    /* A classic (non-overlay) scrollbar reserves width from the box it's
+       on, which very slightly shrinks each "100%" page — just enough
+       that the next page's edge peeked in at the side. */
+    scrollbar-width: none;
+  }
+
+  .card-pager::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card-pager > .card-page {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  /* The front face is just a glyph + stroke-order canvas — on a card that
+     now fills all the height .card-view has to give it (rather than a
+     content-sized floor), a fixed 150px canvas left most of that height
+     as dead space below it. Scaling with the viewport instead of a flat
+     px value means it actually grows to use the room a taller phone
+     screen gives it — but capped by width too (75vw, comfortably inside
+     .card-scene's padded content box), or a tall/narrow phone (e.g. 46vh
+     exceeding the ~85%-of-375px available width) overflows sideways
+     instead of just centering smaller. */
+  .card-face:not(.card-face--back) {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .character-canvas {
+    width: min(46vh, 75vw, 280px);
+    height: min(46vh, 75vw, 280px);
+  }
 }
 
 /* The first sense is the one worth reading first; the rest (near-synonyms,
@@ -893,18 +1076,54 @@
    than minimal. Equal-width contiguous segments, divided by hairlines, each
    marked with its grade color as an underline accent rather than a full
    background fill (color-coded without the "loud pill" look tried before). */
-/* Always present (not just after reveal, so the layout never jumps on
-   flip) — disabled and dimmed until revealed. Four separate rounded
-   buttons with real gaps between them, each tinted with its own grade
-   color at low opacity, not a solid loud fill and not a contiguous
-   glued-together bar. */
+/* Four separate rounded buttons with real gaps between them, each tinted
+   with its own grade color at low opacity, not a solid loud fill and not a
+   contiguous glued-together bar. Always flows directly after the card,
+   never floats on top of it — see .scroll-bottom-spacer below for how it
+   stays reachable on short/overflowing viewports without resorting to
+   position:sticky, which read as the row cutting a hole in the card
+   whenever it happened to still be scrolled mid-content. */
 .grade-row {
   display: flex;
   gap: 10px;
   width: 100%;
   max-width: 620px;
-  margin: 2px auto 0;
+  margin: 8px auto 0;
   box-sizing: border-box;
+  background: transparent;
+  border-radius: 14px;
+  /* Not a backdrop-opacity issue — .side-accent is position:fixed, which
+     makes it a positioned element that paints after (i.e. above) ordinary
+     static content in the same stacking context regardless of DOM order.
+     .card-scene and .app-navbar already happen to be positioned for other
+     reasons, which is the only reason they don't show this; plain static
+     content like this row does, no matter how opaque its own background
+     is. Making this positioned too puts it in that same paint step, where
+     DOM order (this comes after .side-accent) correctly wins. */
+  position: relative;
+}
+
+/* .app-content reserves 84px of padding-bottom so a full scroll clears the
+   fixed .app-navbar — but that padding turned out not to reliably extend
+   scrollHeight once a deeply-flexed descendant (this card) was already
+   overflowing its own ancestor via ordinary visible overflow, leaving the
+   grade row permanently unreachable behind the navbar on short viewports
+   even at max scroll. A real flow element close the actual overflowing
+   content, rather than padding several ancestors away, measures correctly
+   regardless of that quirk. */
+.scroll-bottom-spacer {
+  flex: none;
+  height: 84px;
+}
+
+@media (max-width: 480px) {
+  /* No page-level scroll happens on mobile any more — this existed purely
+     to guarantee scroll clearance past the fixed navbar for the old
+     scroll-to-reach-it approach, so on mobile it's now just dead space
+     stealing height the card could use instead. */
+  .scroll-bottom-spacer {
+    height: 0;
+  }
 }
 
 .grade-btn {
@@ -979,11 +1198,18 @@
   margin: 4px 0;
 }
 
-.backup-panel h3 {
+.backup-panel h3,
+.settings-deck-group h3 {
   font-size: 16px;
   font-weight: 700;
   color: var(--text-h);
   margin: 0;
+}
+
+.settings-deck-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .settings-field {

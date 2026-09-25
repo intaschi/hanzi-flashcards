@@ -1,3 +1,4 @@
+import { useMemo } from 'preact/hooks'
 import { signal } from '@preact/signals'
 import { loadAllCards } from './state/cardData'
 import { loadAllWordCards } from './state/wordCardData'
@@ -61,6 +62,15 @@ export function App() {
     .map((id) => words.cards.find((c) => c.id === id)?.word ?? '')
   const wordsProgressPct = words.totalCount > 0 ? (words.introducedCount / words.totalCount) * 100 : 0
 
+  // Word cards' per-character components are pulled from the character
+  // deck's own cards (see WordCharacterRef's doc comment) — reusing that
+  // same already-loaded deck for meanings avoids duplicating every
+  // character's meanings array into every word card that contains it.
+  const characterMeanings = useMemo(
+    () => new Map(hanzi.cards.map((c) => [c.character, c.meanings] as const)),
+    [hanzi.cards],
+  )
+
   const progressPct = view === 'review-words' ? wordsProgressPct : hanziProgressPct
 
   const isReviewView = view === 'review-hanzi' || view === 'review-words'
@@ -120,6 +130,7 @@ export function App() {
                     onGrade={words.handleGrade}
                     introducedCount={words.introducedCount}
                     totalCount={words.totalCount}
+                    characterMeanings={characterMeanings}
                   />
                 ) : (
                   <div class="session-complete">
@@ -140,8 +151,10 @@ export function App() {
 
             {view === 'settings' && (
               <SettingsPanel
-                settings={hanzi.srs.settings}
-                onChange={(settings) => hanzi.persist({ ...hanzi.srs, settings })}
+                hanziSettings={hanzi.srs.settings}
+                onHanziChange={(settings) => hanzi.persist({ ...hanzi.srs, settings })}
+                wordsSettings={words.srs.settings}
+                onWordsChange={(settings) => words.persist({ ...words.srs, settings })}
                 srsState={hanzi.srs}
                 onImported={hanzi.handleImported}
               />

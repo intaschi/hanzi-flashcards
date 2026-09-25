@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'preact/hooks'
+import { useEffect, useRef, useState } from 'preact/hooks'
 import { CharacterStage } from './CharacterStage'
 import { AudioButton } from './AudioButton'
 import { audioPath } from '../lib/audioPath'
+import { animateScrollLeft } from '../lib/scroll'
 import type { Card, Grade } from '../state/types'
 
-type BackTab = 'components' | 'example'
+type BackTab = 'meaning' | 'components' | 'example'
 
 interface Props {
   card: Card
@@ -35,18 +36,48 @@ export function CardView({
   const [primaryMeaning, ...secondaryMeanings] = card.meanings
 
   const hasComponents = card.components.length > 0
-  const tabs: BackTab[] = hasComponents ? ['components', 'example'] : ['example']
-  const [activeTab, setActiveTab] = useState<BackTab>(tabs[0])
+  const tabs: BackTab[] = ['meaning', ...(hasComponents ? (['components'] as const) : []), 'example']
+  const [activeTab, setActiveTab] = useState<BackTab>('meaning')
+  const pagerRef = useRef<HTMLDivElement>(null)
 
-  // Meanings + the head (character/pinyin) stay always visible — that's the
-  // actual answer to the card. Components and Example are tabbed instead of
-  // stacked, so the card's height is bounded by whichever ONE section is
-  // showing rather than the sum of all of them — that sum is what made the
-  // card balloon on content-heavy characters and force a scroll.
+  // Meaning/Components/Example are equal-weight pages here, not a fixed
+  // meanings header with a tabbed body underneath — on a narrow phone,
+  // meanings could run long enough (的 alone has six senses) to leave next
+  // to nothing on screen for the example/components. Desktop still renders
+  // this as the old grid-stack (meaning showing by default, tab away from
+  // it exactly like before); mobile turns .card-pager into a horizontally
+  // swipeable, snap-to strip — the tab buttons and the swipe both move the
+  // same underlying scroll position, so either works interchangeably.
   useEffect(() => {
-    setActiveTab(tabs[0])
+    setActiveTab('meaning')
+    if (pagerRef.current) pagerRef.current.scrollLeft = 0
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [card.id])
+
+  function goToTab(tab: BackTab) {
+    setActiveTab(tab)
+    const pager = pagerRef.current
+    if (!pager) return
+    const index = tabs.indexOf(tab)
+    animateScrollLeft(pager, index * pager.clientWidth)
+  }
+
+  function handlePagerScroll(e: Event) {
+    const pager = e.currentTarget as HTMLDivElement
+    if (pager.clientWidth === 0) return
+    const index = Math.round(pager.scrollLeft / pager.clientWidth)
+    const tab = tabs[index]
+    if (tab && tab !== activeTab) setActiveTab(tab)
+  }
+
+  // Lets either face flip on a plain tap without hijacking the controls that
+  // already live on top of them (stroke-order canvas/replay link on the
+  // front, tab/audio buttons on the back) — anything button-like handles its
+  // own click and this just gets out of the way instead.
+  function handleFaceClick(e: MouseEvent) {
+    if ((e.target as HTMLElement).closest('button, [role="button"], a')) return
+    onToggleReveal()
+  }
 
   return (
     <div class="card-view">
@@ -59,6 +90,95 @@ export function CardView({
           <strong>{introducedCount.toLocaleString()}</strong>
           <span class="progress-of">/ {totalCount.toLocaleString()}</span>
         </span>
+
+        <div class={`card-flip ${revealed ? 'is-revealed' : ''}`}>
+          <div
+            class="card-face card-surface"
+            aria-hidden={revealed}
+            inert={revealed || undefined}
+            onClick={handleFaceClick}
+          >
+            <CharacterStage character={card.character} />
+          </div>
+
+          <div
+            class="card-face card-face--back card-surface"
+            onClick={handleFaceClick}
+            aria-hidden={!revealed}
+            inert={!revealed || undefined}
+          >
+            <div class="card-back">
+              <div class="card-back-head">
+                <span class="card-back-char chinese">{card.character}</span>
+                <div class="pinyin">{card.pinyin}</div>
+              </div>
+
+              <div class="card-tabs" role="tablist">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab}
+                    type="button"
+                    role="tab"
+                    aria-selected={activeTab === tab}
+                    class={`card-tab-btn ${activeTab === tab ? 'active' : ''}`}
+                    onClick={() => goToTab(tab)}
+                  >
+                    {tab === 'meaning' ? 'Meaning' : tab === 'components' ? 'Components' : 'Example'}
+                  </button>
+                ))}
+              </div>
+
+              {/* Desktop: all pages render at once, grid-stacked in the same
+                  cell, sized to whichever is tallest — switching tabs never
+                  resizes the card. Mobile: this same markup becomes a
+                  horizontally swipeable, snap-to strip instead (see the
+                  max-width:480px rules for .card-pager/.card-page). */}
+              <div class="card-pager" ref={pagerRef} onScroll={handlePagerScroll}>
+                <div class="card-page" aria-hidden={activeTab !== 'meaning'}>
+                  <div class="meanings">
+                    <h3>Meanings</h3>
+                    <p class="meaning-primary">{primaryMeaning}</p>
+                    {secondaryMeanings.length > 0 && (
+                      <p class="meaning-secondary">{secondaryMeanings.join(' · ')}</p>
+                    )}
+                  </div>
+                </div>
+
+                {hasComponents && (
+                  <div class="card-page" aria-hidden={activeTab !== 'components'}>
+                    <div class="components">
+                      {card.components.map((c, i) => (
+                        <div class="component" key={i}>
+                          <span class="component-char">{c.char ?? '—'}</span>
+                          <span class={`component-role role-${c.role}`}>{c.role}</span>
+                          <p class="component-note">{c.note}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <div class="card-page" aria-hidden={activeTab !== 'example'}>
+                  <div class="example">
+                    <p class="example-hanzi" lang="zh">
+                      {card.example.hanzi}{' '}
+                      <AudioButton
+                        text={card.example.hanzi}
+                        label="Play example sentence"
+                        compact
+                        src={audioPath('hanzi-example', card.id)}
+                      />
+                    </p>
+                    <p class="example-pinyin">{card.example.pinyin}</p>
+                    <p class="example-english">{card.example.english}</p>
+                    <p class="example-fact-label">Fun fact</p>
+                    <p class="example-fact">{card.example.fact}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="card-controls">
           <AudioButton
@@ -88,94 +208,6 @@ export function CardView({
               />
             </svg>
           </button>
-        </div>
-
-        <div class={`card-flip ${revealed ? 'is-revealed' : ''}`}>
-          <div class="card-face card-surface" aria-hidden={revealed} inert={revealed || undefined}>
-            <CharacterStage character={card.character} />
-          </div>
-
-          <div
-            class="card-face card-face--back card-surface"
-            aria-hidden={!revealed}
-            inert={!revealed || undefined}
-          >
-            <div class="card-back">
-              <div class="card-back-summary">
-                <div class="card-back-head">
-                  <span class="card-back-char chinese">{card.character}</span>
-                  <div class="pinyin">{card.pinyin}</div>
-                </div>
-                <div class="meanings">
-                  <h3>Meanings</h3>
-                  <p class="meaning-primary">{primaryMeaning}</p>
-                  {secondaryMeanings.length > 0 && (
-                    <p class="meaning-secondary">{secondaryMeanings.join(' · ')}</p>
-                  )}
-                </div>
-              </div>
-
-              {tabs.length > 1 && (
-                <div class="card-tabs" role="tablist">
-                  {tabs.map((tab) => (
-                    <button
-                      key={tab}
-                      type="button"
-                      role="tab"
-                      aria-selected={activeTab === tab}
-                      class={`card-tab-btn ${activeTab === tab ? 'active' : ''}`}
-                      onClick={() => setActiveTab(tab)}
-                    >
-                      {tab === 'components' ? 'Components' : 'Example'}
-                    </button>
-                  ))}
-                </div>
-              )}
-
-              {/* Both panels render at once, grid-stacked in the same cell
-                  (see .card-tab-panels), so the card sizes to whichever tab
-                  is TALLER, not whichever is active — switching tabs would
-                  otherwise resize the card exactly the way flipping used to
-                  before that was fixed the same way. */}
-              <div class="card-tab-panels">
-                {hasComponents && (
-                  <div
-                    class="components"
-                    aria-hidden={activeTab !== 'components'}
-                    inert={activeTab !== 'components' || undefined}
-                  >
-                    {card.components.map((c, i) => (
-                      <div class="component" key={i}>
-                        <span class="component-char">{c.char ?? '—'}</span>
-                        <span class={`component-role role-${c.role}`}>{c.role}</span>
-                        <p class="component-note">{c.note}</p>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                <div
-                  class="example"
-                  aria-hidden={activeTab !== 'example'}
-                  inert={activeTab !== 'example' || undefined}
-                >
-                  <p class="example-hanzi" lang="zh">
-                    {card.example.hanzi}{' '}
-                    <AudioButton
-                      text={card.example.hanzi}
-                      label="Play example sentence"
-                      compact
-                      src={audioPath('hanzi-example', card.id)}
-                    />
-                  </p>
-                  <p class="example-pinyin">{card.example.pinyin}</p>
-                  <p class="example-english">{card.example.english}</p>
-                  <p class="example-fact-label">Fun fact</p>
-                  <p class="example-fact">{card.example.fact}</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -213,6 +245,8 @@ export function CardView({
           Easy
         </button>
       </div>
+
+      <div class="scroll-bottom-spacer" aria-hidden="true" />
     </div>
   )
 }

@@ -124,4 +124,3 @@ changes needed.
 - **Testing the production build locally before pushing**: `npm run build && npm run preview`
   — `vite preview` (unlike `vite dev`) actually respects the `base` path, so it's the real
   smoke test for GitHub-Pages-subpath bugs.
-test

@@ -1,0 +1,87 @@
+import { useEffect, useMemo } from 'preact/hooks'
+import type { Signal } from '@preact/signals'
+import {
+  buildSessionQueue,
+  gradeCard,
+  requestPersistentStorage,
+  saveState,
+} from './srs'
+import type { Grade, SrsState } from './types'
+
+interface Identifiable {
+  id: string
+}
+
+export interface DeckSignals<T> {
+  cards: Signal<T[]>
+  srs: Signal<SrsState>
+  queue: Signal<string[]>
+  revealed: Signal<boolean>
+  ready: Signal<boolean>
+}
+
+// The character deck and the word deck need the exact same queue-building,
+// grading, and persistence logic — only WHICH cards and WHICH localStorage
+// key differ. Rather than duplicate app.tsx's review-session logic per deck,
+// this hook is called once per deck (each with its own module-level signal
+// set and storage key) and returns everything a review view needs.
+export function useReviewDeck<T extends Identifiable & { frequencyRank: number }>(
+  signals: DeckSignals<T>,
+  loadCards: () => Promise<T[]>,
+  storageKey?: string,
+) {
+  useEffect(() => {
+    requestPersistentStorage()
+    loadCards().then((loaded) => {
+      signals.cards.value = loaded
+      const ids = loaded.map((c) => c.id)
+      signals.queue.value = buildSessionQueue(signals.srs.value, ids)
+      signals.ready.value = true
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const cardMap = useMemo(
+    () => new Map(signals.cards.value.map((c) => [c.id, c] as const)),
+    [signals.cards.value],
+  )
+
+  function persist(next: SrsState) {
+    signals.srs.value = next
+    saveState(next, storageKey)
+  }
+
+  function handleGrade(grade: Grade) {
+    const currentId = signals.queue.value[0]
+    if (!currentId) return
+    persist(gradeCard(signals.srs.value, currentId, grade))
+    signals.revealed.value = false
+    signals.queue.value = signals.queue.value.slice(1)
+  }
+
+  function handleImported(next: SrsState) {
+    persist(next)
+    const ids = signals.cards.value.map((c) => c.id)
+    signals.queue.value = buildSessionQueue(next, ids)
+  }
+
+  const currentId = signals.queue.value[0]
+  const currentCard = currentId ? cardMap.get(currentId) : undefined
+  const introducedCount = Object.keys(signals.srs.value.cards).length
+  const totalCount = signals.cards.value.length
+
+  return {
+    ready: signals.ready.value,
+    cards: signals.cards.value,
+    srs: signals.srs.value,
+    queue: signals.queue.value,
+    currentCard,
+    introducedCount,
+    totalCount,
+    revealed: signals.revealed.value,
+    toggleReveal: () => (signals.revealed.value = !signals.revealed.value),
+    handleGrade,
+    handleImported,
+    persist,
+  }
+}

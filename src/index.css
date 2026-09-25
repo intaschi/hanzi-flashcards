@@ -1,0 +1,189 @@
+:root {
+  /* Option D — refined synthesis: clean near-white ground, true ink text, one
+     confident China-red accent. No heavy texture/decoration; the character itself
+     and the seal mark carry the identity. */
+  --bg: #fafaf9;
+  --bg-paper: #ffffff;
+  --text: #6b6558;
+  --text-h: #17140f;
+  --border: #e8e4da;
+  --code-bg: #f2efe7;
+  --accent: #d1352a;
+  --accent-bg: rgba(209, 53, 42, 0.08);
+  --accent-border: rgba(209, 53, 42, 0.35);
+  /* Deeper antique gold, not the olive-khaki it replaced — that shade sat too
+     close in hue to --text's warm brown to read as a deliberate accent. This
+     one is saturated enough to read as gold and dark enough to match jade's
+     visual weight. Dark mode's --gold already reads correctly (a near-black
+     backdrop gives even moderate saturation room to pop) so it's untouched. */
+  --gold: #a8791a;
+  --gold-bg: rgba(168, 121, 26, 0.1);
+  --jade: #1f7a53;
+  --jade-bg: rgba(31, 122, 83, 0.1);
+  --porcelain: #5c7a94;
+  --porcelain-bg: rgba(92, 122, 148, 0.1);
+  --shadow: rgba(20, 15, 10, 0.06) 0 1px 3px, rgba(20, 15, 10, 0.05) 0 8px 20px -8px;
+
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: var(--sans);
+  --chinese: 'Noto Serif SC', 'Songti SC', serif;
+  --brush: 'Ma Shan Zheng', cursive;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 17px/155% var(--sans);
+  letter-spacing: 0.1px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #14120f;
+    --bg-paper: #1c1a16;
+    --text: #8f8a7d;
+    --text-h: #f1ede3;
+    --border: #322c22;
+    --code-bg: #211d16;
+    --accent: #ff5c4d;
+    --accent-bg: rgba(255, 92, 77, 0.14);
+    --accent-border: rgba(255, 92, 77, 0.4);
+    --gold: #d3b45a;
+    --gold-bg: rgba(211, 180, 90, 0.14);
+    --jade: #3fac7c;
+    --jade-bg: rgba(63, 172, 124, 0.14);
+    --porcelain: #93aec4;
+    --porcelain-bg: rgba(147, 174, 196, 0.14);
+    --shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, rgba(0, 0, 0, 0.4) 0 8px 20px -8px;
+  }
+}
+
+:root[data-theme='dark'] {
+  --bg: #14120f;
+  --bg-paper: #1c1a16;
+  --text: #8f8a7d;
+  --text-h: #f1ede3;
+  --border: #322c22;
+  --code-bg: #211d16;
+  --accent: #ff5c4d;
+  --accent-bg: rgba(255, 92, 77, 0.14);
+  --accent-border: rgba(255, 92, 77, 0.4);
+  --gold: #d3b45a;
+  --gold-bg: rgba(211, 180, 90, 0.14);
+  --jade: #3fac7c;
+  --jade-bg: rgba(63, 172, 124, 0.14);
+  --porcelain: #5891cf;
+  --porcelain-bg: rgba(88, 145, 207, 0.14);
+  --shadow: rgba(0, 0, 0, 0.5) 0 1px 3px, rgba(0, 0, 0, 0.4) 0 8px 20px -8px;
+}
+
+body {
+  margin: 0;
+  height: 100svh;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* A bamboo accent running the full height of the screen along the left
+   edge, top:0 to bottom:0 — literally edge to edge. background-size:auto
+   100% fills that height exactly, clipping the image horizontally rather
+   than stretching/distorting it. Left/top are real viewport edges (nothing
+   to fade into); the right edge is an arbitrary internal crop, so a mask
+   fades only that side, sized to the box itself so it holds at any width.
+   The bottom is faded too — not because the box stops short, but because
+   the grade-row/nav-bar live down there and their translucent backgrounds
+   would otherwise let bold ink show straight through. The ::after overlay
+   blends it into the page background before it reaches that zone, so the
+   box still touches the true bottom edge, it just visually dissolves into
+   the page first. */
+.side-accent {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: clamp(240px, 32vw, 420px);
+  pointer-events: none;
+  z-index: 0;
+  background-image: url('./assets/ink-bamboo.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: auto 100%;
+  -webkit-mask-image: linear-gradient(to right, black 45%, transparent 100%);
+  mask-image: linear-gradient(to right, black 45%, transparent 100%);
+}
+
+.side-accent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--bg) 0px, var(--bg) 60px, transparent 300px);
+}
+
+#app {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 32px;
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 128%;
+  letter-spacing: -0.1px;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
+
+[lang='zh'],
+.chinese {
+  font-family: var(--chinese);
+}

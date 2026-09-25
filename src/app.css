@@ -1,0 +1,1472 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100svh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* .app-frame is the page canvas itself now — full-bleed, no outer margin,
+   no box seam against the body. A column: content area, then the nav bar
+   at the bottom — a side rail made the content column look off-center. */
+.app-frame {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* The app never scrolls as a whole page — header/nav bars stay fixed, and
+   only this content region scrolls internally if a card's content is ever
+   taller than the available space. min-height:0 is required here: without
+   it a flex child refuses to shrink below its content size, which would
+   just push the page taller instead of scrolling in place. */
+.app-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-bottom: 84px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+.loading-seal {
+  animation: seal-pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes seal-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.96) rotate(-4deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(-4deg);
+  }
+}
+
+.seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, #e0463c, var(--accent) 60%, #9c231b 100%);
+  color: #fdf3e4;
+  font-family: var(--chinese);
+  font-weight: 700;
+  font-size: 14px;
+  transform: rotate(-3deg);
+  box-shadow: 0 2px 6px rgba(120, 20, 15, 0.3);
+}
+
+.loading-seal {
+  width: 46px;
+  height: 46px;
+  font-size: 21px;
+}
+
+/* Nav bar — a centered bottom bar, persistent across every view. */
+
+.app-navbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 14px 20px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .app-navbar {
+    gap: 10px;
+    padding: 10px 10px;
+  }
+
+  .navbar-nav button {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 6px;
+}
+
+.navbar-nav button {
+  font: inherit;
+  font-size: 14px;
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.navbar-nav button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fdf6ec;
+  font-weight: 600;
+}
+
+.progress-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.progress-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  margin-right: 1px;
+}
+
+.progress-badge strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.progress-of {
+  opacity: 0.55;
+  font-size: 12px;
+}
+
+.theme-toggle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.card-progress-badge {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  z-index: 2;
+}
+
+/* App main — the Review/Settings/Backup views keep a focused reading column. */
+
+.app-main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 32px 40px;
+  box-sizing: border-box;
+  flex-grow: 1;
+  /* Without this, a child using height:100% (.review-view) makes this box
+     grow to fit that child instead of being capped at the actual available
+     flex space — a circular-sizing bug that made the "available height"
+     calculation for centering/scroll decisions wrong. */
+  min-height: 0;
+}
+
+/* The review screen's height varies a lot — a bare character glyph vs. a
+   fully-revealed back face with components and an example — so instead of
+   sticking to the top and leaving a void under a short front face, it
+   centers as a group within the available space.
+   This uses auto margins on the first/last child rather than
+   justify-content:center on the parent deliberately: plain flex centering
+   clips symmetrically when content overflows, pushing the top child (the
+   char strip) above scrollTop:0 — permanently invisible, since there's
+   nothing to scroll up to — while the bottom child gets shoved toward the
+   nav bar. Auto margins center the same way when there's slack, but
+   collapse to 0 (top-aligned, scrollable) instead of clipping when there
+   isn't. */
+.review-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.review-view > :first-child {
+  margin-top: auto;
+}
+
+.review-view > :last-child {
+  margin-bottom: auto;
+}
+
+@media (max-width: 480px) {
+  .app-main {
+    padding: 20px 16px 32px;
+  }
+}
+
+
+/* Character spotlight — dark panel, brush-calligraphy face. Landing hero + the
+   end-of-session moment only; the review card itself uses the stroke-order box. */
+
+.spotlight {
+  background: var(--text-h);
+  border-radius: 14px;
+  padding: 18px 16px 14px;
+  text-align: center;
+}
+
+.spotlight-char {
+  display: block;
+  font-family: var(--brush), var(--chinese);
+  font-size: 60px;
+  line-height: 1;
+  /* Fixed, not var(--bg-paper): the panel itself is always a dark tone in
+     both themes, but --bg-paper flips dark in dark mode too, which made the
+     character invisible against its own panel. */
+  color: #fdf3e4;
+}
+
+.spotlight-pinyin {
+  display: block;
+  font-size: 13px;
+  color: var(--text);
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .spotlight {
+    background: #0c0a08;
+  }
+}
+
+:root[data-theme='dark'] .spotlight {
+  background: #0c0a08;
+}
+
+/* Top progress bar — a thin, always-visible strip showing overall deck
+   progress (characters introduced / total), pinned to the viewport like the
+   bottom nav bar so it's always visible without needing its own page. */
+
+.top-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 20;
+  background: var(--border);
+}
+
+.top-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.review-tagline {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.55;
+  text-align: center;
+}
+
+/* Character strip — upcoming characters in the queue, for context */
+
+.char-strip-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.char-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  font-size: 26px;
+  line-height: 1.3;
+  color: var(--text);
+  overflow: visible;
+}
+
+.char-strip span:not(.on) {
+  opacity: 0.4;
+}
+
+.char-strip .on {
+  font-weight: 700;
+  font-size: 34px;
+  color: var(--accent);
+}
+
+.strip-dots {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.strip-dots span {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text);
+  opacity: 0.25;
+}
+
+.strip-dots span.on {
+  opacity: 1;
+  background: var(--accent);
+}
+
+/* Card view */
+
+.card-view {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* The whole card is the rotating object: .card-scene provides perspective,
+   .card-flip is the 3D object that actually rotates, and each .card-face
+   carries the full visual styling (bg/border/shadow) so both the question
+   side and the answer side look like the same physical card, not text
+   flipping inside a static frame. */
+
+.card-scene {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  perspective: 1400px;
+}
+
+.card-flip {
+  position: relative;
+  display: grid;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 550ms cubic-bezier(0.4, 0.15, 0.2, 1);
+}
+
+.card-flip.is-revealed {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  grid-area: 1 / 1;
+  backface-visibility: hidden;
+  width: 100%;
+  min-width: 0;
+}
+
+.card-face--back {
+  transform: rotateY(180deg);
+}
+
+.card-surface {
+  position: relative;
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px 22px 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  /* A floor, not a fixed height: sampled ~30 real cards' natural back-face
+     height (443-1036px, clustered 700-850px) so most cards render at an
+     identical size instead of the deck visibly growing/shrinking card to
+     card. Genuinely content-heavy outliers still grow taller rather than
+     clipping. Scaled to viewport height (not a flat px value) — a fixed
+     820px floor fit this session's own test viewports but overflowed on
+     shorter real windows, pushing the grade-row out of view entirely. */
+  min-height: min(52vh, 700px);
+}
+
+.character-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.character-canvas {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.character-canvas svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.stroke-replay-link {
+  font: inherit;
+  font-size: 12px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.stroke-replay-link:hover {
+  opacity: 0.8;
+}
+
+/* Persistent controls — a sibling of .card-flip, not a child, so they never
+   rotate away with either face and stay clickable (and correct) whichever
+   side is showing. Centered on the card's height, right-aligned. */
+.card-controls {
+  position: absolute;
+  top: 50%;
+  right: 22px;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  /* Vertically centering on the card's full height looks fine when that
+     height is stable, but a mobile card can get tall (stacked meanings,
+     scrollable component strip, etc.) and centered controls end up
+     floating next to whatever content happens to be at the midpoint
+     instead of sitting at a predictable spot. Anchor to the bottom
+     instead. */
+  .card-controls {
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+}
+
+.card-controls .audio-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  color: #fdf6ec;
+  box-shadow: var(--shadow);
+}
+
+.card-controls .audio-btn:disabled {
+  opacity: 0.5;
+}
+
+.flip-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.flip-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.flip-btn:hover {
+  color: var(--accent);
+}
+
+.audio-btn {
+  font-size: 16px;
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.audio-btn--compact {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.audio-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.audio-btn svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.audio-unavailable {
+  display: inline-flex;
+  opacity: 0.5;
+  font-size: 15px;
+}
+
+.audio-unavailable svg {
+  width: 1em;
+  height: 1em;
+}
+
+.card-back {
+  width: 100%;
+  padding-right: 58px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+/* Character + pinyin sit in their own fixed-width column so the meanings
+   can run alongside to the right instead of stacking underneath. */
+.card-back-summary {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.card-back-head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  flex: none;
+}
+
+.card-back-char {
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--text-h);
+  line-height: 1;
+}
+
+.pinyin {
+  text-align: left;
+  font-size: 26px;
+  color: var(--accent);
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-back-summary .meanings {
+  flex: 1;
+  min-width: 0;
+  padding-top: 2px;
+}
+
+/* Word deck — front-face word text (no HanziWriter; stroke order is the
+   character deck's job, not repeated per-character on a multi-glyph word)
+   and the back-face word heading, sized down from the single-character
+   52px since a 2-4 glyph word at that size would crowd the card. */
+.word-front-text {
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--text-h);
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.word-back-word {
+  font-size: 38px;
+}
+
+.word-characters {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.word-char-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.word-char-tab-btn {
+  font-size: 22px;
+  line-height: 1;
+  padding: 6px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-h);
+  cursor: pointer;
+}
+
+.word-char-tab-btn:hover {
+  border-color: var(--accent-border);
+}
+
+.word-char-tab-btn.active {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+/* Every character's panel renders at once, grid-stacked in the same cell,
+   same trick as .card-tab-panels — the card sizes to whichever character
+   has the most components, not whichever is currently showing. This is
+   what actually fixes the word deck's card height matching the character
+   deck's: only ONE character's components show at a time now, the same
+   as the character deck's own Components tab. */
+.word-char-panels {
+  display: grid;
+}
+
+.word-char-panels > * {
+  grid-area: 1 / 1;
+}
+
+.word-char-panels > [aria-hidden='true'] {
+  visibility: hidden;
+}
+
+.word-char-components {
+  margin: 0;
+}
+
+.word-char-empty {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.55;
+}
+
+/* Shared small-caps section-label treatment — one rule so MEANINGS and the
+   FUN FACT sub-label read as the same kind of thing at a glance. Components
+   and Example are tabbed instead of headed (the tab button itself is the
+   label), so this no longer needs to cover them too. */
+.meanings h3,
+.example-fact-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.45;
+}
+
+.meanings h3 {
+  margin: 0 0 6px;
+}
+
+/* Tabs switch which ONE section (Components / Example) is showing, so the
+   card's height is bounded by the tallest single section instead of the
+   sum of all of them — that sum is what made content-heavy characters
+   balloon the card and force a scroll. */
+.card-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 4px 0 2px;
+}
+
+.card-tab-btn {
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.card-tab-btn:hover {
+  border-color: var(--accent-border);
+}
+
+.card-tab-btn.active {
+  background: var(--accent-bg);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+/* Both tab panels render at once, stacked in the same grid cell, so the
+   card sizes to whichever panel is TALLER rather than whichever is active
+   — otherwise switching tabs resizes the card the same way flipping used
+   to before that was fixed the same way. */
+.card-tab-panels {
+  display: grid;
+}
+
+.card-tab-panels > * {
+  grid-area: 1 / 1;
+}
+
+.card-tab-panels > [aria-hidden='true'] {
+  visibility: hidden;
+}
+
+/* The first sense is the one worth reading first; the rest (near-synonyms,
+   rare alt-readings, abbreviations) are demoted so they don't carry equal
+   weight — see the primaryMeaning/secondaryMeanings split in CardView. */
+.meaning-primary {
+  text-align: left;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.meaning-secondary {
+  text-align: left;
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  color: var(--text);
+  opacity: 0.55;
+  line-height: 1.5;
+}
+
+.components {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 20px;
+}
+
+/* A lone component (no semantic/phonetic counterpart) fills the row
+   instead of sitting half-width with an empty gap beside it. */
+.component:only-child {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 480px) {
+  /* Stacking vertically on mobile could make the card arbitrarily tall
+     with enough components. A horizontally-scrollable strip keeps height
+     bounded regardless of how many there are. */
+  .components {
+    display: flex;
+    grid-template-columns: unset;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 2px;
+    margin: 0 -2px;
+  }
+
+  .component {
+    flex: 0 0 76%;
+    scroll-snap-align: start;
+  }
+
+  .component:only-child {
+    flex: 1 1 100%;
+  }
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 16px;
+  border: 1.5px solid var(--accent);
+  border-radius: 10px;
+  background: transparent;
+}
+
+/* Character carries the most weight — it's the actual answer to "which
+   part is this." Role is a label (small caps). The note is supporting
+   detail, sized down so it doesn't compete with either. */
+.component-char {
+  font-size: 30px;
+  line-height: 1;
+  font-family: var(--chinese);
+  color: var(--text-h);
+}
+
+.component-role {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0 0 2px;
+  border-bottom: 2px solid var(--text);
+  color: var(--text);
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+.component-role.role-semantic {
+  color: var(--jade);
+  border-bottom-color: var(--jade);
+  opacity: 1;
+}
+
+.component-role.role-phonetic {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+  opacity: 1;
+}
+
+.component-note {
+  margin: 0;
+  font-size: 13.5px;
+  opacity: 0.7;
+  line-height: 1.55;
+}
+
+.example {
+  padding: 16px;
+  border: 1.5px solid var(--accent);
+  border-radius: 10px;
+  background: transparent;
+}
+
+.example-hanzi {
+  font-size: 26px;
+  margin: 0 0 8px;
+  color: var(--text-h);
+}
+
+.example-pinyin {
+  margin: 0 0 8px;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.example-english {
+  margin: 0 0 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.example-fact-label {
+  margin: 0 0 2px;
+}
+
+.example-fact {
+  margin: 0;
+  font-size: 13px;
+  font-style: italic;
+  opacity: 0.55;
+  line-height: 1.5;
+}
+
+/* One grouped bar (bordered/rounded like the card itself), not four floating
+   words with big uneven gaps between them — that read as unfinished rather
+   than minimal. Equal-width contiguous segments, divided by hairlines, each
+   marked with its grade color as an underline accent rather than a full
+   background fill (color-coded without the "loud pill" look tried before). */
+/* Always present (not just after reveal, so the layout never jumps on
+   flip) — disabled and dimmed until revealed. Four separate rounded
+   buttons with real gaps between them, each tinted with its own grade
+   color at low opacity, not a solid loud fill and not a contiguous
+   glued-together bar. */
+.grade-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 620px;
+  margin: 2px auto 0;
+  box-sizing: border-box;
+}
+
+.grade-btn {
+  flex: 1;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 4px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: filter 0.15s ease, opacity 0.15s ease;
+}
+
+.grade-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.grade-btn:not(:disabled):hover {
+  filter: brightness(0.96);
+}
+
+.grade-btn:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.grade-again {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.grade-hard {
+  background: var(--gold-bg);
+  color: var(--gold);
+}
+
+.grade-good {
+  background: var(--porcelain-bg);
+  color: var(--porcelain);
+}
+
+.grade-easy {
+  background: var(--jade-bg);
+  color: var(--jade);
+}
+
+.session-complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  padding: 32px 8px;
+}
+
+/* Settings + backup panels */
+
+.settings-panel,
+.backup-panel {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 4px 0;
+}
+
+.backup-panel h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.settings-field input {
+  font: inherit;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-paper);
+  color: var(--text-h);
+  width: 120px;
+}
+
+.settings-hint {
+  opacity: 0.65;
+  font-size: 12px;
+}
+
+.backup-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.backup-actions button {
+  font: inherit;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.backup-last-exported {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.backup-message {
+  font-size: 14px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+/* About page — a compact "masthead + panel" composition rather than four
+   unrelated blocks. The hero reads like a small masthead (icon, wordmark,
+   tagline); the two decks and four features share one bordered panel with
+   an internal divider so they read as a single card, not stacked sections;
+   colored fills reuse the same accent/jade/gold/porcelain vocabulary as
+   grading and card annotations elsewhere instead of inventing new hues.
+   Credits close the page as a proper colophon — a seal glyph marks the
+   CC-CEDICT/hanziDB/etc. attribution as a deliberate footer, not filler. */
+
+/* Same centering trick as .review-view (see its comment): auto margins on
+   the first/last child center the group when the viewport has slack, but
+   collapse to 0 — top-aligned, scrollable — when it doesn't. Plain
+   justify-content:center would instead clip the top content on short
+   viewports, which is exactly what broke here on mobile before this. */
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  padding: 0;
+  height: 100%;
+}
+
+.about-page > :first-child {
+  margin-top: auto;
+}
+
+.about-page > :last-child {
+  margin-bottom: auto;
+}
+
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* The brush glyph sits on a soft bloom of the accent color — a legibility-
+   safe, CSS-only stand-in for the ink-wash texture used on the review
+   views. No image and no risk to text contrast: it's a radial fade behind
+   an already-large glyph, over otherwise empty space. */
+.about-hero-glyph-wrap {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-glyph-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-bg) 0%, transparent 70%);
+}
+
+.about-hero-glyph {
+  position: relative;
+  font-family: var(--brush), var(--chinese);
+  font-size: 54px;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.about-hero-title {
+  margin: 1px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--text-h);
+}
+
+.about-hero-title-accent {
+  color: var(--accent);
+}
+
+.about-hero-tagline {
+  margin: 2px 0 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text);
+  opacity: 0.85;
+  max-width: 320px;
+  text-wrap: balance;
+}
+
+/* One shared panel for decks + features — the choice that makes them read
+   as a single composition instead of separate stacked blocks. */
+.about-panel {
+  width: 100%;
+  max-width: 460px;
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 12px 14px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-decks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.about-deck-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 9px 8px 8px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+
+.about-deck-accent {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+}
+
+.about-deck-jade {
+  background: var(--jade-bg);
+  border-color: var(--jade);
+}
+
+.about-deck-glyph {
+  font-size: 30px;
+  line-height: 1;
+  color: var(--text-h);
+}
+
+.about-deck-card h3 {
+  margin: 1px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.about-deck-stat {
+  margin: 0;
+  font-size: 11px;
+  color: var(--text);
+  opacity: 0.75;
+}
+
+.about-deck-stat strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-h);
+  opacity: 1;
+}
+
+.about-panel-divider {
+  height: 1px;
+  background: var(--border);
+}
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .about-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.about-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 6px 6px;
+  border-radius: 12px;
+}
+
+.about-feature-accent {
+  background: var(--accent-bg);
+}
+
+.about-feature-jade {
+  background: var(--jade-bg);
+}
+
+.about-feature-porcelain {
+  background: var(--porcelain-bg);
+}
+
+.about-feature-gold {
+  background: var(--gold-bg);
+}
+
+/* The badge is a small "paper token" — same recipe as the flip/audio
+   buttons on the review card (paper surface, hairline border, drop shadow)
+   — so it reads as part of the app's own button language rather than a
+   one-off decoration. Color comes from the container modifier above. */
+.about-feature-badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--chinese);
+  font-size: 13px;
+  line-height: 1;
+}
+
+.about-feature-accent .about-feature-badge {
+  color: var(--accent);
+}
+
+.about-feature-jade .about-feature-badge {
+  color: var(--jade);
+}
+
+.about-feature-porcelain .about-feature-badge {
+  color: var(--porcelain);
+}
+
+.about-feature-gold .about-feature-badge {
+  color: var(--gold);
+}
+
+.about-feature-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-h);
+  opacity: 0.75;
+  line-height: 1.3;
+}
+
+.about-privacy {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text);
+  opacity: 0.65;
+  max-width: 420px;
+}
+
+.about-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.about-credits-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-credits-seal {
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+}
+
+.about-credits-kicker {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  opacity: 0.5;
+}
+
+.about-credits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.about-credits a {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.about-credits a:hover {
+  border-color: var(--accent-border);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.about-fine-print {
+  margin: 0;
+  font-size: 10.5px;
+  color: var(--text);
+  opacity: 0.5;
+  max-width: 420px;
+}
+
+/* Browse panel — searchable list of every character */
+
+.browse-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.browse-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.browse-count {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.55;
+  font-variant-numeric: tabular-nums;
+}
+
+.browse-search {
+  font: inherit;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-paper);
+  color: var(--text-h);
+}
+
+.browse-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.browse-row {
+  display: grid;
+  grid-template-columns: 44px 44px 70px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.browse-row:last-child {
+  border-bottom: none;
+}
+
+.browse-rank {
+  font-size: 12px;
+  opacity: 0.45;
+  font-variant-numeric: tabular-nums;
+}
+
+.browse-char {
+  font-size: 24px;
+  color: var(--text-h);
+}
+
+.browse-pinyin {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.browse-meanings {
+  font-size: 13px;
+  opacity: 0.75;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.browse-badge {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: var(--jade-bg);
+  color: var(--jade);
+  white-space: nowrap;
+}
+
+.browse-empty {
+  padding: 24px 4px;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+@media (max-width: 560px) {
+  .browse-row {
+    grid-template-columns: 32px 36px 1fr;
+    grid-template-areas:
+      'rank char pinyin'
+      '. meanings meanings';
+  }
+
+  .browse-rank {
+    grid-area: rank;
+  }
+  .browse-char {
+    grid-area: char;
+  }
+  .browse-pinyin {
+    grid-area: pinyin;
+  }
+  .browse-meanings {
+    grid-area: meanings;
+    white-space: normal;
+  }
+  .browse-badge {
+    display: none;
+  }
+}

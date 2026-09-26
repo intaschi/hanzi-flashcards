@@ -254,7 +254,6 @@ export function WordCardView({
         <button
           type="button"
           class="grade-btn grade-again"
-          disabled={!revealed}
           onClick={() => onGrade('again')}
         >
           Again
@@ -262,7 +261,6 @@ export function WordCardView({
         <button
           type="button"
           class="grade-btn grade-hard"
-          disabled={!revealed}
           onClick={() => onGrade('hard')}
         >
           Hard
@@ -270,7 +268,6 @@ export function WordCardView({
         <button
           type="button"
           class="grade-btn grade-good"
-          disabled={!revealed}
           onClick={() => onGrade('good')}
         >
           Good
@@ -278,7 +275,6 @@ export function WordCardView({
         <button
           type="button"
           class="grade-btn grade-easy"
-          disabled={!revealed}
           onClick={() => onGrade('easy')}
         >
           Easy

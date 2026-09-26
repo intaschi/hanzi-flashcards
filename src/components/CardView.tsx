@@ -215,7 +215,6 @@ export function CardView({
         <button
           type="button"
           class="grade-btn grade-again"
-          disabled={!revealed}
           onClick={() => onGrade('again')}
         >
           Again
@@ -223,7 +222,6 @@ export function CardView({
         <button
           type="button"
           class="grade-btn grade-hard"
-          disabled={!revealed}
           onClick={() => onGrade('hard')}
         >
           Hard
@@ -231,7 +229,6 @@ export function CardView({
         <button
           type="button"
           class="grade-btn grade-good"
-          disabled={!revealed}
           onClick={() => onGrade('good')}
         >
           Good
@@ -239,7 +236,6 @@ export function CardView({
         <button
           type="button"
           class="grade-btn grade-easy"
-          disabled={!revealed}
           onClick={() => onGrade('easy')}
         >
           Easy

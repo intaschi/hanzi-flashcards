@@ -17,14 +17,14 @@ function inkColor(): string {
 // Measuring the rendered stroke paths' actual on-screen bounds and nudging
 // the whole svg to re-center THAT within the canvas works for every
 // character, unlike a single fixed offset tuned for one glyph.
-function recenterGlyph(container: HTMLDivElement) {
+function recenterGlyph(container: HTMLDivElement): boolean {
   const svg = container.querySelector('svg')
-  if (!svg) return
+  if (!svg) return false
   const paths = Array.from(svg.querySelectorAll('path')).filter((p) => !p.closest('defs'))
   const rects = paths
     .map((p) => p.getBoundingClientRect())
     .filter((r) => r.width > 0 || r.height > 0)
-  if (!rects.length) return
+  if (!rects.length) return false
   const inkLeft = Math.min(...rects.map((r) => r.left))
   const inkRight = Math.max(...rects.map((r) => r.right))
   const inkTop = Math.min(...rects.map((r) => r.top))
@@ -33,6 +33,24 @@ function recenterGlyph(container: HTMLDivElement) {
   const dx = (canvasRect.left + canvasRect.right) / 2 - (inkLeft + inkRight) / 2
   const dy = (canvasRect.top + canvasRect.bottom) / 2 - (inkTop + inkBottom) / 2
   svg.style.transform = `translate(${dx}px, ${dy}px)`
+  return true
+}
+
+// hanzi-writer caches loaded character data, so a re-mount for a character
+// it's already fetched this session (e.g. flipping between the Hanzi and
+// Words tabs and back) resolves onLoadCharDataSuccess far faster than a
+// fresh network fetch would — faster than even one requestAnimationFrame,
+// in practice, which raced ahead of the <path> elements actually landing in
+// the DOM and left recenterGlyph measuring nothing. Watching for the real
+// DOM mutation instead of guessing a frame count makes this correct
+// regardless of whether the data was cached or freshly fetched.
+function watchForGlyphAndCenter(container: HTMLDivElement): () => void {
+  if (recenterGlyph(container)) return () => {}
+  const observer = new MutationObserver(() => {
+    if (recenterGlyph(container)) observer.disconnect()
+  })
+  observer.observe(container, { childList: true, subtree: true })
+  return () => observer.disconnect()
 }
 
 // hanzi-writer is an imperative library: it mounts a writer instance against a DOM
@@ -50,7 +68,10 @@ export function CharacterStage({ character }: Props) {
     if (!container) return
     const el: HTMLDivElement = container
 
+    let stopWatchingGlyph = () => {}
+
     function mount() {
+      stopWatchingGlyph()
       el.innerHTML = ''
       writerRef.current = HanziWriter.create(el, character, {
         width: 180,
@@ -60,13 +81,8 @@ export function CharacterStage({ character }: Props) {
         strokeColor: inkColor(),
         strokeAnimationSpeed: 1,
         delayBetweenStrokes: 180,
-        // Stroke data loads async (fetched per-character from a CDN), so the
-        // svg has no <path>s to measure yet at the moment create() returns —
-        // recentering has to wait for this callback instead. The callback
-        // itself still fires a tick before hanzi-writer turns that data into
-        // actual <path> elements, so wait one more frame past it too.
-        onLoadCharDataSuccess: () => requestAnimationFrame(() => recenterGlyph(el)),
       })
+      stopWatchingGlyph = watchForGlyphAndCenter(el)
       writerRef.current.animateCharacter()
     }
 
@@ -86,6 +102,7 @@ export function CharacterStage({ character }: Props) {
     resizeObserver.observe(el)
 
     return () => {
+      stopWatchingGlyph()
       resizeObserver.disconnect()
       observer.disconnect()
       writerRef.current = null

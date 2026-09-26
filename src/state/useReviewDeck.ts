@@ -51,12 +51,21 @@ export function useReviewDeck<T extends Identifiable & { frequencyRank: number }
     saveState(next, storageKey)
   }
 
+  // .card-flip's rotate-back transition (550ms, see app.css) takes the old
+  // card from showing its back face to its front — but both faces are
+  // always in the DOM, so if the queue advances to the next card in the
+  // same tick as un-revealing, the still-rotating back face very briefly
+  // shows the NEXT card's answer instead of the one just graded. Holding
+  // the queue advance until the animation finishes means the old card is
+  // always what's rotating away, never the new one.
   function handleGrade(grade: Grade) {
     const currentId = signals.queue.value[0]
     if (!currentId) return
     persist(gradeCard(signals.srs.value, currentId, grade))
     signals.revealed.value = false
-    signals.queue.value = signals.queue.value.slice(1)
+    setTimeout(() => {
+      signals.queue.value = signals.queue.value.slice(1)
+    }, 550)
   }
 
   function handleImported(next: SrsState) {

@@ -1,4 +1,4 @@
-import { useMemo } from 'preact/hooks'
+import { useEffect, useMemo } from 'preact/hooks'
 import { signal } from '@preact/signals'
 import { loadAllCards } from './state/cardData'
 import { loadAllWordCards } from './state/wordCardData'
@@ -9,7 +9,6 @@ import { WordCardView } from './components/WordCardView'
 import { BrowsePanel } from './components/BrowsePanel'
 import { SettingsPanel } from './components/SettingsPanel'
 import { CharacterStrip } from './components/CharacterStrip'
-import { CharacterSpotlight } from './components/CharacterSpotlight'
 import { ProgressStats } from './components/ProgressStats'
 import { AboutPage } from './components/AboutPage'
 import { AppNavBar } from './components/AppNavBar'
@@ -40,6 +39,36 @@ const wordSignals = {
 const viewSignal = signal<View>('review-words')
 
 initTheme()
+
+// .left-sidebar/.right-sidebar are position:fixed and need a real top/
+// height to line up with .card-scene, which itself moves: .review-view
+// centers the char-strip+card group with auto margins, so on a tall
+// viewport the card sits lower than a flat guess (see the CSS comment
+// on .left-sidebar) — measuring the actual element is the only way to
+// track that regardless of viewport size or which content (a real
+// word card vs. the session-complete card) is currently filling it.
+function useCardAlignmentVars() {
+  useEffect(() => {
+    function sync() {
+      const card = document.querySelector('.card-scene')
+      if (!card) return
+      const rect = card.getBoundingClientRect()
+      document.documentElement.style.setProperty('--card-top', `${rect.top}px`)
+      document.documentElement.style.setProperty('--card-height', `${rect.height}px`)
+    }
+
+    sync()
+    const card = document.querySelector('.card-scene')
+    const resizeObserver = new ResizeObserver(sync)
+    if (card) resizeObserver.observe(card)
+    window.addEventListener('resize', sync)
+
+    return () => {
+      resizeObserver.disconnect()
+      window.removeEventListener('resize', sync)
+    }
+  })
+}
 
 export function App() {
   const hanzi = useReviewDeck(hanziSignals, loadAllCards)
@@ -84,6 +113,8 @@ export function App() {
     const remaining = Math.max(0, words.totalCount - learned - inProgress)
     return { learned, inProgress, remaining }
   }, [words.srs.cards, words.totalCount])
+
+  useCardAlignmentVars()
 
   const isReviewView = view === 'review-words'
 
@@ -148,13 +179,16 @@ export function App() {
                     characterMeanings={characterMeanings}
                   />
                 ) : (
-                  <div class="session-complete">
-                    <CharacterSpotlight character="词" pinyin="cí" />
-                    <h2>All done for now</h2>
-                    <p>
-                      No words due right now. Come back later, or check Settings to adjust your
-                      daily new-card limit.
-                    </p>
+                  // Same card-shaped frame as the real flashcard (not a
+                  // completely different layout with its own icon/sound
+                  // controls) — swapping to a differently-sized element
+                  // here made the whole screen visibly jump/resize.
+                  <div class="card-view">
+                    <div class="card-scene">
+                      <div class="card-surface session-complete">
+                        <h2>All done for now</h2>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

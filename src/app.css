@@ -372,27 +372,31 @@
     flex-direction: column;
     gap: 16px;
     position: fixed;
-    /* Matches .card-scene's own top offset (top-progress-bar + the
-       character strip above it) so the sidebar's top lines up with the
-       top of the main card. */
-    top: 131px;
+    /* --card-top/--card-height are measured off the real .card-scene in
+       app.tsx (see useCardAlignmentVars) and kept in sync via
+       ResizeObserver — a fixed 131px here only matched the card's real
+       top when .review-view had no extra vertical slack to center
+       into; on a tall viewport the card (and the char-strip above it)
+       shift down by half that slack, and a static number couldn't
+       follow. Falls back to the old static guess if JS hasn't run yet
+       (first paint) or the card isn't mounted (e.g. session-complete
+       swaps in a shorter box before this fires once). */
+    top: var(--card-top, 131px);
     overflow-y: auto;
     z-index: 1;
   }
 
   .left-sidebar {
     left: 32px;
-    /* Capped like .right-sidebar's height instead of stretched to the
-       viewport bottom (via a bottom offset) — that stretch is what made
-       this column taller than the main card whenever the card's own
-       content was shorter than the full column height. */
-    height: min(52vh, 700px);
-    /* .card-scene centers at max-width 620px, so its left edge is always
-       50vw - 310px — deriving the stats sidebar's width from that same
+    /* Matches the real card's height instead of a flat guess, for the
+       same reason --card-top does. */
+    height: var(--card-height, min(52vh, 700px));
+    /* .card-scene centers at max-width 660px, so its left edge is always
+       50vw - 330px — deriving the stats sidebar's width from that same
        formula (leaving a fixed 24px gap before it) keeps it consistently
        sized and close to the card, rather than a fixed width that's only
        correctly proportioned at one specific viewport width. */
-    width: calc(50vw - 310px - 24px - 32px);
+    width: calc(50vw - 330px - 24px - 32px);
     /* The grid and chart below flex to fill this box exactly (see their
        own rules) rather than each claiming a fixed size that may add up
        to more than it — so this never needs to scroll. */
@@ -401,14 +405,14 @@
 
   .right-sidebar {
     right: 32px;
-    /* Matches .card-scene's own width (max-width 620px) when there's
+    /* Matches .card-scene's own width (max-width 660px) when there's
        actually room for that next to the card — but capped at the same
        "whatever space is left" formula .left-sidebar uses, so it shrinks
        instead of overlapping the card on narrower "wide" screens (barely
-       above the 1150px reveal threshold, there's nowhere near 620px of
+       above the 1150px reveal threshold, there's nowhere near 660px of
        room left after the card and the left sidebar). */
-    width: min(620px, calc(50vw - 310px - 24px - 32px));
-    height: min(52vh, 700px);
+    width: min(660px, calc(50vw - 330px - 24px - 32px));
+    height: var(--card-height, min(52vh, 700px));
   }
 }
 
@@ -654,7 +658,7 @@
 .card-scene {
   position: relative;
   width: 100%;
-  max-width: 620px;
+  max-width: 660px;
   margin: 0 auto;
   perspective: 1400px;
 }
@@ -1405,7 +1409,7 @@
   display: flex;
   gap: 10px;
   width: 100%;
-  max-width: 620px;
+  max-width: 660px;
   margin: 8px auto 0;
   box-sizing: border-box;
   background: transparent;
@@ -1478,13 +1482,11 @@
   color: var(--text-h);
 }
 
-.session-complete {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  text-align: center;
-  padding: 32px 8px;
+/* .card-surface already centers its content and provides the card's
+   real size/background/border/shadow — this just needs the heading
+   itself, no extra layout of its own. */
+.session-complete h2 {
+  margin: 0;
 }
 
 /* Settings + backup panels */

@@ -877,8 +877,8 @@
    rather than shown in isolation — reading it in context is the actual
    skill being tested. */
 .word-front-sentence {
-  font-size: 30px;
-  line-height: 1.7;
+  font-size: 36px;
+  line-height: 1.6;
   color: var(--text-h);
   text-align: center;
   margin: 0 0 16px;
@@ -1242,9 +1242,16 @@
   align-items: flex-start;
   gap: 6px;
   padding: 16px;
-  border: 1px solid var(--border);
   border-radius: 10px;
   background: transparent;
+}
+
+/* No border around each component any more — instead, a single vertical
+   rule between them when there's more than one (a lone component, via
+   :only-child above, never gets it). Sits in the existing grid/flex gap
+   rather than adding its own padding. */
+.component:not(:first-child) {
+  border-left: 1px solid var(--border);
 }
 
 /* Character carries the most weight — it's the actual answer to "which
@@ -1461,36 +1468,33 @@
   margin: 0;
 }
 
-.backup-panel h3,
-.settings-deck-group h3 {
+/* "New cards per day" sits beside the heading when there's room, instead
+   of stretching a lone number input the full width of the card below
+   it — wraps to its own row under the heading once space runs out. */
+.settings-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+}
+
+.backup-panel h3 {
   font-size: 16px;
   font-weight: 700;
   color: var(--text-h);
   margin: 0;
 }
 
-.settings-deck-group {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.settings-field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 14px;
-  min-width: 0;
-}
-
-.settings-field input {
+.settings-inline-input {
   font: inherit;
   padding: 8px 10px;
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg-paper);
   color: var(--text-h);
-  width: 100%;
+  width: 60px;
+  flex: none;
   box-sizing: border-box;
 }
 
@@ -1540,24 +1544,20 @@
 }
 
 .backup-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  display: flex;
+  gap: 8px;
 }
 
 .backup-actions button {
   font: inherit;
   font-size: 13px;
   font-weight: 600;
-  padding: 10px 8px;
-  border-radius: 10px;
+  padding: 6px 14px;
+  border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg-paper);
   color: var(--accent);
   cursor: pointer;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .hidden-file-input {

@@ -6,6 +6,9 @@ interface DeckFieldsProps {
   onChange: (settings: Settings) => void
 }
 
+// The heading doubles as the field's label now that it's the only
+// setting there is — a generic "Settings" title above a repeat of the
+// same label was redundant with just one field left.
 function DeckSettingsFields({ settings, onChange }: DeckFieldsProps) {
   function updateField(field: keyof Settings, raw: string) {
     const value = Number(raw)
@@ -14,18 +17,14 @@ function DeckSettingsFields({ settings, onChange }: DeckFieldsProps) {
   }
 
   return (
-    <div class="settings-deck-group">
-      <label class="settings-field">
-        New cards per day
-        <input
-          type="number"
-          min={1}
-          max={100}
-          value={settings.newCardsPerDay}
-          onInput={(e) => updateField('newCardsPerDay', (e.target as HTMLInputElement).value)}
-        />
-      </label>
-    </div>
+    <input
+      type="number"
+      min={1}
+      max={100}
+      class="settings-inline-input"
+      value={settings.newCardsPerDay}
+      onInput={(e) => updateField('newCardsPerDay', (e.target as HTMLInputElement).value)}
+    />
   )
 }
 
@@ -44,8 +43,10 @@ export function SettingsPanel({ wordsSettings, onWordsChange, srsState, onImport
   return (
     <div class="settings-panel">
       <div class="settings-card">
-        <h2>Settings</h2>
-        <DeckSettingsFields settings={wordsSettings} onChange={onWordsChange} />
+        <div class="settings-card-head">
+          <h2>New cards per day</h2>
+          <DeckSettingsFields settings={wordsSettings} onChange={onWordsChange} />
+        </div>
       </div>
       <div class="settings-card">
         <BackupPanel state={srsState} onImported={onImported} />

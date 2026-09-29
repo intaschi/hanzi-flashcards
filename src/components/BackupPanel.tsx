@@ -56,10 +56,10 @@ export function BackupPanel({ state, onImported }: Props) {
 
       <div class="backup-actions">
         <button type="button" onClick={handleExport}>
-          Export progress (JSON)
+          Export
         </button>
         <button type="button" onClick={() => fileInputRef.current?.click()}>
-          Import progress (JSON)
+          Import
         </button>
         <input
           ref={fileInputRef}

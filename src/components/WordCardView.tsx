@@ -254,14 +254,19 @@ export function WordCardView({
             />
             <span class="control-label">Sentence</span>
           </div>
-          <div class="control-with-label">
-            <AudioButton
-              text={card.word}
-              label="Play word pronunciation"
-              src={audioPath('words', card.id)}
-            />
-            <span class="control-label">Word</span>
-          </div>
+          {/* Only once the card is flipped — the word's own audio would
+              hand over its pronunciation before the front face has
+              actually tested it. */}
+          {revealed && (
+            <div class="control-with-label">
+              <AudioButton
+                text={card.word}
+                label="Play word pronunciation"
+                src={audioPath('words', card.id)}
+              />
+              <span class="control-label">Word</span>
+            </div>
+          )}
           <button
             type="button"
             class="flip-btn"

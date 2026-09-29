@@ -1461,9 +1461,14 @@
   margin: 0;
 }
 
+/* Grid rather than flex-wrap so the two fields always stay side by side —
+   at the sidebar's narrowest widths there isn't enough room for a
+   min-width to hold without wrapping to a second row, but a 2-column
+   grid just shrinks each column instead, letting the label text itself
+   wrap if it has to. */
 .settings-deck-group {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
 
@@ -1472,14 +1477,13 @@
   flex-direction: column;
   gap: 4px;
   font-size: 14px;
-  flex: 1;
-  min-width: 130px;
+  min-width: 0;
 }
 
 .settings-field-label {
   display: flex;
   align-items: center;
-  white-space: nowrap;
+  gap: 4px;
 }
 
 .settings-field input {

@@ -857,6 +857,12 @@
   border-top: 1px solid var(--border);
 }
 
+.sentence-translation-hanzi {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: var(--text-h);
+}
+
 /* Word deck front face — the word's own example sentence (no HanziWriter;
    stroke order is the character deck's job, not repeated per-character on
    a multi-glyph word), with the target word picked out by color+weight
@@ -1271,7 +1277,6 @@
 
 .example {
   padding: 16px;
-  border: 1.5px solid var(--accent);
   border-radius: 10px;
   background: transparent;
 }
@@ -1425,28 +1430,23 @@
   gap: 16px;
 }
 
-/* In the right sidebar (see .right-sidebar), Settings is a direct child
-   with no surrounding page padding of its own — give it the same card
-   treatment as the stat squares on the left so it doesn't look like a
-   bare fragment floating on its own. */
-.right-sidebar .settings-panel {
+/* Settings and Backup are two separate cards stacked in the right
+   sidebar, matching the stat squares' card treatment on the left so
+   neither looks like a bare fragment floating on its own. */
+.settings-card {
   background: var(--bg-paper);
   border: 1px solid transparent;
   border-radius: 12px;
   padding: 16px;
   box-shadow: var(--shadow);
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.right-sidebar .settings-panel h2 {
+.settings-card h2 {
   font-size: 16px;
-}
-
-.settings-divider {
-  width: 100%;
-  border: none;
-  border-top: 1px solid var(--border);
-  margin: 4px 0;
+  margin: 0;
 }
 
 .backup-panel h3,
@@ -1459,7 +1459,7 @@
 
 .settings-deck-group {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 14px;
 }
 
@@ -1468,6 +1468,14 @@
   flex-direction: column;
   gap: 4px;
   font-size: 14px;
+  flex: 1;
+  min-width: 130px;
+}
+
+.settings-field-label {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 }
 
 .settings-field input {
@@ -1477,24 +1485,73 @@
   border: 1px solid var(--border);
   background: var(--bg-paper);
   color: var(--text-h);
-  width: 120px;
+  width: 100%;
+}
+
+.help-tip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+  border-radius: 50%;
+  background: var(--code-bg);
+  color: var(--text-h);
+  opacity: 0.6;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: help;
+  position: relative;
+  vertical-align: middle;
+}
+
+.help-tip-bubble {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  background: var(--text-h);
+  color: var(--bg-paper);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 8px 10px;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.help-tip:hover .help-tip-bubble,
+.help-tip:focus-within .help-tip-bubble,
+.help-tip:focus .help-tip-bubble {
+  opacity: 1;
+  visibility: visible;
 }
 
 .backup-actions {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
 .backup-actions button {
   font: inherit;
+  font-size: 13px;
   font-weight: 600;
-  padding: 10px 18px;
+  padding: 10px 8px;
   border-radius: 10px;
   border: 1px solid var(--accent-border);
   background: var(--accent-bg);
   color: var(--accent);
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hidden-file-input {
@@ -1864,7 +1921,7 @@
 
 .browse-row {
   display: grid;
-  grid-template-columns: 44px 44px 70px 1fr auto;
+  grid-template-columns: 32px 90px 70px 1fr auto;
   align-items: center;
   gap: 14px;
   padding: 10px 4px;
@@ -1884,6 +1941,7 @@
 .browse-char {
   font-size: 24px;
   color: var(--text-h);
+  white-space: nowrap;
 }
 
 .browse-pinyin {
@@ -1919,7 +1977,7 @@
 
 @media (max-width: 560px) {
   .browse-row {
-    grid-template-columns: 32px 36px 1fr;
+    grid-template-columns: 32px auto 1fr;
     grid-template-areas:
       'rank char pinyin'
       '. meanings meanings';

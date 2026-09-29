@@ -1,4 +1,5 @@
 import { BackupPanel } from './BackupPanel'
+import { HelpTip } from './HelpTip'
 import type { Settings, SrsState } from '../state/types'
 
 interface DeckFieldsProps {
@@ -27,7 +28,10 @@ function DeckSettingsFields({ settings, onChange }: DeckFieldsProps) {
       </label>
 
       <label class="settings-field">
-        Day rollover hour (0–23)
+        <span class="settings-field-label">
+          New day starts at
+          <HelpTip text="The hour (0–23) when today's reviews roll over into tomorrow's. Reviewing at 1am with this set to 4 still counts as 'yesterday' — pick a later hour if you often study past midnight." />
+        </span>
         <input
           type="number"
           min={0}
@@ -48,15 +52,19 @@ interface Props {
 }
 
 // No more tab switcher — Words was the only deck it ever needed to
-// distinguish, and there's just one deck now. Both sections render at
-// once instead, separated by a divider.
+// distinguish, and there's just one deck now. Settings and Backup are two
+// separate cards rather than one panel with a divider, matching the
+// stat-square treatment on the other sidebar.
 export function SettingsPanel({ wordsSettings, onWordsChange, srsState, onImported }: Props) {
   return (
     <div class="settings-panel">
-      <h2>Settings</h2>
-      <DeckSettingsFields settings={wordsSettings} onChange={onWordsChange} />
-      <hr class="settings-divider" />
-      <BackupPanel state={srsState} onImported={onImported} />
+      <div class="settings-card">
+        <h2>Settings</h2>
+        <DeckSettingsFields settings={wordsSettings} onChange={onWordsChange} />
+      </div>
+      <div class="settings-card">
+        <BackupPanel state={srsState} onImported={onImported} />
+      </div>
     </div>
   )
 }

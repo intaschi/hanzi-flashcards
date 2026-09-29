@@ -1,5 +1,6 @@
 import { useRef, useState } from 'preact/hooks'
 import { exportStateJson, mergeImportedState } from '../state/srs'
+import { HelpTip } from './HelpTip'
 import type { SrsState } from '../state/types'
 
 const LAST_EXPORTED_KEY = 'hanzi-srs.lastExportedAt'
@@ -48,11 +49,10 @@ export function BackupPanel({ state, onImported }: Props) {
 
   return (
     <div class="backup-panel">
-      <h3>Backup & restore</h3>
-      <p>
-        Progress is saved automatically in this browser — export a backup occasionally as
-        insurance, or to move it to another device.
-      </p>
+      <h3>
+        Backup & restore
+        <HelpTip text="Progress is saved automatically in this browser — export a backup occasionally as insurance, or to move it to another device." />
+      </h3>
 
       <div class="backup-actions">
         <button type="button" onClick={handleExport}>

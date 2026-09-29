@@ -89,11 +89,10 @@ export function App() {
 
   return (
     <div class="app">
-      {/* Only shown on the review view — the card's opaque background
-          covers it there, but text-heavy views (Browse, About) have no
-          such backing and the bold ink would sit directly under body
-          text, hurting legibility rather than just providing atmosphere. */}
-      {isReviewView && <div class="side-accent" aria-hidden="true" />}
+      {/* Shown on every view except mobile's own Settings tab — there,
+          with no sidebar card to contain it, the strip is wide enough at
+          phone width to bleed straight across the settings fields. */}
+      {view !== 'settings' && <div class="side-accent" aria-hidden="true" />}
 
       {/* Always mounted (CSS hides both below the width where there's no
           real "side" real estate — see .left-sidebar/.right-sidebar in
@@ -113,16 +112,18 @@ export function App() {
       {/* Settings has no nav tab of its own at these widths (see
           .nav-settings-only) — this is its only home there, on the right,
           in front of the decorative bamboo art (z-index only, doesn't
-          otherwise interact with it), regardless of which main view is
-          showing. */}
-      <aside class="right-sidebar" aria-label="Settings">
-        <SettingsPanel
-          wordsSettings={words.srs.settings}
-          onWordsChange={(settings) => words.persist({ ...words.srs, settings })}
-          srsState={words.srs}
-          onImported={words.handleImported}
-        />
-      </aside>
+          otherwise interact with it). Only shown alongside the flashcard
+          view, matching the stats sidebar on the left. */}
+      {isReviewView && (
+        <aside class="right-sidebar" aria-label="Settings">
+          <SettingsPanel
+            wordsSettings={words.srs.settings}
+            onWordsChange={(settings) => words.persist({ ...words.srs, settings })}
+            srsState={words.srs}
+            onImported={words.handleImported}
+          />
+        </aside>
+      )}
 
       <div class="top-progress-bar">
         <div class="top-progress-fill" style={{ width: `${progressPct}%` }} />

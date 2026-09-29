@@ -130,18 +130,6 @@ export function WordCardView({
             <p class="word-front-sentence chinese" lang="zh">
               {highlightWord(card.example.hanzi, card.word)}
             </p>
-            {/* Two sound icons on screen at once (this one, plus the word-
-                only one in .card-controls) read as an unlabeled duplicate
-                without a caption on each making clear which audio is
-                which. */}
-            <div class="control-with-label">
-              <AudioButton
-                text={card.example.hanzi}
-                label="Play example sentence"
-                src={audioPath('words-example', card.id)}
-              />
-              <span class="control-label">Sentence</span>
-            </div>
           </div>
 
           <div
@@ -181,11 +169,13 @@ export function WordCardView({
                     )}
                   </div>
 
-                  {/* The sentence itself is on the front face now — its
-                      translation is the one piece of that sentence that's
-                      actually part of "what does this mean," so it stays
-                      here rather than moving with the fact to Interesting. */}
+                  {/* The sentence is on the front face too, but repeated
+                      here alongside its pinyin/English so the meaning tab
+                      is self-contained without flipping back and forth. */}
                   <div class="sentence-translation">
+                    <p class="chinese sentence-translation-hanzi" lang="zh">
+                      {card.example.hanzi}
+                    </p>
                     <p class="example-pinyin">{card.example.pinyin}</p>
                     <p class="example-english">{card.example.english}</p>
                   </div>
@@ -256,6 +246,14 @@ export function WordCardView({
         </div>
 
         <div class="card-controls">
+          <div class="control-with-label">
+            <AudioButton
+              text={card.example.hanzi}
+              label="Play example sentence"
+              src={audioPath('words-example', card.id)}
+            />
+            <span class="control-label">Sentence</span>
+          </div>
           <div class="control-with-label">
             <AudioButton
               text={card.word}

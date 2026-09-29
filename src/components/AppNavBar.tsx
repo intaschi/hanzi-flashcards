@@ -14,7 +14,7 @@ export function AppNavBar({ activeView, onNav }: Props) {
           class={activeView === 'review-words' ? 'active' : ''}
           onClick={() => onNav('review-words')}
         >
-          Words
+          Review
         </button>
         <button
           type="button"

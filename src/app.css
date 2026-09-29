@@ -574,6 +574,11 @@
   margin-bottom: 28px;
 }
 
+/* This strip sits directly on the background art with no card behind
+   it, right where that art's own detail (a blossom branch) is
+   strongest — a halo of the page's own background color, layered in
+   every direction, keeps the glyphs legible against busy art the same
+   way a solid backdrop would, without actually boxing the text in. */
 .char-strip {
   display: flex;
   justify-content: center;
@@ -583,6 +588,11 @@
   line-height: 1.3;
   color: var(--text);
   overflow: visible;
+  text-shadow:
+    0 0 6px var(--bg),
+    0 0 6px var(--bg),
+    0 0 10px var(--bg),
+    0 0 10px var(--bg);
 }
 
 .char-strip span:not(.on) {

@@ -1464,11 +1464,20 @@
 
 /* Settings + backup panels */
 
-.settings-panel,
 .backup-panel {
   text-align: left;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+
+/* Row instead of column — the two cards sit side by side once the
+   sidebar is wide enough for both, wrapping to stacked otherwise (see
+   .settings-card's own min-width/flex). */
+.settings-panel {
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 }
 
@@ -1484,6 +1493,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  flex: 1 1 220px;
 }
 
 .settings-card h2 {

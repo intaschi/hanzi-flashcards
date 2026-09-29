@@ -44,7 +44,7 @@ export function SettingsPanel({ wordsSettings, onWordsChange, srsState, onImport
     <div class="settings-panel">
       <div class="settings-card">
         <div class="settings-card-head">
-          <h2>New cards per day</h2>
+          <h2>New cards /day</h2>
           <DeckSettingsFields settings={wordsSettings} onChange={onWordsChange} />
         </div>
       </div>

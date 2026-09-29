@@ -128,18 +128,16 @@ body {
   mask-image: linear-gradient(to right, black 45%, transparent 100%);
 }
 
-/* Only widen out and zoom out on screens with room to spare — at phone
-   width, clamp's own 320px floor was wider than the viewport itself,
-   pushing most of the art off-screen instead of showing more of it. */
+/* Only widen out on screens with room to spare — at phone width,
+   clamp's own 320px floor was wider than the viewport itself, pushing
+   most of the art off-screen instead of showing more of it. Height
+   stays locked to 100% (no change from the base rule) — a shorter
+   fraction left an empty gap above the art instead of showing more of
+   it; a wider box at full height reveals more of the same image
+   without one. */
 @media (min-width: 700px) {
   .side-accent {
     width: clamp(320px, 42vw, 560px);
-    /* Scaled to height before (auto 100%) zoomed in so far that only a
-       narrow sliver of this wider landscape image's width was ever
-       visible — sizing to a smaller fraction of the box's own height
-       instead shows much more of the actual picture, anchored to the
-       bottom edge. */
-    background-size: auto 65%;
   }
 }
 

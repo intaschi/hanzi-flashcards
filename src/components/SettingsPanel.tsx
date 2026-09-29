@@ -30,11 +30,6 @@ function DeckSettingsFields({ label, settings, onChange }: DeckFieldsProps) {
           value={settings.newCardsPerDay}
           onInput={(e) => updateField('newCardsPerDay', (e.target as HTMLInputElement).value)}
         />
-        <span class="settings-hint">
-          Caps only how many brand-new cards get introduced per day. Every card already due
-          for review is always included on top of this, so a day's full queue is usually
-          larger than this number — this isn't a total daily card limit.
-        </span>
       </label>
 
       <label class="settings-field">
@@ -46,9 +41,6 @@ function DeckSettingsFields({ label, settings, onChange }: DeckFieldsProps) {
           value={settings.dayRolloverHour}
           onInput={(e) => updateField('dayRolloverHour', (e.target as HTMLInputElement).value)}
         />
-        <span class="settings-hint">
-          Your study "day" ends at this local hour rather than literal midnight.
-        </span>
       </label>
 
       <label class="settings-field">

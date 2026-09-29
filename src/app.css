@@ -361,24 +361,31 @@
        character strip above it) so the sidebar's top lines up with the
        top of the main card. */
     top: 131px;
-    bottom: 20px;
-    /* .card-scene centers at max-width 620px, so its left/right edges are
-       always 50vw - 310px from their respective side — deriving each
-       sidebar's width from that same formula (leaving a fixed 24px gap
-       before the card) keeps them consistently sized and close to it,
-       rather than a fixed width that's only correctly proportioned at one
-       specific viewport width. */
-    width: calc(50vw - 310px - 24px - 32px);
     overflow-y: auto;
     z-index: 1;
   }
 
   .left-sidebar {
     left: 32px;
+    bottom: 20px;
+    /* .card-scene centers at max-width 620px, so its left edge is always
+       50vw - 310px — deriving the stats sidebar's width from that same
+       formula (leaving a fixed 24px gap before it) keeps it consistently
+       sized and close to the card, rather than a fixed width that's only
+       correctly proportioned at one specific viewport width. */
+    width: calc(50vw - 310px - 24px - 32px);
   }
 
   .right-sidebar {
     right: 32px;
+    /* Matches .card-scene's own width (max-width 620px) when there's
+       actually room for that next to the card — but capped at the same
+       "whatever space is left" formula .left-sidebar uses, so it shrinks
+       instead of overlapping the card on narrower "wide" screens (barely
+       above the 1150px reveal threshold, there's nowhere near 620px of
+       room left after the card and the left sidebar). */
+    width: min(620px, calc(50vw - 310px - 24px - 32px));
+    height: min(52vh, 700px);
   }
 }
 
@@ -694,6 +701,21 @@
   gap: 10px;
 }
 
+/* A caption under an audio button, so two of them on screen at once (the
+   word-only one here, the sentence one on the front face) read as two
+   different things rather than an unexplained duplicate icon. */
+.control-with-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.control-label {
+  font-size: 10px;
+  opacity: 0.55;
+}
+
 /* Vertically centering .card-controls on the card's full height looks
    fine when that height is stable, but a mobile card can get tall and
    centered controls end up floating next to whatever content happens to
@@ -826,17 +848,35 @@
   padding-top: 2px;
 }
 
-/* Word deck — front-face word text (no HanziWriter; stroke order is the
-   character deck's job, not repeated per-character on a multi-glyph word)
-   and the back-face word heading, sized down from the single-character
-   52px since a 2-4 glyph word at that size would crowd the card. */
-.word-front-text {
-  font-size: 60px;
-  font-weight: 700;
-  color: var(--text-h);
-  letter-spacing: 0.02em;
-  text-align: center;
+/* The example sentence's pinyin/translation, appended below the word's own
+   meanings within the same Meaning tab — a thin rule separates the two
+   since they're related but distinct pieces of "what does this mean." */
+.sentence-translation {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
 }
+
+/* Word deck front face — the word's own example sentence (no HanziWriter;
+   stroke order is the character deck's job, not repeated per-character on
+   a multi-glyph word), with the target word picked out by color+weight
+   rather than shown in isolation — reading it in context is the actual
+   skill being tested. */
+.word-front-sentence {
+  font-size: 30px;
+  line-height: 1.7;
+  color: var(--text-h);
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.sentence-target {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Back-face word heading, sized down from the single-character 52px since
+   a 2-4 glyph word at that size would crowd the card. */
 
 .word-back-word {
   font-size: 38px;
@@ -1260,10 +1300,9 @@
 
 .example-fact {
   margin: 0;
-  font-size: 13px;
-  font-style: italic;
-  opacity: 0.55;
-  line-height: 1.5;
+  font-size: 15px;
+  opacity: 0.85;
+  line-height: 1.6;
 }
 
 /* One grouped bar (bordered/rounded like the card itself), not four floating
@@ -1391,10 +1430,10 @@
    treatment as the stat squares on the left so it doesn't look like a
    bare fragment floating on its own. */
 .right-sidebar .settings-panel {
-  background: var(--bg-paper);
+  background: transparent;
+  border: 1px solid var(--text-h);
   border-radius: 12px;
   padding: 16px;
-  box-shadow: var(--shadow);
   overflow-y: auto;
 }
 
@@ -1438,11 +1477,6 @@
   background: var(--bg-paper);
   color: var(--text-h);
   width: 120px;
-}
-
-.settings-hint {
-  opacity: 0.65;
-  font-size: 12px;
 }
 
 .backup-actions {

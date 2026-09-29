@@ -4,7 +4,27 @@ import { audioPath } from '../lib/audioPath'
 import { animateScrollLeft } from '../lib/scroll'
 import type { Grade, WordCard } from '../state/types'
 
-type BackTab = 'meaning' | 'characters' | 'example'
+type BackTab = 'meaning' | 'characters' | 'interesting'
+
+// A word's own example sentence rarely repeats it, but a few (的, 了, 是...)
+// legitimately do — splitting on every occurrence instead of just the
+// first is what keeps all of them highlighted, not only the leftmost one.
+function highlightWord(sentence: string, word: string) {
+  if (!word) return sentence
+  const parts = sentence.split(word)
+  const nodes: unknown[] = []
+  parts.forEach((part, i) => {
+    if (i > 0) {
+      nodes.push(
+        <span class="sentence-target" key={`highlight-${i}`}>
+          {word}
+        </span>,
+      )
+    }
+    nodes.push(part)
+  })
+  return nodes
+}
 
 interface Props {
   card: WordCard
@@ -19,9 +39,10 @@ interface Props {
 // Mirrors CardView's structure and CSS classes closely (same flip mechanic,
 // same tab-panel height-stacking trick, same grade row) so the word deck
 // feels like the same product as the character deck rather than a
-// bolted-on second app. The front face just shows the word as plain text —
-// stroke-order practice is a per-character concern the character deck
-// already owns, not something a multi-character word card repeats.
+// bolted-on second app. The front face shows the word's example sentence
+// with the target word highlighted, not the word in isolation — reading it
+// in context is the actual skill, and the highlight is what keeps that
+// from turning into "guess which word this is."
 export function WordCardView({
   card,
   revealed,
@@ -40,7 +61,11 @@ export function WordCardView({
   const hasAnyCharacterInfo = card.characters.some(
     (c) => c.components.length > 0 || (characterMeanings.get(c.char)?.length ?? 0) > 0,
   )
-  const tabs: BackTab[] = ['meaning', ...(hasAnyCharacterInfo ? (['characters'] as const) : []), 'example']
+  const tabs: BackTab[] = [
+    'meaning',
+    ...(hasAnyCharacterInfo ? (['characters'] as const) : []),
+    'interesting',
+  ]
   const [activeTab, setActiveTab] = useState<BackTab>('meaning')
   const pagerRef = useRef<HTMLDivElement>(null)
 
@@ -102,7 +127,21 @@ export function WordCardView({
             inert={revealed || undefined}
             onClick={handleFaceClick}
           >
-            <span class="word-front-text chinese">{card.word}</span>
+            <p class="word-front-sentence chinese" lang="zh">
+              {highlightWord(card.example.hanzi, card.word)}
+            </p>
+            {/* Two sound icons on screen at once (this one, plus the word-
+                only one in .card-controls) read as an unlabeled duplicate
+                without a caption on each making clear which audio is
+                which. */}
+            <div class="control-with-label">
+              <AudioButton
+                text={card.example.hanzi}
+                label="Play example sentence"
+                src={audioPath('words-example', card.id)}
+              />
+              <span class="control-label">Sentence</span>
+            </div>
           </div>
 
           <div
@@ -127,7 +166,7 @@ export function WordCardView({
                     class={`card-tab-btn ${activeTab === tab ? 'active' : ''}`}
                     onClick={() => goToTab(tab)}
                   >
-                    {tab === 'meaning' ? 'Meaning' : tab === 'characters' ? 'Characters' : 'Example'}
+                    {tab === 'meaning' ? 'Meaning' : tab === 'characters' ? 'Characters' : 'Interesting'}
                   </button>
                 ))}
               </div>
@@ -140,6 +179,15 @@ export function WordCardView({
                     {secondaryMeanings.length > 0 && (
                       <p class="meaning-secondary">{secondaryMeanings.join(' · ')}</p>
                     )}
+                  </div>
+
+                  {/* The sentence itself is on the front face now — its
+                      translation is the one piece of that sentence that's
+                      actually part of "what does this mean," so it stays
+                      here rather than moving with the fact to Interesting. */}
+                  <div class="sentence-translation">
+                    <p class="example-pinyin">{card.example.pinyin}</p>
+                    <p class="example-english">{card.example.english}</p>
                   </div>
                 </div>
 
@@ -197,20 +245,8 @@ export function WordCardView({
                   </div>
                 )}
 
-                <div class="card-page" aria-hidden={activeTab !== 'example'}>
+                <div class="card-page" aria-hidden={activeTab !== 'interesting'}>
                   <div class="example">
-                    <p class="example-hanzi" lang="zh">
-                      {card.example.hanzi}{' '}
-                      <AudioButton
-                        text={card.example.hanzi}
-                        label="Play example sentence"
-                        compact
-                        src={audioPath('words-example', card.id)}
-                      />
-                    </p>
-                    <p class="example-pinyin">{card.example.pinyin}</p>
-                    <p class="example-english">{card.example.english}</p>
-                    <p class="example-fact-label">Fun fact</p>
                     <p class="example-fact">{card.example.fact}</p>
                   </div>
                 </div>
@@ -220,11 +256,14 @@ export function WordCardView({
         </div>
 
         <div class="card-controls">
-          <AudioButton
-            text={card.word}
-            label="Play word pronunciation"
-            src={audioPath('words', card.id)}
-          />
+          <div class="control-with-label">
+            <AudioButton
+              text={card.word}
+              label="Play word pronunciation"
+              src={audioPath('words', card.id)}
+            />
+            <span class="control-label">Word</span>
+          </div>
           <button
             type="button"
             class="flip-btn"

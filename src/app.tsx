@@ -89,10 +89,11 @@ export function App() {
 
   return (
     <div class="app">
-      {/* Shown on every view except mobile's own Settings tab — there,
-          with no sidebar card to contain it, the strip is wide enough at
-          phone width to bleed straight across the settings fields. */}
-      {view !== 'settings' && <div class="side-accent" aria-hidden="true" />}
+      {/* Shown on every view, including mobile's own Settings tab — its
+          fields now sit inside solid white .settings-card boxes (not bare
+          on the page background), so the art behind them no longer bleeds
+          across any text the way it did before those existed. */}
+      <div class="side-accent" aria-hidden="true" />
 
       {/* Always mounted (CSS hides both below the width where there's no
           real "side" real estate — see .left-sidebar/.right-sidebar in

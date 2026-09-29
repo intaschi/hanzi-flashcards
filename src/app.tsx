@@ -99,6 +99,7 @@ export function App() {
           learned={wordProgressCounts.learned}
           inProgress={wordProgressCounts.inProgress}
           remaining={wordProgressCounts.remaining}
+          srsState={words.srs}
         />
       )}
 

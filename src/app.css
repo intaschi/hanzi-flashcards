@@ -336,7 +336,10 @@
     gap: 12px;
     position: fixed;
     left: 28px;
-    top: 96px;
+    /* Matches .card-scene's own top offset (top-progress-bar + the
+       character strip above it), so the first stat card lines up with the
+       top of the main card instead of floating at an arbitrary height. */
+    top: 131px;
     width: 168px;
     z-index: 1;
   }
@@ -348,8 +351,7 @@
   gap: 2px;
   padding: 14px 16px;
   border-radius: 12px;
-  background: var(--bg-paper);
-  border: 1px solid var(--border);
+  border: 1px solid transparent;
   box-shadow: var(--shadow);
 }
 
@@ -362,19 +364,75 @@
 
 .stat-label {
   font-size: 12px;
-  opacity: 0.6;
+  opacity: 0.7;
+}
+
+.stat-learned {
+  background: var(--jade-bg);
 }
 
 .stat-learned .stat-value {
   color: var(--jade);
 }
 
+.stat-in-progress {
+  background: var(--gold-bg);
+}
+
 .stat-in-progress .stat-value {
   color: var(--gold);
 }
 
+.stat-remaining {
+  background: var(--porcelain-bg);
+}
+
 .stat-remaining .stat-value {
   color: var(--porcelain);
+}
+
+/* Last-7-days bar chart — a fourth card in the same stack, its own
+   background left neutral (unlike the three count cards above) since it
+   isn't a single-color metric. */
+.daily-chart {
+  background: var(--bg-paper);
+  gap: 8px;
+}
+
+.daily-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 64px;
+}
+
+.daily-chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+
+.daily-chart-track {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.daily-chart-bar {
+  width: 100%;
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+  background: var(--accent);
+  opacity: 0.85;
+}
+
+.daily-chart-day {
+  font-size: 10px;
+  opacity: 0.55;
 }
 
 /* Character strip — upcoming characters in the queue, for context */

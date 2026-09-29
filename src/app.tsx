@@ -146,9 +146,12 @@ export function App() {
       {/* Settings has no nav tab of its own at these widths (see
           .nav-settings-only) — this is its only home there, on the right,
           in front of the decorative bamboo art (z-index only, doesn't
-          otherwise interact with it). Only shown alongside the flashcard
-          view, matching the stats sidebar on the left. */}
-      {isReviewView && (
+          otherwise interact with it). Only shown alongside an actual
+          flashcard, not the session-complete state — being able to
+          reach Export/Import/New-cards-per-day from what's meant to
+          read as a simple "you're done" screen made it feel busier
+          than intended. */}
+      {isReviewView && words.currentCard && (
         <aside class="right-sidebar" aria-label="Settings">
           <SettingsPanel
             wordsSettings={words.srs.settings}

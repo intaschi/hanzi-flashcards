@@ -1485,8 +1485,14 @@
 /* .card-surface already centers its content and provides the card's
    real size/background/border/shadow — this just needs the heading
    itself, no extra layout of its own. */
+/* Smaller and lighter than a real heading — this is a quiet, empty-state
+   note sitting under the spotlight glyph, not a headline competing with
+   it for attention. */
 .session-complete h2 {
   margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
 }
 
 /* Settings + backup panels */

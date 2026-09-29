@@ -323,24 +323,38 @@
 
 /* Learning-progress cards — occupy the same left-edge real estate as
    .side-accent's decorative bamboo art (index.css), just above it in
-   z-order. Hidden below the width where the card itself already fills the
-   viewport and there's no real "left side" to put anything in. */
+   z-order. Hidden below the width where there's no real "left side" to put
+   anything in, or too little of it to fit these comfortably. */
 .progress-stats {
   display: none;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1150px) {
   .progress-stats {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    /* Space is distributed BETWEEN the 4 cards rather than a fixed gap, so
+       the first card's top and the last card's bottom land exactly on the
+       container's own top/bottom — see height/top below for how those are
+       made to match .card-scene's. */
+    justify-content: space-between;
     position: fixed;
-    left: 28px;
+    left: 32px;
     /* Matches .card-scene's own top offset (top-progress-bar + the
-       character strip above it), so the first stat card lines up with the
-       top of the main card instead of floating at an arbitrary height. */
+       character strip above it) so the first card's top lines up with the
+       top of the main card. */
     top: 131px;
-    width: 168px;
+    /* .card-view's height is itself min(52vh, 700px) (see its own rule) —
+       reusing that exact formula, rather than a fixed px height, is what
+       keeps the last card's bottom tracking the card's bottom edge across
+       different viewport heights instead of just matching it once. */
+    height: min(52vh, 700px);
+    /* .card-scene centers at max-width 620px, so its left edge is always
+       50vw - 310px — deriving the sidebar's width from that same formula
+       (leaving a fixed 24px gap before it) keeps the two closer together
+       and consistently sized, rather than a fixed width that's only
+       correctly proportioned at one specific viewport width. */
+    width: calc(50vw - 310px - 24px - 32px);
     z-index: 1;
   }
 }
@@ -352,6 +366,7 @@
   padding: 14px 16px;
   border-radius: 12px;
   border: 1px solid transparent;
+  background: var(--bg-paper);
   box-shadow: var(--shadow);
 }
 
@@ -367,33 +382,19 @@
   opacity: 0.7;
 }
 
-.stat-learned {
-  background: var(--jade-bg);
-}
-
 .stat-learned .stat-value {
   color: var(--jade);
-}
-
-.stat-in-progress {
-  background: var(--gold-bg);
 }
 
 .stat-in-progress .stat-value {
   color: var(--gold);
 }
 
-.stat-remaining {
-  background: var(--porcelain-bg);
-}
-
 .stat-remaining .stat-value {
   color: var(--porcelain);
 }
 
-/* Last-7-days bar chart — a fourth card in the same stack, its own
-   background left neutral (unlike the three count cards above) since it
-   isn't a single-color metric. */
+/* Last-7-days bar chart — a fourth card in the same stack. */
 .daily-chart {
   background: var(--bg-paper);
   gap: 8px;

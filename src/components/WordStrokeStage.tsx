@@ -4,9 +4,14 @@ import { recenterGlyph, watchForGlyphAndCenter } from '../lib/hanziWriterCanvas'
 
 interface Props {
   characters: string[]
+  // Gates the intro sequence rather than always auto-playing on mount —
+  // this stage lives on the back face now, mounted (though hidden) the
+  // whole time the card shows its front, so it needs to wait for the
+  // flip instead of animating before anyone's looking.
+  play: boolean
 }
 
-const CANVAS_SIZE = 64
+const CANVAS_SIZE = 48
 
 type Writer = ReturnType<typeof HanziWriter.create>
 
@@ -28,16 +33,9 @@ function CharCanvas({ character, onReady }: { character: string; onReady: (write
     const writer = HanziWriter.create(el, character, {
       width: CANVAS_SIZE,
       height: CANVAS_SIZE,
-      padding: 4,
+      padding: 2,
       showCharacter: false,
-      // Lighter than the ink-black used for the character deck's own
-      // stroke stage — this sits above the front face's example
-      // sentence rather than being the sole focus of its own card, so it
-      // reads as a subtle guide rather than competing with that text.
-      // Stays on screen once drawn (animateCharacter doesn't clear it),
-      // so the finished word is what's visible at rest, not just mid-
-      // animation.
-      strokeColor: getComputedStyle(document.documentElement).getPropertyValue('--text').trim() || '#6b6558',
+      strokeColor: getComputedStyle(document.documentElement).getPropertyValue('--text-h').trim() || '#17140f',
       strokeAnimationSpeed: 1,
       delayBetweenStrokes: 150,
     })
@@ -71,10 +69,11 @@ function CharCanvas({ character, onReady }: { character: string; onReady: (write
   )
 }
 
-export function WordStrokeStage({ characters }: Props) {
+export function WordStrokeStage({ characters, play }: Props) {
   const writersRef = useRef<Writer[]>([])
 
   useEffect(() => {
+    if (!play) return
     // Children's own effects (which populate writersRef via onReady) run
     // before this one on both mount and update, so by the time this runs
     // every writer for the CURRENT characters is already in place —
@@ -97,7 +96,7 @@ export function WordStrokeStage({ characters }: Props) {
     return () => {
       cancelled = true
     }
-  }, [characters.join('')])
+  }, [characters.join(''), play])
 
   return (
     <div class="word-stroke-stage">

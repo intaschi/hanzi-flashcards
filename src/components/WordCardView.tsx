@@ -128,7 +128,6 @@ export function WordCardView({
             inert={revealed || undefined}
             onClick={handleFaceClick}
           >
-            <WordStrokeStage characters={card.characters.map((c) => c.char)} />
             <p class="word-front-sentence chinese" lang="zh">
               {highlightWord(card.example.hanzi, card.word)}
             </p>
@@ -143,7 +142,7 @@ export function WordCardView({
             <div class="card-back">
               <div class="card-back-head">
                 <span class="card-back-word-row">
-                  <span class="card-back-char chinese word-back-word">{card.word}</span>
+                  <WordStrokeStage characters={card.characters.map((c) => c.char)} play={revealed} />
                   {/* Icon-only and right next to the word itself, unlike the
                       captioned Sentence button in .card-controls — its
                       position alone makes clear this plays just the word,

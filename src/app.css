@@ -923,29 +923,17 @@
    a multi-glyph word), with the target word picked out by color+weight
    rather than shown in isolation — reading it in context is the actual
    skill being tested. */
-/* Taken out of the flex flow (absolute, anchored above the midline)
-   rather than stacked inline above the sentence — .card-surface only
-   has the sentence left to center in-flow this way, so the sentence
-   itself lands exactly at the card's true center instead of the
-   sentence+stage group centering as a block and pushing the sentence
-   below center. */
+/* Sits inline in .card-back-word-row now, alongside the pinyin/audio
+   button — the back face's own word heading, drawn stroke by stroke on
+   flip rather than a separate front-face element. */
 .word-stroke-stage {
-  position: absolute;
-  left: 50%;
-  bottom: calc(50% + 26px);
-  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
 }
 
 .word-stroke-canvas {
-  width: 64px;
-  height: 64px;
+  width: 48px;
+  height: 48px;
   cursor: pointer;
-  /* Lighter than the ink-black strokeColor actually paints — dimming
-     the whole canvas rather than picking a paler stroke color keeps it
-     simple and still reads clearly against the card. */
-  opacity: 0.4;
 }
 
 /* Each glyph has its own built-in whitespace margin within its canvas
@@ -954,7 +942,7 @@
    between the boxes themselves — pulling them together with a negative
    margin is what actually closes it. */
 .word-stroke-canvas + .word-stroke-canvas {
-  margin-left: -14px;
+  margin-left: -10px;
 }
 
 .word-front-sentence {
@@ -970,12 +958,6 @@
   font-weight: 700;
 }
 
-/* Back-face word heading, sized down from the single-character 52px since
-   a 2-4 glyph word at that size would crowd the card. */
-
-.word-back-word {
-  font-size: 38px;
-}
 
 .word-characters {
   display: flex;

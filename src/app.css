@@ -923,6 +923,31 @@
    a multi-glyph word), with the target word picked out by color+weight
    rather than shown in isolation — reading it in context is the actual
    skill being tested. */
+.word-stroke-stage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.word-stroke-canvas {
+  width: 88px;
+  height: 88px;
+  cursor: pointer;
+  /* Lighter than the ink-black strokeColor actually paints — dimming
+     the whole canvas rather than picking a paler stroke color keeps it
+     simple and still reads clearly against the card. */
+  opacity: 0.4;
+}
+
+/* Each glyph has its own built-in whitespace margin within its canvas
+   (recenterGlyph centers the ink, but doesn't crop that margin away),
+   so two adjacent canvases still show a visible gap even with zero gap
+   between the boxes themselves — pulling them together with a negative
+   margin is what actually closes it. */
+.word-stroke-canvas + .word-stroke-canvas {
+  margin-left: -20px;
+}
+
 .word-front-sentence {
   font-size: 36px;
   line-height: 1.6;
@@ -1889,6 +1914,10 @@
   padding: 24px 4px;
   opacity: 0.6;
   font-size: 14px;
+}
+
+.browse-load-sentinel {
+  height: 1px;
 }
 
 @media (max-width: 560px) {

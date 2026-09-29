@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'preact/hooks'
+import { useEffect, useMemo, useRef, useState } from 'preact/hooks'
 import type { SrsState, WordCard } from '../state/types'
 
 interface Props {
@@ -6,8 +6,12 @@ interface Props {
   srsState: SrsState
 }
 
+const PAGE_SIZE = 60
+
 export function BrowsePanel({ cards, srsState }: Props) {
   const [query, setQuery] = useState('')
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
+  const sentinelRef = useRef<HTMLDivElement>(null)
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
@@ -19,6 +23,30 @@ export function BrowsePanel({ cards, srsState }: Props) {
         c.meanings.some((m) => m.toLowerCase().includes(q)),
     )
   }, [cards, query])
+
+  // A fresh search should show its own first page immediately, not
+  // whatever page depth the previous query had scrolled to.
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE)
+  }, [query])
+
+  // Rendering all 5,000 rows on first paint (rather than the underlying
+  // fetch, which is quick) was the actual source of the lag — growing the
+  // list in pages as the sentinel scrolls into view keeps the DOM small
+  // until the user actually scrolls down for more.
+  useEffect(() => {
+    const sentinel = sentinelRef.current
+    if (!sentinel) return
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0]?.isIntersecting) {
+        setVisibleCount((v) => Math.min(v + PAGE_SIZE, filtered.length))
+      }
+    })
+    observer.observe(sentinel)
+    return () => observer.disconnect()
+  }, [filtered.length])
+
+  const visible = filtered.slice(0, visibleCount)
 
   return (
     <div class="browse-panel">
@@ -42,7 +70,7 @@ export function BrowsePanel({ cards, srsState }: Props) {
         />
 
         <div class="browse-list">
-          {filtered.map((c) => {
+          {visible.map((c) => {
             const learned = Boolean(srsState.cards[c.id])
             return (
               <div class={`browse-row ${learned ? 'is-learned' : ''}`} key={c.id}>
@@ -56,6 +84,8 @@ export function BrowsePanel({ cards, srsState }: Props) {
           })}
 
           {filtered.length === 0 && <p class="browse-empty">No words match "{query}".</p>}
+
+          {visibleCount < filtered.length && <div ref={sentinelRef} class="browse-load-sentinel" />}
         </div>
       </div>
     </div>

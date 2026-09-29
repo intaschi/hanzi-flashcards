@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'preact/hooks'
 import { AudioButton } from './AudioButton'
+import { WordStrokeStage } from './WordStrokeStage'
 import { audioPath } from '../lib/audioPath'
 import { animateScrollLeft } from '../lib/scroll'
 import type { Grade, WordCard } from '../state/types'
@@ -127,6 +128,7 @@ export function WordCardView({
             inert={revealed || undefined}
             onClick={handleFaceClick}
           >
+            <WordStrokeStage characters={card.characters.map((c) => c.char)} />
             <p class="word-front-sentence chinese" lang="zh">
               {highlightWord(card.example.hanzi, card.word)}
             </p>

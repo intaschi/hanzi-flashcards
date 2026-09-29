@@ -117,11 +117,13 @@ body {
    "cover" centered on a tall narrow phone screen crops down to mostly
    that empty middle, and even "top center" still centers horizontally
    between the two corners, missing both. Anchoring to the blossom
-   branch specifically (top left) keeps at least one recognizable
-   feature in frame instead of none. */
+   branch specifically (left) keeps a recognizable feature in frame.
+   Shifted down from the very top edge (0% -> 18%) so the branch's own
+   densest ink doesn't land directly behind the character strip's text
+   right at the top of the review view. */
 @media (max-width: 700px) {
   .side-accent {
-    background-position: top left;
+    background-position: left 18%;
   }
 }
 

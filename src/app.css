@@ -745,13 +745,17 @@
    side in the swipeable pager. */
 
 .card-controls .audio-btn {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: var(--accent);
-  border: none;
-  color: #fdf6ec;
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  color: var(--accent);
   box-shadow: var(--shadow);
+}
+
+.card-controls .audio-btn:hover {
+  border-color: var(--accent-border);
 }
 
 .card-controls .audio-btn:disabled {
@@ -1413,8 +1417,9 @@
   font-size: 13px;
   font-weight: 600;
   padding: 11px 4px;
-  border: none;
+  border: 1px solid var(--border);
   border-radius: 10px;
+  background: none;
   cursor: pointer;
   transition: filter 0.15s ease, opacity 0.15s ease;
 }
@@ -1434,22 +1439,18 @@
 }
 
 .grade-again {
-  background: var(--accent-bg);
   color: var(--accent);
 }
 
 .grade-hard {
-  background: var(--gold-bg);
   color: var(--gold);
 }
 
 .grade-good {
-  background: var(--porcelain-bg);
   color: var(--porcelain);
 }
 
 .grade-easy {
-  background: var(--jade-bg);
   color: var(--jade);
 }
 

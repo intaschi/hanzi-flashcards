@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks'
 import { BackupPanel } from './BackupPanel'
 import type { Settings, SrsState } from '../state/types'
 
-type SettingsTab = 'hanzi' | 'words' | 'backup'
+type SettingsTab = 'words' | 'backup'
 
 interface DeckFieldsProps {
   label: string
@@ -10,9 +10,6 @@ interface DeckFieldsProps {
   onChange: (settings: Settings) => void
 }
 
-// Each deck (Hanzi, Words) keeps its own independent SrsState — including its
-// own daily new-card cap — so this renders once per deck rather than once
-// globally, the way the settings used to (silently) only ever affect Hanzi.
 function DeckSettingsFields({ label, settings, onChange }: DeckFieldsProps) {
   function updateField(field: keyof Settings, raw: string) {
     const value = Number(raw)
@@ -69,30 +66,21 @@ function DeckSettingsFields({ label, settings, onChange }: DeckFieldsProps) {
 }
 
 interface Props {
-  hanziSettings: Settings
-  onHanziChange: (settings: Settings) => void
   wordsSettings: Settings
   onWordsChange: (settings: Settings) => void
   srsState: SrsState
   onImported: (newState: SrsState) => void
 }
 
-export function SettingsPanel({
-  hanziSettings,
-  onHanziChange,
-  wordsSettings,
-  onWordsChange,
-  srsState,
-  onImported,
-}: Props) {
-  const [activeTab, setActiveTab] = useState<SettingsTab>('hanzi')
+export function SettingsPanel({ wordsSettings, onWordsChange, srsState, onImported }: Props) {
+  const [activeTab, setActiveTab] = useState<SettingsTab>('words')
 
   return (
     <div class="settings-panel">
       <h2>Settings</h2>
 
       <div class="card-tabs" role="tablist">
-        {(['hanzi', 'words', 'backup'] as const).map((tab) => (
+        {(['words', 'backup'] as const).map((tab) => (
           <button
             key={tab}
             type="button"
@@ -101,14 +89,11 @@ export function SettingsPanel({
             class={`card-tab-btn ${activeTab === tab ? 'active' : ''}`}
             onClick={() => setActiveTab(tab)}
           >
-            {tab === 'hanzi' ? 'Hanzi' : tab === 'words' ? 'Words' : 'Backup'}
+            {tab === 'words' ? 'Words' : 'Backup'}
           </button>
         ))}
       </div>
 
-      {activeTab === 'hanzi' && (
-        <DeckSettingsFields label="Hanzi" settings={hanziSettings} onChange={onHanziChange} />
-      )}
       {activeTab === 'words' && (
         <DeckSettingsFields label="Words" settings={wordsSettings} onChange={onWordsChange} />
       )}

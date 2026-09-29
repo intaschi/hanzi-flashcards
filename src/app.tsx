@@ -5,19 +5,22 @@ import { loadAllWordCards } from './state/wordCardData'
 import { loadState, WORD_STORAGE_KEY } from './state/srs'
 import { useReviewDeck } from './state/useReviewDeck'
 import type { Card, SrsState, WordCard } from './state/types'
-import { CardView } from './components/CardView'
 import { WordCardView } from './components/WordCardView'
 import { BrowsePanel } from './components/BrowsePanel'
 import { SettingsPanel } from './components/SettingsPanel'
 import { CharacterStrip } from './components/CharacterStrip'
 import { CharacterSpotlight } from './components/CharacterSpotlight'
+import { ProgressStats } from './components/ProgressStats'
 import { AboutPage } from './components/AboutPage'
 import { AppNavBar } from './components/AppNavBar'
 import { initTheme } from './lib/theme'
 import './app.css'
 
-export type View = 'review-hanzi' | 'review-words' | 'browse' | 'settings' | 'about'
+export type View = 'review-words' | 'browse' | 'settings' | 'about'
 
+// Still loaded even with the Hanzi tab gone — word cards' per-character
+// components reuse this deck's cards for meanings lookups (see
+// WordCharacterRef's doc comment), so the data stays needed internally.
 const hanziSignals = {
   cards: signal<Card[]>([]),
   srs: signal<SrsState>(loadState()),
@@ -34,7 +37,7 @@ const wordSignals = {
   ready: signal(false),
 }
 
-const viewSignal = signal<View>('review-hanzi')
+const viewSignal = signal<View>('review-words')
 
 initTheme()
 
@@ -44,7 +47,7 @@ export function App() {
 
   const view = viewSignal.value
 
-  if (view === 'review-hanzi' && !hanzi.ready) {
+  if (!words.ready) {
     return (
       <div class="loading">
         <span class="seal loading-seal">字</span>
@@ -52,15 +55,10 @@ export function App() {
     )
   }
 
-  const upcomingChars = hanzi.queue
-    .slice(0, 6)
-    .map((id) => hanzi.cards.find((c) => c.id === id)?.character ?? '')
-  const hanziProgressPct = hanzi.totalCount > 0 ? (hanzi.introducedCount / hanzi.totalCount) * 100 : 0
-
   const upcomingWords = words.queue
     .slice(0, 6)
     .map((id) => words.cards.find((c) => c.id === id)?.word ?? '')
-  const wordsProgressPct = words.totalCount > 0 ? (words.introducedCount / words.totalCount) * 100 : 0
+  const progressPct = words.totalCount > 0 ? (words.introducedCount / words.totalCount) * 100 : 0
 
   // Word cards' per-character components are pulled from the character
   // deck's own cards (see WordCharacterRef's doc comment) — reusing that
@@ -71,17 +69,38 @@ export function App() {
     [hanzi.cards],
   )
 
-  const progressPct = view === 'review-words' ? wordsProgressPct : hanziProgressPct
+  // A card only enters srs.cards once it's been graded at least once (see
+  // gradeCard in state/srs.ts) — 'review' means it graduated to a stable
+  // spaced-repetition interval ("learned"), 'learning'/'relearning' means
+  // it's still being actively drilled, and anything never graded at all
+  // isn't in the map yet, hence the subtraction rather than a third state.
+  const wordProgressCounts = useMemo(() => {
+    let learned = 0
+    let inProgress = 0
+    for (const progress of Object.values(words.srs.cards)) {
+      if (progress.state === 'review') learned++
+      else inProgress++
+    }
+    const remaining = Math.max(0, words.totalCount - learned - inProgress)
+    return { learned, inProgress, remaining }
+  }, [words.srs.cards, words.totalCount])
 
-  const isReviewView = view === 'review-hanzi' || view === 'review-words'
+  const isReviewView = view === 'review-words'
 
   return (
     <div class="app">
-      {/* Only shown on the review views — the card's opaque background
+      {/* Only shown on the review view — the card's opaque background
           covers it there, but text-heavy views (Browse, About) have no
           such backing and the bold ink would sit directly under body
           text, hurting legibility rather than just providing atmosphere. */}
       {isReviewView && <div class="side-accent" aria-hidden="true" />}
+      {isReviewView && (
+        <ProgressStats
+          learned={wordProgressCounts.learned}
+          inProgress={wordProgressCounts.inProgress}
+          remaining={wordProgressCounts.remaining}
+        />
+      )}
 
       <div class="top-progress-bar">
         <div class="top-progress-fill" style={{ width: `${progressPct}%` }} />
@@ -90,39 +109,10 @@ export function App() {
       <div class="app-frame">
         <div class="app-content">
           <main class="app-main">
-            {view === 'review-hanzi' && (
-              <div class="review-view">
-                <CharacterStrip characters={upcomingChars} />
-                {hanzi.currentCard ? (
-                  <CardView
-                    card={hanzi.currentCard}
-                    revealed={hanzi.revealed}
-                    onToggleReveal={hanzi.toggleReveal}
-                    onGrade={hanzi.handleGrade}
-                    introducedCount={hanzi.introducedCount}
-                    totalCount={hanzi.totalCount}
-                  />
-                ) : (
-                  <div class="session-complete">
-                    <CharacterSpotlight character="好" pinyin="hǎo" />
-                    <h2>All done for now</h2>
-                    <p>
-                      No cards due right now. Come back later, or check Settings to adjust your
-                      daily new-card limit.
-                    </p>
-                  </div>
-                )}
-              </div>
-            )}
-
             {view === 'review-words' && (
               <div class="review-view">
                 <CharacterStrip characters={upcomingWords} />
-                {!words.ready ? (
-                  <div class="session-complete">
-                    <p>Loading words&hellip;</p>
-                  </div>
-                ) : words.currentCard ? (
+                {words.currentCard ? (
                   <WordCardView
                     card={words.currentCard}
                     revealed={words.revealed}
@@ -145,18 +135,14 @@ export function App() {
               </div>
             )}
 
-            {view === 'browse' && (
-              <BrowsePanel cards={hanzi.cards} srsState={hanzi.srs} />
-            )}
+            {view === 'browse' && <BrowsePanel cards={words.cards} srsState={words.srs} />}
 
             {view === 'settings' && (
               <SettingsPanel
-                hanziSettings={hanzi.srs.settings}
-                onHanziChange={(settings) => hanzi.persist({ ...hanzi.srs, settings })}
                 wordsSettings={words.srs.settings}
                 onWordsChange={(settings) => words.persist({ ...words.srs, settings })}
-                srsState={hanzi.srs}
-                onImported={hanzi.handleImported}
+                srsState={words.srs}
+                onImported={words.handleImported}
               />
             )}
 

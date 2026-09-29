@@ -331,6 +331,62 @@
   text-align: center;
 }
 
+/* Learning-progress cards — occupy the same left-edge real estate as
+   .side-accent's decorative bamboo art (index.css), just above it in
+   z-order. Hidden below the width where the card itself already fills the
+   viewport and there's no real "left side" to put anything in. */
+.progress-stats {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .progress-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: fixed;
+    left: 28px;
+    top: 96px;
+    width: 168px;
+    z-index: 1;
+  }
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.stat-value {
+  font-family: var(--heading);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.stat-learned .stat-value {
+  color: var(--jade);
+}
+
+.stat-in-progress .stat-value {
+  color: var(--gold);
+}
+
+.stat-remaining .stat-value {
+  color: var(--porcelain);
+}
+
 /* Character strip — upcoming characters in the queue, for context */
 
 .char-strip-wrap {

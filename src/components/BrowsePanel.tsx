@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'preact/hooks'
-import type { Card, SrsState } from '../state/types'
+import type { SrsState, WordCard } from '../state/types'
 
 interface Props {
-  cards: Card[]
+  cards: WordCard[]
   srsState: SrsState
 }
 
@@ -14,7 +14,7 @@ export function BrowsePanel({ cards, srsState }: Props) {
     if (!q) return cards
     return cards.filter(
       (c) =>
-        c.character.includes(q) ||
+        c.word.includes(q) ||
         c.pinyin.toLowerCase().includes(q) ||
         c.meanings.some((m) => m.toLowerCase().includes(q)),
     )
@@ -23,7 +23,7 @@ export function BrowsePanel({ cards, srsState }: Props) {
   return (
     <div class="browse-panel">
       <div class="browse-head">
-        <h2>All characters</h2>
+        <h2>All words</h2>
         <p class="browse-count">
           {filtered.length.toLocaleString()} of {cards.length.toLocaleString()}
         </p>
@@ -32,7 +32,7 @@ export function BrowsePanel({ cards, srsState }: Props) {
       <input
         type="search"
         class="browse-search"
-        placeholder="Search by character, pinyin, or meaning…"
+        placeholder="Search by word, pinyin, or meaning…"
         value={query}
         onInput={(e) => setQuery((e.target as HTMLInputElement).value)}
       />
@@ -43,7 +43,7 @@ export function BrowsePanel({ cards, srsState }: Props) {
           return (
             <div class={`browse-row ${learned ? 'is-learned' : ''}`} key={c.id}>
               <span class="browse-rank">#{c.frequencyRank}</span>
-              <span class="browse-char chinese">{c.character}</span>
+              <span class="browse-char chinese">{c.word}</span>
               <span class="browse-pinyin">{c.pinyin}</span>
               <span class="browse-meanings">{c.meanings.join(' · ')}</span>
               {learned && <span class="browse-badge">learned</span>}
@@ -51,7 +51,7 @@ export function BrowsePanel({ cards, srsState }: Props) {
           )
         })}
 
-        {filtered.length === 0 && <p class="browse-empty">No characters match "{query}".</p>}
+        {filtered.length === 0 && <p class="browse-empty">No words match "{query}".</p>}
       </div>
     </div>
   )

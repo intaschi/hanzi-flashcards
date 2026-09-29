@@ -1430,10 +1430,11 @@
    treatment as the stat squares on the left so it doesn't look like a
    bare fragment floating on its own. */
 .right-sidebar .settings-panel {
-  background: transparent;
-  border: 1px solid var(--text-h);
+  background: var(--bg-paper);
+  border: 1px solid transparent;
   border-radius: 12px;
   padding: 16px;
+  box-shadow: var(--shadow);
   overflow-y: auto;
 }
 

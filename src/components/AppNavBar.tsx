@@ -21,7 +21,7 @@ export function AppNavBar({ activeView, onNav }: Props) {
           class={activeView === 'browse' ? 'active' : ''}
           onClick={() => onNav('browse')}
         >
-          Browse
+          Word list
         </button>
         {/* Hidden at desktop widths (see .nav-settings-only in app.css) —
             Settings lives in the left sidebar there instead, alongside

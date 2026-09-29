@@ -29,29 +29,34 @@ export function BrowsePanel({ cards, srsState }: Props) {
         </p>
       </div>
 
-      <input
-        type="search"
-        class="browse-search"
-        placeholder="Search by word, pinyin, or meaning…"
-        value={query}
-        onInput={(e) => setQuery((e.target as HTMLInputElement).value)}
-      />
+      {/* A solid card behind the search box and list — against the
+          full-bleed background art, plain text/rows had nowhere near
+          enough contrast to stay legible. */}
+      <div class="browse-content">
+        <input
+          type="search"
+          class="browse-search"
+          placeholder="Search by word, pinyin, or meaning…"
+          value={query}
+          onInput={(e) => setQuery((e.target as HTMLInputElement).value)}
+        />
 
-      <div class="browse-list">
-        {filtered.map((c) => {
-          const learned = Boolean(srsState.cards[c.id])
-          return (
-            <div class={`browse-row ${learned ? 'is-learned' : ''}`} key={c.id}>
-              <span class="browse-rank">#{c.frequencyRank}</span>
-              <span class="browse-char chinese">{c.word}</span>
-              <span class="browse-pinyin">{c.pinyin}</span>
-              <span class="browse-meanings">{c.meanings.join(' · ')}</span>
-              {learned && <span class="browse-badge">learned</span>}
-            </div>
-          )
-        })}
+        <div class="browse-list">
+          {filtered.map((c) => {
+            const learned = Boolean(srsState.cards[c.id])
+            return (
+              <div class={`browse-row ${learned ? 'is-learned' : ''}`} key={c.id}>
+                <span class="browse-rank">#{c.frequencyRank}</span>
+                <span class="browse-char chinese">{c.word}</span>
+                <span class="browse-pinyin">{c.pinyin}</span>
+                <span class="browse-meanings">{c.meanings.join(' · ')}</span>
+                {learned && <span class="browse-badge">learned</span>}
+              </div>
+            )
+          })}
 
-        {filtered.length === 0 && <p class="browse-empty">No words match "{query}".</p>}
+          {filtered.length === 0 && <p class="browse-empty">No words match "{query}".</p>}
+        </div>
       </div>
     </div>
   )

@@ -17,6 +17,15 @@
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  /* .side-accent is position:fixed with z-index:0 — without a z-index
+     of its own, this plain in-flow content would actually paint BELOW
+     that positioned sibling (a CSS stacking quirk: non-positioned boxes
+     paint below any positioned one, z-index:0 or not, regardless of DOM
+     order), invisibly hiding text anywhere the art wasn't already
+     masked to transparent. Harmless while .side-accent was a narrow
+     masked strip; became visible everywhere once it went full-bleed. */
+  position: relative;
+  z-index: 1;
 }
 
 /* The app never scrolls as a whole page — header/nav bars stay fixed, and
@@ -1278,17 +1287,6 @@
   color: var(--text-h);
 }
 
-.component-ai-badge {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 3px 7px;
-  border-radius: 999px;
-  background: var(--code-bg);
-  color: var(--text);
-  opacity: 0.7;
-}
 
 .component-role {
   font-size: 11px;
@@ -1438,20 +1436,11 @@
   outline-offset: 2px;
 }
 
-.grade-again {
-  color: var(--accent);
-}
-
-.grade-hard {
-  color: var(--gold);
-}
-
-.grade-good {
-  color: var(--porcelain);
-}
-
+.grade-again,
+.grade-hard,
+.grade-good,
 .grade-easy {
-  color: var(--jade);
+  color: var(--text-h);
 }
 
 .session-complete {
@@ -1611,269 +1600,102 @@
   padding: 10px 12px;
 }
 
-/* About page — a masthead + one panel + a footer colophon. Deliberately
-   monochrome apart from the hero glyph and its bloom: one panel holding a
-   single headline stat and a plain feature list reads as calm and modern,
-   where four differently-tinted deck/feature cards read as a color test
-   grid. Scales up with the viewport instead of staying pinned to a phone-
-   width column — this is the one page in the app with nothing pinned
-   beside it, so it can use the room. Credits close the page as a proper
-   colophon — a seal glyph marks the CC-CEDICT/hanziDB/etc. attribution as
-   a deliberate footer, not filler. */
-
-/* Same centering trick as .review-view (see its comment): auto margins on
-   the first/last child center the group when the viewport has slack, but
-   collapse to 0 — top-aligned, scrollable — when it doesn't. Plain
-   justify-content:center would instead clip the top content on short
-   viewports, which is exactly what broke here on mobile before this. */
+/* About page — just the banner image, full-bleed, plus a small hover
+   icon in the corner for the CC-CEDICT/hanziDB/etc. attribution their
+   licenses require. Everything that used to be hand-coded page content
+   (hero, personal note, stat panel) is now baked into the image itself. */
+/* Breaks out of .app-main's own padding/max-width entirely — fixed to
+   the actual viewport (like .side-accent) rather than sized within the
+   normal content column, so the image can fill the whole screen edge to
+   edge instead of sitting inset inside the page's usual content gutter. */
 .about-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 28px;
-  text-align: center;
-  padding: 40px 0 24px;
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+}
+
+.about-hero-test-image {
   width: 100%;
-  max-width: 640px;
-  margin: 0 auto;
+  height: 100%;
+  object-fit: cover;
 }
 
-.about-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-}
-
-/* The brush glyph sits on a soft bloom of the accent color — a legibility-
-   safe, CSS-only stand-in for the ink-wash texture used on the review
-   views. No image and no risk to text contrast: it's a radial fade behind
-   an already-large glyph, over otherwise empty space. */
-.about-hero-glyph-wrap {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  display: flex;
+.about-credits-tip {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-}
-
-.about-hero-glyph-wrap::before {
-  content: '';
-  position: absolute;
-  inset: 0;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
-  background: radial-gradient(circle, var(--accent-bg) 0%, transparent 70%);
-}
-
-.about-hero-glyph {
-  position: relative;
-  font-family: var(--brush), var(--chinese);
-  font-size: 76px;
-  line-height: 1;
-  color: var(--accent);
-}
-
-.about-hero-title {
-  margin: 6px 0 0;
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
-  color: var(--text-h);
-}
-
-.about-hero-title-accent {
-  color: var(--accent);
-}
-
-/* A short, personal note in the maker's own voice — set apart from the
-   neutral stat panel below it with a tinted background and a left rule,
-   like a margin note, rather than reading as just another paragraph of
-   body copy. */
-.about-note {
-  margin: 0;
-  max-width: 480px;
-  padding: 14px 20px;
-  border-left: 3px solid var(--accent);
-  background: var(--accent-bg);
-  border-radius: 0 10px 10px 0;
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: var(--text-h);
-  text-align: left;
-}
-
-/* Bento grid — one large stat tile plus three smaller feature tiles,
-   instead of a stat line sitting above a flat, uniform row. Varying tile
-   size gives the headline stat the visual priority it actually has. */
-.about-bento {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.about-tile {
   background: var(--bg-paper);
   border: 1px solid var(--border);
-  border-radius: 16px;
   box-shadow: var(--shadow);
-  box-sizing: border-box;
-}
-
-.about-tile-stat {
-  grid-column: 1 / -1;
-  padding: 26px 30px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  text-align: left;
-}
-
-.about-tile-glyph {
-  font-family: var(--chinese);
-  font-size: 34px;
-  line-height: 1;
-  color: var(--accent);
-  opacity: 0.5;
-  flex: none;
-}
-
-.about-headline-stat {
-  margin: 0;
-  font-size: 18px;
   color: var(--text);
+  font-size: 14px;
+  cursor: help;
 }
 
-.about-headline-stat strong {
-  font-family: var(--heading);
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.about-tile-feature {
-  padding: 20px 12px;
+.about-credits-tip-bubble {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: var(--text-h);
+  box-shadow: var(--shadow);
+  text-align: left;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
 }
 
-@media (max-width: 560px) {
-  .about-bento {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .about-tile-stat {
-    grid-column: 1 / -1;
-  }
-
-  /* .side-accent has a 240px floor regardless of viewport width, so on a
-     phone it eats a much bigger share of the screen than on desktop —
-     the hero shrinks back down here so its text doesn't run into it. */
-  .about-hero-glyph-wrap {
-    width: 84px;
-    height: 84px;
-  }
-
-  .about-hero-glyph {
-    font-size: 54px;
-  }
-
-  .about-hero-title {
-    font-size: 22px;
-  }
-
-  .about-note {
-    font-size: 13.5px;
-    padding: 12px 16px;
-  }
+.about-credits-tip:hover .about-credits-tip-bubble,
+.about-credits-tip:focus-within .about-credits-tip-bubble {
+  opacity: 1;
+  visibility: visible;
 }
 
-/* The badge is a small "paper token" — same recipe as the flip/audio
-   buttons on the review card (paper surface, hairline border, drop
-   shadow) — so it reads as part of the app's own button language rather
-   than a one-off decoration. */
-.about-feature-badge {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--chinese);
-  font-size: 17px;
-  line-height: 1;
-  color: var(--accent);
-}
-
-.about-feature-label {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-h);
-  opacity: 0.75;
-  line-height: 1.3;
-}
-
-
-.about-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  padding-top: 20px;
-  border-top: 1px solid var(--border);
-}
-
-.about-credits-head {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.about-credits-seal {
-  width: 20px;
-  height: 20px;
+.about-credits-tip-kicker {
   font-size: 10px;
-}
-
-.about-credits-kicker {
-  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--text);
-  opacity: 0.5;
+  color: var(--bg-paper);
+  opacity: 0.6;
 }
 
-.about-credits {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
-
-.about-credits a {
+.about-credits-tip-bubble a {
   font-size: 13px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  color: var(--text);
+  color: var(--bg-paper);
 }
 
-.about-credits a:hover {
-  border-color: var(--accent-border);
-  color: var(--accent);
-  text-decoration: none;
+.about-credits-tip-bubble a:hover {
+  text-decoration: underline;
 }
 
 
 /* Browse panel — searchable list of every character */
 
 .browse-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.browse-content {
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 16px;

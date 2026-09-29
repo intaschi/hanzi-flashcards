@@ -4,6 +4,7 @@
      and the seal mark carry the identity. */
   --bg: #fafaf9;
   --bg-paper: #ffffff;
+  --bg-wash: rgba(250, 250, 249, 0.55);
   --text: #6b6558;
   --text-h: #17140f;
   --border: #e8e4da;
@@ -49,6 +50,7 @@
   :root:not([data-theme='light']) {
     --bg: #14120f;
     --bg-paper: #1c1a16;
+    --bg-wash: rgba(20, 18, 15, 0.55);
     --text: #8f8a7d;
     --text-h: #f1ede3;
     --border: #322c22;
@@ -69,6 +71,7 @@
 :root[data-theme='dark'] {
   --bg: #14120f;
   --bg-paper: #1c1a16;
+  --bg-wash: rgba(20, 18, 15, 0.55);
   --text: #8f8a7d;
   --text-h: #f1ede3;
   --border: #322c22;
@@ -111,34 +114,30 @@ body {
    blends it into the page background before it reaches that zone, so the
    box still touches the true bottom edge, it just visually dissolves into
    the page first. */
+/* TEST: full-bleed instead of a right-edge accent strip — covers the
+   whole viewport, with a translucent wash (::before) over the top so
+   body text and the plain-background nav/header stay legible instead
+   of sitting directly on the art at full strength. */
 .side-accent {
   position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: clamp(240px, 32vw, 420px);
+  inset: 0;
   pointer-events: none;
   z-index: 0;
-  transform: scaleX(-1);
   background-image: url('./assets/ink-landscape-test.png');
   background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: auto 100%;
-  -webkit-mask-image: linear-gradient(to right, black 45%, transparent 100%);
-  mask-image: linear-gradient(to right, black 45%, transparent 100%);
+  background-position: center;
+  background-size: cover;
 }
 
-/* Only widen out on screens with room to spare — at phone width,
-   clamp's own 320px floor was wider than the viewport itself, pushing
-   most of the art off-screen instead of showing more of it. Height
-   stays locked to 100% (no change from the base rule) — a shorter
-   fraction left an empty gap above the art instead of showing more of
-   it; a wider box at full height reveals more of the same image
-   without one. */
-@media (min-width: 700px) {
-  .side-accent {
-    width: clamp(320px, 42vw, 560px);
-  }
+/* Radial rather than flat — strongest behind the centered card content
+   (where text actually needs the contrast), thinning out toward the
+   edges so the art keeps more of its own color right at the borders
+   instead of being muted uniformly everywhere. */
+.side-accent::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, var(--bg-wash) 35%, transparent 100%);
 }
 
 .side-accent::after {

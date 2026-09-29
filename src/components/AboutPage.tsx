@@ -30,42 +30,40 @@ export function AboutPage() {
         you always learn the word you're most likely to actually need next.
       </p>
 
-      <div class="about-panel">
-        <p class="about-headline-stat">
-          <strong>5,000</strong> words, ranked by real-world frequency
-        </p>
+      {/* A bento grid — one large tile carrying the headline stat, four
+          smaller tiles for the supporting features — rather than a stat
+          line + a flat uniform row. Varying tile weight gives the stat
+          the visual priority it actually has, instead of every fact on
+          the page reading as equally important. */}
+      <div class="about-bento">
+        <div class="about-tile about-tile-stat">
+          <span class="about-tile-glyph chinese" aria-hidden="true">
+            频
+          </span>
+          <p class="about-headline-stat">
+            <strong>5,000</strong> words, ranked by real-world frequency
+          </p>
+        </div>
 
-        <div class="about-panel-divider" />
-
-        <div class="about-features">
-          <div class="about-feature">
-            <span class="about-feature-badge chinese" aria-hidden="true">
-              頻
-            </span>
-            <span class="about-feature-label">Real frequency data</span>
-          </div>
-          <div class="about-feature">
-            <span class="about-feature-badge chinese" aria-hidden="true">
-              筆
-            </span>
-            <span class="about-feature-label">Stroke order</span>
-          </div>
-          <div class="about-feature">
-            <span class="about-feature-badge chinese" aria-hidden="true">
-              音
-            </span>
-            <span class="about-feature-label">Audio</span>
-          </div>
-          <div class="about-feature">
-            <span class="about-feature-badge chinese" aria-hidden="true">
-              憶
-            </span>
-            <span class="about-feature-label">Spaced repetition</span>
-          </div>
+        <div class="about-tile about-tile-feature">
+          <span class="about-feature-badge chinese" aria-hidden="true">
+            筆
+          </span>
+          <span class="about-feature-label">Stroke order</span>
+        </div>
+        <div class="about-tile about-tile-feature">
+          <span class="about-feature-badge chinese" aria-hidden="true">
+            音
+          </span>
+          <span class="about-feature-label">Audio</span>
+        </div>
+        <div class="about-tile about-tile-feature">
+          <span class="about-feature-badge chinese" aria-hidden="true">
+            憶
+          </span>
+          <span class="about-feature-label">Spaced repetition</span>
         </div>
       </div>
-
-      <p class="about-privacy">Your progress stays on this device — nothing is sent anywhere.</p>
 
       <div class="about-footer">
         <div class="about-credits-head">

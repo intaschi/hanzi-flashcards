@@ -228,7 +228,15 @@ export function WordCardView({
                                 <div class="components word-char-components">
                                   {wc.components.map((c, j) => (
                                     <div class="component" key={j}>
-                                      <span class="component-char">{c.char ?? '—'}</span>
+                                      {c.char ? (
+                                        <span class="component-char">{c.char}</span>
+                                      ) : (
+                                        // No single sub-character breakdown exists for this
+                                        // one (source: llm-fallback) — a placeholder dash read
+                                        // as a real, blank component instead of signaling that
+                                        // the etymology note itself is AI-written.
+                                        <span class="component-ai-badge">AI-generated</span>
+                                      )}
                                       <span class={`component-role role-${c.role}`}>{c.role}</span>
                                       <p class="component-note">{c.note}</p>
                                     </div>

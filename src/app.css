@@ -879,8 +879,14 @@
 
 .sentence-translation-hanzi {
   margin: 0 0 8px;
-  font-size: 18px;
+  font-size: 22px;
   color: var(--text-h);
+}
+
+@media (min-width: 700px) {
+  .sentence-translation-hanzi {
+    font-size: 26px;
+  }
 }
 
 /* Word deck front face — the word's own example sentence (no HanziWriter;
@@ -1268,6 +1274,18 @@
   color: var(--text-h);
 }
 
+.component-ai-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: var(--code-bg);
+  color: var(--text);
+  opacity: 0.7;
+}
+
 .component-role {
   font-size: 11px;
   text-transform: uppercase;
@@ -1603,19 +1621,10 @@
   align-items: center;
   gap: 28px;
   text-align: center;
-  padding: 0;
-  height: 100%;
+  padding: 40px 0 24px;
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
-}
-
-.about-page > :first-child {
-  margin-top: auto;
-}
-
-.about-page > :last-child {
-  margin-bottom: auto;
 }
 
 .about-hero {
@@ -1666,14 +1675,21 @@
   color: var(--accent);
 }
 
-.about-hero-tagline {
-  margin: 6px 0 0;
-  font-size: 16px;
-  font-weight: 400;
-  color: var(--text);
-  opacity: 0.85;
-  max-width: 380px;
-  text-wrap: balance;
+/* A short, personal note in the maker's own voice — set apart from the
+   neutral stat panel below it with a tinted background and a left rule,
+   like a margin note, rather than reading as just another paragraph of
+   body copy. */
+.about-note {
+  margin: 0;
+  max-width: 480px;
+  padding: 14px 20px;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-bg);
+  border-radius: 0 10px 10px 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-h);
+  text-align: left;
 }
 
 /* One shared panel for the headline stat + features — reads as a single
@@ -1736,9 +1752,9 @@
     font-size: 22px;
   }
 
-  .about-hero-tagline {
-    font-size: 14px;
-    max-width: 260px;
+  .about-note {
+    font-size: 13.5px;
+    padding: 12px 16px;
   }
 }
 
@@ -1836,13 +1852,6 @@
   text-decoration: none;
 }
 
-.about-fine-print {
-  margin: 0;
-  font-size: 11px;
-  color: var(--text);
-  opacity: 0.5;
-  max-width: 420px;
-}
 
 /* Browse panel — searchable list of every character */
 

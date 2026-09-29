@@ -21,8 +21,14 @@ export function AboutPage() {
         <h1 class="about-hero-title">
           <span class="about-hero-title-accent">Hanzi</span> Flashcards
         </h1>
-        <p class="about-hero-tagline">Mandarin, in the order you'll actually need it.</p>
       </div>
+
+      <p class="about-note">
+        I built this for myself, to learn Hanzi and the most useful Mandarin words in an
+        efficient order — and I'm sharing it in case it helps you too. It's free for anyone to
+        use. The deck covers the 5,000 most frequent words, presented in order of frequency, so
+        you always learn the word you're most likely to actually need next.
+      </p>
 
       <div class="about-panel">
         <p class="about-headline-stat">
@@ -89,9 +95,6 @@ export function AboutPage() {
             hanzi-writer
           </a>
         </div>
-        <p class="about-fine-print">
-          Example sentences and facts are AI-generated and marked as such in each card's data.
-        </p>
       </div>
     </div>
   )

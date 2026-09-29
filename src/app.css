@@ -378,6 +378,10 @@
        sized and close to the card, rather than a fixed width that's only
        correctly proportioned at one specific viewport width. */
     width: calc(50vw - 310px - 24px - 32px);
+    /* The grid and chart below flex to fill this box exactly (see their
+       own rules) rather than each claiming a fixed size that may add up
+       to more than it — so this never needs to scroll. */
+    overflow: hidden;
   }
 
   .right-sidebar {
@@ -393,17 +397,21 @@
   }
 }
 
-/* The 2x2 grid of stat squares — a plain grid now, not itself positioned;
-   .left-sidebar (above) handles placement for the whole column. */
+/* The 2x2 grid of stat squares — .left-sidebar (above) handles placement
+   for the whole column; this and .daily-chart split its height between
+   them via flex instead of each sizing to its own content, so together
+   they always fill it exactly with no scroll. */
 .stat-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  flex: 3;
+  min-height: 0;
   gap: 12px;
 }
 
 .stat-card {
   position: relative;
-  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -430,7 +438,7 @@
 }
 
 .stat-streak .stat-value {
-  color: var(--accent);
+  color: var(--text-h);
 }
 
 .stat-learned .stat-value {
@@ -438,18 +446,19 @@
 }
 
 .stat-in-progress .stat-value {
-  color: var(--gold);
+  color: var(--text-h);
 }
 
 .stat-remaining .stat-value {
-  color: var(--porcelain);
+  color: var(--text-h);
 }
 
 /* Last-7-days bar chart, sitting below the 2x2 grid in the same left
    sidebar. Not a square like the 4 stat cards — a wide strip instead, the
    natural shape for 7 side-by-side bars. */
 .daily-chart {
-  aspect-ratio: auto;
+  flex: 2;
+  min-height: 0;
   align-items: stretch;
   justify-content: flex-start;
   text-align: left;
@@ -460,7 +469,8 @@
   display: flex;
   align-items: flex-end;
   gap: 5px;
-  height: 64px;
+  flex: 1;
+  min-height: 0;
 }
 
 .daily-chart-col {
@@ -1461,14 +1471,9 @@
   margin: 0;
 }
 
-/* Grid rather than flex-wrap so the two fields always stay side by side —
-   at the sidebar's narrowest widths there isn't enough room for a
-   min-width to hold without wrapping to a second row, but a 2-column
-   grid just shrinks each column instead, letting the label text itself
-   wrap if it has to. */
 .settings-deck-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
 }
 
@@ -1480,12 +1485,6 @@
   min-width: 0;
 }
 
-.settings-field-label {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
 .settings-field input {
   font: inherit;
   padding: 8px 10px;
@@ -1494,6 +1493,7 @@
   background: var(--bg-paper);
   color: var(--text-h);
   width: 100%;
+  box-sizing: border-box;
 }
 
 .help-tip {

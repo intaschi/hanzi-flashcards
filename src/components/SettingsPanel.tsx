@@ -1,5 +1,4 @@
 import { BackupPanel } from './BackupPanel'
-import { HelpTip } from './HelpTip'
 import type { Settings, SrsState } from '../state/types'
 
 interface DeckFieldsProps {
@@ -24,20 +23,6 @@ function DeckSettingsFields({ settings, onChange }: DeckFieldsProps) {
           max={100}
           value={settings.newCardsPerDay}
           onInput={(e) => updateField('newCardsPerDay', (e.target as HTMLInputElement).value)}
-        />
-      </label>
-
-      <label class="settings-field">
-        <span class="settings-field-label">
-          New day starts at
-          <HelpTip text="The hour (0–23) when today's reviews roll over into tomorrow's. Reviewing at 1am with this set to 4 still counts as 'yesterday' — pick a later hour if you often study past midnight." />
-        </span>
-        <input
-          type="number"
-          min={0}
-          max={23}
-          value={settings.dayRolloverHour}
-          onInput={(e) => updateField('dayRolloverHour', (e.target as HTMLInputElement).value)}
         />
       </label>
     </div>

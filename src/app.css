@@ -367,7 +367,11 @@
 
   .left-sidebar {
     left: 32px;
-    bottom: 20px;
+    /* Capped like .right-sidebar's height instead of stretched to the
+       viewport bottom (via a bottom offset) — that stretch is what made
+       this column taller than the main card whenever the card's own
+       content was shorter than the full column height. */
+    height: min(52vh, 700px);
     /* .card-scene centers at max-width 620px, so its left edge is always
        50vw - 310px — deriving the stats sidebar's width from that same
        formula (leaving a fixed 24px gap before it) keeps it consistently

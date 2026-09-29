@@ -104,6 +104,7 @@ export function App() {
             learned={wordProgressCounts.learned}
             inProgress={wordProgressCounts.inProgress}
             remaining={wordProgressCounts.remaining}
+            dueToday={words.queue.length}
             srsState={words.srs}
           />
         </aside>
@@ -134,7 +135,7 @@ export function App() {
           <main class="app-main">
             {view === 'review-words' && (
               <div class="review-view">
-                <CharacterStrip characters={upcomingWords} />
+                <CharacterStrip characters={upcomingWords} totalInQueue={words.queue.length} />
                 {words.currentCard ? (
                   <WordCardView
                     card={words.currentCard}

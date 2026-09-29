@@ -49,28 +49,30 @@ export function BackupPanel({ state, onImported }: Props) {
 
   return (
     <div class="backup-panel">
-      <h3>
-        Backup & restore
-        <HelpTip text="Progress is saved automatically in this browser — export a backup occasionally as insurance, or to move it to another device." />
-      </h3>
+      <div class="settings-card-head">
+        <h3>
+          Backup
+          <HelpTip text="Progress is saved automatically in this browser — export a backup occasionally as insurance, or to move it to another device." />
+        </h3>
 
-      <div class="backup-actions">
-        <button type="button" onClick={handleExport}>
-          Export
-        </button>
-        <button type="button" onClick={() => fileInputRef.current?.click()}>
-          Import
-        </button>
-        <input
-          ref={fileInputRef}
-          type="file"
-          accept="application/json"
-          class="hidden-file-input"
-          onChange={(e) => {
-            const file = (e.target as HTMLInputElement).files?.[0]
-            if (file) handleImportFile(file)
-          }}
-        />
+        <div class="backup-actions">
+          <button type="button" onClick={handleExport}>
+            Export
+          </button>
+          <button type="button" onClick={() => fileInputRef.current?.click()}>
+            Import
+          </button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="application/json"
+            class="hidden-file-input"
+            onChange={(e) => {
+              const file = (e.target as HTMLInputElement).files?.[0]
+              if (file) handleImportFile(file)
+            }}
+          />
+        </div>
       </div>
 
       <p class="backup-last-exported">

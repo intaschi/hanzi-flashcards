@@ -5,32 +5,12 @@ interface Props {
   learned: number
   inProgress: number
   remaining: number
+  dueToday: number
   srsState: SrsState
 }
 
 const DAY_MS = 24 * 60 * 60 * 1000
 const WEEKDAY_LETTERS = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
-
-// A card only enters srs.cards once graded (see gradeCard in state/srs.ts),
-// so "today" not yet having a log entry doesn't mean the streak broke — it
-// just means today hasn't happened yet. Walking backward from yesterday in
-// that case (rather than always starting at today) is what keeps a streak
-// alive across the gap between opening the app and reviewing the first
-// word of the day.
-function computeStreak(srsState: SrsState): number {
-  const rolloverHour = srsState.settings.dayRolloverHour
-  const reviewedOn = (date: Date) => (srsState.dailyLog[dayKey(date, rolloverHour)]?.reviewsDone ?? 0) > 0
-
-  let cursor = new Date()
-  if (!reviewedOn(cursor)) cursor = new Date(cursor.getTime() - DAY_MS)
-
-  let streak = 0
-  while (reviewedOn(cursor)) {
-    streak++
-    cursor = new Date(cursor.getTime() - DAY_MS)
-  }
-  return streak
-}
 
 interface StatCardProps {
   variant: string
@@ -57,9 +37,7 @@ function StatCard({ variant, value, label, help }: StatCardProps) {
 // The 2x2 grid of squares plus the 7-day chart below it — positioning/
 // visibility is handled by the .left-sidebar wrapper in app.tsx, which
 // this fills entirely, rather than being its own fixed-position element.
-export function ProgressStats({ learned, inProgress, remaining, srsState }: Props) {
-  const streak = computeStreak(srsState)
-
+export function ProgressStats({ learned, inProgress, remaining, dueToday, srsState }: Props) {
   const rolloverHour = srsState.settings.dayRolloverHour
   const today = new Date()
   const last7Days = Array.from({ length: 7 }, (_, i) => {
@@ -74,10 +52,10 @@ export function ProgressStats({ learned, inProgress, remaining, srsState }: Prop
     <>
       <div class="stat-grid" aria-label="Word learning progress">
         <StatCard
-          variant="streak"
-          value={streak}
-          label="Streak"
-          help="Consecutive days you've reviewed at least one word."
+          variant="due-today"
+          value={dueToday}
+          label="Due today"
+          help="Words still waiting for a review right now, according to your daily new-card setting."
         />
         <StatCard
           variant="in-progress"

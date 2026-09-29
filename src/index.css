@@ -95,38 +95,34 @@ body {
   background: var(--bg);
 }
 
-/* A bamboo accent running the full height of the screen along the right
-   edge, top:0 to bottom:0 — literally edge to edge. Lives on the right
-   (not left) so it doesn't sit behind .progress-stats' real stat cards,
-   which now occupy the left edge's real estate instead. background-size:
-   auto 100% fills that height exactly, clipping the image horizontally
-   rather than stretching/distorting it. The right/top edges are real
-   viewport edges (nothing to fade into); the left edge is an arbitrary
-   internal crop, so a mask fades only that side, sized to the box itself
-   so it holds at any width. transform:scaleX(-1) mirrors the artwork
-   itself (it was drawn to read correctly anchored on the left) and, as a
-   side effect, mirrors the mask gradient along with it — one transform
-   correctly re-orients both for the opposite edge, rather than needing to
-   separately flip the image and reverse the mask direction by hand. The
-   bottom is faded too — not because the box stops short, but because the
-   grade-row/nav-bar live down there and their translucent backgrounds
-   would otherwise let bold ink show straight through. The ::after overlay
-   blends it into the page background before it reaches that zone, so the
-   box still touches the true bottom edge, it just visually dissolves into
-   the page first. */
-/* TEST: full-bleed instead of a right-edge accent strip — covers the
-   whole viewport, with a translucent wash (::before) over the top so
-   body text and the plain-background nav/header stay legible instead
-   of sitting directly on the art at full strength. */
+/* The one background image for every tab (Review, Word list, About all
+   share it — see .about-page, which deliberately sets no background of
+   its own and lets this show through instead). Full-bleed behind
+   everything, with a translucent wash (::before) over the top so body
+   text and the plain-background nav/header stay legible instead of
+   sitting directly on the art at full strength. */
 .side-accent {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: url('./assets/ink-landscape-test.png');
+  background-image: url('./assets/about-bg.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+/* This image's interesting content (the blossom branch, the mountains)
+   sits at the top-left/top-right corners, with a plain, empty middle —
+   "cover" centered on a tall narrow phone screen crops down to mostly
+   that empty middle, and even "top center" still centers horizontally
+   between the two corners, missing both. Anchoring to the blossom
+   branch specifically (top left) keeps at least one recognizable
+   feature in frame instead of none. */
+@media (max-width: 700px) {
+  .side-accent {
+    background-position: top left;
+  }
 }
 
 /* Radial rather than flat — strongest behind the centered card content

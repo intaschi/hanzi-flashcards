@@ -1,15 +1,50 @@
-import aboutHeroTest from '../assets/about-hero-test.png'
-
 // CC-CEDICT/hanziDB/etc.'s licenses require attribution — the hover-
-// revealed icon below is that attribution's home now that the rest of
-// this page is just the banner image. This page is a permanent nav
-// destination rather than a standalone landing page specifically so it
-// can't be lost the way an earlier attribution mention was when its
-// original host page was deleted.
+// revealed icon below is that attribution's home. This page is a
+// permanent nav destination rather than a standalone landing page
+// specifically so it can't be lost the way an earlier attribution
+// mention was when its original host page was deleted.
+//
+// No background image of its own — .side-accent (see index.css) is the
+// one shared background for every tab, and this page's z-index:2 sits
+// above it so it shows through here too.
 export function AboutPage() {
   return (
     <div class="about-page">
-      <img src={aboutHeroTest} alt="Hanzi Flashcards — Chinese, one word at a time" class="about-hero-test-image" />
+      <div class="about-content">
+        <span class="about-glyph chinese" aria-hidden="true">
+          学
+        </span>
+        <h1 class="about-title">Chinese, one word at a time.</h1>
+        <p class="about-tagline">
+          5,000 useful words. A little practice each day.
+          <br />
+          Free, made for the joy of learning.
+        </p>
+
+        <div class="about-cards">
+          <div class="about-card">
+            <span class="about-card-icon chinese" aria-hidden="true">
+              頻
+            </span>
+            <h3>Ordered by frequency</h3>
+            <p>Learn common words first.</p>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon chinese" aria-hidden="true">
+              音
+            </span>
+            <h3>Audio</h3>
+            <p>Hear each word.</p>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon chinese" aria-hidden="true">
+              憶
+            </span>
+            <h3>Spaced repetition</h3>
+            <p>Review over time.</p>
+          </div>
+        </div>
+      </div>
 
       <span class="about-credits-tip" tabIndex={0} aria-label="Data & sources">
         ⓘ

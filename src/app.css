@@ -923,15 +923,24 @@
    a multi-glyph word), with the target word picked out by color+weight
    rather than shown in isolation — reading it in context is the actual
    skill being tested. */
+/* Taken out of the flex flow (absolute, anchored above the midline)
+   rather than stacked inline above the sentence — .card-surface only
+   has the sentence left to center in-flow this way, so the sentence
+   itself lands exactly at the card's true center instead of the
+   sentence+stage group centering as a block and pushing the sentence
+   below center. */
 .word-stroke-stage {
+  position: absolute;
+  left: 50%;
+  bottom: calc(50% + 26px);
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  margin-bottom: 12px;
 }
 
 .word-stroke-canvas {
-  width: 88px;
-  height: 88px;
+  width: 64px;
+  height: 64px;
   cursor: pointer;
   /* Lighter than the ink-black strokeColor actually paints — dimming
      the whole canvas rather than picking a paler stroke color keeps it
@@ -945,7 +954,7 @@
    between the boxes themselves — pulling them together with a negative
    margin is what actually closes it. */
 .word-stroke-canvas + .word-stroke-canvas {
-  margin-left: -20px;
+  margin-left: -14px;
 }
 
 .word-front-sentence {

@@ -6,7 +6,7 @@ interface Props {
   characters: string[]
 }
 
-const CANVAS_SIZE = 88
+const CANVAS_SIZE = 64
 
 type Writer = ReturnType<typeof HanziWriter.create>
 

@@ -140,7 +140,19 @@ export function WordCardView({
           >
             <div class="card-back">
               <div class="card-back-head">
-                <span class="card-back-char chinese word-back-word">{card.word}</span>
+                <span class="card-back-word-row">
+                  <span class="card-back-char chinese word-back-word">{card.word}</span>
+                  {/* Icon-only and right next to the word itself, unlike the
+                      captioned Sentence button in .card-controls — its
+                      position alone makes clear this plays just the word,
+                      not the full sentence. */}
+                  <AudioButton
+                    text={card.word}
+                    label="Play word pronunciation"
+                    src={audioPath('words', card.id)}
+                    compact
+                  />
+                </span>
                 <div class="pinyin">{card.pinyin}</div>
               </div>
 
@@ -246,27 +258,11 @@ export function WordCardView({
         </div>
 
         <div class="card-controls">
-          <div class="control-with-label">
-            <AudioButton
-              text={card.example.hanzi}
-              label="Play example sentence"
-              src={audioPath('words-example', card.id)}
-            />
-            <span class="control-label">Sentence</span>
-          </div>
-          {/* Only once the card is flipped — the word's own audio would
-              hand over its pronunciation before the front face has
-              actually tested it. */}
-          {revealed && (
-            <div class="control-with-label">
-              <AudioButton
-                text={card.word}
-                label="Play word pronunciation"
-                src={audioPath('words', card.id)}
-              />
-              <span class="control-label">Word</span>
-            </div>
-          )}
+          <AudioButton
+            text={card.example.hanzi}
+            label="Play example sentence"
+            src={audioPath('words-example', card.id)}
+          />
           <button
             type="button"
             class="flip-btn"

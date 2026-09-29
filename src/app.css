@@ -715,21 +715,6 @@
   gap: 10px;
 }
 
-/* A caption under an audio button, so two of them on screen at once (the
-   word-only one here, the sentence one on the front face) read as two
-   different things rather than an unexplained duplicate icon. */
-.control-with-label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-}
-
-.control-label {
-  font-size: 10px;
-  opacity: 0.55;
-}
-
 /* Vertically centering .card-controls on the card's full height looks
    fine when that height is stable, but a mobile card can get tall and
    centered controls end up floating next to whatever content happens to
@@ -848,6 +833,12 @@
   font-weight: 700;
   color: var(--text-h);
   line-height: 1;
+}
+
+.card-back-word-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .pinyin {

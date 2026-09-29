@@ -90,20 +90,23 @@
   z-index: 10;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 28px;
   padding: 14px 20px;
   background: var(--bg);
   border-top: 1px solid var(--border);
   box-sizing: border-box;
 }
 
+/* Four tabs now that Hanzi is gone, each taking an equal share of the full
+   width instead of clustering as small pills in the middle with empty bar
+   on either side. */
 .navbar-nav {
   display: flex;
-  gap: 6px;
+  width: 100%;
+  gap: 8px;
 }
 
 .navbar-nav button {
+  flex: 1;
   font: inherit;
   font-size: 14px;
   padding: 9px 14px;
@@ -112,6 +115,7 @@
   background: none;
   color: var(--text);
   cursor: pointer;
+  text-align: center;
 }
 
 .navbar-nav button.active {
@@ -128,30 +132,16 @@
    losing to the desktop values above, on every phone, the whole time. */
 @media (max-width: 600px) {
   .app-navbar {
-    gap: 10px;
     padding: 8px 6px;
   }
 
   .navbar-nav {
-    gap: 2px;
-    /* Five labels at any comfortable size are tight on a narrow phone —
-       tuned to fit without clipping down to ~360px, but an even narrower
-       device (or a bigger font-size setting) scrolls horizontally rather
-       than silently cutting off "Browse"/"Settings" like a fixed layout
-       would. */
-    max-width: 100%;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .navbar-nav::-webkit-scrollbar {
-    display: none;
+    gap: 4px;
   }
 
   .navbar-nav button {
-    padding: 7px 8px;
+    padding: 7px 4px;
     font-size: 12px;
-    flex: none;
   }
 }
 

@@ -9,6 +9,7 @@ import { WordCardView } from './components/WordCardView'
 import { BrowsePanel } from './components/BrowsePanel'
 import { SettingsPanel } from './components/SettingsPanel'
 import { CharacterStrip } from './components/CharacterStrip'
+import { CharacterSpotlight } from './components/CharacterSpotlight'
 import { ProgressStats } from './components/ProgressStats'
 import { AboutPage } from './components/AboutPage'
 import { AppNavBar } from './components/AppNavBar'
@@ -186,6 +187,7 @@ export function App() {
                   <div class="card-view">
                     <div class="card-scene">
                       <div class="card-surface session-complete">
+                        <CharacterSpotlight character="词" pinyin="cí" />
                         <h2>All done for now</h2>
                       </div>
                     </div>

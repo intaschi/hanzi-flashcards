@@ -391,12 +391,12 @@
     /* Matches the real card's height instead of a flat guess, for the
        same reason --card-top does. */
     height: var(--card-height, min(52vh, 700px));
-    /* .card-scene centers at max-width 660px, so its left edge is always
-       50vw - 330px — deriving the stats sidebar's width from that same
+    /* .card-scene centers at max-width 690px, so its left edge is always
+       50vw - 345px — deriving the stats sidebar's width from that same
        formula (leaving a fixed 24px gap before it) keeps it consistently
        sized and close to the card, rather than a fixed width that's only
        correctly proportioned at one specific viewport width. */
-    width: calc(50vw - 330px - 24px - 32px);
+    width: calc(50vw - 345px - 24px - 32px);
     /* The grid and chart below flex to fill this box exactly (see their
        own rules) rather than each claiming a fixed size that may add up
        to more than it — so this never needs to scroll. */
@@ -405,13 +405,13 @@
 
   .right-sidebar {
     right: 32px;
-    /* Matches .card-scene's own width (max-width 660px) when there's
+    /* Matches .card-scene's own width (max-width 690px) when there's
        actually room for that next to the card — but capped at the same
        "whatever space is left" formula .left-sidebar uses, so it shrinks
        instead of overlapping the card on narrower "wide" screens (barely
-       above the 1150px reveal threshold, there's nowhere near 660px of
+       above the 1150px reveal threshold, there's nowhere near 690px of
        room left after the card and the left sidebar). */
-    width: min(660px, calc(50vw - 330px - 24px - 32px));
+    width: min(690px, calc(50vw - 345px - 24px - 32px));
     height: var(--card-height, min(52vh, 700px));
   }
 }
@@ -658,7 +658,7 @@
 .card-scene {
   position: relative;
   width: 100%;
-  max-width: 660px;
+  max-width: 690px;
   margin: 0 auto;
   perspective: 1400px;
 }
@@ -1409,7 +1409,7 @@
   display: flex;
   gap: 10px;
   width: 100%;
-  max-width: 660px;
+  max-width: 690px;
   margin: 8px auto 0;
   box-sizing: border-box;
   background: transparent;

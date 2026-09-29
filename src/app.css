@@ -321,36 +321,30 @@
   text-align: center;
 }
 
-/* Learning-progress cards — occupy the same left-edge real estate as
+/* Learning-progress squares — occupy the same left-edge real estate as
    .side-accent's decorative bamboo art (index.css), just above it in
    z-order. Hidden below the width where there's no real "left side" to put
-   anything in, or too little of it to fit these comfortably. */
+   anything in, or too little of it to fit these comfortably. A 2x2 grid
+   rather than a stacked column: each cell's width and height come from the
+   same track size, so aspect-ratio:1 below actually renders as a square
+   instead of just being labeled one. */
 .progress-stats {
   display: none;
 }
 
 @media (min-width: 1150px) {
   .progress-stats {
-    display: flex;
-    flex-direction: column;
-    /* Space is distributed BETWEEN the 4 cards rather than a fixed gap, so
-       the first card's top and the last card's bottom land exactly on the
-       container's own top/bottom — see height/top below for how those are
-       made to match .card-scene's. */
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
     position: fixed;
     left: 32px;
     /* Matches .card-scene's own top offset (top-progress-bar + the
-       character strip above it) so the first card's top lines up with the
-       top of the main card. */
+       character strip above it) so the grid's top lines up with the top
+       of the main card. */
     top: 131px;
-    /* .card-view's height is itself min(52vh, 700px) (see its own rule) —
-       reusing that exact formula, rather than a fixed px height, is what
-       keeps the last card's bottom tracking the card's bottom edge across
-       different viewport heights instead of just matching it once. */
-    height: min(52vh, 700px);
     /* .card-scene centers at max-width 620px, so its left edge is always
-       50vw - 310px — deriving the sidebar's width from that same formula
+       50vw - 310px — deriving the grid's width from that same formula
        (leaving a fixed 24px gap before it) keeps the two closer together
        and consistently sized, rather than a fixed width that's only
        correctly proportioned at one specific viewport width. */
@@ -360,14 +354,19 @@
 }
 
 .stat-card {
+  position: relative;
+  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 14px 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px;
   border-radius: 12px;
   border: 1px solid transparent;
   background: var(--bg-paper);
   box-shadow: var(--shadow);
+  text-align: center;
 }
 
 .stat-value {
@@ -382,6 +381,10 @@
   opacity: 0.7;
 }
 
+.stat-streak .stat-value {
+  color: var(--accent);
+}
+
 .stat-learned .stat-value {
   color: var(--jade);
 }
@@ -394,46 +397,49 @@
   color: var(--porcelain);
 }
 
-/* Last-7-days bar chart — a fourth card in the same stack. */
-.daily-chart {
-  background: var(--bg-paper);
-  gap: 8px;
-}
-
-.daily-chart-bars {
-  display: flex;
-  align-items: flex-end;
-  gap: 5px;
-  height: 64px;
-}
-
-.daily-chart-col {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  height: 100%;
-}
-
-.daily-chart-track {
-  flex: 1 1 auto;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-}
-
-.daily-chart-bar {
-  width: 100%;
-  min-height: 2px;
-  border-radius: 3px 3px 0 0;
-  background: var(--accent);
-  opacity: 0.85;
-}
-
-.daily-chart-day {
+/* A "?" in the corner of each square, revealing a plain-language
+   explanation of that metric on hover/focus — CSS-only (no JS state),
+   shown via :hover/:focus-within on the card itself so touch/keyboard
+   users tabbing onto the "?" get the same reveal as a mouse hover. */
+.stat-help {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--text);
   font-size: 10px;
-  opacity: 0.55;
+  line-height: 15px;
+  text-align: center;
+  cursor: help;
+  opacity: 0.7;
+}
+
+.stat-help-tip {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: 160px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--text-h);
+  color: var(--bg-paper);
+  font-size: 11.5px;
+  line-height: 1.4;
+  text-align: left;
+  box-shadow: var(--shadow);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+}
+
+.stat-card:hover .stat-help-tip,
+.stat-card:focus-within .stat-help-tip {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Character strip — upcoming characters in the queue, for context */

@@ -125,6 +125,16 @@
   font-weight: 600;
 }
 
+/* Settings moves into .left-sidebar at this width instead (see app.css'
+   .left-sidebar rules) — same breakpoint, so the tab disappears exactly
+   when its sidebar replacement appears, never leaving Settings reachable
+   from neither or double-reachable from both. */
+@media (min-width: 1150px) {
+  .nav-settings-only {
+    display: none;
+  }
+}
+
 /* This must come AFTER the unconditional .navbar-nav/.navbar-nav button
    rules above — equal specificity, so whichever is later in source order
    wins regardless of the media condition. Having this block first (as it
@@ -321,36 +331,63 @@
   text-align: center;
 }
 
-/* Learning-progress squares — occupy the same left-edge real estate as
-   .side-accent's decorative bamboo art (index.css), just above it in
-   z-order. Hidden below the width where there's no real "left side" to put
-   anything in, or too little of it to fit these comfortably. A 2x2 grid
-   rather than a stacked column: each cell's width and height come from the
-   same track size, so aspect-ratio:1 below actually renders as a square
-   instead of just being labeled one. */
-.progress-stats {
+/* Left sidebar — just the stat squares, review view only. Occupies the
+   same left-edge real estate .side-accent's decorative bamboo art used to
+   (index.css moved that to the right, see its own comment for why), just
+   above it in z-order. Hidden below the width where there's no real "left
+   side" to put anything in, or too little of it to fit these comfortably. */
+.left-sidebar {
+  display: none;
+}
+
+/* Right sidebar — Settings, which has no nav tab of its own at these
+   widths (see .nav-settings-only) and lives only here instead, in front
+   of (z-index only) the bamboo art that now lives on the right. A mirror
+   of .left-sidebar's positioning math, not a stacked-together column with
+   it — the two together overflowed the available height next to the
+   card. */
+.right-sidebar {
   display: none;
 }
 
 @media (min-width: 1150px) {
-  .progress-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+  .left-sidebar,
+  .right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     position: fixed;
-    left: 32px;
     /* Matches .card-scene's own top offset (top-progress-bar + the
-       character strip above it) so the grid's top lines up with the top
-       of the main card. */
+       character strip above it) so the sidebar's top lines up with the
+       top of the main card. */
     top: 131px;
-    /* .card-scene centers at max-width 620px, so its left edge is always
-       50vw - 310px — deriving the grid's width from that same formula
-       (leaving a fixed 24px gap before it) keeps the two closer together
-       and consistently sized, rather than a fixed width that's only
-       correctly proportioned at one specific viewport width. */
+    bottom: 20px;
+    /* .card-scene centers at max-width 620px, so its left/right edges are
+       always 50vw - 310px from their respective side — deriving each
+       sidebar's width from that same formula (leaving a fixed 24px gap
+       before the card) keeps them consistently sized and close to it,
+       rather than a fixed width that's only correctly proportioned at one
+       specific viewport width. */
     width: calc(50vw - 310px - 24px - 32px);
+    overflow-y: auto;
     z-index: 1;
   }
+
+  .left-sidebar {
+    left: 32px;
+  }
+
+  .right-sidebar {
+    right: 32px;
+  }
+}
+
+/* The 2x2 grid of stat squares — a plain grid now, not itself positioned;
+   .left-sidebar (above) handles placement for the whole column. */
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
 .stat-card {
@@ -395,6 +432,53 @@
 
 .stat-remaining .stat-value {
   color: var(--porcelain);
+}
+
+/* Last-7-days bar chart, sitting below the 2x2 grid in the same left
+   sidebar. Not a square like the 4 stat cards — a wide strip instead, the
+   natural shape for 7 side-by-side bars. */
+.daily-chart {
+  aspect-ratio: auto;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 8px;
+}
+
+.daily-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 64px;
+}
+
+.daily-chart-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+
+.daily-chart-track {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.daily-chart-bar {
+  width: 100%;
+  min-height: 2px;
+  border-radius: 3px 3px 0 0;
+  background: var(--accent);
+  opacity: 0.85;
+}
+
+.daily-chart-day {
+  font-size: 10px;
+  opacity: 0.55;
 }
 
 /* A "?" in the corner of each square, revealing a plain-language
@@ -1300,6 +1384,22 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+/* In the right sidebar (see .right-sidebar), Settings is a direct child
+   with no surrounding page padding of its own — give it the same card
+   treatment as the stat squares on the left so it doesn't look like a
+   bare fragment floating on its own. */
+.right-sidebar .settings-panel {
+  background: var(--bg-paper);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  overflow-y: auto;
+}
+
+.right-sidebar .settings-panel h2 {
+  font-size: 16px;
 }
 
 .settings-divider {

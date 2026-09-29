@@ -23,9 +23,13 @@ export function AppNavBar({ activeView, onNav }: Props) {
         >
           Browse
         </button>
+        {/* Hidden at desktop widths (see .nav-settings-only in app.css) —
+            Settings lives in the left sidebar there instead, alongside
+            the stat squares. Still needed here on mobile, which has no
+            "left side" to put it in. */}
         <button
           type="button"
-          class={activeView === 'settings' ? 'active' : ''}
+          class={`nav-settings-only ${activeView === 'settings' ? 'active' : ''}`}
           onClick={() => onNav('settings')}
         >
           Settings

@@ -94,14 +94,35 @@ export function App() {
           such backing and the bold ink would sit directly under body
           text, hurting legibility rather than just providing atmosphere. */}
       {isReviewView && <div class="side-accent" aria-hidden="true" />}
+
+      {/* Always mounted (CSS hides both below the width where there's no
+          real "side" real estate — see .left-sidebar/.right-sidebar in
+          app.css). Split across both sides rather than stacked on one:
+          together they overflowed the available height next to the card. */}
       {isReviewView && (
-        <ProgressStats
-          learned={wordProgressCounts.learned}
-          inProgress={wordProgressCounts.inProgress}
-          remaining={wordProgressCounts.remaining}
-          srsState={words.srs}
-        />
+        <aside class="left-sidebar" aria-label="Word learning progress">
+          <ProgressStats
+            learned={wordProgressCounts.learned}
+            inProgress={wordProgressCounts.inProgress}
+            remaining={wordProgressCounts.remaining}
+            srsState={words.srs}
+          />
+        </aside>
       )}
+
+      {/* Settings has no nav tab of its own at these widths (see
+          .nav-settings-only) — this is its only home there, on the right,
+          in front of the decorative bamboo art (z-index only, doesn't
+          otherwise interact with it), regardless of which main view is
+          showing. */}
+      <aside class="right-sidebar" aria-label="Settings">
+        <SettingsPanel
+          wordsSettings={words.srs.settings}
+          onWordsChange={(settings) => words.persist({ ...words.srs, settings })}
+          srsState={words.srs}
+          onImported={words.handleImported}
+        />
+      </aside>
 
       <div class="top-progress-bar">
         <div class="top-progress-fill" style={{ width: `${progressPct}%` }} />

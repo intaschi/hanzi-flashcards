@@ -1544,8 +1544,8 @@
   font-weight: 600;
   padding: 10px 8px;
   border-radius: 10px;
-  border: 1px solid var(--accent-border);
-  background: var(--accent-bg);
+  border: 1px solid var(--border);
+  background: var(--bg-paper);
   color: var(--accent);
   cursor: pointer;
   white-space: nowrap;
@@ -1570,14 +1570,15 @@
   padding: 10px 12px;
 }
 
-/* About page — a compact "masthead + panel" composition rather than four
-   unrelated blocks. The hero reads like a small masthead (icon, wordmark,
-   tagline); the two decks and four features share one bordered panel with
-   an internal divider so they read as a single card, not stacked sections;
-   colored fills reuse the same accent/jade/gold/porcelain vocabulary as
-   grading and card annotations elsewhere instead of inventing new hues.
-   Credits close the page as a proper colophon — a seal glyph marks the
-   CC-CEDICT/hanziDB/etc. attribution as a deliberate footer, not filler. */
+/* About page — a masthead + one panel + a footer colophon. Deliberately
+   monochrome apart from the hero glyph and its bloom: one panel holding a
+   single headline stat and a plain feature list reads as calm and modern,
+   where four differently-tinted deck/feature cards read as a color test
+   grid. Scales up with the viewport instead of staying pinned to a phone-
+   width column — this is the one page in the app with nothing pinned
+   beside it, so it can use the room. Credits close the page as a proper
+   colophon — a seal glyph marks the CC-CEDICT/hanziDB/etc. attribution as
+   a deliberate footer, not filler. */
 
 /* Same centering trick as .review-view (see its comment): auto margins on
    the first/last child center the group when the viewport has slack, but
@@ -1588,10 +1589,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 28px;
   text-align: center;
   padding: 0;
   height: 100%;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .about-page > :first-child {
@@ -1606,7 +1610,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 2px;
 }
 
 /* The brush glyph sits on a soft bloom of the accent color — a legibility-
@@ -1615,8 +1619,8 @@
    an already-large glyph, over otherwise empty space. */
 .about-hero-glyph-wrap {
   position: relative;
-  width: 84px;
-  height: 84px;
+  width: 120px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1633,16 +1637,16 @@
 .about-hero-glyph {
   position: relative;
   font-family: var(--brush), var(--chinese);
-  font-size: 54px;
+  font-size: 76px;
   line-height: 1;
   color: var(--accent);
 }
 
 .about-hero-title {
-  margin: 1px 0 0;
-  font-size: 18px;
+  margin: 6px 0 0;
+  font-size: 32px;
   font-weight: 700;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.3px;
   color: var(--text-h);
 }
 
@@ -1651,82 +1655,41 @@
 }
 
 .about-hero-tagline {
-  margin: 2px 0 0;
-  font-size: 13px;
+  margin: 6px 0 0;
+  font-size: 16px;
   font-weight: 400;
   color: var(--text);
   opacity: 0.85;
-  max-width: 320px;
+  max-width: 380px;
   text-wrap: balance;
 }
 
-/* One shared panel for decks + features — the choice that makes them read
-   as a single composition instead of separate stacked blocks. */
+/* One shared panel for the headline stat + features — reads as a single
+   composition rather than stacked sections. */
 .about-panel {
   width: 100%;
-  max-width: 460px;
   background: var(--bg-paper);
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: var(--shadow);
-  padding: 12px 14px 12px;
+  padding: 28px 32px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 22px;
 }
 
-.about-decks {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.about-deck-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  padding: 9px 8px 8px;
-  border: 1px solid transparent;
-  border-radius: 12px;
-}
-
-.about-deck-accent {
-  background: var(--accent-bg);
-  border-color: var(--accent);
-}
-
-.about-deck-jade {
-  background: var(--jade-bg);
-  border-color: var(--jade);
-}
-
-.about-deck-glyph {
-  font-size: 30px;
-  line-height: 1;
-  color: var(--text-h);
-}
-
-.about-deck-card h3 {
-  margin: 1px 0 0;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-h);
-}
-
-.about-deck-stat {
+.about-headline-stat {
   margin: 0;
-  font-size: 11px;
+  font-size: 18px;
   color: var(--text);
-  opacity: 0.75;
 }
 
-.about-deck-stat strong {
-  font-size: 13px;
+.about-headline-stat strong {
+  font-family: var(--heading);
+  font-size: 28px;
   font-weight: 700;
-  color: var(--text-h);
-  opacity: 1;
+  color: var(--accent);
 }
 
 .about-panel-divider {
@@ -1737,12 +1700,33 @@
 .about-features {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
+  gap: 16px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .about-features {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* .side-accent has a 240px floor regardless of viewport width, so on a
+     phone it eats a much bigger share of the screen than on desktop —
+     the hero shrinks back down here so its text doesn't run into it. */
+  .about-hero-glyph-wrap {
+    width: 84px;
+    height: 84px;
+  }
+
+  .about-hero-glyph {
+    font-size: 54px;
+  }
+
+  .about-hero-title {
+    font-size: 22px;
+  }
+
+  .about-hero-tagline {
+    font-size: 14px;
+    max-width: 260px;
   }
 }
 
@@ -1750,64 +1734,31 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  padding: 8px 6px 6px;
-  border-radius: 12px;
-}
-
-.about-feature-accent {
-  background: var(--accent-bg);
-}
-
-.about-feature-jade {
-  background: var(--jade-bg);
-}
-
-.about-feature-porcelain {
-  background: var(--porcelain-bg);
-}
-
-.about-feature-gold {
-  background: var(--gold-bg);
+  gap: 8px;
 }
 
 /* The badge is a small "paper token" — same recipe as the flip/audio
-   buttons on the review card (paper surface, hairline border, drop shadow)
-   — so it reads as part of the app's own button language rather than a
-   one-off decoration. Color comes from the container modifier above. */
+   buttons on the review card (paper surface, hairline border, drop
+   shadow) — so it reads as part of the app's own button language rather
+   than a one-off decoration. One neutral treatment for all four instead
+   of a different tint each, with the glyph itself carrying the accent. */
 .about-feature-badge {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: var(--bg-paper);
+  background: var(--bg);
   border: 1px solid var(--border);
-  box-shadow: var(--shadow);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--chinese);
-  font-size: 13px;
+  font-size: 17px;
   line-height: 1;
-}
-
-.about-feature-accent .about-feature-badge {
   color: var(--accent);
 }
 
-.about-feature-jade .about-feature-badge {
-  color: var(--jade);
-}
-
-.about-feature-porcelain .about-feature-badge {
-  color: var(--porcelain);
-}
-
-.about-feature-gold .about-feature-badge {
-  color: var(--gold);
-}
-
 .about-feature-label {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-h);
   opacity: 0.75;
@@ -1816,7 +1767,7 @@
 
 .about-privacy {
   margin: 0;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text);
   opacity: 0.65;
   max-width: 420px;
@@ -1826,9 +1777,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 20px;
   border-top: 1px solid var(--border);
 }
 
@@ -1845,7 +1796,7 @@
 }
 
 .about-credits-kicker {
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text);
@@ -1856,12 +1807,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .about-credits a {
-  font-size: 12px;
-  padding: 5px 12px;
+  font-size: 13px;
+  padding: 6px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
   color: var(--text);
@@ -1875,7 +1826,7 @@
 
 .about-fine-print {
   margin: 0;
-  font-size: 10.5px;
+  font-size: 11px;
   color: var(--text);
   opacity: 0.5;
   max-width: 420px;

@@ -3,6 +3,12 @@
 // destination rather than a standalone landing page specifically so it
 // can't be lost the way an earlier attribution mention was when its
 // original host page was deleted.
+//
+// Words-only now (the Hanzi deck has no nav tab of its own any more — see
+// app.tsx), so this no longer advertises a second deck the app doesn't
+// actually offer. Feature badges dropped their per-item accent/jade/
+// porcelain/gold tints for a single neutral treatment — four different
+// colors for four unrelated bullet points read as noise, not signal.
 export function AboutPage() {
   return (
     <div class="about-page">
@@ -18,52 +24,33 @@ export function AboutPage() {
         <p class="about-hero-tagline">Mandarin, in the order you'll actually need it.</p>
       </div>
 
-      {/* Decks and features share one panel so they read as a single
-          composition rather than three stacked blocks. */}
       <div class="about-panel">
-        <div class="about-decks">
-          <div class="about-deck-card about-deck-accent">
-            <span class="about-deck-glyph chinese" aria-hidden="true">
-              字
-            </span>
-            <h3>Hanzi</h3>
-            <p class="about-deck-stat">
-              <strong>5,000</strong> characters &middot; by frequency
-            </p>
-          </div>
-          <div class="about-deck-card about-deck-jade">
-            <span class="about-deck-glyph chinese" aria-hidden="true">
-              词
-            </span>
-            <h3>Words</h3>
-            <p class="about-deck-stat">
-              <strong>5,000</strong> words &middot; by frequency
-            </p>
-          </div>
-        </div>
+        <p class="about-headline-stat">
+          <strong>5,000</strong> words, ranked by real-world frequency
+        </p>
 
         <div class="about-panel-divider" />
 
         <div class="about-features">
-          <div class="about-feature about-feature-accent">
+          <div class="about-feature">
             <span class="about-feature-badge chinese" aria-hidden="true">
               頻
             </span>
             <span class="about-feature-label">Real frequency data</span>
           </div>
-          <div class="about-feature about-feature-jade">
+          <div class="about-feature">
             <span class="about-feature-badge chinese" aria-hidden="true">
               筆
             </span>
             <span class="about-feature-label">Stroke order</span>
           </div>
-          <div class="about-feature about-feature-porcelain">
+          <div class="about-feature">
             <span class="about-feature-badge chinese" aria-hidden="true">
               音
             </span>
             <span class="about-feature-label">Audio</span>
           </div>
-          <div class="about-feature about-feature-gold">
+          <div class="about-feature">
             <span class="about-feature-badge chinese" aria-hidden="true">
               憶
             </span>

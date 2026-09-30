@@ -146,12 +146,12 @@ export function App() {
       {/* Settings has no nav tab of its own at these widths (see
           .nav-settings-only) — this is its only home there, on the right,
           in front of the decorative bamboo art (z-index only, doesn't
-          otherwise interact with it). Only shown alongside an actual
-          flashcard, not the session-complete state — being able to
-          reach Export/Import/New-cards-per-day from what's meant to
-          read as a simple "you're done" screen made it feel busier
-          than intended. */}
-      {isReviewView && words.currentCard && (
+          otherwise interact with it). Stays reachable even once the
+          queue is empty (session-complete) — that's exactly when
+          someone finishing early might want to raise New cards/day and
+          keep going, so hiding it there would remove the one obvious
+          way to do that. */}
+      {isReviewView && (
         <aside class="right-sidebar" aria-label="Settings">
           <SettingsPanel
             wordsSettings={words.srs.settings}

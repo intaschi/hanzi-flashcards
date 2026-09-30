@@ -383,7 +383,14 @@
        swaps in a shorter box before this fires once). */
     top: var(--card-top, 131px);
     overflow-y: auto;
-    z-index: 1;
+    /* Higher than .app-frame's z-index:1 — .app-main centers its own
+       (transparent, otherwise-empty) box within the full viewport
+       width, ignoring these fixed sidebars entirely, so on a very wide
+       screen its box can extend far enough right/left to geometrically
+       overlap a sidebar. Equal z-index there would let app-main's DOM-
+       later box win the overlap and swallow clicks meant for the
+       sidebar underneath it, even though nothing was visibly on top. */
+    z-index: 3;
   }
 
   .left-sidebar {

@@ -175,7 +175,8 @@ export function gradeCard(state: SrsState, cardId: string, grade: Grade): SrsSta
   const today = dayKey(new Date(), settings.dayRolloverHour)
   const existingLog: DailyLogEntry = state.dailyLog[today] ?? { newIntroduced: 0, reviewsDone: 0 }
   const updatedLog: DailyLogEntry = {
-    newIntroduced: existingLog.newIntroduced + (wasNew ? 1 : 0),
+    newIntroduced:
+      existingLog.newIntroduced + (wasNew && !state.promotedIds?.includes(cardId) ? 1 : 0),
     reviewsDone: existingLog.reviewsDone + 1,
   }
 
@@ -213,6 +214,16 @@ export function getUnintroducedCardIds(
   return allCardIdsInFrequencyOrder.filter((id) => !state.cards[id])
 }
 
+export function promoteCard(state: SrsState, cardId: string): SrsState {
+  if (state.cards[cardId] || state.promotedIds?.includes(cardId)) return state
+  return { ...state, promotedIds: [...(state.promotedIds ?? []), cardId] }
+}
+
+// Entries are dropped once graded (they gain a progress entry), so no cleanup pass is needed.
+export function getPromotedCardIds(state: SrsState, validIds: Set<string>): string[] {
+  return (state.promotedIds ?? []).filter((id) => !state.cards[id] && validIds.has(id))
+}
+
 export function remainingNewSlotsToday(state: SrsState): number {
   const today = dayKey(new Date(), state.settings.dayRolloverHour)
   const introducedToday = state.dailyLog[today]?.newIntroduced ?? 0
@@ -223,10 +234,16 @@ export function remainingNewSlotsToday(state: SrsState): number {
 // allotment, interleaved roughly evenly rather than front- or back-loaded.
 export function buildSessionQueue(state: SrsState, allCardIdsInFrequencyOrder: string[]): string[] {
   const due = shuffle(getDueCardIds(state, allCardIdsInFrequencyOrder))
-  const newIds = getUnintroducedCardIds(state, allCardIdsInFrequencyOrder).slice(
-    0,
-    remainingNewSlotsToday(state),
-  )
+  const promoted = getPromotedCardIds(state, new Set(allCardIdsInFrequencyOrder))
+  const promotedSet = new Set(promoted)
+  // Promoted words are on top of the daily allotment, so picking them doesn't
+  // starve the regular frequency-order new cards.
+  const newIds = [
+    ...promoted,
+    ...getUnintroducedCardIds(state, allCardIdsInFrequencyOrder)
+      .filter((id) => !promotedSet.has(id))
+      .slice(0, remainingNewSlotsToday(state)),
+  ]
 
   if (newIds.length === 0) return due
   if (due.length === 0) return newIds
@@ -279,6 +296,7 @@ export function mergeImportedState(
     ...current,
     cards: mergedCards,
     dailyLog: { ...imported.dailyLog, ...current.dailyLog },
+    promotedIds: [...new Set([...(current.promotedIds ?? []), ...(imported.promotedIds ?? [])])],
   }
   return { merged, summary: { updated, skipped } }
 }

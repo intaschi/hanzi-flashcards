@@ -155,7 +155,7 @@ export function App() {
         <aside class="right-sidebar" aria-label="Settings">
           <SettingsPanel
             wordsSettings={words.srs.settings}
-            onWordsChange={(settings) => words.persist({ ...words.srs, settings })}
+            onWordsChange={words.handleSettingsChange}
             srsState={words.srs}
             onImported={words.handleImported}
           />
@@ -199,12 +199,17 @@ export function App() {
               </div>
             )}
 
-            {view === 'browse' && <BrowsePanel cards={words.cards} srsState={words.srs} />}
+            {view === 'browse' && <BrowsePanel
+                cards={words.cards}
+                srsState={words.srs}
+                queueIds={words.queue}
+                onLearn={words.handlePromote}
+              />}
 
             {view === 'settings' && (
               <SettingsPanel
                 wordsSettings={words.srs.settings}
-                onWordsChange={(settings) => words.persist({ ...words.srs, settings })}
+                onWordsChange={words.handleSettingsChange}
                 srsState={words.srs}
                 onImported={words.handleImported}
               />

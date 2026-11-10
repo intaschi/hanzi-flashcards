@@ -1916,6 +1916,29 @@
   white-space: nowrap;
 }
 
+.browse-badge.is-queued {
+  background: var(--border);
+  color: var(--text-h);
+}
+
+.browse-learn {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.browse-learn:hover {
+  background: var(--accent);
+  color: var(--bg-paper);
+}
+
 .browse-empty {
   padding: 24px 4px;
   opacity: 0.6;
@@ -1928,10 +1951,15 @@
 
 @media (max-width: 560px) {
   .browse-row {
-    grid-template-columns: 32px auto 1fr;
+    grid-template-columns: 32px auto 1fr auto;
     grid-template-areas:
-      'rank char pinyin'
-      '. meanings meanings';
+      'rank char pinyin action'
+      '. meanings meanings meanings';
+  }
+
+  .browse-learn,
+  .browse-badge {
+    grid-area: action;
   }
 
   .browse-rank {
@@ -1946,8 +1974,5 @@
   .browse-meanings {
     grid-area: meanings;
     white-space: normal;
-  }
-  .browse-badge {
-    display: none;
   }
 }

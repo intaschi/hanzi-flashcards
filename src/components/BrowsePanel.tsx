@@ -4,11 +4,17 @@ import type { SrsState, WordCard } from '../state/types'
 interface Props {
   cards: WordCard[]
   srsState: SrsState
+  queueIds: string[]
+  onLearn: (id: string) => void
 }
 
 const PAGE_SIZE = 60
 
-export function BrowsePanel({ cards, srsState }: Props) {
+export function BrowsePanel({ cards, srsState, queueIds, onLearn }: Props) {
+  const queued = useMemo(
+    () => new Set([...queueIds, ...(srsState.promotedIds ?? [])]),
+    [queueIds, srsState.promotedIds],
+  )
   const [query, setQuery] = useState('')
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE)
   const sentinelRef = useRef<HTMLDivElement>(null)
@@ -78,7 +84,15 @@ export function BrowsePanel({ cards, srsState }: Props) {
                 <span class="browse-char chinese">{c.word}</span>
                 <span class="browse-pinyin">{c.pinyin}</span>
                 <span class="browse-meanings">{c.meanings.join(' · ')}</span>
-                {learned && <span class="browse-badge">learned</span>}
+                {learned ? (
+                  <span class="browse-badge">learned</span>
+                ) : queued.has(c.id) ? (
+                  <span class="browse-badge is-queued">queued</span>
+                ) : (
+                  <button type="button" class="browse-learn" onClick={() => onLearn(c.id)}>
+                    Learn
+                  </button>
+                )}
               </div>
             )
           })}

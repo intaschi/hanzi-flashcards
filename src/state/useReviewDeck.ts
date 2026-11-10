@@ -3,10 +3,11 @@ import type { Signal } from '@preact/signals'
 import {
   buildSessionQueue,
   gradeCard,
+  promoteCard,
   requestPersistentStorage,
   saveState,
 } from './srs'
-import type { Grade, SrsState } from './types'
+import type { Grade, Settings, SrsState } from './types'
 
 interface Identifiable {
   id: string
@@ -76,6 +77,31 @@ export function useReviewDeck<T extends Identifiable & { frequencyRank: number }
     }
   }
 
+  // Slotted right after the card currently on screen rather than at index 0,
+  // so promoting never swaps out a card the user is looking at.
+  function handlePromote(cardId: string) {
+    const next = promoteCard(signals.srs.value, cardId)
+    if (next === signals.srs.value) return
+    persist(next)
+    const queue = signals.queue.value
+    if (queue.includes(cardId)) return
+    const at = Math.min(1, queue.length)
+    signals.queue.value = [...queue.slice(0, at), cardId, ...queue.slice(at)]
+  }
+
+  // The card on screen stays first even if the new limit would no longer
+  // include it, so editing the setting never swaps out what the user is looking at.
+  function handleSettingsChange(settings: Settings) {
+    const next = { ...signals.srs.value, settings }
+    persist(next)
+    const ids = signals.cards.value.map((c) => c.id)
+    const rebuilt = buildSessionQueue(next, ids)
+    const currentId = signals.queue.value[0]
+    signals.queue.value = currentId
+      ? [currentId, ...rebuilt.filter((id) => id !== currentId)]
+      : rebuilt
+  }
+
   function handleImported(next: SrsState) {
     persist(next)
     const ids = signals.cards.value.map((c) => c.id)
@@ -99,6 +125,8 @@ export function useReviewDeck<T extends Identifiable & { frequencyRank: number }
     toggleReveal: () => (signals.revealed.value = !signals.revealed.value),
     handleGrade,
     handleImported,
+    handlePromote,
+    handleSettingsChange,
     persist,
   }
 }

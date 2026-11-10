@@ -82,4 +82,7 @@ export interface SrsState {
   settings: Settings
   cards: Record<string, CardProgress>
   dailyLog: Record<string, DailyLogEntry>
+  // Words the user chose to learn ahead of their frequency-order turn. Optional
+  // so state saved before this field existed loads unchanged.
+  promotedIds?: string[]
 }

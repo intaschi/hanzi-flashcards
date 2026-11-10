@@ -16,7 +16,7 @@ export function AboutPage() {
         </span>
         <h1 class="about-title">Chinese, one word at a time.</h1>
         <p class="about-tagline">
-          5,000 useful words. A little practice each day.
+          5,000+ useful words. A little practice each day.
           <br />
           Free, made for the joy of learning.
         </p>

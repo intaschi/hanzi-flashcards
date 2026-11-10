@@ -11,7 +11,7 @@ interface Props {
   play: boolean
 }
 
-const CANVAS_SIZE = 48
+const CANVAS_SIZE = 72
 
 type Writer = ReturnType<typeof HanziWriter.create>
 

@@ -8,6 +8,10 @@ interface ManifestChunk {
 }
 
 interface Manifest {
+  // Changes whenever chunk contents are regenerated (e.g. a re-rank), so a
+  // browser holding an older chunk file under the same name never mixes it
+  // with a newer manifest.
+  version?: string
   chunks: ManifestChunk[]
   totalCards: number
 }
@@ -26,11 +30,13 @@ export function loadAllWordCards(): Promise<WordCard[]> {
 
 async function fetchAllWordCards(): Promise<WordCard[]> {
   const base = import.meta.env.BASE_URL
-  const manifestRes = await fetch(`${base}data/word-manifest.json`)
+  // Always revalidated: the manifest is what decides which chunk URLs to ask for.
+  const manifestRes = await fetch(`${base}data/word-manifest.json`, { cache: 'no-cache' })
   const manifest: Manifest = await manifestRes.json()
+  const versionQuery = manifest.version ? `?v=${encodeURIComponent(manifest.version)}` : ''
   const chunkArrays = await Promise.all(
     manifest.chunks.map(async (chunk) => {
-      const res = await fetch(`${base}data/${chunk.file}`)
+      const res = await fetch(`${base}data/${chunk.file}${versionQuery}`)
       return (await res.json()) as WordCard[]
     }),
   )

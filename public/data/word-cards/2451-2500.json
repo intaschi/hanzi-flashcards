@@ -1,2539 +1,214 @@
 [
   {
-    "id": "W+73A9-73A9",
-    "word": "玩玩",
+    "id": "W+5730-677F",
+    "word": "地板",
     "frequencyRank": 2451,
-    "pinyin": "wán wán",
+    "pinyin": "dì bǎn",
     "meanings": [
-      "to play around",
-      "to fool around with",
-      "to try out for fun"
+      "floor"
     ],
     "characters": [
       {
-        "char": "玩",
+        "char": "地",
         "components": [
           {
-            "char": "王",
+            "char": "土",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "王 (jade, written without its dot) — 玩 originally meant to handle and admire a piece of jade, extending to 'to play, to have fun.'"
+            "note": "土 (earth) — ground and place, as in 场 field, 城 city, 坐 sit."
           },
           {
-            "char": "元",
+            "char": "也",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "元 (yuán) gives a sound distantly related to wán, having drifted apart over time."
+            "note": "也 (yě) is a loose sound clue for dì; 也 also sounds out 他 tā and 池 chí."
           }
         ]
       },
       {
-        "char": "玩",
+        "char": "板",
         "components": [
           {
-            "char": "王",
+            "char": "木",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "王 (jade, written without its dot) — 玩 originally meant to handle and admire a piece of jade, extending to 'to play, to have fun.'"
-          },
-          {
-            "char": "元",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "元 (yuán) gives a sound distantly related to wán, having drifted apart over time."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他只是拿新手机玩玩,没打算认真研究。",
-      "pinyin": "tā zhǐshì ná xīn shǒujī wánwán, méi dǎsuàn rènzhēn yánjiū.",
-      "english": "He's just playing around with the new phone, not planning to seriously study it.",
-      "fact": "The IBM Simon, released in 1994, is widely considered the first smartphone — it had a touchscreen, email, and even a calendar nearly 15 years before the iPhone. It weighed over half a kilogram and its battery lasted less than an hour of talk time.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+4E89-9738",
-    "word": "争霸",
-    "frequencyRank": 2452,
-    "pinyin": "zhēng bà",
-    "meanings": [
-      "to contend for hegemony",
-      "a power struggle"
-    ],
-    "characters": [
-      {
-        "char": "争",
-        "components": [
-          {
-            "char": "爪",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "爪 and 彐 (two hands, reaching from opposite sides) — a simplified form of 爭, grabbing for the same thing."
-          },
-          {
-            "char": "亅",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "亅 (the object) — what the two hands are struggling over, giving 争 its meaning 'to contend, compete, fight for.'"
-          }
-        ]
-      },
-      {
-        "char": "霸",
-        "components": [
-          {
-            "char": "雨",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "Rain — an older semantic root kept from the character's older form."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "两家科技巨头正在人工智能领域争霸。",
-      "pinyin": "liǎng jiā kējì jùtóu zhèngzài réngōng zhìnéng lǐngyù zhēngbà.",
-      "english": "The two tech giants are contending for dominance in the field of artificial intelligence.",
-      "fact": "Invasive Argentine ant colonies along the Mediterranean coast have merged across huge stretches of territory into a single 'supercolony' spanning thousands of kilometers, eliminating rival colonies in their struggle for dominance. Scientists consider it one of the largest cooperative units ever documented in the animal kingdom.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+4FB5-72AF",
-    "word": "侵犯",
-    "frequencyRank": 2453,
-    "pinyin": "qīn fàn",
-    "meanings": [
-      "to infringe on",
-      "to encroach on",
-      "to violate",
-      "to assault"
-    ],
-    "characters": [
-      {
-        "char": "侵",
-        "components": [
-          {
-            "char": "人",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "人 (person) appears in 侵's structure, reflecting the character's original picture of a person creeping forward to raid or encroach on another's territory."
-          },
-          {
-            "char": "帚",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "帚 (broom) sits alongside the person element; early forms show someone advancing with a broom-like tool, an image of stealthy invasion that later broadened to any act of encroachment."
-          }
-        ]
-      },
-      {
-        "char": "犯",
-        "components": [
-          {
-            "char": "犭",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "犭 (dog) — 犯 originally related to a dog attacking, later extended to any act of violation"
-          },
-          {
-            "char": "㔾",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "㔾 (jié) gives a sound distantly related to 犯's reading fàn, having drifted apart over time"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "未经许可复制别人的作品属于侵犯版权。",
-      "pinyin": "wèijīng xǔkě fùzhì biérén de zuòpǐn shǔyú qīnfàn bǎnquán.",
-      "english": "Copying someone else's work without permission constitutes copyright infringement.",
-      "fact": "The Berne Convention of 1886 was the first international agreement to protect authors' rights across borders, and it still underpins copyright law in more than 180 countries today. It introduced the principle that copyright exists automatically the moment a work is created, without needing registration.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+4E00-767E-4E07",
-    "word": "一百万",
-    "frequencyRank": 2454,
-    "pinyin": "yī bǎi wàn",
-    "meanings": [
-      "one million",
-      "1,000,000"
-    ],
-    "characters": [
-      {
-        "char": "一",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "A single horizontal stroke — the simplest possible way to represent the number one; some traditional interpretations link it to heaven or earth as the very first stroke of creation.",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "百",
-        "components": [
-          {
-            "char": "一",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "一 (one) — relates to 百's meaning 'hundred,' a large round number built from 'one.'"
-          },
-          {
-            "char": "白",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "白 (bái) gives a sound hint — 百 is pronounced bǎi, sharing the same base sound with a different tone."
-          }
-        ]
-      },
-      {
-        "char": "万",
-        "components": [
-          {
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "The traditional form 萬 was a pictograph of a scorpion, its raised tail and legs later abstracted into the compact 万 shape. The link between 'scorpion' and 'ten thousand' is a sound borrowing rather than a meaning connection, one of many such loans in Chinese writing."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这座桥的建造花费了超过一百万美元。",
-      "pinyin": "zhè zuò qiáo de jiànzào huāfèi le chāoguò yībǎiwàn měiyuán.",
-      "english": "Building this bridge cost more than one million dollars.",
-      "fact": "The Golden Gate Bridge, completed in 1937, cost about $35 million to build — equivalent to well over a billion dollars today — and its total length of cable wire, if unwound, would circle the earth more than three times.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+65E0-610F",
-    "word": "无意",
-    "frequencyRank": 2455,
-    "pinyin": "wú yì",
-    "meanings": [
-      "inadvertent",
-      "accidental",
-      "to have no intention of"
-    ],
-    "characters": [
-      {
-        "char": "无",
-        "components": [
-          {
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "无 simplifies 無, whose early form pictured a dancer waving decorated sleeves. That dance image was borrowed for its sound to write the abstract idea of 'nothing, without,' completely displacing the original meaning of dancing."
-          }
-        ]
-      },
-      {
-        "char": "意",
-        "components": [
-          {
-            "char": "心",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "心 (heart/mind) — 意 relates to thought, intention, and meaning, things of the mind."
-          },
-          {
-            "char": "音",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "音 (yīn) is the historical phonetic element; its modern reading has drifted from yì, though both share a similar vowel."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "我无意打扰你,只是想确认一下时间。",
-      "pinyin": "wǒ wúyì dǎrǎo nǐ, zhǐshì xiǎng quèrèn yīxià shíjiān.",
-      "english": "I didn't mean to disturb you; I just wanted to confirm the time.",
-      "fact": "Penicillin, one of the most important medical discoveries in history, was found completely by accident in 1928 when Alexander Fleming noticed mold had killed bacteria in a petri dish he'd left uncovered. He almost discarded the dish before noticing the unusual clearing around the mold.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+6E29-6696",
-    "word": "温暖",
-    "frequencyRank": 2456,
-    "pinyin": "wēn nuǎn",
-    "meanings": [
-      "warm"
-    ],
-    "characters": [
-      {
-        "char": "温",
-        "components": [
-          {
-            "char": "氵",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "氵 (water) — 温 originally described warm water."
-          },
-          {
-            "char": "昷",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "昷 (wēn) gives the sound — an exact match with 温."
-          }
-        ]
-      },
-      {
-        "char": "暖",
-        "components": [
-          {
-            "char": "日",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "Sun — warmth comes from the sun."
-          },
-          {
-            "char": "爰",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "Gives the sound yuán, related to nuǎn but drifted apart over time."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "壁炉让整个房间变得温暖起来。",
-      "pinyin": "bìlú ràng zhěnggè fángjiān biàn de wēnnuǎn qǐlái.",
-      "english": "The fireplace made the whole room warm.",
-      "fact": "The Gulf Stream carries roughly 30 times more water than all the world's rivers combined, moving warm water from the Gulf of Mexico up toward Northern Europe. It's a major reason London stays milder in winter than cities at similar latitudes in Canada.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+73E0-5B9D",
-    "word": "珠宝",
-    "frequencyRank": 2457,
-    "pinyin": "zhū bǎo",
-    "meanings": [
-      "pearls",
-      "jewels",
-      "precious stones"
-    ],
-    "characters": [
-      {
-        "char": "珠",
-        "components": [
-          {
-            "char": "王",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "王 (jade, written as the radical for 玉) — 珠 names a round gem or bead."
-          },
-          {
-            "char": "朱",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "朱 (zhū) is an exact match for the sound of 珠."
-          }
-        ]
-      },
-      {
-        "char": "宝",
-        "components": [
-          {
-            "char": "宀",
-            "role": "ideographic",
-            "note": "宀 (a roof) — a house where valuables are kept",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "玉",
-            "role": "ideographic",
-            "note": "玉 (jade) — the treasure kept safe inside",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "她把祖母留下的珠宝锁进了保险箱。",
-      "pinyin": "tā bǎ zǔmǔ liú xià de zhūbǎo suǒ jìn le bǎoxiǎnxiāng.",
-      "english": "She locked the jewelry her grandmother left behind into the safe.",
-      "fact": "The Hope Diamond, one of the most famous jewels in the world, is believed to have originated from the Kollur Mine in India and is now valued at over $250 million. Its deep blue color comes from trace amounts of boron atoms in its crystal structure.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+63D0-8D77",
-    "word": "提起",
-    "frequencyRank": 2458,
-    "pinyin": "tí qǐ",
-    "meanings": [
-      "to mention",
-      "to bring up",
-      "(lit. and fig.) to lift",
-      "to raise",
-      "to initiate"
-    ],
-    "characters": [
-      {
-        "char": "提",
-        "components": [
-          {
-            "char": "扌",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "扌 (hand) — 提 relates to lifting or carrying something by hand."
-          },
-          {
-            "char": "是",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "是 (shì) gives a hint of the sound — 提 is pronounced tí, a connection that has shifted over time."
-          }
-        ]
-      },
-      {
-        "char": "起",
-        "components": [
-          {
-            "char": "走",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "走 (to walk/run) — 起 relates to standing up and setting into motion."
-          },
-          {
-            "char": "己",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "己 (jǐ) gives a close sound cue — 起 is pronounced qǐ, sharing the same final sound."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "每次提起那次旅行,他都会笑出来。",
-      "pinyin": "měi cì tíqǐ nà cì lǚxíng, tā dōu huì xiào chūlái.",
-      "english": "Every time that trip comes up, he laughs.",
-      "fact": "Smell-triggered memories are so vivid they have their own name, the 'Proust phenomenon,' because the brain's olfactory bulb connects almost directly to the memory and emotion centers. Studies have found that scent-cued memories feel more emotionally intense than the same memories cued by words or pictures.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+5927-4F19",
-    "word": "大伙",
-    "frequencyRank": 2459,
-    "pinyin": "dà huǒ",
-    "meanings": [
-      "variant of 大夥|大伙[da4 huo3]",
-      "everyone",
-      "all of us",
-      "all of you"
-    ],
-    "characters": [
-      {
-        "char": "大",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "A drawing of a person standing with arms and legs spread wide — used to represent the idea of something being 'big' or 'great.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "伙",
-        "components": [
-          {
-            "char": "亻",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "亻 (person) — 伙 relates to people who share meals or work together."
-          },
-          {
-            "char": "火",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "火 (huǒ) gives the sound — an exact match with 伙's reading huǒ."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "周末大伙一起去海边野餐吧。",
-      "pinyin": "zhōumò dàhuǒ yīqǐ qù hǎibiān yěcān ba.",
-      "english": "Let's all go to the beach for a picnic together this weekend.",
-      "fact": "Emperor penguins survive Antarctic winters by huddling together in groups of thousands, constantly rotating positions so no single bird stays on the frigid outer edge too long. This collective strategy can raise the temperature at the center of the huddle to nearly 37°C even when it's -40°C outside.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+5668-5B98",
-    "word": "器官",
-    "frequencyRank": 2460,
-    "pinyin": "qì guān",
-    "meanings": [
-      "(physiology) organ",
-      "apparatus"
-    ],
-    "characters": [
-      {
-        "char": "器",
-        "components": [
-          {
-            "char": "口",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "口 (a vessel), shown four times — a set of cooking vessels."
-          },
-          {
-            "char": "犬",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "犬 (a dog) — guarding the vessels, the source of 器's meaning 'vessel, tool, instrument.'"
-          }
-        ]
-      },
-      {
-        "char": "官",
-        "components": [
-          {
-            "char": "宀",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "宀 (roof, building) sits atop 官, evoking a hall or office."
-          },
-          {
-            "char": "㠯",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "㠯 depicts a mound or garrison beneath the roof; together the two pieces pictured a government building where officials presided, a meaning later extended to bodily 'organs' as functional units within the body."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "心脏是人体最重要的器官之一。",
-      "pinyin": "xīnzàng shì rén tǐ zuì zhòngyào de qìguān zhī yī.",
-      "english": "The heart is one of the most important organs in the human body.",
-      "fact": "The human liver is the only internal organ that can regrow to nearly its full size after part of it is removed — even after losing up to 70%, it can regenerate within a few months. This regenerative ability is what makes living-donor liver transplants possible.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+51FA-7248",
-    "word": "出版",
-    "frequencyRank": 2461,
-    "pinyin": "chū bǎn",
-    "meanings": [
-      "to publish"
-    ],
-    "characters": [
-      {
-        "char": "出",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "屮 (a young sprout) growing up and out of 凵 (a container or pit) — a picture of something emerging, hence 'going out.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "版",
-        "components": [
-          {
-            "char": "片",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "片 (a slice/plate) — 版 originally referred to a wooden printing block"
+            "note": "木 (wood) — trees and wooden things: 树, 桌, 桥; 板 is a plank or board."
           },
           {
             "char": "反",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "反 (fǎn) gives the sound — an exact match with 版's reading bǎn"
+            "note": "反 (fǎn) is a near sound match (-an); same part in 饭 fàn and 版 bǎn."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "这本小说去年正式出版。",
-      "pinyin": "zhè běn xiǎoshuō qùnián zhèngshì chūbǎn.",
-      "english": "This novel was officially published last year.",
-      "fact": "Johannes Gutenberg's movable-type printing press, introduced around 1440, sparked a mass-publishing revolution in Europe — within 50 years, over 20 million books had been printed, more than all European scribes had produced by hand in the previous thousand years combined.",
+      "hanzi": "请把地板擦干净。",
+      "pinyin": "Qǐng bǎ dìbǎn cā gānjìng.",
+      "english": "Please wipe the floor clean.",
+      "fact": "板 (from 木 \"wood\" plus the phonetic 反) means \"a board, plank,\" so 地板 literally pictures a wooden floor laid over open ground; usage has since broadened well past wood alone to cover tile, laminate, and stone floors too, while 地面 stays the more general word for \"ground\" of any kind.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+5207-65AD",
-    "word": "切断",
-    "frequencyRank": 2462,
-    "pinyin": "qiē duàn",
-    "meanings": [
-      "to cut off",
-      "to sever"
-    ],
-    "characters": [
+    "examples": [
       {
-        "char": "切",
-        "components": [
-          {
-            "char": "刀",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "刀 (knife) — relates directly to 切's meaning 'to cut.'"
-          },
-          {
-            "char": "七",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "七 (qī) gives a sound hint — 切 is pronounced qiè, sharing the same initial consonant."
-          }
-        ]
+        "hanzi": "地板上有一些水，小心别滑倒。",
+        "pinyin": "Dìbǎn shang yǒu yìxiē shuǐ, xiǎoxīn bié huá dǎo.",
+        "english": "There is some water on the floor, so be careful not to slip."
       },
       {
-        "char": "断",
-        "components": [
-          {
-            "char": "斤",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "斤 (an axe) — cutting through something."
-          },
-          {
-            "char": "米",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "米 (grain, in the simplified form; a bundle of thread in the traditional 斷) — the material being cut, giving 断 its meaning 'to break off, cut, sever.'"
-          }
-        ]
+        "hanzi": "我们家的地板是木头做的。",
+        "pinyin": "Wǒmen jiā de dìbǎn shì mùtou zuò de.",
+        "english": "The floor of our house is made of wood."
       }
     ],
-    "example": {
-      "hanzi": "暴风雪切断了整个村庄的电力供应。",
-      "pinyin": "bàofēngxuě qiēduàn le zhěnggè cūnzhuāng de diànlì gōngyìng.",
-      "english": "The blizzard cut off the entire village's power supply.",
-      "fact": "In 2003, a single software bug in an Ohio power plant's alarm system helped trigger the Northeast Blackout, cutting off electricity to 55 million people across the US and Canada for up to two days. It remains one of the largest blackouts in history.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
     "batchId": "2451-2500"
   },
   {
-    "id": "W+73AB-7470",
-    "word": "玫瑰",
-    "frequencyRank": 2463,
-    "pinyin": "méi guī",
+    "id": "W+60B2-4F24",
+    "word": "悲伤",
+    "frequencyRank": 2452,
+    "pinyin": "bēi shāng",
     "meanings": [
-      "rugosa rose",
-      "rose flower"
+      "sad",
+      "sorrowful"
     ],
     "characters": [
       {
-        "char": "玫",
-        "components": [
-          {
-            "char": "王",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "王 (jade, written as 王 in components) — 玫 originally described a type of fine jade or gem."
-          },
-          {
-            "char": "攵",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "攵 gives a sound only distantly related to méi today, having drifted apart over time."
-          }
-        ]
-      },
-      {
-        "char": "瑰",
-        "components": [
-          {
-            "char": "王",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "王 (jade) — 瑰 originally described a fine, precious stone."
-          },
-          {
-            "char": "鬼",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "鬼 (guǐ) gives a sound close to guī, differing only in tone."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他送了她一束红玫瑰。",
-      "pinyin": "tā sòng le tā yī shù hóng méiguī.",
-      "english": "He gave her a bouquet of red roses.",
-      "fact": "Roses are among the oldest cultivated flowers on Earth — fossil evidence suggests wild roses existed 35 million years ago, and archaeologists have found rose motifs in Egyptian tombs, pointing to cultivation stretching back thousands of years.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+5D07-62DC",
-    "word": "崇拜",
-    "frequencyRank": 2464,
-    "pinyin": "chóng bài",
-    "meanings": [
-      "to worship",
-      "adoration"
-    ],
-    "characters": [
-      {
-        "char": "崇",
-        "components": [
-          {
-            "char": "山",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "山 (mountain) — 崇 describes something towering high, like a mountain, extending to 'to revere.'"
-          },
-          {
-            "char": "宗",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "宗 (zōng) shares the rhyme -ong with chóng, though the initial has drifted from z- to ch- over time."
-          }
-        ]
-      },
-      {
-        "char": "拜",
-        "components": [
-          {
-            "char": "手",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "手 (hand), shown twice, side by side — two hands pressed together in a gesture of respect, giving 拜 its meaning 'to bow, to pay respects.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "很多孩子从小就崇拜自己的父亲。",
-      "pinyin": "hěn duō háizi cóngxiǎo jiù chóngbài zìjǐ de fùqīn.",
-      "english": "Many children have worshipped their fathers since they were young.",
-      "fact": "Ancient Egyptians worshipped the sun god Ra as one of their most powerful deities, believing he sailed across the sky each day in a solar barge and battled the serpent Apep every night to be reborn at dawn. Sun worship even influenced the alignment of monuments like the pyramids.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+524D-59BB",
-    "word": "前妻",
-    "frequencyRank": 2465,
-    "pinyin": "qián qī",
-    "meanings": [
-      "ex-wife",
-      "late wife"
-    ],
-    "characters": [
-      {
-        "char": "前",
-        "components": [
-          {
-            "char": "止",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "止 (foot) at the top of 前 shows movement."
-          },
-          {
-            "char": "舟",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "舟 (boat) beneath the foot completes the original picture of a foot stepping into a boat to move ahead, which is how 前 came to mean 'front' or 'before.'"
-          }
-        ]
-      },
-      {
-        "char": "妻",
-        "components": [
-          {
-            "char": "女",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "女 (woman) sits at the base of the character."
-          },
-          {
-            "char": "彐",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "彐-shaped strokes above picture a hand holding a broom, an old image of a wife managing the household."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他和前妻仍然保持着朋友关系。",
-      "pinyin": "tā hé qiánqī réngrán bǎochí zhe péngyǒu guānxì.",
-      "english": "He and his ex-wife still remain friends.",
-      "fact": "Ancient Rome allowed unilateral no-fault divorce as early as the 2nd century BC, making it one of the earliest legal systems to let either spouse end a marriage without proving wrongdoing — a right many modern legal systems didn't grant until the 20th century.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+5931-8D25-8005",
-    "word": "失败者",
-    "frequencyRank": 2466,
-    "pinyin": "shī bài zhě",
-    "meanings": [
-      "loser"
-    ],
-    "characters": [
-      {
-        "char": "失",
-        "components": [
-          {
-            "char": "丿",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "丿 (something falling) — an object slipping away."
-          },
-          {
-            "char": "夫",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "夫 (a hand/person) — the object slipping out of a hand, giving 失 its meaning 'to lose.'"
-          }
-        ]
-      },
-      {
-        "char": "败",
-        "components": [
-          {
-            "char": "攵",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "攵 (a striking hand) — 败 relates to being struck down or defeated."
-          },
-          {
-            "char": "贝",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "贝 (bèi) gives a sound close to bài, sharing the same initial."
-          }
-        ]
-      },
-      {
-        "char": "者",
-        "components": [
-          {
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "者's ancient form pictured leaves or stalks growing from a plant, an image later borrowed purely for its sound to mark 'the one who' or 'the thing that,' as in 读者 (reader) — the plant meaning has been completely lost."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "没有人愿意被称为失败者。",
-      "pinyin": "méiyǒu rén yuànyì bèi chēng wéi shībàizhě.",
-      "english": "No one wants to be called a loser.",
-      "fact": "Wilbur and Orville Wright endured years of crashes and failed glider tests at Kitty Hawk before their December 1903 flight lasted just 12 seconds — yet it became the first sustained, controlled, powered flight in human history.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+8003-9A8C",
-    "word": "考验",
-    "frequencyRank": 2467,
-    "pinyin": "kǎo yàn",
-    "meanings": [
-      "to test",
-      "to put to the test",
-      "trial",
-      "ordeal"
-    ],
-    "characters": [
-      {
-        "char": "考",
-        "components": [
-          {
-            "char": "耂",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "耂 (a variant of 老, 'old') — 考 relates to careful examination and testing"
-          },
-          {
-            "char": "丂",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "丂 gives a loose sound connection to 考's reading kǎo"
-          }
-        ]
-      },
-      {
-        "char": "验",
-        "components": [
-          {
-            "char": "马",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "马 (horse) — 验 originally related to examining or testing horses, later extended to 'to test, examine, verify'"
-          },
-          {
-            "char": "佥",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "佥 (qiān) gives a loose sound connection to 验's reading yàn"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这场比赛是对他体力的一次考验。",
-      "pinyin": "zhè chǎng bǐsài shì duì tā tǐlì de yī cì kǎoyàn.",
-      "english": "This competition is a test of his physical strength.",
-      "fact": "NASA astronaut candidates undergo a water-survival test where they're strapped into a mock capsule and dropped into a pool, then must escape while inverted and disoriented — an ordeal deliberately designed to simulate emergency splashdown conditions.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+7F6A-884C",
-    "word": "罪行",
-    "frequencyRank": 2468,
-    "pinyin": "zuì xíng",
-    "meanings": [
-      "crime",
-      "offense"
-    ],
-    "characters": [
-      {
-        "char": "罪",
-        "components": [
-          {
-            "char": "罒",
-            "role": "ideographic",
-            "note": "罒 (a net) — the law closing in around wrongdoing",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "非",
-            "role": "ideographic",
-            "note": "非 (wrong) — the wrongdoing itself, caught in the net",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "行",
-        "components": [
-          {
-            "char": "彳",
-            "role": "ideographic",
-            "note": "彳 depicts a step with the left foot; together with 亍 (a step with the right foot), 行 shows a person walking or moving.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "亍",
-            "role": "ideographic",
-            "note": "亍 depicts a step with the right foot, complementing 彳 to form the idea of walking or travel.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "法庭正在审理他的罪行。",
-      "pinyin": "fǎtíng zhèngzài shěnlǐ tā de zuìxíng.",
-      "english": "The court is currently trying his offense.",
-      "fact": "The Nuremberg trials of 1945-46 were the first international tribunals to prosecute leaders for war crimes and crimes against humanity, establishing legal precedents — like rejecting 'just following orders' as a defense — that still shape international criminal law today.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+6548-52B3",
-    "word": "效劳",
-    "frequencyRank": 2469,
-    "pinyin": "xiào láo",
-    "meanings": [
-      "to serve (in some capacity)",
-      "to work for"
-    ],
-    "characters": [
-      {
-        "char": "效",
-        "components": [
-          {
-            "char": "攵",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "攵 (an action/to strike) — 效 relates to the result produced by an action"
-          },
-          {
-            "char": "交",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "交 (jiāo) gives a sound close to 效's reading xiào"
-          }
-        ]
-      },
-      {
-        "char": "劳",
-        "components": [
-          {
-            "char": "艹",
-            "role": "ideographic",
-            "note": "艹 (grass) — a bundle of grass or straw carried as a load",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "力",
-            "role": "ideographic",
-            "note": "力 (strength) — the effort of lifting and carrying the heavy load",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他愿意为公司效劳多年。",
-      "pinyin": "tā yuànyì wèi gōngsī xiàoláo duō nián.",
-      "english": "He is willing to serve the company for many years.",
-      "fact": "Honeybee workers spend their roughly six-week lifespan working themselves to death for the colony — foraging bees fly up to 800 kilometers over their lifetime and can visit over 2,000 flowers in a single day of gathering for the hive.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+65F6-88C5",
-    "word": "时装",
-    "frequencyRank": 2470,
-    "pinyin": "shí zhuāng",
-    "meanings": [
-      "fashion",
-      "fashionable clothes"
-    ],
-    "characters": [
-      {
-        "char": "时",
-        "components": [
-          {
-            "char": "日",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "日 (sun/day) — relates to 时's meaning of 'time, season'; the phonetic part of the character was later replaced by 寸 in the simplified form"
-          }
-        ]
-      },
-      {
-        "char": "装",
-        "components": [
-          {
-            "char": "衣",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "衣 (clothing) — 装 relates to clothes, dress, and attire"
-          },
-          {
-            "char": "壮",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "壮 (zhuàng) gives the sound — 装 is pronounced zhuāng, a close match"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "巴黎每年都会举办著名的时装秀。",
-      "pinyin": "bālí měi nián dōu huì jǔbàn zhùmíng de shízhuāng xiù.",
-      "english": "Paris holds a famous fashion show every year.",
-      "fact": "Paris Fashion Week traces its roots to the Chambre Syndicale de la Couture Parisienne, founded in 1868, making it one of the oldest continuously running fashion institutions in the world — over 150 years before today's livestreamed runway shows.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+7A0D-540E",
-    "word": "稍后",
-    "frequencyRank": 2471,
-    "pinyin": "shāo hòu",
-    "meanings": [
-      "in a little while",
-      "shortly after"
-    ],
-    "characters": [
-      {
-        "char": "稍",
-        "components": [
-          {
-            "char": "禾",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "禾 (grain) — 稍 relates to a small amount of grain."
-          },
-          {
-            "char": "肖",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "肖 (to resemble) — grain 禾 that only resembles a full harvest, a slightly smaller amount, gave 稍 its meaning 'slightly, a little.'"
-          }
-        ]
-      },
-      {
-        "char": "后",
-        "components": [
-          {
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "后 was originally a separate character picturing a ruler with an open mouth issuing commands, the source of meanings like 'queen' or 'empress.' Simplified Chinese reused this shape to also stand for 後 ('behind, after'), so the modern 后 quietly carries two unrelated histories in one form."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "会议稍后开始,请大家先坐好。",
-      "pinyin": "huìyì shāohòu kāishǐ, qǐng dàjiā xiān zuò hǎo.",
-      "english": "The meeting will start shortly; everyone please take a seat first.",
-      "fact": "Light from the Sun takes about 8 minutes and 20 seconds to reach Earth, so whenever you look at the Sun, you're actually seeing it as it appeared slightly earlier — if it suddenly vanished, we wouldn't know for over eight minutes.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+642C-5BB6",
-    "word": "搬家",
-    "frequencyRank": 2472,
-    "pinyin": "bān jiā",
-    "meanings": [
-      "to move house",
-      "to relocate",
-      "to remove (sth)"
-    ],
-    "characters": [
-      {
-        "char": "搬",
-        "components": [
-          {
-            "char": "扌",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "Hand — moving things is done by hand."
-          },
-          {
-            "char": "般",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "Gives the sound bān, matching the character's reading."
-          }
-        ]
-      },
-      {
-        "char": "家",
-        "components": [
-          {
-            "char": "宀",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "宀 (roof) — 家 is about a home, the space under a roof."
-          },
-          {
-            "char": "豕",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "豕 (shǐ, 'pig') supplies the ancient sound for 家; keeping a pig under one's roof was also a practical sign of a household in ancient China, though the modern readings jiā and shǐ no longer rhyme."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "我们下个月要搬家到另一个城市。",
-      "pinyin": "wǒmen xià gè yuè yào bānjiā dào lìng yī gè chéngshì.",
-      "english": "We're moving to another city next month.",
-      "fact": "According to US Census data, the average American moves about 11.7 times in their lifetime, a notably higher rate of internal migration than in most other developed nations, largely driven by job mobility.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+4E3B-6301",
-    "word": "主持",
-    "frequencyRank": 2473,
-    "pinyin": "zhǔ chí",
-    "meanings": [
-      "to take charge of",
-      "to manage or direct",
-      "to preside over",
-      "to uphold",
-      "to stand for",
-      "to host (a TV or radio program etc)"
-    ],
-    "characters": [
-      {
-        "char": "主",
-        "components": [
-          {
-            "char": "丶",
-            "role": "pictographic",
-            "note": "丶 (a dot) — represents the burning flame atop a lamp.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "王",
-            "role": "pictographic",
-            "note": "王 here depicts the base and stand of an oil lamp, not its usual meaning 'king' — the one who tends the flame became linked to 'master, lord, main.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "持",
-        "components": [
-          {
-            "char": "扌",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "扌 (hand) — relates directly to 持's meaning 'to hold, maintain.'"
-          },
-          {
-            "char": "寺",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "寺 (sì) served as the phonetic base; its pronunciation has since drifted well away from chí."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "她将主持今晚的颁奖典礼。",
-      "pinyin": "tā jiāng zhǔchí jīnwǎn de bānjiǎng diǎnlǐ.",
-      "english": "She will host tonight's award ceremony.",
-      "fact": "The Academy Awards ceremony has aired live on television since 1953, and its unscripted hosting segments are considered so unpredictable that producers build in extensive contingency plans, including backup hosts kept on standby in case of an emergency.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+7537-5B50",
-    "word": "男子",
-    "frequencyRank": 2474,
-    "pinyin": "nán zǐ",
-    "meanings": [
-      "a man",
-      "a male"
-    ],
-    "characters": [
-      {
-        "char": "男",
-        "components": [
-          {
-            "char": "田",
-            "role": "ideographic",
-            "note": "田 (field) — represents farmland.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "力",
-            "role": "ideographic",
-            "note": "力 (strength/effort) — someone strong enough to work the fields gave 男 its meaning 'male, man.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "子",
-        "components": [
-          {
-            "role": "pictographic",
-            "note": "A simple drawing of a swaddled baby — arms reaching out, legs bundled together in a wrap.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "一名男子在公园里跑步锻炼。",
-      "pinyin": "yī míng nánzǐ zài gōngyuán lǐ pǎobù duànliàn.",
-      "english": "A man was running and exercising in the park.",
-      "fact": "The men's 100-meter world record, held by Usain Bolt at 9.58 seconds since 2009, requires reaching speeds of over 44 km/h at peak stride — faster than many dog breeds can sustain over the same short distance.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+7F6A-6076",
-    "word": "罪恶",
-    "frequencyRank": 2475,
-    "pinyin": "zuì è",
-    "meanings": [
-      "crime",
-      "evil",
-      "sin"
-    ],
-    "characters": [
-      {
-        "char": "罪",
-        "components": [
-          {
-            "char": "罒",
-            "role": "ideographic",
-            "note": "罒 (a net) — the law closing in around wrongdoing",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "非",
-            "role": "ideographic",
-            "note": "非 (wrong) — the wrongdoing itself, caught in the net",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "恶",
+        "char": "悲",
         "components": [
           {
             "char": "心",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "心 (heart) — 恶 relates to an evil or malicious state of heart/mind"
+            "note": "心 (heart) — 心 marks feelings, as in 想, 爱, 怒; 悲 is sorrow."
           },
           {
-            "char": "亚",
+            "char": "非",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "亚 (yà) gives a sound distantly related to 恶's reading è, having drifted apart over time"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他终于为自己的罪恶付出了代价。",
-      "pinyin": "tā zhōngyú wèi zìjǐ de zuìè fùchū le dàijià.",
-      "english": "He finally paid the price for his own wrongdoing.",
-      "fact": "Dante's 'Inferno,' written in the early 14th century, organized sin into nine concentric circles of Hell ranked by severity — a literary structure so influential that it still shapes modern pop-culture depictions of moral hierarchy seven centuries later.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+6D3B-513F",
-    "word": "活儿",
-    "frequencyRank": 2476,
-    "pinyin": "huó r",
-    "meanings": [
-      "work",
-      "(lots of) things to do"
-    ],
-    "characters": [
-      {
-        "char": "活",
-        "components": [
-          {
-            "char": "氵",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "氵 (water) — 活 relates to water flowing, a symbol of life and vitality."
-          },
-          {
-            "char": "舌",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "舌 (shé) gives a hint of the sound — 活 is pronounced huó, a connection that has shifted over time."
+            "note": "非 (fēi) — near sound — 悲 is bēi; 非 also sounds out 辈 bèi and 排 pái."
           }
         ]
       },
       {
-        "char": "儿",
-        "components": [
-          {
-            "char": "儿",
-            "role": "pictographic",
-            "source": "llm-fallback",
-            "note": "儿 (simplified from 兒) depicts a small child, drawn with a large head on a small body — a simple picture of youth."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "今天家里的活儿都干完了。",
-      "pinyin": "jīntiān jiā lǐ de huór dōu gàn wán le.",
-      "english": "Today all the housework at home has been finished.",
-      "fact": "The 40-hour workweek wasn't standardized in the US until the Fair Labor Standards Act of 1938; before that, many factory laborers, including children, routinely worked 60-plus hours a week under grueling industrial-era conditions.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+7528-6765",
-    "word": "用来",
-    "frequencyRank": 2477,
-    "pinyin": "yòng lái",
-    "meanings": [
-      "to be used for"
-    ],
-    "characters": [
-      {
-        "char": "用",
-        "components": [
-          {
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "用's earliest forms pictured a wooden bucket or pail, an everyday household tool. From the concrete image of a useful container, the character broadened over time into the abstract verb 'to use.'"
-          }
-        ]
-      },
-      {
-        "char": "来",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "Originally depicted a wheat plant; this agricultural picture was borrowed early on to represent the unrelated verb 'to come.'",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这个房间专门用来存放旧书。",
-      "pinyin": "zhè ge fángjiān zhuānmén yònglái cúnfàng jiù shū.",
-      "english": "This room is used specifically for storing old books.",
-      "fact": "The Svalbard Global Seed Vault, carved into a mountainside in the Arctic, stores backup samples of over a million crop seed varieties from around the world at -18°C, in case natural disasters or war destroy the original crops.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+8FDC-8FDC",
-    "word": "远远",
-    "frequencyRank": 2478,
-    "pinyin": "yuǎn yuǎn",
-    "meanings": [
-      "distant",
-      "by far"
-    ],
-    "characters": [
-      {
-        "char": "远",
-        "components": [
-          {
-            "char": "辶",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "辶 (walking/movement) — relates to 远's meaning 'far, distant,' a long way to walk."
-          },
-          {
-            "char": "元",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "元 (yuán) gives a sound hint — 远 is pronounced yuǎn, sharing the same base sound with a different tone."
-          }
-        ]
-      },
-      {
-        "char": "远",
-        "components": [
-          {
-            "char": "辶",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "辶 (walking/movement) — relates to 远's meaning 'far, distant,' a long way to walk."
-          },
-          {
-            "char": "元",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "元 (yuán) gives a sound hint — 远 is pronounced yuǎn, sharing the same base sound with a different tone."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他的成绩远远超过了其他同学。",
-      "pinyin": "tā de chéngjì yuǎnyuǎn chāoguò le qítā tóngxué.",
-      "english": "His grades far exceeded those of his classmates.",
-      "fact": "Voyager 1, launched in 1977, is now more than 24 billion kilometers from Earth — farther than any human-made object has ever traveled — and its radio signals still take over 22 hours to reach us.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+54C8-5229",
-    "word": "哈利",
-    "frequencyRank": 2479,
-    "pinyin": "Hā lì",
-    "meanings": [
-      "Harry"
-    ],
-    "characters": [
-      {
-        "char": "哈",
-        "components": [
-          {
-            "char": "口",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "口 (mouth) — 哈 is the sound made by the mouth while laughing"
-          },
-          {
-            "char": "合",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "合 (hé) gives a sound related to 哈's reading hā, from an older, closer pronunciation link"
-          }
-        ]
-      },
-      {
-        "char": "利",
-        "components": [
-          {
-            "char": "禾",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "禾 (grain, a growing rice or wheat plant) — 利 pictures a harvest."
-          },
-          {
-            "char": "刂",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "刂 (knife) — cutting grain at harvest time was a clear benefit or gain, giving 利 its meaning 'profit' or 'advantage.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "电影里的哈利最终打败了敌人。",
-      "pinyin": "diànyǐng lǐ de Hālì zuìzhōng dǎbài le dírén.",
-      "english": "Harry in the movie eventually defeated the enemy.",
-      "fact": "Harry Houdini performed his famous 'Chinese Water Torture Cell' escape thousands of times over a decade — submerged upside down in a locked, water-filled tank, he had roughly three minutes to escape before running out of air.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+626B-63CF",
-    "word": "扫描",
-    "frequencyRank": 2480,
-    "pinyin": "sǎo miáo",
-    "meanings": [
-      "to scan"
-    ],
-    "characters": [
-      {
-        "char": "扫",
-        "components": [
-          {
-            "char": "扌",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "扌 (hand) — 扫 describes using the hand to sweep."
-          },
-          {
-            "char": "帚",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "帚 depicts a hand-held broom — held by the hand 扌, it gave 扫 its meaning 'to sweep.'"
-          }
-        ]
-      },
-      {
-        "char": "描",
-        "components": [
-          {
-            "char": "扌",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "扌 (hand) — 描 describes tracing or drawing something by hand."
-          },
-          {
-            "char": "苗",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "苗 (miáo) is an exact match for the sound of 描."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "医生让他去做一次全身扫描。",
-      "pinyin": "yīshēng ràng tā qù zuò yī cì quánshēn sǎomiáo.",
-      "english": "The doctor had him get a full-body scan.",
-      "fact": "The first CT scanner, built by Godfrey Hounsfield in 1971, took over five hours to scan a single brain and nearly two and a half hours to process the resulting image; modern scanners now do the equivalent in seconds.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+5047-671F",
-    "word": "假期",
-    "frequencyRank": 2481,
-    "pinyin": "jià qī",
-    "meanings": [
-      "vacation"
-    ],
-    "characters": [
-      {
-        "char": "假",
+        "char": "伤",
         "components": [
           {
             "char": "亻",
-            "role": "ideographic",
-            "note": "亻 (person) — represents a human figure.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "叚",
-            "role": "ideographic",
-            "note": "叚 depicts borrowing or handing something over — a person who is not genuine, or something borrowed rather than real, gave 假 its meaning 'false, fake' (and, for a break from routine, 'vacation, leave.')",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "期",
-        "components": [
-          {
-            "char": "月",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "月 (moon) — 期 relates to time measured by the moon's cycles, like a period or term."
-          },
-          {
-            "char": "其",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "其 (qí) gives a hint of the sound — 期 is pronounced qī, a connection that has shifted slightly in tone."
+            "note": "亻 (person) — people, as in 你, 他, 做: a person hurt. The traditional 傷 took its sound from 昜 yáng (also in 汤 and 场)."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "暑假是学生们最喜欢的假期。",
-      "pinyin": "shǔjià shì xuéshēngmen zuì xǐhuān de jiàqī.",
-      "english": "Summer break is students' favorite vacation.",
-      "fact": "France mandates by law that every full-time employee receive a minimum of five weeks of paid vacation annually, one of the most generous statutory minimums in the world, compared to the US, which has no federal law guaranteeing any paid vacation at all.",
+      "hanzi": "听到这个消息,她感到非常悲伤。",
+      "pinyin": "Tīngdào zhège xiāoxi, tā gǎndào fēicháng bēishāng.",
+      "english": "Hearing the news, she felt extremely sad.",
+      "fact": "悲伤 leans literary, common in writing or formal speech about grief and loss; in everyday conversation Mandarin speakers reach far more often for the plainer 难过 to describe the same feeling.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+7F3A-4E4F",
-    "word": "缺乏",
-    "frequencyRank": 2482,
-    "pinyin": "quē fá",
-    "meanings": [
-      "to lack",
-      "to be short of"
-    ],
-    "characters": [
+    "examples": [
       {
-        "char": "缺",
-        "components": [
-          {
-            "char": "缶",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "缶 (a clay jar) — 缺 relates to something broken or missing, like a cracked vessel."
-          },
-          {
-            "char": "夬",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "夬 (guài) reflects the character's historical phonetic root, though the modern reading quē has diverged."
-          }
-        ]
+        "hanzi": "他看起来很悲伤，一句话也不说。",
+        "pinyin": "Tā kàn qǐlái hěn bēishāng, yí jù huà yě bù shuō.",
+        "english": "He looked sad and didn't say a word."
       },
       {
-        "char": "乏",
-        "components": [
-          {
-            "char": "之",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "之 depicts a foot stepping forward."
-          },
-          {
-            "char": "丿",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "丿 marks a barrier in front of the foot — a step blocked by a wall gave 乏 its meaning 'lacking, tired.'"
-          }
-        ]
+        "hanzi": "这首歌的旋律让人感到悲伤。",
+        "pinyin": "Zhè shǒu gē de xuánlǜ ràng rén gǎndào bēishāng.",
+        "english": "The melody of this song makes people feel sorrowful."
       }
     ],
-    "example": {
-      "hanzi": "这个地区长期缺乏干净的饮用水。",
-      "pinyin": "zhè ge dìqū chángqí quēfá gānjìng de yǐnyòngshuǐ.",
-      "english": "This region has long lacked clean drinking water.",
-      "fact": "According to the WHO, roughly 2 billion people worldwide still lack access to safely managed drinking water at home, and unsafe water contributes to over 500,000 diarrheal deaths every year, disproportionately affecting children under five.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
     "batchId": "2451-2500"
   },
   {
-    "id": "W+4E49-52A1",
-    "word": "义务",
-    "frequencyRank": 2483,
-    "pinyin": "yì wù",
+    "id": "W+5C16-53EB",
+    "word": "尖叫",
+    "frequencyRank": 2453,
+    "pinyin": "jiān jiào",
     "meanings": [
-      "duty",
-      "obligation",
-      "volunteer (work etc)"
+      "to screech",
+      "to shriek"
     ],
     "characters": [
       {
-        "char": "义",
+        "char": "尖",
         "components": [
           {
-            "char": "⺷",
-            "role": "semantic",
+            "char": "小",
+            "role": "ideographic",
             "source": "makemeahanzi",
-            "note": "⺷ (sheep, related to 羊) — 义 relates to what is right or moral, linked to the idea of sacrificial sheep used in rituals of righteousness."
-          },
-          {
-            "char": "乂",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "乂 (yì) gives the sound — 义 is also pronounced yì, an exact match."
+            "note": "小 (small) — 小 above 大 — a small top over a big base is a point."
           }
         ]
       },
       {
-        "char": "务",
+        "char": "叫",
         "components": [
-          {
-            "char": "力",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "力 (strength, effort) anchors 务/務, showing exertion put toward a task."
-          },
-          {
-            "char": "攴",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "攴 (a hand wielding a tool) appears in the traditional 務, picturing someone striving hard at labor — together the pieces built the idea of 'duty' or 'affairs' that must be attended to with effort."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "纳税是每个公民的义务。",
-      "pinyin": "nàshuì shì měi gè gōngmín de yìwù.",
-      "english": "Paying taxes is every citizen's duty.",
-      "fact": "Switzerland still practices a form of mandatory national service, requiring most male citizens to complete military duty and remain part of a reserve into their 30s, letting the country mobilize a large trained force despite having a small standing army.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+8FDE-7EED",
-    "word": "连续",
-    "frequencyRank": 2484,
-    "pinyin": "lián xù",
-    "meanings": [
-      "continuous",
-      "in a row",
-      "serial",
-      "consecutive"
-    ],
-    "characters": [
-      {
-        "char": "连",
-        "components": [
-          {
-            "char": "车",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "车 (cart) — the vehicle moving goods."
-          },
-          {
-            "char": "辶",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "辶 (walking/movement) — the cart traveling along a road, linking one place to another, giving 连 its meaning 'to connect, link.'"
-          }
-        ]
-      },
-      {
-        "char": "续",
-        "components": [
-          {
-            "char": "纟",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "纟 (thread) — 续 relates to continuing, like an unbroken thread"
-          },
-          {
-            "char": "卖",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "卖 (mài) gives a loose sound connection to 续's reading xù"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这支球队已经连续赢了十场比赛。",
-      "pinyin": "zhè zhī qiúduì yǐjīng liánxù yíng le shí chǎng bǐsài.",
-      "english": "This team has won ten games in a row.",
-      "fact": "The longest winning streak in major North American pro sports belongs to the 1971-72 Los Angeles Lakers, who won 33 consecutive NBA games — a record that has stood for over 50 years and is still considered one of the hardest in sports to break.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+4E00-65F6",
-    "word": "一时",
-    "frequencyRank": 2485,
-    "pinyin": "yī shí",
-    "meanings": [
-      "a period of time",
-      "a while",
-      "for a short while",
-      "temporary",
-      "momentary",
-      "at the same time"
-    ],
-    "characters": [
-      {
-        "char": "一",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "A single horizontal stroke — the simplest possible way to represent the number one; some traditional interpretations link it to heaven or earth as the very first stroke of creation.",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "时",
-        "components": [
-          {
-            "char": "日",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "日 (sun/day) — relates to 时's meaning of 'time, season'; the phonetic part of the character was later replaced by 寸 in the simplified form"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他一时想不起那个人的名字。",
-      "pinyin": "tā yīshí xiǎng bù qǐ nà ge rén de míngzi.",
-      "english": "He couldn't recall that person's name for a moment.",
-      "fact": "Short-term memory typically holds only about four to seven items at once for a matter of seconds unless they're actively rehearsed — a limit famously described in psychologist George Miller's 1956 paper 'The Magical Number Seven.'",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+767D-5929",
-    "word": "白天",
-    "frequencyRank": 2486,
-    "pinyin": "bái tiān",
-    "meanings": [
-      "daytime",
-      "during the day",
-      "day",
-      "CL:個|个[ge4]"
-    ],
-    "characters": [
-      {
-        "char": "白",
-        "components": [
-          {
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "Originally depicted a burning candle or the sun's rays radiating outward — the source of 白's meaning 'white, bright, clear.'"
-          }
-        ]
-      },
-      {
-        "char": "天",
-        "components": [
-          {
-            "char": "大",
-            "role": "ideographic",
-            "note": "大 (a person, arms outstretched) — represents a human being.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "一",
-            "role": "ideographic",
-            "note": "一 (a line, here representing the sky) — drawn above a person, showing what is above them: the heavens, hence 'sky, day.'",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他白天工作,晚上上课。",
-      "pinyin": "tā báitiān gōngzuò, wǎnshang shàngkè.",
-      "english": "He works during the day and attends classes at night.",
-      "fact": "North of the Arctic Circle, parts of Norway experience the Midnight Sun, where the sun doesn't set at all for up to 76 consecutive days each summer, turning 'daytime' into a continuous, round-the-clock event.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+6B32-671B",
-    "word": "欲望",
-    "frequencyRank": 2487,
-    "pinyin": "yù wàng",
-    "meanings": [
-      "desire",
-      "longing",
-      "appetite",
-      "craving"
-    ],
-    "characters": [
-      {
-        "char": "欲",
-        "components": [
-          {
-            "char": "欠",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "欠 (to lack) — wanting something you lack ties to 欲's meaning 'desire.'"
-          },
-          {
-            "char": "谷",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "谷 (gǔ) gives a sound distantly related to yù, having drifted apart over time."
-          }
-        ]
-      },
-      {
-        "char": "望",
-        "components": [
-          {
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "Depicts a person standing tall, gazing up at the moon 月 — the image of looking into the distance, the source of 望's meaning 'to gaze, hope, expect.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "金钱无法满足他所有的欲望。",
-      "pinyin": "jīnqián wúfǎ mǎnzú tā suǒyǒu de yùwàng.",
-      "english": "Money can't satisfy all of his desires.",
-      "fact": "Dopamine, often called the 'desire molecule,' spikes in the brain not at the moment of reward but during the anticipation of it — a mechanism confirmed in 1990s primate studies that helps explain why craving something can feel more intense than actually getting it.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+9B54-672F",
-    "word": "魔术",
-    "frequencyRank": 2488,
-    "pinyin": "mó shù",
-    "meanings": [
-      "magic"
-    ],
-    "characters": [
-      {
-        "char": "魔",
-        "components": [
-          {
-            "char": "鬼",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "鬼 (ghost) — 魔 names a demon or evil spirit."
-          },
-          {
-            "char": "麻",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "麻 (má) gives a sound distantly related to mó, having drifted apart over time."
-          }
-        ]
-      },
-      {
-        "char": "术",
-        "components": [
-          {
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "术 began as a pictograph of a millet plant with grains hanging from its stalk. In the traditional character 術 (skill, technique), this millet sign sat inside 行 (a crossroads radical) as a sound element; simplified Chinese later kept just the millet shape to stand for the whole idea of 'technique' or 'art.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他在派对上表演了一个魔术。",
-      "pinyin": "tā zài pàiduì shàng biǎoyǎn le yī gè móshù.",
-      "english": "He performed a magic trick at the party.",
-      "fact": "The largest magic trick ever performed was David Copperfield's 1983 'vanishing' of the Statue of Liberty, where he made the 151-foot statue seem to disappear in front of a live audience using a rotating platform and carefully timed lighting.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+8FDE-73AF",
-    "word": "连环",
-    "frequencyRank": 2489,
-    "pinyin": "lián huán",
-    "meanings": [
-      "chain of rings",
-      "(attributive) linked",
-      "successive",
-      "serial"
-    ],
-    "characters": [
-      {
-        "char": "连",
-        "components": [
-          {
-            "char": "车",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "车 (cart) — the vehicle moving goods."
-          },
-          {
-            "char": "辶",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "辶 (walking/movement) — the cart traveling along a road, linking one place to another, giving 连 its meaning 'to connect, link.'"
-          }
-        ]
-      },
-      {
-        "char": "环",
-        "components": [
-          {
-            "char": "王",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "王 (a variant of 玉, jade) — 环 originally referred to a round jade ring or bracelet"
-          },
-          {
-            "char": "不",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "不 (bù) gives a sound distantly related to 环's reading huán, having drifted apart considerably over time"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这是一部连环画风格的漫画。",
-      "pinyin": "zhè shì yī bù liánhuán huà fēnggé de mànhuà.",
-      "english": "This is a comic drawn in a serial-panel picture-book style.",
-      "fact": "The ancient Chinese mechanical puzzle known as the Nine Linked Rings dates back over 2,000 years and requires a minimum of 341 moves to fully separate all nine interlocking rings, making it one of the earliest known combinatorial puzzles in the world.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+871C-8702",
-    "word": "蜜蜂",
-    "frequencyRank": 2490,
-    "pinyin": "mì fēng",
-    "meanings": [
-      "bee",
-      "honeybee",
-      "CL:隻|只[zhi1],群[qun2]"
-    ],
-    "characters": [
-      {
-        "char": "蜜",
-        "components": [
-          {
-            "char": "虫",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "虫 (insect) — honey is made by bees, which are insects."
-          },
-          {
-            "char": "宓",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "宓 (mì) gives the sound — an exact match for 蜜."
-          }
-        ]
-      },
-      {
-        "char": "蜂",
-        "components": [
-          {
-            "char": "虫",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "虫 (insect) — a bee is a kind of insect."
-          },
-          {
-            "char": "夆",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "夆 (féng in related characters) gives a sound close to fēng, sharing the same rhyme."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "一群蜜蜂正在花丛中采蜜。",
-      "pinyin": "yī qún mìfēng zhèngzài huācóng zhōng cǎimì.",
-      "english": "A swarm of bees is gathering nectar among the flowers.",
-      "fact": "A single honeybee colony can visit up to 2 million flowers to produce just one pound of honey, and worker bees communicate the direction and distance of food sources to each other through a precise 'waggle dance.'",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+4E4B-6240-4EE5",
-    "word": "之所以",
-    "frequencyRank": 2491,
-    "pinyin": "zhī suǒ yǐ",
-    "meanings": [
-      "(after a noun N and before a predicate P) the reason why N P"
-    ],
-    "characters": [
-      {
-        "char": "之",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "A stylized foot (related to 止, 'to stop/foot') — originally meant 'to go,' later grammaticalized into a literary possessive/linking particle, similar to 的.",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "所",
-        "components": [
-          {
-            "char": "户",
-            "role": "ideographic",
-            "note": "户 (door) — 所 evokes a location or place, such as where a door stands.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "斤",
-            "role": "ideographic",
-            "note": "斤 (axe) — combined with 户 (door), the image of an axe at a door gave rise to the abstract sense of 'a place' or 'that which.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "以",
-        "components": [
-          {
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "以's early form pictured a person bent over, carrying or lifting an object such as a farming tool. From the concrete act of 'taking up' something, the character broadened into the abstract sense of 'by means of, using, because of.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他之所以迟到,是因为路上堵车。",
-      "pinyin": "tā zhīsuǒyǐ chídào, shì yīnwèi lùshang dǔchē.",
-      "english": "The reason he was late is that there was traffic on the road.",
-      "fact": "The world's longest recorded traffic jam occurred in China in August 2010 on the Beijing-Tibet Expressway, stretching roughly 100 kilometers and trapping some drivers for more than 10 days as construction and truck congestion piled up.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+62C9-65AF-7EF4-52A0-65AF",
-    "word": "拉斯维加斯",
-    "frequencyRank": 2492,
-    "pinyin": "Lā sī Wéi jiā sī",
-    "meanings": [
-      "Las Vegas, Nevada"
-    ],
-    "characters": [
-      {
-        "char": "拉",
-        "components": [
-          {
-            "char": "扌",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "扌 (hand) — relates directly to 拉's meaning 'to pull, drag,' an action done by hand."
-          },
-          {
-            "char": "立",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "立 (lì) served as the phonetic base; its pronunciation has since drifted noticeably from lā."
-          }
-        ]
-      },
-      {
-        "char": "斯",
-        "components": [
-          {
-            "char": "其",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "其 (a winnowing basket) forms the left side of 斯, tied to the character's original meaning of splitting grain from chaff."
-          },
-          {
-            "char": "斤",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "斤 (axe) on the right shows the tool used to cleave apart. Over time 斯's core meaning of 'to split' faded, and its sound was borrowed as a near-universal syllable for transliterating foreign words, as in 拉斯维加斯 (Las Vegas)."
-          }
-        ]
-      },
-      {
-        "char": "维",
-        "components": [
-          {
-            "char": "纟",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "纟 (thread/silk) — 维 relates to a connecting thread or fiber, extended to mean 'to maintain, to link'"
-          },
-          {
-            "char": "隹",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "隹 (zhuī) gives a loose sound connection to 维's reading wéi"
-          }
-        ]
-      },
-      {
-        "char": "加",
-        "components": [
-          {
-            "char": "力",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "力 (strength) — 加 pictures adding one's effort to a cause."
-          },
           {
             "char": "口",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "口 (mouth, words) — combining strength with words of support gave 加 its meaning 'to add' or 'to increase.'"
-          }
-        ]
-      },
-      {
-        "char": "斯",
-        "components": [
-          {
-            "char": "其",
             "role": "semantic",
-            "source": "llm-fallback",
-            "note": "其 (a winnowing basket) forms the left side of 斯, tied to the character's original meaning of splitting grain from chaff."
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "口 (mouth) — calling and speech: 吗, 喊, 呼; 叫 is to shout."
           },
           {
-            "char": "斤",
-            "role": "ideographic",
+            "char": "丩",
+            "role": "phonetic",
             "source": "llm-fallback",
-            "note": "斤 (axe) on the right shows the tool used to cleave apart. Over time 斯's core meaning of 'to split' faded, and its sound was borrowed as a near-universal syllable for transliterating foreign words, as in 拉斯维加斯 (Las Vegas)."
+            "note": "丩 (jiū) is a loose clue; it also sounds out 纠 jiū."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "很多游客专门飞去拉斯维加斯看演出。",
-      "pinyin": "hěn duō yóukè zhuānmén fēi qù Lāsīwéijiāsī kàn yǎnchū.",
-      "english": "Many tourists fly specifically to Las Vegas to see shows.",
-      "fact": "Las Vegas sits in the middle of the Mojave Desert, yet the city has become a leader in water recycling, treating and returning nearly 99% of indoor water use back to Lake Mead despite its famous fountains and pools.",
+      "hanzi": "看到蛇,她尖叫了一声。",
+      "pinyin": "Kàndào shé, tā jiānjiào le yì shēng.",
+      "english": "Seeing the snake, she let out a scream.",
+      "fact": "尖 (\"sharp, pointed\" — 小 \"small\" narrowing to a point above 大 \"big\" at the base) plus 叫 (\"to call out\") combine almost like a sound picture: a \"sharp cry,\" about as literal as Chinese compounds get.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+5B9E-529B",
-    "word": "实力",
-    "frequencyRank": 2493,
-    "pinyin": "shí lì",
-    "meanings": [
-      "strength"
-    ],
-    "characters": [
+    "examples": [
       {
-        "char": "实",
-        "components": [
-          {
-            "char": "宀",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "宀 (roof, house) tops 实/實, setting the scene inside a home."
-          },
-          {
-            "char": "毌",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "毌 pictures a string of valuables such as strung coins or shells; a house full of such wealth gave 实 its core sense of being 'substantial, full, real' — the same idea behind 实力, tangible strength you can actually draw on."
-          }
-        ]
+        "hanzi": "孩子们在游乐园里开心地尖叫。",
+        "pinyin": "Háizimen zài yóulèyuán lǐ kāixīn de jiānjiào.",
+        "english": "The children were shrieking happily at the amusement park."
       },
       {
-        "char": "力",
-        "components": [
-          {
-            "char": "力",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "力 depicts the blade of a plow — since plowing fields took great physical effort, the shape came to represent strength or power."
-          }
-        ]
+        "hanzi": "她被吓得尖叫起来。",
+        "pinyin": "Tā bèi xià de jiānjiào qǐlái.",
+        "english": "She was so scared that she screamed."
       }
     ],
-    "example": {
-      "hanzi": "这支球队的实力不容小觑。",
-      "pinyin": "zhè zhī qiúduì de shílì bù róng xiǎoqiào.",
-      "english": "This team's strength should not be underestimated.",
-      "fact": "The US Navy's Nimitz-class aircraft carriers each displace over 100,000 tons and carry roughly 90 aircraft, giving a single ship more raw military strength than the entire air force of most countries in the world.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
     "batchId": "2451-2500"
   },
   {
-    "id": "W+7CBE-7075",
-    "word": "精灵",
-    "frequencyRank": 2494,
-    "pinyin": "jīng líng",
+    "id": "W+7F51-4E0A",
+    "word": "网上",
+    "frequencyRank": 2454,
+    "pinyin": "wǎng shàng",
     "meanings": [
-      "spirit",
-      "fairy",
-      "elf",
-      "sprite",
-      "genie"
+      "online"
     ],
     "characters": [
       {
-        "char": "精",
+        "char": "网",
         "components": [
           {
-            "char": "米",
-            "role": "semantic",
+            "role": "pictographic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "米 (grain, especially husked rice) — 精's meaning 'refined, essence, spirit' relates to rice refined to its purest form."
-          },
-          {
-            "char": "青",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "青 (qīng) gives a sound hint — 精 is pronounced jīng, sharing the same rhyme though the initial consonant differs."
-          }
-        ]
-      },
-      {
-        "char": "灵",
-        "components": [
-          {
-            "char": "火",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "火 (fire) — linked to ritual fires once used to try to communicate with spirits"
-          },
-          {
-            "char": "彐",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "彐 (jì) gives a sound distantly related to 灵's reading líng, having drifted apart considerably over time"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这部动画里有一个调皮的小精灵。",
-      "pinyin": "zhè bù dònghuà lǐ yǒu yī gè tiáopí de xiǎo jīnglíng.",
-      "english": "There's a mischievous little sprite in this animated show.",
-      "fact": "Iceland's national road agency has, on occasion, rerouted actual highway construction around large boulders because of public belief in 'hidden folk,' elf-like spirits said to live inside rocks — a modern accommodation rooted in centuries-old Icelandic folklore.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+5938-5F20",
-    "word": "夸张",
-    "frequencyRank": 2495,
-    "pinyin": "kuā zhāng",
-    "meanings": [
-      "to exaggerate",
-      "overstated",
-      "exaggerated",
-      "hyperbole",
-      "(coll.) excessive",
-      "ridiculous"
-    ],
-    "characters": [
-      {
-        "char": "夸",
-        "components": [
-          {
-            "char": "大",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "大 (great, big) — boasting or praising both involve making something out to be great."
-          },
-          {
-            "char": "亏",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "亏 (kuī) gives a sound close to kuā, sharing the initial consonant."
-          }
-        ]
-      },
-      {
-        "char": "张",
-        "components": [
-          {
-            "char": "弓",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "弓 (bow) — relates to 张's original meaning 'to draw a bow taut,' extended to 'to open, stretch.'"
-          },
-          {
-            "char": "长",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "长 (cháng) gives a sound hint — 张 is pronounced zhāng, sharing the same rhyme though the initial consonant and tone differ."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他说话总是有点夸张。",
-      "pinyin": "tā shuōhuà zǒng shì yǒudiǎn kuāzhāng.",
-      "english": "He always exaggerates a bit when he talks.",
-      "fact": "American folktales about Paul Bunyan, a giant lumberjack supposedly responsible for carving the Grand Canyon by dragging his axe, are a well-documented example of the 19th-century 'tall tale' tradition, built entirely on outlandish exaggeration for entertainment.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+5931-63A7",
-    "word": "失控",
-    "frequencyRank": 2496,
-    "pinyin": "shī kòng",
-    "meanings": [
-      "to go out of control"
-    ],
-    "characters": [
-      {
-        "char": "失",
-        "components": [
-          {
-            "char": "丿",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "丿 (something falling) — an object slipping away."
-          },
-          {
-            "char": "夫",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "夫 (a hand/person) — the object slipping out of a hand, giving 失 its meaning 'to lose.'"
-          }
-        ]
-      },
-      {
-        "char": "控",
-        "components": [
-          {
-            "char": "扌",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "扌 (hand) — 控 relates to controlling or restraining something by hand"
-          },
-          {
-            "char": "空",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "空 (kōng) gives the sound — an exact match with 控's reading kòng"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "汽车在冰面上突然失控打滑。",
-      "pinyin": "qìchē zài bīngmiàn shàng tūrán shīkòng dǎhuá.",
-      "english": "The car suddenly went out of control and skidded on the ice.",
-      "fact": "The Chernobyl nuclear disaster of 1986 began when a routine safety test went out of control during a power surge, causing reactor 4 to explode; the resulting radioactive fallout was detected across most of Europe within days.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "2451-2500"
-  },
-  {
-    "id": "W+684C-4E0A",
-    "word": "桌上",
-    "frequencyRank": 2497,
-    "pinyin": "zhuō shàng",
-    "meanings": [
-      "on the table",
-      "on the desk"
-    ],
-    "characters": [
-      {
-        "char": "桌",
-        "components": [
-          {
-            "char": "木",
-            "role": "semantic",
-            "source": "llm-fallback",
-            "note": "木 (wood) marks 桌 as a piece of wooden furniture."
-          },
-          {
-            "char": "卓",
-            "role": "phonetic",
-            "source": "llm-fallback",
-            "note": "卓 (zhuó) supplied a sound close to zhuō and also carries a sense of 'standing tall,' fitting for a piece of furniture that stands up off the floor."
+            "note": "网 (net) — a picture of a hanging net with crossing cords; as a radical it appears as 罒 in 罚, 置, 罗."
           }
         ]
       },
@@ -2542,170 +217,2874 @@
         "components": [
           {
             "role": "ideographic",
-            "note": "A short stroke placed above a longer one — a simple graphic way to show 'up' or 'above,' contrasted with 下 (down), which flips the strokes.",
-            "source": "llm-fallback"
+            "source": "llm-fallback",
+            "note": "上 (above) — a mark above a line, the mirror of 下 below."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "钥匙就放在桌上,你没看到吗?",
-      "pinyin": "yàoshi jiù fàng zài zhuōshàng, nǐ méi kàndào ma?",
-      "english": "The keys are right there on the table — didn't you see them?",
-      "fact": "Formal dining etiquette around the table varies widely — in the UK, placing elbows on the table is traditionally considered rude, while in France it's commonly accepted and even expected during conversation between courses.",
+      "hanzi": "这些鞋子我是在网上买的。",
+      "pinyin": "Zhèxiē xiézi wǒ shì zài wǎngshàng mǎi de.",
+      "english": "I bought these shoes online.",
+      "fact": "网 originally meant a woven fishing or hunting net (the character itself is a pictograph of mesh stretched on a frame); 网上 — literally \"on the net\" — is very likely a loan-translation of English \"online,\" borrowed alongside \"network\" as computing terms entered Chinese in the 1980s–90s.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "我常常在网上看电影。",
+        "pinyin": "Wǒ chángcháng zài wǎngshang kàn diànyǐng.",
+        "english": "I often watch movies online."
+      },
+      {
+        "hanzi": "你可以在网上查一下火车时间。",
+        "pinyin": "Nǐ kěyǐ zài wǎngshang chá yíxià huǒchē shíjiān.",
+        "english": "You can check the train times online."
+      }
+    ],
     "batchId": "2451-2500"
   },
   {
-    "id": "W+4E00-5343",
-    "word": "一千",
-    "frequencyRank": 2498,
-    "pinyin": "yī qiān",
+    "id": "W+8BF4-4E0D-5B9A",
+    "word": "说不定",
+    "frequencyRank": 2455,
+    "pinyin": "shuō bu dìng",
     "meanings": [
-      "one thousand",
-      "1,000"
+      "can't say for sure",
+      "maybe"
+    ],
+    "characters": [
+      {
+        "char": "说",
+        "components": [
+          {
+            "char": "讠",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "讠 (speech) — words and language, as in 请, 谢, 话."
+          },
+          {
+            "char": "兑",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "兑 (duì) is a loose sound clue for shuō; 兑 also sounds out 脱 tuō, 税 shuì and 悦 yuè."
+          }
+        ]
+      },
+      {
+        "char": "不",
+        "components": [
+          {
+            "char": "一",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "一 (line) — dictionary reads 不 as a bird flying up toward the sky 一. The meaning 'not' is a borrowing, so the shape does not explain it today."
+          },
+          {
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "杯 (bēi) — a character that uses 不 as a loose sound clue (木 + 不). The sound is a hint only: 不 bù vs bēi."
+          }
+        ]
+      },
+      {
+        "char": "定",
+        "components": [
+          {
+            "char": "宀",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "宀 (roof) — houses and shelter, as in 家 home, 安 safe, 客 guest; settling down under a roof."
+          },
+          {
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "正 (zhèng, upright; the lower part is written 疋) is a loose sound clue for dìng; also in 证 zhèng and 政 zhèng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "说不定他已经知道这件事了。",
+      "pinyin": "Shuōbudìng tā yǐjīng zhīdào zhè jiàn shì le.",
+      "english": "Maybe he already knows about this.",
+      "fact": "说不定, built from 说 (\"to say\") plus 不定 (\"not fixed, not certain\"), sits at the more hedging, \"I really can't be sure\" end of Mandarin's maybe-words — a shade less confident than 可能 or 也许 — and it can open a sentence on its own the way \"who knows, maybe...\" does in English.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "明天说不定会下雨，带把伞吧。",
+        "pinyin": "Míngtiān shuōbudìng huì xià yǔ, dài bǎ sǎn ba.",
+        "english": "It might rain tomorrow, so bring an umbrella."
+      },
+      {
+        "hanzi": "我也说不定，要看老板怎么安排。",
+        "pinyin": "Wǒ yě shuōbudìng, yào kàn lǎobǎn zěnme ānpái.",
+        "english": "I can't say for sure; it depends on how the boss arranges things."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+5C0F-4E11",
+    "word": "小丑",
+    "frequencyRank": 2456,
+    "pinyin": "xiǎo chǒu",
+    "meanings": [
+      "clown"
+    ],
+    "characters": [
+      {
+        "char": "小",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "小 (small) — three small dots, tiny grains. As a radical it appears in 少 few, 尖 sharp."
+          }
+        ]
+      },
+      {
+        "char": "丑",
+        "components": [
+          {
+            "char": "二",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "二 (two) — the bottom bars. 丑 is an old calendar sign (the second branch) later borrowed for 'ugly'. Memory aid: a clown with two stripes, as in 小丑."
+          },
+          {
+            "char": "刀",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "刀 (knife) — the dictionary lists a knife-like stroke group. The shape does not explain 'ugly'; Memory aid only."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "马戏团里的小丑逗得孩子们哈哈大笑。",
+      "pinyin": "Mǎxìtuán lǐ de xiǎochǒu dòu de háizimen hāhā dà xiào.",
+      "english": "The clown in the circus made the children laugh out loud.",
+      "fact": "丑 has several unrelated senses — the 12th of the zodiac's earthly branches, and separately \"ugly\" — but the 丑 in 小丑 most likely traces to a third, older sense: one of the standard role-types in traditional Chinese opera, the comic character, from which \"clown\" generalized.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "小丑戴着红鼻子，表演得很有趣。",
+        "pinyin": "Xiǎochǒu dài zhe hóng bízi, biǎoyǎn de hěn yǒuqù.",
+        "english": "The clown wore a red nose and performed in a funny way."
+      },
+      {
+        "hanzi": "别把我当小丑，我是认真的。",
+        "pinyin": "Bié bǎ wǒ dāng xiǎochǒu, wǒ shì rènzhēn de.",
+        "english": "Don't treat me like a clown; I'm serious."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+5267",
+    "word": "剧",
+    "frequencyRank": 2457,
+    "pinyin": "jù",
+    "meanings": [
+      "drama",
+      "play",
+      "severe"
+    ],
+    "characters": [
+      {
+        "char": "剧",
+        "components": [
+          {
+            "char": "刂",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "刂 (knife) — 刂 is 刀 (knife), as in 到, 别, 利; 剧 first meant to cut deeply, then intense and drama."
+          },
+          {
+            "char": "居",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "居 (jū) — near sound — 剧 is jù; 居 also sounds out 据 jù."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我喜欢看电视剧。",
+      "pinyin": "Wǒ xǐhuan kàn diànshìjù.",
+      "english": "I like watching TV series.",
+      "fact": "剧 means drama in 电视剧 (TV series), 京剧 (Peking opera), 话剧 (stage play) and 剧院 (theater). 追剧, 'to chase a series', is the everyday term for binge-watching. It can also mean intense: 剧烈.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我周末去看了一场京剧。",
+        "pinyin": "Wǒ zhōumò qù kàn le yì chǎng jīngjù.",
+        "english": "I went to see a Peking opera on the weekend."
+      },
+      {
+        "hanzi": "这部喜剧很好笑。",
+        "pinyin": "Zhè bù xǐjù hěn hǎoxiào.",
+        "english": "This comedy is very funny."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+5C0F-8BF4",
+    "word": "小说",
+    "frequencyRank": 2458,
+    "pinyin": "xiǎo shuō",
+    "meanings": [
+      "novel",
+      "fiction",
+      "CL:本[ben3],部[bu4]"
+    ],
+    "characters": [
+      {
+        "char": "小",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "小 (small) — three small dots, tiny grains. As a radical it appears in 少 few, 尖 sharp."
+          }
+        ]
+      },
+      {
+        "char": "说",
+        "components": [
+          {
+            "char": "讠",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "讠 (speech) — words and language, as in 请, 谢, 话."
+          },
+          {
+            "char": "兑",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "兑 (duì) is a loose sound clue for shuō; 兑 also sounds out 脱 tuō, 税 shuì and 悦 yuè."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "她正在读一本很有名的小说。",
+      "pinyin": "Tā zhèngzài dú yì běn hěn yǒumíng de xiǎoshuō.",
+      "english": "She's reading a very famous novel.",
+      "fact": "小说 literally reads \"small talk\" or \"minor sayings\"; in classical usage it originally referred to unofficial anecdotes and gossip beneath the notice of serious history-writing, and only narrowed over centuries to its modern sense, \"novel, fiction.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我很喜欢看侦探小说。",
+        "pinyin": "Wǒ hěn xǐhuan kàn zhēntàn xiǎoshuō.",
+        "english": "I really like reading detective novels."
+      },
+      {
+        "hanzi": "这部小说已经被拍成了电影。",
+        "pinyin": "Zhè bù xiǎoshuō yǐjīng bèi pāi chéng le diànyǐng.",
+        "english": "This novel has already been made into a movie."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+5E74-9F84",
+    "word": "年龄",
+    "frequencyRank": 2459,
+    "pinyin": "nián líng",
+    "meanings": [
+      "(a person's) age",
+      "CL:把[ba3],個|个[ge4]"
+    ],
+    "characters": [
+      {
+        "char": "年",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "年 (year) — first drawn as a person carrying harvested grain: one harvest per year. Seen in 今年, 去年, 年轻."
+          }
+        ]
+      },
+      {
+        "char": "龄",
+        "components": [
+          {
+            "char": "齿",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "齿 (teeth) — 齿 is the tooth radical — age was read from teeth, as in 年龄."
+          },
+          {
+            "char": "令",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "令 (lìng) — near sound — 龄 is líng; 令 also sounds out 领 lǐng and 铃 líng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "请问,可以问一下您的年龄吗?",
+      "pinyin": "Qǐngwèn, kěyǐ wèn yíxià nín de niánlíng ma?",
+      "english": "Excuse me, may I ask your age?",
+      "fact": "龄's semantic component 齿 (\"teeth\") points to a real practice, estimating age by the condition of the teeth — still literally how a vet judges a horse's age today — and likely the origin of extending \"tooth\" to the abstract sense \"age\" in this character.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "你的年龄比我大还是小？",
+        "pinyin": "Nǐ de niánlíng bǐ wǒ dà háishi xiǎo?",
+        "english": "Are you older or younger than me?"
+      },
+      {
+        "hanzi": "不同年龄的人喜欢的音乐不一样。",
+        "pinyin": "Bù tóng niánlíng de rén xǐhuan de yīnyuè bù yíyàng.",
+        "english": "People of different ages like different kinds of music."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+4EA4-6362",
+    "word": "交换",
+    "frequencyRank": 2460,
+    "pinyin": "jiāo huàn",
+    "meanings": [
+      "to exchange",
+      "to swap",
+      "to switch (telecom)",
+      "commutative",
+      "to commute"
+    ],
+    "characters": [
+      {
+        "char": "交",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "交 (cross, hand over) — a person with legs crossed: to intersect, then to exchange. Same part in 校 xiào, 较 jiào, 胶 jiāo."
+          }
+        ]
+      },
+      {
+        "char": "换",
+        "components": [
+          {
+            "char": "扌",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "扌 (hand) — hand radical — 换 is to swap with the hands."
+          },
+          {
+            "char": "奂",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "奂 (huàn) — same sound — 换 is huàn, like 奂; 奂 also sounds out 唤 huàn."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我们互相交换了电话号码。",
+      "pinyin": "Wǒmen hùxiāng jiāohuàn le diànhuà hàomǎ.",
+      "english": "We exchanged phone numbers with each other.",
+      "fact": "交换 wants a concrete, countable thing changing hands — gifts, seats, phone numbers — while its cousin 交流 is reserved for exchanging something intangible, like ideas or feelings; mixing the two up is a common learner slip.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我想用旧手机交换一个新杯子。",
+        "pinyin": "Wǒ xiǎng yòng jiù shǒujī jiāohuàn yí ge xīn bēizi.",
+        "english": "I'd like to swap my old phone for a new cup."
+      },
+      {
+        "hanzi": "你能和我交换一下座位吗？",
+        "pinyin": "Nǐ néng hé wǒ jiāohuàn yíxià zuòwèi ma?",
+        "english": "Could you switch seats with me?"
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+7B26-5408",
+    "word": "符合",
+    "frequencyRank": 2461,
+    "pinyin": "fú hé",
+    "meanings": [
+      "in accordance with",
+      "to agree with",
+      "to conform to",
+      "to meet (a requirement)",
+      "(physics) coincidence"
+    ],
+    "characters": [
+      {
+        "char": "符",
+        "components": [
+          {
+            "char": "⺮",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "⺮ (bamboo) — ⺮ is bamboo, as in 笔, 筷, 箱; tallies were bamboo slips split in two to match, so 符 is to match."
+          },
+          {
+            "char": "付",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "付 (fù) — near sound — 符 is fú; 付 also sounds out 附 fù and 府 fǔ."
+          }
+        ]
+      },
+      {
+        "char": "合",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "合 (join) — a lid fitting over an opening 口: things that fit together. 合 also appears in 答 dá, 给 gěi and 拾 shí."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这份简历完全符合我们的要求。",
+      "pinyin": "Zhè fèn jiǎnlì wánquán fúhé wǒmen de yāoqiú.",
+      "english": "This resume completely meets our requirements.",
+      "fact": "符 (⺮ \"bamboo\" plus the phonetic 付) refers to an ancient tally: a bamboo or wood token split in two, with each half's cut edge serving as a signature — the two halves \"符合\" (fit together) only if they were genuinely a matching pair, the root image behind today's sense \"to accord with, to meet a requirement.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这个办法符合我们的实际情况。",
+        "pinyin": "Zhège bànfǎ fúhé wǒmen de shíjì qíngkuàng.",
+        "english": "This method fits our actual situation."
+      },
+      {
+        "hanzi": "这件产品不符合安全标准。",
+        "pinyin": "Zhè jiàn chǎnpǐn bù fúhé ānquán biāozhǔn.",
+        "english": "This product does not meet the safety standards."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+96EA",
+    "word": "雪",
+    "frequencyRank": 2462,
+    "pinyin": "xuě",
+    "meanings": [
+      "snow"
+    ],
+    "characters": [
+      {
+        "char": "雪",
+        "components": [
+          {
+            "char": "雨",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "雨 (rain) — weather radical, as in 雷 thunder, 雾 fog; snow is frozen rain."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "北京冬天常常下雪。",
+      "pinyin": "Běijīng dōngtiān chángcháng xià xuě.",
+      "english": "It often snows in Beijing in winter.",
+      "fact": "'To snow' is 下雪, using 下 'to fall', just like 下雨. 小雪 and 大雪 are two of the 24 solar terms. The classical meaning 'to wipe away' lives on in 雪耻, to wipe away shame.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "孩子们在院子里堆雪人。",
+        "pinyin": "Háizimen zài yuànzi li duī xuěrén.",
+        "english": "The kids are building a snowman in the yard."
+      },
+      {
+        "hanzi": "昨天夜里下了一场大雪。",
+        "pinyin": "Zuótiān yèli xià le yì chǎng dàxuě.",
+        "english": "It snowed heavily last night."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+62E5-62B1",
+    "word": "拥抱",
+    "frequencyRank": 2463,
+    "pinyin": "yōng bào",
+    "meanings": [
+      "to embrace",
+      "to hug"
+    ],
+    "characters": [
+      {
+        "char": "拥",
+        "components": [
+          {
+            "char": "扌",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "扌 (hand radical, 提手旁) — actions done by hand, as in 打 hit, 抱 hug, 拉 pull; fits 拥 to embrace or hold."
+          },
+          {
+            "char": "用",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "用 (yòng) is only a loose sound hint for yōng — same ending -ong."
+          }
+        ]
+      },
+      {
+        "char": "抱",
+        "components": [
+          {
+            "char": "扌",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "扌 (hand) — hand actions, as in 打 hit, 拿 take, 把 hold; 抱 is to hug or hold in the arms."
+          },
+          {
+            "char": "包",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "包 (bāo) is a close sound clue for bào; it also sounds out 跑 pǎo, 饱 bǎo and 炮 pào."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "他们在机场紧紧拥抱在一起。",
+      "pinyin": "Tāmen zài jīchǎng jǐnjǐn yōngbào zài yìqǐ.",
+      "english": "They hugged each other tightly at the airport.",
+      "fact": "拥 and 抱 already each independently mean roughly \"to hold in the arms\" — 拥抱 doubles up two near-synonyms into one word, the same word-building strategy behind 喜欢 and 应该 elsewhere in this deck.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "朋友之间见面时，常常会拥抱一下。",
+        "pinyin": "Péngyou zhījiān jiànmiàn shí, chángcháng huì yōngbào yíxià.",
+        "english": "Friends often hug when they meet."
+      },
+      {
+        "hanzi": "妈妈给了我一个温暖的拥抱。",
+        "pinyin": "Māma gěi le wǒ yí ge wēnnuǎn de yōngbào.",
+        "english": "Mom gave me a warm hug."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+4E07-4E00",
+    "word": "万一",
+    "frequencyRank": 2464,
+    "pinyin": "wàn yī",
+    "meanings": [
+      "just in case",
+      "if by any chance",
+      "contingency"
+    ],
+    "characters": [
+      {
+        "char": "万",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "萬 (traditional ten thousand) — 万 is the simplified form of 萬, which pictured a scorpion borrowed for the number 10,000; 万 also sounds out 迈 mài."
+          }
+        ]
+      },
+      {
+        "char": "一",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "一 (one) — a single horizontal stroke is the number one; 二 and 三 just add strokes, so the first three numbers are tally marks."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "你带把伞吧,万一下雨呢。",
+      "pinyin": "Nǐ dài bǎ sǎn ba, wànyī xiàyǔ ne.",
+      "english": "Take an umbrella, just in case it rains.",
+      "fact": "万 (\"ten thousand\") plus 一 (\"one\") literally gives \"one chance in ten thousand\" — from that image of vanishingly low odds, 万一 became the word for hedging against an unlikely but undesirable possibility, typically opening a clause the way \"in the unlikely event that...\" does in English.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "万一我迟到了，你们先开始吧。",
+        "pinyin": "Wànyī wǒ chídào le, nǐmen xiān kāishǐ ba.",
+        "english": "If I happen to be late, you all go ahead and start."
+      },
+      {
+        "hanzi": "多存一点钱，以防万一。",
+        "pinyin": "Duō cún yìdiǎn qián, yǐ fáng wànyī.",
+        "english": "Save a bit more money just in case."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+793E-533A",
+    "word": "社区",
+    "frequencyRank": 2465,
+    "pinyin": "shè qū",
+    "meanings": [
+      "community",
+      "neighborhood"
+    ],
+    "characters": [
+      {
+        "char": "社",
+        "components": [
+          {
+            "char": "礻",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "礻 (altar, spirit — form of 示) — rites and spirits: 神, 礼, 福; 社 was an altar to the earth god 土."
+          },
+          {
+            "char": "土",
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "土 (earth) — the earth god worshipped at the altar; hence a community that gathers there: society."
+          }
+        ]
+      },
+      {
+        "char": "区",
+        "components": [
+          {
+            "char": "匸",
+            "role": "semantic",
+            "source": "makemeahanzi",
+            "note": "匸 (hiding box) — traditional 區 put several 品 (goods) in a box 匸: separate compartments, hence districts; 区 is area, in 地区."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我们社区新开了一家超市。",
+      "pinyin": "Wǒmen shèqū xīn kāi le yì jiā chāoshì.",
+      "english": "A new supermarket just opened in our community.",
+      "fact": "社 originally named the local earth-god a village worshipped together — its oldest sense is closer to \"the community that shares a shrine\" than to any modern institution; 社区's use for \"community\" in the sociological sense is comparatively recent, part of a wave of social-science vocabulary that entered Chinese in the 20th century.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我们社区有一个小图书馆。",
+        "pinyin": "Wǒmen shèqū yǒu yí ge xiǎo túshūguǎn.",
+        "english": "Our neighborhood has a small library."
+      },
+      {
+        "hanzi": "社区里的邻居们经常一起锻炼。",
+        "pinyin": "Shèqū lǐ de línjūmen jīngcháng yìqǐ duànliàn.",
+        "english": "The neighbors in the community often exercise together."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+52A9-7406",
+    "word": "助理",
+    "frequencyRank": 2466,
+    "pinyin": "zhù lǐ",
+    "meanings": [
+      "assistant"
+    ],
+    "characters": [
+      {
+        "char": "助",
+        "components": [
+          {
+            "char": "力",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "力 (strength) — effort, as in 办, 男, 努; 助 is to lend strength."
+          },
+          {
+            "char": "且",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "且 (qiě) is a loose sound clue for zhù; 且 also sounds out 祖 zǔ, 租 zū and 姐 jiě."
+          }
+        ]
+      },
+      {
+        "char": "理",
+        "components": [
+          {
+            "char": "王",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "王 (jade) — jade and gems, as in 球 ball, 玩 play, 现 appear: 理 first meant polishing jade along its grain, then reason."
+          },
+          {
+            "char": "里",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "里 (lǐ) gives the exact sound; also in 鲤 lǐ."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "她是总经理的私人助理。",
+      "pinyin": "Tā shì zǒngjīnglǐ de sīrén zhùlǐ.",
+      "english": "She is the general manager's personal assistant.",
+      "fact": "助 (力 \"strength\" plus the phonetic 且) means \"to lend one's strength, to help,\" and 理 (originally the natural grain running through jade, later \"to manage, to put in order\") combine fairly transparently into \"one who helps manage\" — a title, not just a helper.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我是经理的助理，有事可以找我。",
+        "pinyin": "Wǒ shì jīnglǐ de zhùlǐ, yǒu shì kěyǐ zhǎo wǒ.",
+        "english": "I am the manager's assistant; you can come to me if you need anything."
+      },
+      {
+        "hanzi": "这位老师需要一个助理帮忙改作业。",
+        "pinyin": "Zhè wèi lǎoshī xūyào yí ge zhùlǐ bāngmáng gǎi zuòyè.",
+        "english": "This teacher needs an assistant to help grade homework."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+53D1-660E",
+    "word": "发明",
+    "frequencyRank": 2467,
+    "pinyin": "fā míng",
+    "meanings": [
+      "to invent",
+      "an invention",
+      "CL:個|个[ge4]"
+    ],
+    "characters": [
+      {
+        "char": "发",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "发 (send out, hair) — two characters merged in simplified writing: 發 fā \"emit, issue\" and 髮 fà \"hair\" (头发)."
+          }
+        ]
+      },
+      {
+        "char": "明",
+        "components": [
+          {
+            "char": "日",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "日 (sun) — the sun beside the moon: two light sources, so bright and clear."
+          },
+          {
+            "char": "月",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "月 (moon) — as in 朋, 期, 有; here it brightens the night."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "谁发明了电话?",
+      "pinyin": "Shéi fāmíng le diànhuà?",
+      "english": "Who invented the telephone?",
+      "fact": "发明 always takes something that did not exist before — a device, a technique — which is exactly what separates it from the frequently confused 发现 (\"to discover\"), which uncovers something that was already there all along.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这是谁发明的？真聪明。",
+        "pinyin": "Zhè shì shéi fāmíng de? Zhēn cōngmíng.",
+        "english": "Who invented this? It's really clever."
+      },
+      {
+        "hanzi": "这个发明让我们的生活方便多了。",
+        "pinyin": "Zhège fāmíng ràng wǒmen de shēnghuó fāngbiàn duō le.",
+        "english": "This invention has made our lives much more convenient."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+901A-8BDD",
+    "word": "通话",
+    "frequencyRank": 2468,
+    "pinyin": "tōng huà",
+    "meanings": [
+      "to hold a conversation",
+      "to talk over the telephone",
+      "phone call"
+    ],
+    "characters": [
+      {
+        "char": "通",
+        "components": [
+          {
+            "char": "辶",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "辶 (walk) — movement and roads, as in 过, 近, 送: a way through."
+          },
+          {
+            "char": "甬",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "甬 (yǒng) is a close sound clue for tōng; 甬 also in 痛 tòng, 桶 tǒng and 勇 yǒng."
+          }
+        ]
+      },
+      {
+        "char": "话",
+        "components": [
+          {
+            "char": "讠",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "讠 (speech) — words and language, as in 说, 请, 谢; 话 is speech."
+          },
+          {
+            "char": "舌",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "舌 (shé, tongue) fits the meaning (speaking) and is a loose sound clue for huà; also in 活 huó."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我正在跟客户通话,请稍等。",
+      "pinyin": "Wǒ zhèngzài gēn kèhù tōnghuà, qǐng shāo děng.",
+      "english": "I'm on a call with a client right now, please hold on.",
+      "fact": "通 (\"to pass through, to connect\") plus 话 (\"speech\") gives \"connected speech\" — a fittingly literal way to name what a telephone call actually is, decades before \"connection\" became a tech buzzword in English too.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我们通话了半个小时。",
+        "pinyin": "Wǒmen tōnghuà le bàn ge xiǎoshí.",
+        "english": "We talked on the phone for half an hour."
+      },
+      {
+        "hanzi": "这里信号不好，通话常常中断。",
+        "pinyin": "Zhèlǐ xìnhào bù hǎo, tōnghuà chángcháng zhōngduàn.",
+        "english": "The signal is poor here, so calls are often cut off."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+4EA4-901A",
+    "word": "交通",
+    "frequencyRank": 2469,
+    "pinyin": "jiāo tōng",
+    "meanings": [
+      "to be connected",
+      "traffic",
+      "transportation",
+      "communications",
+      "liaison"
+    ],
+    "characters": [
+      {
+        "char": "交",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "交 (cross, hand over) — a person with legs crossed: to intersect, then to exchange. Same part in 校 xiào, 较 jiào, 胶 jiāo."
+          }
+        ]
+      },
+      {
+        "char": "通",
+        "components": [
+          {
+            "char": "辶",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "辶 (walk) — movement and roads, as in 过, 近, 送: a way through."
+          },
+          {
+            "char": "甬",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "甬 (yǒng) is a close sound clue for tōng; 甬 also in 痛 tòng, 桶 tǒng and 勇 yǒng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "下班时间,这条路的交通特别拥挤。",
+      "pinyin": "Xiàbān shíjiān, zhè tiáo lù de jiāotōng tèbié yōngjǐ.",
+      "english": "During rush hour, traffic on this road is especially congested.",
+      "fact": "交 (a person standing with legs crossed, \"to intersect\") plus 通 (\"to pass through\") build \"crossing-through\" — routes crisscrossing and passing each other — about as literal a picture of \"traffic\" as a two-character compound can offer.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "早上的交通比较拥挤。",
+        "pinyin": "Zǎoshang de jiāotōng bǐjiào yōngjǐ.",
+        "english": "Traffic is rather crowded in the morning."
+      },
+      {
+        "hanzi": "这个城市的公共交通很发达。",
+        "pinyin": "Zhège chéngshì de gōnggòng jiāotōng hěn fādá.",
+        "english": "This city has a well-developed public transportation system."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+8D35",
+    "word": "贵",
+    "frequencyRank": 2470,
+    "pinyin": "guì",
+    "meanings": [
+      "expensive",
+      "valuable",
+      "noble"
+    ],
+    "characters": [
+      {
+        "char": "贵",
+        "components": [
+          {
+            "char": "贝",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "贝 (shell, old money) — value and price, as in 财 wealth, 买 buy, 费 fee."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这件衣服太贵了。",
+      "pinyin": "Zhè jiàn yīfu tài guì le.",
+      "english": "This piece of clothing is too expensive.",
+      "fact": "贵 means costly, and also honored: 贵姓 asks 'your honorable surname', and 贵国 means 'your country'. It is also the abbreviation for Guizhou province (贵州). It is the opposite of 便宜 for price.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这家餐厅贵不贵?",
+        "pinyin": "Zhè jiā cāntīng guì bu guì?",
+        "english": "Is this restaurant expensive?"
+      },
+      {
+        "hanzi": "这个包比那个贵一百块。",
+        "pinyin": "Zhège bāo bǐ nàge guì yìbǎi kuài.",
+        "english": "This bag costs a hundred yuan more than that one."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+6F14-5531",
+    "word": "演唱",
+    "frequencyRank": 2471,
+    "pinyin": "yǎn chàng",
+    "meanings": [
+      "to sing (for an audience)",
+      "vocal performance"
+    ],
+    "characters": [
+      {
+        "char": "演",
+        "components": [
+          {
+            "char": "氵",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "氵 (water) — water and flow, as in 河, 海, 清: 演 first meant a long flowing stream, then spreading out and performing."
+          },
+          {
+            "char": "寅",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "寅 (yín) is a close sound clue for yǎn."
+          }
+        ]
+      },
+      {
+        "char": "唱",
+        "components": [
+          {
+            "char": "口",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "口 (mouth) — mouth radical for speaking and sounds, as in 吃, 叫, 吗; 唱 is to sing."
+          },
+          {
+            "char": "昌",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "昌 (chāng) — same sound, different tone — 唱 is chàng; 昌 also sounds out 倡 chàng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这位歌手将在体育馆演唱。",
+      "pinyin": "Zhè wèi gēshǒu jiāng zài tǐyùguǎn yǎnchàng.",
+      "english": "This singer will perform at the stadium.",
+      "fact": "演唱 specifically implies singing as a performance for an audience — on a stage, at a concert — while bare 唱 covers singing in any context, including humming to yourself in the shower; the distinction survives in 演唱会, the everyday word for \"concert.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "她在晚会上演唱了一首民歌。",
+        "pinyin": "Tā zài wǎnhuì shang yǎnchàng le yì shǒu míngē.",
+        "english": "She sang a folk song at the evening party."
+      },
+      {
+        "hanzi": "这个演唱会的票很难买。",
+        "pinyin": "Zhège yǎnchàng huì de piào hěn nán mǎi.",
+        "english": "Tickets for this concert are hard to get."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+91CD-5927",
+    "word": "重大",
+    "frequencyRank": 2472,
+    "pinyin": "zhòng dà",
+    "meanings": [
+      "great",
+      "important",
+      "major",
+      "significant"
+    ],
+    "characters": [
+      {
+        "char": "重",
+        "components": [
+          {
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "重 (zhòng) is a sound clue for 种 zhǒng/zhòng; it means heavy (zhòng) or to repeat (chóng, as in 重新)."
+          }
+        ]
+      },
+      {
+        "char": "大",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "大 (big) — a front-facing person with arms and legs spread wide: big. As radical, 大 is in 天 sky, 太 too much, 夫 man."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这是一项重大的决定。",
+      "pinyin": "Zhè shì yí xiàng zhòngdà de juédìng.",
+      "english": "This is a major decision.",
+      "fact": "重大 only modifies abstract nouns — events, decisions, discoveries, losses — never physical weight; for something literally heavy, Mandarin just uses 重 by itself, with 大 here contributing \"magnitude\" rather than \"size.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "今天公司有一个重大的消息要宣布。",
+        "pinyin": "Jīntiān gōngsī yǒu yí ge zhòngdà de xiāoxi yào xuānbù.",
+        "english": "The company has an important announcement to make today."
+      },
+      {
+        "hanzi": "这次事故造成了重大的损失。",
+        "pinyin": "Zhè cì shìgù zàochéng le zhòngdà de sǔnshī.",
+        "english": "This accident caused major losses."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+7EC4-5408",
+    "word": "组合",
+    "frequencyRank": 2473,
+    "pinyin": "zǔ hé",
+    "meanings": [
+      "to assemble",
+      "to combine",
+      "to compose",
+      "combination",
+      "association",
+      "set"
+    ],
+    "characters": [
+      {
+        "char": "组",
+        "components": [
+          {
+            "char": "纟",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "纟 (thread, simplified 糸) — silk and cord: 红, 给, 线; 组 is to weave threads together, so to form a group."
+          },
+          {
+            "char": "且",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "且 (qiě) loosely hints at zǔ; 组 sounds exactly like 祖 zǔ and 阻 zǔ, same part."
+          }
+        ]
+      },
+      {
+        "char": "合",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "合 (join) — a lid fitting over an opening 口: things that fit together. 合 also appears in 答 dá, 给 gěi and 拾 shí."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这两种颜色组合在一起很好看。",
+      "pinyin": "Zhè liǎng zhǒng yánsè zǔhé zài yìqǐ hěn hǎokàn.",
+      "english": "These two colors look great combined together.",
+      "fact": "组合 is also the everyday word for a music group or idol group in Mandarin pop culture — a 男团/女团 \"combination\" of performers — an extension of the literal sense \"to combine, combination\" from mathematics and chemistry into entertainment.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这几个词可以组合成一个新句子。",
+        "pinyin": "Zhè jǐ ge cí kěyǐ zǔhé chéng yí ge xīn jùzi.",
+        "english": "These words can be combined into a new sentence."
+      },
+      {
+        "hanzi": "他们是一个很受欢迎的歌唱组合。",
+        "pinyin": "Tāmen shì yí ge hěn shòu huānyíng de gēchàng zǔhé.",
+        "english": "They are a very popular singing group."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+601D-60F3",
+    "word": "思想",
+    "frequencyRank": 2474,
+    "pinyin": "sī xiǎng",
+    "meanings": [
+      "thought",
+      "thinking",
+      "idea",
+      "ideology",
+      "CL:個|个[ge4]"
+    ],
+    "characters": [
+      {
+        "char": "思",
+        "components": [
+          {
+            "char": "田",
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "田 here replaces 囟 (skull) in the older form: head over heart"
+          },
+          {
+            "char": "心",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "心 (heart) — thinking and feeling, as in 想, 意, 感: 思 is to think over, with head and heart."
+          }
+        ]
+      },
+      {
+        "char": "想",
+        "components": [
+          {
+            "char": "心",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "心 (heart) — thought and feelings, as in 思, 感, 急: to think of someone."
+          },
+          {
+            "char": "相",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "相 (xiāng) is a close sound clue for xiǎng; 相 also in 箱 xiāng and 湘 xiāng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这本书介绍了他的哲学思想。",
+      "pinyin": "Zhè běn shū jièshào le tā de zhéxué sīxiǎng.",
+      "english": "This book introduces his philosophical thought.",
+      "fact": "思想 carries real intellectual and even political weight in modern Chinese — it's the word in \"毛泽东思想\" (Mao Zedong Thought) — sitting well above the everyday 想法 (\"idea, opinion\") in formality, the way \"philosophy\" outranks \"opinion\" in English.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "他的思想很开放，愿意接受新事物。",
+        "pinyin": "Tā de sīxiǎng hěn kāifàng, yuànyì jiēshòu xīn shìwù.",
+        "english": "His thinking is open and he is willing to accept new things."
+      },
+      {
+        "hanzi": "这个孩子很有自己的思想。",
+        "pinyin": "Zhège háizi hěn yǒu zìjǐ de sīxiǎng.",
+        "english": "This child has ideas of his own."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+5531-7247",
+    "word": "唱片",
+    "frequencyRank": 2475,
+    "pinyin": "chàng piàn",
+    "meanings": [
+      "gramophone record",
+      "LP",
+      "music CD",
+      "musical album",
+      "CL:張|张[zhang1]"
+    ],
+    "characters": [
+      {
+        "char": "唱",
+        "components": [
+          {
+            "char": "口",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "口 (mouth) — mouth radical for speaking and sounds, as in 吃, 叫, 吗; 唱 is to sing."
+          },
+          {
+            "char": "昌",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "昌 (chāng) — same sound, different tone — 唱 is chàng; 昌 also sounds out 倡 chàng."
+          }
+        ]
+      },
+      {
+        "char": "片",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "片 (slice) — the right half of 木 split down the middle: a flat piece. See 版 bǎn (printing plate) and 牌 pái (card)."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这家店专门卖老唱片。",
+      "pinyin": "Zhè jiā diàn zhuānmén mài lǎo chàngpiàn.",
+      "english": "This shop specializes in selling old records.",
+      "fact": "片, a pictograph of a split log's cross-section — literally \"a thin slice\" — named the physical shellac and vinyl discs 唱片 once referred to; Mandarin has kept the same word for \"album\" even now that most 唱片 are digital files with no disc at all.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "爸爸收集了很多旧唱片。",
+        "pinyin": "Bàba shōují le hěn duō jiù chàngpiàn.",
+        "english": "Dad has collected many old records."
+      },
+      {
+        "hanzi": "她刚出了一张新唱片。",
+        "pinyin": "Tā gāng chū le yì zhāng xīn chàngpiàn.",
+        "english": "She just released a new album."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+9A91-58EB",
+    "word": "骑士",
+    "frequencyRank": 2476,
+    "pinyin": "qí shì",
+    "meanings": [
+      "knight",
+      "cavalier",
+      "(Tw) bike rider (scooter, bicycle etc)"
+    ],
+    "characters": [
+      {
+        "char": "骑",
+        "components": [
+          {
+            "char": "马",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "马 (horse) — 马 is the horse radical, as in 骗, 驾, 验; 骑 is to ride."
+          },
+          {
+            "char": "奇",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "奇 (qí) — same sound — 骑 is qí, like 奇; 奇 also sounds out 椅 yǐ."
+          }
+        ]
+      },
+      {
+        "char": "士",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "士 (scholar, soldier) — usually read as an axe or weapon, so a warrior or gentleman (士兵, 博士). Memory aid: 士 has the longer bar on top, 土 (earth) on the bottom."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这部电影讲的是中世纪骑士的故事。",
+      "pinyin": "Zhè bù diànyǐng jiǎng de shì zhōngshìjì qíshì de gùshi.",
+      "english": "This movie tells the story of a medieval knight.",
+      "fact": "士 originally named a class of ancient Chinese warrior-scholars, the lower rung of the old aristocracy; 骑士 (\"mounted 士\") was coined by prefixing 骑 (\"to ride\") to translate the unrelated European idea of chivalric knighthood — the same word Chinese sportswriters also use for the NBA's Cleveland Cavaliers.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "骑士骑着白马，来到了城堡前。",
+        "pinyin": "Qíshì qí zhe bái mǎ, lái dào le chéngbǎo qián.",
+        "english": "The knight rode a white horse to the front of the castle."
+      },
+      {
+        "hanzi": "孩子们喜欢听骑士和龙的故事。",
+        "pinyin": "Háizimen xǐhuan tīng qíshì hé lóng de gùshi.",
+        "english": "Children like to hear stories about knights and dragons."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+6D17-624B-95F4",
+    "word": "洗手间",
+    "frequencyRank": 2477,
+    "pinyin": "xǐ shǒu jiān",
+    "meanings": [
+      "toilet",
+      "lavatory",
+      "washroom"
+    ],
+    "characters": [
+      {
+        "char": "洗",
+        "components": [
+          {
+            "char": "氵",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "氵 (water) — 氵 is water, as in 河, 海; 洗 is to wash."
+          },
+          {
+            "char": "先",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "先 (xiān) — near sound — 洗 is xǐ; 先 also sounds out 选 xuǎn."
+          }
+        ]
+      },
+      {
+        "char": "手",
+        "components": [
+          {
+            "char": "手",
+            "role": "pictographic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "手 (hand) — a picture of a hand with fingers spread. As a left-hand radical it becomes 扌 in 打 hit, 拿 take, 推 push."
+          }
+        ]
+      },
+      {
+        "char": "间",
+        "components": [
+          {
+            "char": "门",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "门 (gate) — doors and openings, as in 问 ask, 开 open, 关 close."
+          },
+          {
+            "char": "日",
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "日 (sun) — a gap in the gate lets daylight through (the traditional 間 had 月 moon): the space between."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "洗手间在走廊的尽头。",
+      "pinyin": "Xǐshǒujiān zài zǒuláng de jìntóu.",
+      "english": "The restroom is at the end of the hallway.",
+      "fact": "洗手间 literally means \"hand-washing room\" — a polite indirection for the toilet, functionally identical to English \"restroom\" or \"washroom.\" The blunter, more clinical 厕所 names the same room but sits lower on the politeness scale.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "请问洗手间在哪儿？",
+        "pinyin": "Qǐngwèn xǐshǒujiān zài nǎr?",
+        "english": "Excuse me, where is the restroom?"
+      },
+      {
+        "hanzi": "他去洗手间洗手了。",
+        "pinyin": "Tā qù xǐshǒujiān xǐ shǒu le.",
+        "english": "He went to the bathroom to wash his hands."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+54C8-54C8",
+    "word": "哈哈",
+    "frequencyRank": 2478,
+    "pinyin": "hā hā",
+    "meanings": [
+      "(onom.) laughing out loud"
+    ],
+    "characters": [
+      {
+        "char": "哈",
+        "components": [
+          {
+            "char": "口",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "口 (mouth) — 口 is a mouth, as in 吃, 叫, 吗; 哈 is the sound of laughing."
+          },
+          {
+            "char": "合",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "合 (hé) — near sound — 哈 is hā; 合 also sounds out 盒 hé."
+          }
+        ]
+      },
+      {
+        "char": "哈",
+        "components": [
+          {
+            "char": "口",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "口 (mouth) — 口 is a mouth, as in 吃, 叫, 吗; 哈 is the sound of laughing."
+          },
+          {
+            "char": "合",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "合 (hé) — near sound — 哈 is hā; 合 also sounds out 盒 hé."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "“哈哈,你说得太对了!”他笑着说。",
+      "pinyin": "“Hāhā, nǐ shuō de tài duì le!” tā xiàozhe shuō.",
+      "english": "\"Ha ha, you're so right!\" he said, laughing.",
+      "fact": "哈哈 doubling or tripling in Chinese texting and chat (哈哈, 哈哈哈, 哈哈哈哈…) reads as genuinely warm, amused laughter, with more repetitions signaling more amusement — unlike English \"ha ha,\" which can carry a flat or sarcastic edge depending on context.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "哈哈，这个笑话太好笑了！",
+        "pinyin": "Hāhā, zhège xiàohua tài hǎoxiào le!",
+        "english": "Haha, this joke is so funny!"
+      },
+      {
+        "hanzi": "他看着我，哈哈大笑起来。",
+        "pinyin": "Tā kàn zhe wǒ, hāhā dà xiào qǐlái.",
+        "english": "He looked at me and burst out laughing."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+697C-4E0A",
+    "word": "楼上",
+    "frequencyRank": 2479,
+    "pinyin": "lóu shàng",
+    "meanings": [
+      "upstairs",
+      "(Internet slang) previous poster in a forum thread"
+    ],
+    "characters": [
+      {
+        "char": "楼",
+        "components": [
+          {
+            "char": "木",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "木 (wood) — 木 is wood and trees, as in 树, 板, 桌; buildings with floors were built of wood, hence 楼."
+          },
+          {
+            "char": "娄",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "娄 (lóu) — same sound — 楼 is lóu; 娄 also sounds out 搂 lǒu."
+          }
+        ]
+      },
+      {
+        "char": "上",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "上 (above) — a mark above a line, the mirror of 下 below."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "楼上住着一对老夫妻。",
+      "pinyin": "Lóushàng zhùzhe yí duì lǎo fūqī.",
+      "english": "An elderly couple lives upstairs.",
+      "fact": "Beyond its literal sense, forum culture reused 楼上 for \"the poster right before me\" — each reply in a thread is imagined as a floor (楼) stacked on the ones before it, so the previous post is, quite literally, \"upstairs.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我住三楼，他住在我楼上。",
+        "pinyin": "Wǒ zhù sān lóu, tā zhù zài wǒ lóushàng.",
+        "english": "I live on the third floor, and he lives upstairs from me."
+      },
+      {
+        "hanzi": "楼上太吵了，我睡不着。",
+        "pinyin": "Lóushàng tài chǎo le, wǒ shuì bù zháo.",
+        "english": "It's too noisy upstairs and I can't sleep."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+8F7D",
+    "word": "载",
+    "frequencyRank": 2480,
+    "pinyin": "zài",
+    "meanings": [
+      "to carry",
+      "to load",
+      "to hold"
+    ],
+    "characters": [
+      {
+        "char": "载",
+        "components": [
+          {
+            "char": "车",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "车 (vehicle) — carrying loads by cart; also in 轮 wheel, 辆 for cars."
+          },
+          {
+            "char": "哉",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "哉 (zāi) gives a close sound; it also sounds out 栽 zāi and 裁 cái. Note 载 reads zài in 下载."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这辆车可以载五个人。",
+      "pinyin": "Zhè liàng chē kěyǐ zài wǔ gè rén.",
+      "english": "This car can carry five people.",
+      "fact": "载 is read zài for 'carry' (装载, 载客) and in 下载 (to download). Read zǎi, it means 'to record' or 'year': 记载 (to record), 转载 (to repost), 三年五载 (several years).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这辆卡车载着很多货物。",
+        "pinyin": "Zhè liàng kǎchē zài zhe hěn duō huòwù.",
+        "english": "This truck is carrying a lot of goods."
+      },
+      {
+        "hanzi": "请把软件下载到手机上。",
+        "pinyin": "Qǐng bǎ ruǎnjiàn xiàzài dào shǒujī shang.",
+        "english": "Please download the software onto your phone."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+5723-8BDE-8001-4EBA",
+    "word": "圣诞老人",
+    "frequencyRank": 2481,
+    "pinyin": "Shèng dàn Lǎo rén",
+    "meanings": [
+      "Father Christmas",
+      "Santa Claus"
+    ],
+    "characters": [
+      {
+        "char": "圣",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "圣 (holy) — traditional 聖 had an ear 耳 and a mouth 口: the sage who listens and speaks wisely."
+          }
+        ]
+      },
+      {
+        "char": "诞",
+        "components": [
+          {
+            "char": "讠",
+            "role": "semantic",
+            "radical": true,
+            "source": "llm-fallback",
+            "note": "讠 (speech, simplified 言) — speech: 说, 话, 请; 诞 first meant big talk, then birth and birthday."
+          },
+          {
+            "char": "延",
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "延 (yán) is only a loose sound hint for dàn."
+          }
+        ]
+      },
+      {
+        "char": "老",
+        "components": [
+          {
+            "char": "耂",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "耂 (old) — 老 pictures an old person with long hair leaning on a staff; the short form 耂 is also in 考 test and 孝 filial."
+          }
+        ]
+      },
+      {
+        "char": "人",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "makemeahanzi",
+            "note": "人 (person) — a side-view figure of a person walking. As a radical it appears as 亻 on the left: 你 他 们."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "孩子们都相信圣诞老人会送礼物。",
+      "pinyin": "Háizimen dōu xiāngxìn Shèngdàn Lǎorén huì sòng lǐwù.",
+      "english": "Children all believe that Santa Claus will bring presents.",
+      "fact": "圣诞 literally means \"holy birth\" — Chinese's calque for \"Christmas\" as the nativity — and 老人 simply means \"old person\"; together 圣诞老人, \"the holy-birth old man,\" is a transparent compound built to name a Western figure with no indigenous equivalent in Chinese folklore.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "圣诞老人骑着雪橇来送礼物。",
+        "pinyin": "Shèngdàn Lǎorén qí zhe xuěqiāo lái sòng lǐwù.",
+        "english": "Santa Claus comes riding a sleigh to deliver presents."
+      },
+      {
+        "hanzi": "爸爸在圣诞节那天扮成了圣诞老人。",
+        "pinyin": "Bàba zài Shèngdànjié nà tiān bàn chéng le Shèngdàn Lǎorén.",
+        "english": "Dad dressed up as Santa Claus on Christmas Day."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+902E",
+    "word": "逮",
+    "frequencyRank": 2482,
+    "pinyin": "dǎi",
+    "meanings": [
+      "to catch",
+      "to seize",
+      "to capture"
+    ],
+    "characters": [
+      {
+        "char": "逮",
+        "components": [
+          {
+            "char": "辶",
+            "role": "semantic",
+            "radical": true,
+            "source": "llm-fallback",
+            "note": "辶 (walk, 走之旁) — movement and roads: 过, 进, 送; 逮 is to chase and catch. 隶 shows a hand grabbing a tail."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "猫逮住了一只老鼠。",
+      "pinyin": "Māo dǎizhù le yì zhī lǎoshǔ.",
+      "english": "The cat caught a mouse.",
+      "fact": "逮 is read dǎi in the colloquial sense 'to catch' (逮鱼, 逮蚊子). In the formal word 逮捕 (to arrest) it is read dài. The colloquial reading is common in northern Mandarin.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "警察逮住了小偷。",
+        "pinyin": "Jǐngchá dǎi zhù le xiǎotōu.",
+        "english": "The police caught the thief."
+      },
+      {
+        "hanzi": "他想逮那只蝴蝶,可是没逮着。",
+        "pinyin": "Tā xiǎng dǎi nà zhī húdié, kěshì méi dǎi zháo.",
+        "english": "He tried to catch that butterfly but couldn't."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+955C",
+    "word": "镜",
+    "frequencyRank": 2483,
+    "pinyin": "jìng",
+    "meanings": [
+      "mirror",
+      "lens"
+    ],
+    "characters": [
+      {
+        "char": "镜",
+        "components": [
+          {
+            "char": "钅",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "钅 (metal) — 钅 is simplified 金 (metal), as in 钱, 铁, 钟; mirrors were polished bronze."
+          },
+          {
+            "char": "竟",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "竟 (jìng) — same sound — 镜 is jìng; 竟 also sounds out 境 jìng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "她在照镜子。",
+      "pinyin": "Tā zài zhào jìngzi.",
+      "english": "She is looking in the mirror.",
+      "fact": "镜 builds many useful words: 镜子 (mirror), 眼镜 (glasses), 镜头 (camera lens), 望远镜 (telescope). A classical saying, 以史为镜, urges you to use history as a mirror.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我的眼镜找不到了。",
+        "pinyin": "Wǒ de yǎnjìng zhǎo bu dào le.",
+        "english": "I can't find my glasses."
+      },
+      {
+        "hanzi": "洗手间里有一面大镜子。",
+        "pinyin": "Xǐshǒujiān li yǒu yí miàn dà jìngzi.",
+        "english": "There is a big mirror in the restroom."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+9488-5BF9",
+    "word": "针对",
+    "frequencyRank": 2484,
+    "pinyin": "zhēn duì",
+    "meanings": [
+      "to target",
+      "to focus on",
+      "to be aimed at or against",
+      "in response to"
+    ],
+    "characters": [
+      {
+        "char": "针",
+        "components": [
+          {
+            "char": "钅",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "钅 (metal) — 钅 is the simplified 金 (metal), as in 钱, 铁; 针 is a metal needle."
+          },
+          {
+            "char": "十",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "十 (ten, cross) — 十 stands for the needle's shape, as in the old form 針."
+          }
+        ]
+      },
+      {
+        "char": "对",
+        "components": [
+          {
+            "char": "寸",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "寸 (hand, inch) — hands and measuring, as in 寻 seek, 导 lead, 射 shoot; 对 faces someone or matches a pair. 又 here only stands in for the left side of 對."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这个广告是针对年轻人设计的。",
+      "pinyin": "Zhège guǎnggào shì zhēnduì niánqīngrén shèjì de.",
+      "english": "This advertisement is designed targeting young people.",
+      "fact": "针 (\"needle,\" a fine point of metal) plus 对 (\"facing, directed at\") builds a fairly vivid image — \"needle-pointed at\" — for 针对's sense of being specifically aimed or directed at a particular target, whether a demographic, a problem, or a criticism.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这些政策是针对环境问题制定的。",
+        "pinyin": "Zhèxiē zhèngcè shì zhēnduì huánjìng wèntí zhìdìng de.",
+        "english": "These policies were made to address environmental problems."
+      },
+      {
+        "hanzi": "他的话不是针对你。",
+        "pinyin": "Tā de huà bú shì zhēnduì nǐ.",
+        "english": "His words weren't aimed at you."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+4E00-5206",
+    "word": "一分",
+    "frequencyRank": 2485,
+    "pinyin": "yī fēn",
+    "meanings": [
+      "one point (in a score or grade)",
+      "one minute",
+      "one fen (Chinese currency, 1/100 of a yuan)",
+      "a tiny bit"
     ],
     "characters": [
       {
         "char": "一",
         "components": [
           {
-            "role": "ideographic",
-            "note": "A single horizontal stroke — the simplest possible way to represent the number one; some traditional interpretations link it to heaven or earth as the very first stroke of creation.",
-            "source": "llm-fallback"
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "一 (one) — a single horizontal stroke is the number one; 二 and 三 just add strokes, so the first three numbers are tally marks."
           }
         ]
       },
       {
-        "char": "千",
+        "char": "分",
         "components": [
           {
-            "char": "人",
+            "char": "刀",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "刀 (knife) — cutting, as in 切, 刻, 到: a blade splits."
+          },
+          {
+            "char": "八",
             "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "千 grew from the character 人 (person) with an added mark across the leg. Marking a person this way was a simple tally device that was borrowed to write the numeral 'thousand.'"
+            "source": "makemeahanzi",
+            "note": "八 (eight) — originally two lines pulling apart: divide. 分 also gives 份 fèn, 粉 fěn and 纷 fēn."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "这幅画拍卖出了一千多美元。",
-      "pinyin": "zhè fú huà pāimài chū le yīqiān duō měiyuán.",
-      "english": "This painting sold at auction for more than a thousand dollars.",
-      "fact": "The Japanese tradition of folding 1,000 paper cranes, senbazuru, is believed to grant a wish and was popularized worldwide after Sadako Sasaki, a survivor of the Hiroshima bombing, attempted to fold 1,000 cranes before her death from leukemia in 1955.",
+      "hanzi": "他们的比赛只差一分。",
+      "pinyin": "Tāmen de bǐsài zhǐ chà yì fēn.",
+      "english": "Their game was decided by just one point.",
+      "fact": "分 alone already covers a small, fixed unit in several unrelated systems — a minute of time, a point of score, a fēn of currency (1/100 yuan) — so 一分 (\"one 分\") inherits whichever sense the surrounding context calls for, much like English \"a point\" shifts between sports, punctuation, and geometry.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "这次考试我只错了一分。",
+        "pinyin": "Zhè cì kǎoshì wǒ zhǐ cuò le yì fēn.",
+        "english": "I lost only one point on this exam."
+      },
+      {
+        "hanzi": "等我一分钟，我马上就好。",
+        "pinyin": "Děng wǒ yì fēnzhōng, wǒ mǎshàng jiù hǎo.",
+        "english": "Wait a minute for me; I'll be ready right away."
+      }
+    ],
     "batchId": "2451-2500"
   },
   {
-    "id": "W+8D4C-535A",
-    "word": "赌博",
-    "frequencyRank": 2499,
-    "pinyin": "dǔ bó",
+    "id": "W+80A5",
+    "word": "肥",
+    "frequencyRank": 2486,
+    "pinyin": "féi",
     "meanings": [
-      "to gamble"
+      "fat",
+      "fertile",
+      "loose-fitting"
     ],
     "characters": [
       {
-        "char": "赌",
+        "char": "肥",
         "components": [
           {
-            "char": "贝",
+            "char": "⺼",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "贝 (money) — gambling involves staking money."
+            "note": "⺼ (flesh, 肉月旁) — body parts, as in 脸 face, 胖 plump, 脂 fat."
           },
           {
-            "char": "者",
+            "char": "巴",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "者 (zhě) gives a sound distantly related to dǔ, having drifted apart over time."
+            "note": "巴 (bā) is only a loose sound clue for féi."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这只猫太肥了。",
+      "pinyin": "Zhè zhī māo tài féi le.",
+      "english": "This cat is too fat.",
+      "fact": "肥 describes animals and meat (肥肉, fatty meat). For people, 胖 (pàng) is less harsh, and calling someone 肥 is rude. 肥 is also fertile or loose-fitting (肥沃, 肥大), and 减肥 is to go on a diet; 肥料 means fertilizer.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这条裤子太肥了,我要换小一点的。",
+        "pinyin": "Zhè tiáo kùzi tài féi le, wǒ yào huàn xiǎo yìdiǎn de.",
+        "english": "These pants are too loose; I want a smaller pair."
+      },
+      {
+        "hanzi": "这片土地很肥沃。",
+        "pinyin": "Zhè piàn tǔdì hěn féiwò.",
+        "english": "This land is very fertile."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+5177-4F53",
+    "word": "具体",
+    "frequencyRank": 2487,
+    "pinyin": "jù tǐ",
+    "meanings": [
+      "concrete",
+      "specific",
+      "detailed"
+    ],
+    "characters": [
+      {
+        "char": "具",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "具 (tool) — two hands 廾 (the bottom 八) hold something valuable above — to provide, and a tool, as in 工具; 具 also sounds out 惧 jù."
           }
         ]
       },
       {
-        "char": "博",
+        "char": "体",
         "components": [
+          {
+            "char": "亻",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "亻 (person) — people, as in 你, 他, 做: 体 is a person's body."
+          },
+          {
+            "char": "本",
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "本 (root) — the root of a person, the body; the traditional form was 體 with 骨 (bone)."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "请给我一个具体的例子。",
+      "pinyin": "Qǐng gěi wǒ yí gè jùtǐ de lìzi.",
+      "english": "Please give me a specific example.",
+      "fact": "具 (two hands, 八, holding up a tray, 目) already means \"utensil, tool\" — something with physical form you can hold — and 体 means \"body, form\"; together 具体 literally builds \"having bodily form,\" the natural opposite of 抽象 (\"abstract\").",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "你能说得更具体一点吗？",
+        "pinyin": "Nǐ néng shuō de gèng jùtǐ yìdiǎn ma?",
+        "english": "Could you be more specific?"
+      },
+      {
+        "hanzi": "具体的时间还没有定下来。",
+        "pinyin": "Jùtǐ de shíjiān hái méiyǒu dìng xiàlái.",
+        "english": "The exact time hasn't been decided yet."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+7248",
+    "word": "版",
+    "frequencyRank": 2488,
+    "pinyin": "bǎn",
+    "meanings": [
+      "edition",
+      "printing block",
+      "version"
+    ],
+    "characters": [
+      {
+        "char": "版",
+        "components": [
+          {
+            "char": "片",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "片 (slice, plank) — marks flat pieces and wooden boards, as in 牌 sign; 版 is a printing block."
+          },
+          {
+            "char": "反",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "反 (fǎn) hints at the sound: 版 bǎn is close, as in 板 bǎn and 饭 fàn."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这本书有新版。",
+      "pinyin": "Zhè běn shū yǒu xīnbǎn.",
+      "english": "This book has a new edition.",
+      "fact": "版 started as a printing block. It now covers editions and versions: 第二版 (second edition), 出版 (to publish), 版权 (copyright), 盗版 (pirated edition), 网页版 (web version).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这本书的第二版出来了。",
+        "pinyin": "Zhè běn shū de dì-èr bǎn chūlái le.",
+        "english": "The second edition of this book is out."
+      },
+      {
+        "hanzi": "你看今天报纸的头版了吗?",
+        "pinyin": "Nǐ kàn jīntiān bàozhǐ de tóubǎn le ma?",
+        "english": "Did you see today's newspaper front page?"
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+9886-5BFC",
+    "word": "领导",
+    "frequencyRank": 2489,
+    "pinyin": "lǐng dǎo",
+    "meanings": [
+      "lead",
+      "leading",
+      "to lead",
+      "leadership",
+      "leader",
+      "CL:位[wei4],個|个[ge4]"
+    ],
+    "characters": [
+      {
+        "char": "领",
+        "components": [
+          {
+            "char": "页",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "页 (head) — 页 is the head, as in 题, 顶, 颜; 领 is the neck and then to lead."
+          },
+          {
+            "char": "令",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "令 (lìng) — near sound — 领 is lǐng; 令 also sounds out 龄 líng and 铃 líng."
+          }
+        ]
+      },
+      {
+        "char": "导",
+        "components": [
+          {
+            "char": "寸",
+            "role": "semantic",
+            "source": "makemeahanzi",
+            "note": "寸 (hand, inch) — traditional 導 had 道 (road) plus 寸 (hand): a hand leading along a road; 道 dào is also a near-sound clue for 导 dǎo."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "他是我们公司的领导。",
+      "pinyin": "Tā shì wǒmen gōngsī de lǐngdǎo.",
+      "english": "He is the leader of our company.",
+      "fact": "In Chinese workplaces, 领导 doubles as a direct form of address — employees often call their boss 领导 to their face, the way one might say \"boss\" in English, rather than using a personal name or a specific title.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我们的领导很关心员工。",
+        "pinyin": "Wǒmen de lǐngdǎo hěn guānxīn yuángōng.",
+        "english": "Our leader really cares about the employees."
+      },
+      {
+        "hanzi": "他领导着一个十个人的团队。",
+        "pinyin": "Tā lǐngdǎo zhe yí ge shí ge rén de tuánduì.",
+        "english": "He leads a team of ten people."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+5171-540C",
+    "word": "共同",
+    "frequencyRank": 2490,
+    "pinyin": "gòng tóng",
+    "meanings": [
+      "common",
+      "joint",
+      "jointly",
+      "together",
+      "collaborative"
+    ],
+    "characters": [
+      {
+        "char": "共",
+        "components": [
+          {
+            "char": "廾",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "廾 (two hands) — two hands joined — 共 is doing together; it also sounds out 供 gōng."
+          }
+        ]
+      },
+      {
+        "char": "同",
+        "components": [
+          {
+            "char": "口",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "口 (mouth) — speech, as in 吃, 唱, 问: voices in unison. 同 also gives sound to 铜 tóng, 桶 tǒng, 洞 dòng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "大家要共同努力才能完成任务。",
+      "pinyin": "Dàjiā yào gòngtóng nǔlì cái néng wánchéng rènwu.",
+      "english": "Everyone needs to work together to complete the task.",
+      "fact": "共同 is almost always an adverb sitting right before a verb (共同努力, 共同决定, \"work/decide together\") rather than a free-standing word the way 一起 can be — you'd say 我们一起去, but 共同 needs a verb of shared effort to modify.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我们有共同的爱好。",
+        "pinyin": "Wǒmen yǒu gòngtóng de àihào.",
+        "english": "We share a common hobby."
+      },
+      {
+        "hanzi": "两家公司共同投资了这个项目。",
+        "pinyin": "Liǎng jiā gōngsī gòngtóng tóuzī le zhège xiàngmù.",
+        "english": "The two companies jointly invested in this project."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+6D17-6FA1",
+    "word": "洗澡",
+    "frequencyRank": 2491,
+    "pinyin": "xǐ zǎo",
+    "meanings": [
+      "to bathe",
+      "to take a shower"
+    ],
+    "characters": [
+      {
+        "char": "洗",
+        "components": [
+          {
+            "char": "氵",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "氵 (water) — 氵 is water, as in 河, 海; 洗 is to wash."
+          },
+          {
+            "char": "先",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "先 (xiān) — near sound — 洗 is xǐ; 先 also sounds out 选 xuǎn."
+          }
+        ]
+      },
+      {
+        "char": "澡",
+        "components": [
+          {
+            "char": "氵",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "氵 (water) — 氵 is water, as in 洗, 海; 澡 is bathing."
+          },
+          {
+            "char": "喿",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "喿 (zào) — same sound — 澡 is zǎo; 喿 also sounds out 燥 zào and 操 cāo."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我每天早上洗澡。",
+      "pinyin": "Wǒ měitiān zǎoshang xǐzǎo.",
+      "english": "I take a shower every morning.",
+      "fact": "洗澡 is a \"verb + built-in object\" compound — 澡 isn't a free-standing noun outside this word — so it can never take another direct object the way plain 洗 does in 洗衣服 (\"wash clothes\") or 洗碗 (\"wash dishes\"); \"bathe\" is baked into the verb itself.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我习惯晚上洗澡。",
+        "pinyin": "Wǒ xíguàn wǎnshang xǐzǎo.",
+        "english": "I'm used to taking a bath at night."
+      },
+      {
+        "hanzi": "孩子正在洗澡，请稍等一会儿。",
+        "pinyin": "Háizi zhèngzài xǐzǎo, qǐng shāo děng yíhuìr.",
+        "english": "The child is taking a bath; please wait a moment."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+66F2",
+    "word": "曲",
+    "frequencyRank": 2492,
+    "pinyin": "qǔ",
+    "meanings": [
+      "song",
+      "tune",
+      "melody"
+    ],
+    "characters": [
+      {
+        "char": "曲",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "makemeahanzi",
+            "note": "曲 (bent) — the shape pictures something bent; qū means crooked and qǔ means a song, as in 歌曲."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这首曲子很好听。",
+      "pinyin": "Zhè shǒu qǔzi hěn hǎotīng.",
+      "english": "This tune sounds lovely.",
+      "fact": "曲 is read qǔ for songs and music: 歌曲 (song), 作曲 (compose), 曲调 (melody). Read qū, it means bent: 弯曲 (to curve), 曲线 (curve), 曲折 (winding). Yuan-dynasty 曲 is a famous verse form.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "他会弹一首钢琴曲。",
+        "pinyin": "Tā huì tán yì shǒu gāngqín qǔ.",
+        "english": "He can play a piano piece."
+      },
+      {
+        "hanzi": "这首歌的作曲家是谁?",
+        "pinyin": "Zhè shǒu gē de zuòqǔjiā shì shéi?",
+        "english": "Who composed this song?"
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+9488",
+    "word": "针",
+    "frequencyRank": 2493,
+    "pinyin": "zhēn",
+    "meanings": [
+      "needle",
+      "injection",
+      "pin"
+    ],
+    "characters": [
+      {
+        "char": "针",
+        "components": [
+          {
+            "char": "钅",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "钅 (metal) — 钅 is the simplified 金 (metal), as in 钱, 铁; 针 is a metal needle."
+          },
           {
             "char": "十",
-            "role": "semantic",
+            "role": "ideographic",
             "source": "makemeahanzi",
-            "note": "十 (ten) — 博 relates to breadth, with ten symbolizing completeness."
-          },
-          {
-            "char": "尃",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "尃 (fū) reflects the character's historical phonetic root, though the modern reading bó has diverged considerably."
+            "note": "十 (ten, cross) — 十 stands for the needle's shape, as in the old form 針."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "长期赌博让他欠下了巨额债务。",
-      "pinyin": "chángqí dǔbó ràng tā qiàn xià le jù'é zhàiwù.",
-      "english": "Long-term gambling left him deeply in debt.",
-      "fact": "The oldest known dice, carved from bone, date back roughly 5,000 years to sites in Iran, showing that games of chance and gambling-like behavior are among the oldest recorded human pastimes, predating written history in many cultures.",
+      "hanzi": "护士给我打了一针。",
+      "pinyin": "Hùshi gěi wǒ dǎ le yì zhēn.",
+      "english": "The nurse gave me an injection.",
+      "fact": "针 is a needle, and 打针 is to get an injection. It forms 针灸 (acupuncture) and 指南针 (compass), literally 'south-pointing needle'. 针 also counts shots and stitches.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "奶奶在用针缝衣服。",
+        "pinyin": "Nǎinai zài yòng zhēn féng yīfu.",
+        "english": "Grandma is sewing clothes with a needle."
+      },
+      {
+        "hanzi": "我最怕打针了。",
+        "pinyin": "Wǒ zuì pà dǎzhēn le.",
+        "english": "I'm most afraid of getting shots."
+      }
+    ],
     "batchId": "2451-2500"
   },
   {
-    "id": "W+5904-5883",
-    "word": "处境",
-    "frequencyRank": 2500,
-    "pinyin": "chǔ jìng",
+    "id": "W+7A0D-5FAE",
+    "word": "稍微",
+    "frequencyRank": 2494,
+    "pinyin": "shāo wēi",
     "meanings": [
-      "situation (of a person)"
+      "a little bit"
     ],
     "characters": [
       {
-        "char": "处",
+        "char": "稍",
         "components": [
           {
-            "char": "夂",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "夂 (a foot, to go) — 处 relates to arriving somewhere."
+            "char": "禾",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "禾 (grain) — 禾 is grain, as in 种, 秋; 稍 first meant the tip of the grain, a little bit."
           },
           {
-            "char": "卜",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "卜 (a mark or flag) — planting a marker after arriving gave 处 its meaning of 'a place' or 'to settle, deal with.'"
+            "char": "肖",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "肖 (xiāo) — near sound — 稍 is shāo; 肖 also sounds out 消 xiāo and 削 xiāo."
           }
         ]
       },
       {
-        "char": "境",
+        "char": "微",
+        "components": [
+          {
+            "char": "彳",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "彳 (step) — the left part and radical, as in 往 and 行. It suggests going step by step; in 微 'tiny', as in 微笑 smile. Rest of the shape is unclear."
+          },
+          {
+            "char": "攵",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "攵 (tap) — the bottom-right part, as in 收. Memory aid: tapping very lightly with tiny steps, so everything is 'slight'."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "今天的天气比昨天稍微冷一点。",
+      "pinyin": "Jīntiān de tiānqì bǐ zuótiān shāowēi lěng yìdiǎn.",
+      "english": "Today's weather is slightly colder than yesterday.",
+      "fact": "稍微 rarely modifies a bare adjective by itself — it almost always teams up with a following 一点/一些/一下 (稍微冷一点, \"slightly colder\") to soften the degree, a pairing that trips up learners who drop the second half and leave the sentence feeling unfinished.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "请你稍微快一点，我们要迟到了。",
+        "pinyin": "Qǐng nǐ shāowēi kuài yìdiǎn, wǒmen yào chídào le.",
+        "english": "Please go a little faster; we're going to be late."
+      },
+      {
+        "hanzi": "这件衣服稍微有点大。",
+        "pinyin": "Zhè jiàn yīfu shāowēi yǒudiǎn dà.",
+        "english": "This piece of clothing is a little too big."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+586B",
+    "word": "填",
+    "frequencyRank": 2495,
+    "pinyin": "tián",
+    "meanings": [
+      "to fill in",
+      "to fill up",
+      "to stuff"
+    ],
+    "characters": [
+      {
+        "char": "填",
         "components": [
           {
             "char": "土",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "土 (earth) — 境 relates to land and territory, extended to mean 'environment, boundary'"
+            "note": "土 (earth) — marks soil and ground, as in 地 ground, 城 city wall, 坏 broken; 填 is filling a hole with earth."
           },
           {
-            "char": "竟",
+            "char": "真",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "竟 (jìng) gives the sound — 境 is also pronounced jìng, an exact match"
+            "note": "真 (zhēn) — loose sound hint (tián vs zhēn); same part in 镇 zhèn and 慎 shèn."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "公司目前的处境十分艰难。",
-      "pinyin": "gōngsī mùqián de chǔjìng shífēn jiānnán.",
-      "english": "The company's current situation is very difficult.",
-      "fact": "Ernest Shackleton's 1915 Antarctic expedition became one of history's most famous survival situations when their ship Endurance was crushed by pack ice; all 28 crew members nonetheless survived over a year stranded on ice and in open boats before a daring rescue.",
+      "hanzi": "请填一下这张表。",
+      "pinyin": "Qǐng tián yíxià zhè zhāng biǎo.",
+      "english": "Please fill in this form.",
+      "fact": "填 is the verb for filling blanks on forms: 填表 (fill out a form), 填空 (fill in the blank), 填写 (complete). It also means filling a hole or gap, and 填饱肚子 means to fill your stomach.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "请在这里填你的名字。",
+        "pinyin": "Qǐng zài zhèli tián nǐ de míngzi.",
+        "english": "Please fill in your name here."
+      },
+      {
+        "hanzi": "你填好申请表了吗?",
+        "pinyin": "Nǐ tián hǎo shēnqǐngbiǎo le ma?",
+        "english": "Have you filled out the application form?"
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+996E-6599",
+    "word": "饮料",
+    "frequencyRank": 2496,
+    "pinyin": "yǐn liào",
+    "meanings": [
+      "drink",
+      "beverage"
+    ],
+    "characters": [
+      {
+        "char": "饮",
+        "components": [
+          {
+            "char": "饣",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "饣 (food) — 饣 is the simplified 食 (food), as in 饭, 饿, 饼; 饮 is a drink."
+          },
+          {
+            "char": "欠",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "欠 (open mouth) — 欠 shows a person with an open mouth — taking a drink."
+          }
+        ]
+      },
+      {
+        "char": "料",
+        "components": [
+          {
+            "char": "斗",
+            "role": "semantic",
+            "radical": true,
+            "source": "llm-fallback",
+            "note": "斗 (dipper, measure) — measuring grain and liquids: 科, 斜, 升; 料 is rice 米 measured out, then material."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "你想喝点什么饮料?",
+      "pinyin": "Nǐ xiǎng hē diǎn shénme yǐnliào?",
+      "english": "What would you like to drink?",
+      "fact": "饮 (饣 \"food,\" narrowed here to drinking, plus the phonetic 欠) means \"to drink,\" and 料, which elsewhere means \"material, ingredient\" (from an old image of measuring grain with a ladle, 斗), together give the literal \"drinking material\" — Mandarin's everyday word for \"beverage.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "夏天我喜欢喝冰的饮料。",
+        "pinyin": "Xiàtiān wǒ xǐhuan hē bīng de yǐnliào.",
+        "english": "In summer I like to drink cold beverages."
+      },
+      {
+        "hanzi": "这家店的饮料都很便宜。",
+        "pinyin": "Zhè jiā diàn de yǐnliào dōu hěn piányi.",
+        "english": "The drinks in this shop are all cheap."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+516C-8DEF",
+    "word": "公路",
+    "frequencyRank": 2497,
+    "pinyin": "gōng lù",
+    "meanings": [
+      "highway",
+      "road",
+      "CL:條|条[tiao2]"
+    ],
+    "characters": [
+      {
+        "char": "公",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "公 (public) — 八 over 厶: dividing 八 what is private 厶; so \"shared, public, fair\"."
+          }
+        ]
+      },
+      {
+        "char": "路",
+        "components": [
+          {
+            "char": "⻊",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "⻊ (foot, form of 足) — feet and travel: 跑, 跳, 跟; 路 is a road."
+          },
+          {
+            "char": "各",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "各 (gè) is a loose sound clue; same part in 洛 luò, 落 luò, 客 kè."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这条公路直接通向山顶。",
+      "pinyin": "Zhè tiáo gōnglù zhíjiē tōngxiàng shāndǐng.",
+      "english": "This highway leads directly to the mountaintop.",
+      "fact": "公 (八 \"to divide\" plus 厶, an old graph for \"private\") pictures private property being divided up to be shared fairly — the root of \"public\" — so 公路, \"public road,\" names infrastructure by contrast with any privately owned lane or path.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这条公路两边都是树。",
+        "pinyin": "Zhè tiáo gōnglù liǎngbiān dōu shì shù.",
+        "english": "There are trees on both sides of this highway."
+      },
+      {
+        "hanzi": "我们开车沿着公路走了一整天。",
+        "pinyin": "Wǒmen kāi chē yánzhe gōnglù zǒu le yì zhěng tiān.",
+        "english": "We drove along the highway for a whole day."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+4E3B-9898",
+    "word": "主题",
+    "frequencyRank": 2498,
+    "pinyin": "zhǔ tí",
+    "meanings": [
+      "theme",
+      "subject"
+    ],
+    "characters": [
+      {
+        "char": "主",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "主 (master, host) — a lamp with a flame on top; a lamp stand was the centre of the room. 主 also sounds out 注 zhù, 住 zhù and 柱 zhù."
+          }
+        ]
+      },
+      {
+        "char": "题",
+        "components": [
+          {
+            "char": "页",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "页 (head, page) — heads and faces, as in 头 head, 顶 top, 额 forehead; 题 first meant forehead, then \"heading\"."
+          },
+          {
+            "char": "是",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "是 (shì) gives a loose sound clue for tí; 是 also sounds out 提 tí and 堤 dī."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这次会议的主题是环境保护。",
+      "pinyin": "Zhè cì huìyì de zhǔtí shì huánjìng bǎohù.",
+      "english": "The theme of this meeting is environmental protection.",
+      "fact": "主 (originally a lamp's flame and stand, 丶 over 王, \"the one who tends the light\") narrowed to \"main, master,\" and 题 (页 \"head, forehead\" plus the phonetic 是) named whatever sits at the top of a document — together, 主题 is close to literally \"the main heading.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这篇文章的主题是什么？",
+        "pinyin": "Zhè piān wénzhāng de zhǔtí shì shénme?",
+        "english": "What is the theme of this article?"
+      },
+      {
+        "hanzi": "我们的婚礼以海洋为主题。",
+        "pinyin": "Wǒmen de hūnlǐ yǐ hǎiyáng wéi zhǔtí.",
+        "english": "Our wedding has the ocean as its theme."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+6D77-76D7",
+    "word": "海盗",
+    "frequencyRank": 2499,
+    "pinyin": "hǎi dào",
+    "meanings": [
+      "pirate"
+    ],
+    "characters": [
+      {
+        "char": "海",
+        "components": [
+          {
+            "char": "氵",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "氵 (water) — 氵 is water, as in 河, 汤, 酒; 海 is the sea."
+          },
+          {
+            "char": "每",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "每 (měi) — near sound — 海 is hǎi; 每 also sounds out 梅 méi and 悔 huǐ."
+          }
+        ]
+      },
+      {
+        "char": "盗",
+        "components": [
+          {
+            "char": "皿",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "皿 (dish) — 皿 is a vessel, as in 盘, 盒; 盗 is coveting what is not yours."
+          },
+          {
+            "char": "次",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "次 (drool) — 次 here originally pictured drooling — wanting something greedily."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这片海域曾经有海盗出没。",
+      "pinyin": "Zhè piàn hǎiyù céngjīng yǒu hǎidào chūmò.",
+      "english": "Pirates used to roam this stretch of sea.",
+      "fact": "盗 by itself means \"to steal, a thief,\" and the same character resurfaces in 盗版 (\"pirated edition\") for bootlegged books, software, or films — Chinese independently extended \"piracy\" from sea-robbery to intellectual-property theft, the same metaphorical leap English made with the word \"piracy.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这部电影讲的是一个海盗的故事。",
+        "pinyin": "Zhè bù diànyǐng jiǎng de shì yí ge hǎidào de gùshi.",
+        "english": "This movie tells the story of a pirate."
+      },
+      {
+        "hanzi": "海盗把宝藏埋在了小岛上。",
+        "pinyin": "Hǎidào bǎ bǎozàng mái zài le xiǎo dǎo shang.",
+        "english": "The pirates buried the treasure on a small island."
+      }
+    ],
+    "batchId": "2451-2500"
+  },
+  {
+    "id": "W+4E00-70B9-513F",
+    "word": "一点儿",
+    "frequencyRank": 2500,
+    "pinyin": "yī diǎn r",
+    "meanings": [
+      "erhua variant of 一點|一点[yi1 dian3]"
+    ],
+    "characters": [
+      {
+        "char": "一",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "一 (one) — a single horizontal stroke is the number one; 二 and 三 just add strokes, so the first three numbers are tally marks."
+          }
+        ]
+      },
+      {
+        "char": "点",
+        "components": [
+          {
+            "char": "灬",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "灬 (fire) — heat and burning, as in 热 hot, 照 shine, 黑 black; a dot is a small spot like a spark."
+          },
+          {
+            "char": "占",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "占 (zhàn) is a loose sound clue for diǎn; 占 also sounds out 站 zhàn and 粘 zhān."
+          }
+        ]
+      },
+      {
+        "char": "儿",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "儿 (child, legs) — shows a person's legs; in 兒 the top was a child's soft skull. As an ending (这儿) it adds the er sound; 儿 also in 先, 兄, 光."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "麻烦你把音乐声音调小一点儿。",
+      "pinyin": "Máfan nǐ bǎ yīnyuè shēngyīn tiáo xiǎo yìdiǎnr.",
+      "english": "Could you please turn the music volume down a little?",
+      "fact": "The 儿 in 一点儿 is erhua — a colloquial retroflex coloring of the final syllable rather than a separate spoken syllable, so despite being written with its own character, 一点儿 is pronounced as a single merged sound, yìdiǎnr, closer to Beijing-flavored speech than the equally correct, un-suffixed 一点.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我只想吃一点儿，不太饿。",
+        "pinyin": "Wǒ zhǐ xiǎng chī yìdiǎnr, bú tài è.",
+        "english": "I only want to eat a little; I'm not very hungry."
+      },
+      {
+        "hanzi": "今天比昨天冷一点儿。",
+        "pinyin": "Jīntiān bǐ zuótiān lěng yìdiǎnr.",
+        "english": "Today is a little colder than yesterday."
+      }
+    ],
     "batchId": "2451-2500"
   }
 ]

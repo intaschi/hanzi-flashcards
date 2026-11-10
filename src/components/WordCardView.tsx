@@ -7,6 +7,12 @@ import type { Grade, WordCard } from '../state/types'
 
 type BackTab = 'meaning' | 'characters' | 'interesting'
 
+const TAB_LABELS: Record<BackTab, string> = {
+  meaning: 'Meaning',
+  characters: 'Components',
+  interesting: 'Interesting',
+}
+
 // A word's own example sentence rarely repeats it, but a few (的, 了, 是...)
 // legitimately do — splitting on every occurrence instead of just the
 // first is what keeps all of them highlighted, not only the leftmost one.
@@ -40,10 +46,9 @@ interface Props {
 // Mirrors CardView's structure and CSS classes closely (same flip mechanic,
 // same tab-panel height-stacking trick, same grade row) so the word deck
 // feels like the same product as the character deck rather than a
-// bolted-on second app. The front face shows the word's example sentence
-// with the target word highlighted, not the word in isolation — reading it
-// in context is the actual skill, and the highlight is what keeps that
-// from turning into "guess which word this is."
+// bolted-on second app. The front face leads with the word itself, large,
+// and puts its example sentence underneath with the target word still
+// highlighted, so the word is seen both in isolation and in context.
 export function WordCardView({
   card,
   revealed,
@@ -59,9 +64,24 @@ export function WordCardView({
   // breakdown (components) or via its standalone meaning (looked up from the
   // already-loaded Hanzi deck, not duplicated into every word card) — the
   // tab is only worth hiding if a word's characters have neither.
+  // A one-character word IS its character: its meanings are already the
+  // Meaning tab, so the Characters tab only earns its place with a breakdown.
+  const isSingleChar = card.characters.length === 1
   const hasAnyCharacterInfo = card.characters.some(
-    (c) => c.components.length > 0 || (characterMeanings.get(c.char)?.length ?? 0) > 0,
+    (c) =>
+      c.components.length > 0 || (!isSingleChar && (characterMeanings.get(c.char)?.length ?? 0) > 0),
   )
+  // The card's main example first, then up to two extra context phrases;
+  // all of them are shown on the front and again, with pinyin and
+  // translation, on the Meaning tab. Cards without extras show just the one.
+  const phrases = [
+    { ...card.example, audio: 'words-example' as const },
+    ...(card.examples ?? [])
+      .slice(0, 2)
+      .map((ex, i) => ({ ...ex, audio: (i === 0 ? 'words-example-2' : 'words-example-3') as 'words-example-2' | 'words-example-3' })),
+  ]
+  const [phraseIndex, setPhraseIndex] = useState(0)
+  const phrase = phrases[Math.min(phraseIndex, phrases.length - 1)]
   const tabs: BackTab[] = [
     'meaning',
     ...(hasAnyCharacterInfo ? (['characters'] as const) : []),
@@ -80,6 +100,7 @@ export function WordCardView({
   useEffect(() => {
     setActiveTab('meaning')
     setActiveCharIndex(0)
+    setPhraseIndex(0)
     if (pagerRef.current) pagerRef.current.scrollLeft = 0
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [card.id])
@@ -128,9 +149,24 @@ export function WordCardView({
             inert={revealed || undefined}
             onClick={handleFaceClick}
           >
-            <p class="word-front-sentence chinese" lang="zh">
-              {highlightWord(card.example.hanzi, card.word)}
+            <p class="word-front-word chinese" lang="zh">
+              {card.word}
             </p>
+            <div class="word-front-phrases">
+              {phrases.map((p, i) => (
+                <div class="word-front-row" key={i}>
+                  <p class="word-front-sentence chinese" lang="zh">
+                    {highlightWord(p.hanzi, card.word)}
+                  </p>
+                  <AudioButton
+                    text={p.hanzi}
+                    label={`Play example sentence ${i + 1}`}
+                    src={audioPath(p.audio, card.id)}
+                    compact
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div
@@ -143,18 +179,8 @@ export function WordCardView({
               <div class="card-back-head">
                 <span class="card-back-word-row">
                   <WordStrokeStage characters={card.characters.map((c) => c.char)} play={revealed} />
-                  {/* Icon-only and right next to the word itself, unlike the
-                      captioned Sentence button in .card-controls — its
-                      position alone makes clear this plays just the word,
-                      not the full sentence. */}
-                  <AudioButton
-                    text={card.word}
-                    label="Play word pronunciation"
-                    src={audioPath('words', card.id)}
-                    compact
-                  />
+                  <div class="pinyin">{card.pinyin}</div>
                 </span>
-                <div class="pinyin">{card.pinyin}</div>
               </div>
 
               <div class="card-tabs" role="tablist">
@@ -167,7 +193,7 @@ export function WordCardView({
                     class={`card-tab-btn ${activeTab === tab ? 'active' : ''}`}
                     onClick={() => goToTab(tab)}
                   >
-                    {tab === 'meaning' ? 'Meaning' : tab === 'characters' ? 'Characters' : 'Interesting'}
+                    {TAB_LABELS[tab]}
                   </button>
                 ))}
               </div>
@@ -182,22 +208,41 @@ export function WordCardView({
                     )}
                   </div>
 
-                  {/* The sentence is on the front face too, but repeated
-                      here alongside its pinyin/English so the meaning tab
-                      is self-contained without flipping back and forth. */}
-                  <div class="sentence-translation">
-                    <p class="chinese sentence-translation-hanzi" lang="zh">
-                      {card.example.hanzi}
-                    </p>
-                    <p class="example-pinyin">{card.example.pinyin}</p>
-                    <p class="example-english">{card.example.english}</p>
+                  <div class="usage-list">
+                    <div class="usage-item">
+                      <div class="usage-item-text">
+                        <p class="chinese usage-hanzi" lang="zh">
+                          {highlightWord(phrase.hanzi, card.word)}
+                        </p>
+                        <p class="example-pinyin">{phrase.pinyin}</p>
+                        <p class="example-english">{phrase.english}</p>
+                      </div>
+                      <div class="usage-actions">
+                        <AudioButton
+                          text={phrase.hanzi}
+                          label={`Play example sentence ${phraseIndex + 1}`}
+                          src={audioPath(phrase.audio, card.id)}
+                          compact
+                        />
+                        {phrases.length > 1 && (
+                          <button
+                            type="button"
+                            class="usage-next"
+                            aria-label="Next phrase"
+                            onClick={() => setPhraseIndex((phraseIndex + 1) % phrases.length)}
+                          >
+                            {phraseIndex + 1}/{phrases.length} ›
+                          </button>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 </div>
 
                 {hasAnyCharacterInfo && (
                   <div class="card-page" aria-hidden={activeTab !== 'characters'}>
                     <div class="word-characters">
-                      <div class="word-char-tabs" role="tablist">
+                      <div class="word-char-tabs" role="tablist" hidden={isSingleChar}>
                         {card.characters.map((wc, i) => (
                           <button
                             key={i}
@@ -214,7 +259,7 @@ export function WordCardView({
 
                       <div class="word-char-panels">
                         {card.characters.map((wc, i) => {
-                          const meanings = characterMeanings.get(wc.char) ?? []
+                          const meanings = isSingleChar ? [] : (characterMeanings.get(wc.char) ?? [])
                           return (
                             <div
                               class="word-char-block"
@@ -231,6 +276,7 @@ export function WordCardView({
                                     <div class="component" key={j}>
                                       {c.char && <span class="component-char">{c.char}</span>}
                                       <span class={`component-role role-${c.role}`}>{c.role}</span>
+                                      {c.radical && <span class="component-radical">radical</span>}
                                       <p class="component-note">{c.note}</p>
                                     </div>
                                   ))}
@@ -260,9 +306,9 @@ export function WordCardView({
 
         <div class="card-controls">
           <AudioButton
-            text={card.example.hanzi}
-            label="Play example sentence"
-            src={audioPath('words-example', card.id)}
+            text={card.word}
+            label="Play word pronunciation"
+            src={audioPath('words', card.id)}
           />
           <button
             type="button"

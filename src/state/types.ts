@@ -1,6 +1,9 @@
 export interface CardComponent {
   char?: string
   role: string
+  // True when this part is the character's dictionary radical and carries a
+  // meaningful family (氵 water, 讠 speech...), so the UI can flag it.
+  radical?: boolean
   note: string
   source: string
 }
@@ -40,6 +43,14 @@ export interface WordCharacterRef {
   components: CardComponent[]
 }
 
+// Extra context sentences beyond the card's main `example`; no fact, since
+// the main example already carries the card's "interesting" note.
+export interface WordExtraExample {
+  hanzi: string
+  pinyin: string
+  english: string
+}
+
 export interface WordCard {
   id: string
   word: string
@@ -48,6 +59,8 @@ export interface WordCard {
   meanings: string[]
   characters: WordCharacterRef[]
   example: CardExample
+  // Optional so a deck chunk saved before this field existed still loads.
+  examples?: WordExtraExample[]
   batchId: string
 }
 

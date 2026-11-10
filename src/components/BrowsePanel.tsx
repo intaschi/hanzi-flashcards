@@ -6,11 +6,12 @@ interface Props {
   srsState: SrsState
   queueIds: string[]
   onLearn: (id: string) => void
+  onKnown: (id: string) => void
 }
 
 const PAGE_SIZE = 60
 
-export function BrowsePanel({ cards, srsState, queueIds, onLearn }: Props) {
+export function BrowsePanel({ cards, srsState, queueIds, onLearn, onKnown }: Props) {
   const queued = useMemo(
     () => new Set([...queueIds, ...(srsState.promotedIds ?? [])]),
     [queueIds, srsState.promotedIds],
@@ -86,12 +87,24 @@ export function BrowsePanel({ cards, srsState, queueIds, onLearn }: Props) {
                 <span class="browse-meanings">{c.meanings.join(' · ')}</span>
                 {learned ? (
                   <span class="browse-badge">learned</span>
-                ) : queued.has(c.id) ? (
-                  <span class="browse-badge is-queued">queued</span>
                 ) : (
-                  <button type="button" class="browse-learn" onClick={() => onLearn(c.id)}>
-                    Learn
-                  </button>
+                  <span class="browse-actions">
+                    {queued.has(c.id) ? (
+                      <span class="browse-badge is-queued">queued</span>
+                    ) : (
+                      <button type="button" class="browse-learn" onClick={() => onLearn(c.id)}>
+                        Learn
+                      </button>
+                    )}
+                    <button
+                      type="button"
+                      class="browse-known"
+                      title="Mark as already learned"
+                      onClick={() => onKnown(c.id)}
+                    >
+                      Known
+                    </button>
+                  </span>
                 )}
               </div>
             )

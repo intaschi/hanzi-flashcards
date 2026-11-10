@@ -18,7 +18,7 @@ const SAMPLE_RATE = '22050'
 const CONCURRENCY = 12
 const OUT_DIR = process.argv[2] || 'public/audio'
 
-type Kind = 'hanzi' | 'hanzi-example' | 'words' | 'words-example'
+type Kind = 'hanzi' | 'hanzi-example' | 'words' | 'words-example' | 'words-example-2' | 'words-example-3'
 interface Job {
   kind: Kind
   id: string
@@ -43,6 +43,11 @@ function collectJobs(): Job[] {
   for (const c of loadJsonDir('data/word-cards')) {
     jobs.push({ kind: 'words', id: c.id, text: c.word })
     jobs.push({ kind: 'words-example', id: c.id, text: c.example.hanzi })
+    // The two extra phrases (see 11-apply-enrichment.ts) are clips 2 and 3
+    // of the card's examples; 'words-example' stays the main example.
+    ;(c.examples ?? []).slice(0, 2).forEach((ex: { hanzi: string }, i: number) => {
+      jobs.push({ kind: i === 0 ? 'words-example-2' : 'words-example-3', id: c.id, text: ex.hanzi })
+    })
   }
   return jobs
 }

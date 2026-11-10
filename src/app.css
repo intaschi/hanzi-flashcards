@@ -215,9 +215,16 @@
 
 .card-progress-badge {
   position: absolute;
-  top: 14px;
-  right: 18px;
+  top: 22px;
+  right: 124px;
   z-index: 2;
+}
+
+@media (max-width: 480px) {
+  .card-progress-badge {
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 /* App main — the Review/Settings/Backup views keep a focused reading column. */
@@ -756,12 +763,11 @@
    side is showing. Centered on the card's height, right-aligned. */
 .card-controls {
   position: absolute;
-  top: 50%;
-  right: 22px;
-  transform: translateY(-50%);
+  top: 12px;
+  right: 14px;
   z-index: 2;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 10px;
 }
@@ -893,7 +899,7 @@
 .card-back-word-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .pinyin {
@@ -919,7 +925,7 @@
 
 .sentence-translation-hanzi {
   margin: 0 0 8px;
-  font-size: 22px;
+  font-size: clamp(26px, 6vw, 32px);
   color: var(--text-h);
 }
 
@@ -942,8 +948,8 @@
 }
 
 .word-stroke-canvas {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   cursor: pointer;
 }
 
@@ -953,15 +959,38 @@
    between the boxes themselves — pulling them together with a negative
    margin is what actually closes it. */
 .word-stroke-canvas + .word-stroke-canvas {
-  margin-left: -10px;
+  margin-left: -15px;
+}
+
+.word-front-word {
+  font-size: clamp(48px, 13vw, 72px);
+  line-height: 1.15;
+  color: var(--text-h);
+  text-align: center;
+  margin: 0 0 20px;
+  overflow-wrap: anywhere;
+}
+
+.word-front-phrases {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.word-front-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .word-front-sentence {
-  font-size: 36px;
-  line-height: 1.6;
-  color: var(--text-h);
+  font-size: clamp(22px, 5.8vw, 30px);
+  line-height: 1.5;
+  color: var(--text);
   text-align: center;
-  margin: 0 0 16px;
+  margin: 0;
 }
 
 .sentence-target {
@@ -979,6 +1008,10 @@
 .word-char-tabs {
   display: flex;
   gap: 6px;
+}
+
+.word-char-tabs[hidden] {
+  display: none;
 }
 
 .word-char-tab-btn {
@@ -1169,6 +1202,7 @@
     position: static;
     transform: none;
     flex: none;
+    order: -1;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -1355,6 +1389,80 @@
   color: var(--gold);
   border-bottom-color: var(--gold);
   opacity: 1;
+}
+
+/* Marks the part that is the character's dictionary radical — the one
+   piece of a breakdown that carries over to dozens of other characters. */
+.component-radical {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.usage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.usage-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.usage-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex: none;
+}
+
+.usage-next {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.usage-next:hover {
+  background: var(--accent);
+  color: var(--bg-paper);
+}
+
+.usage-item .example-pinyin {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.usage-item .example-english {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.usage-hanzi {
+  margin: 0 0 1px;
+  line-height: 1.35;
+  font-size: clamp(28px, 7vw, 34px);
+  color: var(--text-h);
 }
 
 .component-note {
@@ -1939,6 +2047,31 @@
   color: var(--bg-paper);
 }
 
+.browse-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.browse-known {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: inherit;
+  opacity: 0.75;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.browse-known:hover {
+  opacity: 1;
+  border-color: var(--text);
+}
+
 .browse-empty {
   padding: 24px 4px;
   opacity: 0.6;
@@ -1957,7 +2090,7 @@
       '. meanings meanings meanings';
   }
 
-  .browse-learn,
+  .browse-actions,
   .browse-badge {
     grid-area: action;
   }

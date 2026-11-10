@@ -219,6 +219,29 @@ export function promoteCard(state: SrsState, cardId: string): SrsState {
   return { ...state, promotedIds: [...(state.promotedIds ?? []), cardId] }
 }
 
+// Counts the word as learned without a review: it graduates straight to
+// `review` and first resurfaces after KNOWN_INTERVAL_DAYS, so a word the
+// learner already knows is checked occasionally instead of drilled as new.
+const KNOWN_INTERVAL_DAYS = 30
+
+export function markCardKnown(state: SrsState, cardId: string): SrsState {
+  const existing = state.cards[cardId]
+  if (existing && existing.state !== 'new') return state
+  const progress: CardProgress = {
+    ...freshProgress(),
+    state: 'review',
+    intervalDays: KNOWN_INTERVAL_DAYS,
+    dueAt: addDays(new Date(), KNOWN_INTERVAL_DAYS).toISOString(),
+    lastReviewedAt: nowIso(),
+    reps: 1,
+  }
+  return {
+    ...state,
+    cards: { ...state.cards, [cardId]: progress },
+    promotedIds: state.promotedIds?.filter((id) => id !== cardId),
+  }
+}
+
 // Entries are dropped once graded (they gain a progress entry), so no cleanup pass is needed.
 export function getPromotedCardIds(state: SrsState, validIds: Set<string>): string[] {
   return (state.promotedIds ?? []).filter((id) => !state.cards[id] && validIds.has(id))

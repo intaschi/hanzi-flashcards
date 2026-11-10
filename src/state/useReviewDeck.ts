@@ -4,6 +4,7 @@ import {
   buildSessionQueue,
   gradeCard,
   promoteCard,
+  markCardKnown,
   requestPersistentStorage,
   saveState,
 } from './srs'
@@ -89,6 +90,15 @@ export function useReviewDeck<T extends Identifiable & { frequencyRank: number }
     signals.queue.value = [...queue.slice(0, at), cardId, ...queue.slice(at)]
   }
 
+  function handleMarkKnown(cardId: string) {
+    const next = markCardKnown(signals.srs.value, cardId)
+    if (next === signals.srs.value) return
+    persist(next)
+    const queue = signals.queue.value
+    // Never drop the card on screen from under the user; it just gets graded as usual.
+    signals.queue.value = queue.filter((id, i) => id !== cardId || i === 0)
+  }
+
   // The card on screen stays first even if the new limit would no longer
   // include it, so editing the setting never swaps out what the user is looking at.
   function handleSettingsChange(settings: Settings) {
@@ -126,6 +136,7 @@ export function useReviewDeck<T extends Identifiable & { frequencyRank: number }
     handleGrade,
     handleImported,
     handlePromote,
+    handleMarkKnown,
     handleSettingsChange,
     persist,
   }

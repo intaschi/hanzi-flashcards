@@ -1,4 +1,4 @@
-export type AudioKind = 'hanzi' | 'hanzi-example' | 'words' | 'words-example'
+export type AudioKind = 'hanzi' | 'hanzi-example' | 'words' | 'words-example' | 'words-example-2' | 'words-example-3'
 
 // Card ids ("U+4E2D", "W+xxxx-xxxx") are already filename- and URL-path-safe,
 // so the file on disk and the fetch path share the id verbatim — no encoding

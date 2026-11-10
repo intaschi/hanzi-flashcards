@@ -1,1716 +1,445 @@
 [
   {
-    "id": "W+53F7-7801",
-    "word": "号码",
+    "id": "W+5012",
+    "word": "倒",
     "frequencyRank": 551,
-    "pinyin": "hào mǎ",
+    "pinyin": "dǎo",
     "meanings": [
-      "number",
-      "CL:堆[dui1],個|个[ge4]"
+      "to fall",
+      "to collapse",
+      "to fail"
     ],
     "characters": [
       {
-        "char": "号",
+        "char": "倒",
         "components": [
           {
-            "char": "口",
+            "char": "亻",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "口 (mouth) — 号 relates to calling or crying out aloud, as well as a spoken or marked sign"
+            "note": "亻 (person) — a person falling over; marks people and their actions, as in 你, 做."
           },
           {
-            "char": "丂",
+            "char": "到",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "丂 gives a loose sound connection to 号's reading hào"
-          }
-        ]
-      },
-      {
-        "char": "码",
-        "components": [
-          {
-            "char": "石",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "石 (stone) — 码 originally related to counting stones used for reckoning, extended to mean 'number, code.'"
-          },
-          {
-            "char": "马",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "马 (mǎ) is an exact match for the sound of 码."
+            "note": "到 (dào) gives the sound: 倒 is dǎo (fall) or dào (upside down)."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "你的电话号码是多少?",
-      "pinyin": "Nǐ de diànhuà hàomǎ shì duōshao?",
-      "english": "What's your phone number?",
-      "fact": "号码 names an identifying number treated as a label — a phone number, room number, ID number — while 数字 is reserved for digits or figures used in counting and math; reaching for 数字 to ask someone's phone number is a common learner mix-up.",
+      "hanzi": "他不小心摔倒了。",
+      "pinyin": "Tā bù xiǎoxīn shuāidǎo le.",
+      "english": "He fell over by accident.",
+      "fact": "倒 has two readings: dǎo ('to fall, to collapse', as in 摔倒) and dào ('to pour, upside down', as in 倒水). Many learners need the context to pick the right reading: 倒了 (fell) vs. 倒茶 (pour tea).",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "台风来了，很多树都倒了。",
+        "pinyin": "Táifēng lái le, hěn duō shù dōu dǎo le.",
+        "english": "A typhoon came and many trees fell."
+      },
+      {
+        "hanzi": "他昨天晚上累倒了。",
+        "pinyin": "Tā zuótiān wǎnshang lèidǎo le.",
+        "english": "He collapsed from exhaustion last night."
+      }
+    ],
     "batchId": "0551-0600"
   },
   {
-    "id": "W+65E5-5B50",
-    "word": "日子",
+    "id": "W+89E3-91CA",
+    "word": "解释",
     "frequencyRank": 552,
-    "pinyin": "rì zi",
+    "pinyin": "jiě shì",
     "meanings": [
-      "day",
-      "a (calendar) date",
-      "days of one's life"
-    ],
-    "characters": [
-      {
-        "char": "日",
-        "components": [
-          {
-            "char": "日",
-            "role": "pictographic",
-            "source": "llm-fallback",
-            "note": "日 depicts the sun as a circle with a dot or short stroke inside — a simplified picture of the sun's disc, later squared off in the standard script."
-          }
-        ]
-      },
-      {
-        "char": "子",
-        "components": [
-          {
-            "role": "pictographic",
-            "note": "A simple drawing of a swaddled baby — arms reaching out, legs bundled together in a wrap.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他们过着幸福的日子。",
-      "pinyin": "Tāmen guòzhe xìngfú de rìzi.",
-      "english": "They are living a happy life.",
-      "fact": "日子 stretches beyond a single calendar date to mean \"the days of one's life,\" which is why 过日子 (guò rìzi, literally \"to pass one's days\") is the everyday idiom for \"to get by\" or \"to live one's life\" — a sense the more literal 天 (\"day,\" as a count) doesn't carry.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+6BD4-5982",
-    "word": "比如",
-    "frequencyRank": 553,
-    "pinyin": "bǐ rú",
-    "meanings": [
-      "for example",
-      "for instance",
-      "such as"
-    ],
-    "characters": [
-      {
-        "char": "比",
-        "components": [
-          {
-            "char": "比",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "比 is made of two identical 匕 (spoon) shapes placed side by side — comparing two similar things led to its meaning 'to compare.'"
-          }
-        ]
-      },
-      {
-        "char": "如",
-        "components": [
-          {
-            "char": "女",
-            "role": "ideographic",
-            "note": "女 (woman) — depicts a wife in the traditional image behind this character.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "口",
-            "role": "ideographic",
-            "note": "口 (mouth/words) — the wife following her husband's spoken words gave 如 its meaning of 'as, like, if.'",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "很多水果都很甜,比如西瓜和芒果。",
-      "pinyin": "Hěnduō shuǐguǒ dōu hěn tián, bǐrú xīguā hé mángguǒ.",
-      "english": "Many fruits are sweet, for example watermelon and mango.",
-      "fact": "比如 sits at the conversational end of Chinese's \"for example\" words — its cousin 例如 carries the same meaning but leans more formal and written, useful to know when picking the right register for giving an example.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+54EA-4E2A",
-    "word": "哪个",
-    "frequencyRank": 554,
-    "pinyin": "nǎ ge",
-    "meanings": [
-      "which",
-      "who"
-    ],
-    "characters": [
-      {
-        "char": "哪",
-        "components": [
-          {
-            "char": "口",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "口 (mouth) — used when asking a question aloud"
-          },
-          {
-            "char": "那",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "那 (nà) gives a sound close to 哪's reading nǎ, differing mainly in tone"
-          }
-        ]
-      },
-      {
-        "char": "个",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "丨 (a vertical tally mark) over 人 (person) — suggests counting people one by one, fitting 个's role today as Mandarin's most common general measure word.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这两件衬衫,你喜欢哪个?",
-      "pinyin": "Zhè liǎng jiàn chènshān, nǐ xǐhuan nǎge?",
-      "english": "Of these two shirts, which one do you like?",
-      "fact": "哪个 pairs the question word 哪 (\"which\") with 个, Mandarin's default measure word — the same \"question word + 个\" pattern behind 这个/那个 elsewhere in this deck — though a more specific classifier (哪件, 哪本) is used when the noun calls for one.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+5269-4E0B",
-    "word": "剩下",
-    "frequencyRank": 555,
-    "pinyin": "shèng xià",
-    "meanings": [
-      "to remain",
-      "to be left over"
-    ],
-    "characters": [
-      {
-        "char": "剩",
-        "components": [
-          {
-            "char": "刂",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "刂 (knife) — 剩 originally involved cutting away a surplus portion, giving 'to remain, leftover.'"
-          },
-          {
-            "char": "乘",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "乘 (chéng) shares the rhyme -eng and a related retroflex initial (ch/sh) with shèng — only the tone differs."
-          }
-        ]
-      },
-      {
-        "char": "下",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "A short stroke placed below a longer one — the mirror image of 上 (up), together forming a simple, opposite pair.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "蛋糕吃了一半,剩下的放冰箱里。",
-      "pinyin": "Dàngāo chīle yíbàn, shèngxià de fàng bīngxiāng lǐ.",
-      "english": "Half the cake got eaten; put what's left in the fridge.",
-      "fact": "剩下 is a verb plus result-complement: 剩 alone already means \"to be left over,\" and 下 adds a sense of settling or remaining in place — the same verb + 下 pattern seen in 留下 (\"to leave behind\") and 坐下 (\"to sit down\").",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+4E25-91CD",
-    "word": "严重",
-    "frequencyRank": 556,
-    "pinyin": "yán zhòng",
-    "meanings": [
-      "grave",
-      "serious",
-      "severe",
-      "critical"
-    ],
-    "characters": [
-      {
-        "char": "严",
-        "components": []
-      },
-      {
-        "char": "重",
-        "components": [
-          {
-            "char": "千",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "千 (thousand) — 重 pictures a heavy burden carried a great distance."
-          },
-          {
-            "char": "里",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "里 (a unit of distance, like a mile) — carrying something a thousand 里 emphasizes how heavy and significant a burden it is, giving 重 its meaning 'heavy' or 'important.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这次交通事故很严重。",
-      "pinyin": "Zhè cì jiāotōng shìgù hěn yánzhòng.",
-      "english": "This traffic accident was very serious.",
-      "fact": "严重 describes how grave a problem, illness, or situation is, but never a person's manner or personality — for a \"serious\" demeanor, Chinese instead reaches for 严肃, a split that English's single word \"serious\" glosses over.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+4EAB-53D7",
-    "word": "享受",
-    "frequencyRank": 557,
-    "pinyin": "xiǎng shòu",
-    "meanings": [
-      "to enjoy",
-      "to live it up",
-      "pleasure",
-      "CL:種|种[zhong3]"
-    ],
-    "characters": [
-      {
-        "char": "享",
-        "components": [
-          {
-            "char": "亠",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "亠 (a roof) — the top of a house."
-          },
-          {
-            "char": "口",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "口 (a mouth) — eating and enjoying inside it."
-          },
-          {
-            "char": "子",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "子 (a child) — together showing a family living and eating well under one roof, giving 享 its meaning 'to enjoy.'"
-          }
-        ]
-      },
-      {
-        "char": "受",
-        "components": [
-          {
-            "char": "爫",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "爫 (a hand, from above) — 受 pictures something being passed."
-          },
-          {
-            "char": "又",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "又 (a hand, from below) — one hand giving and another receiving gave 受 its meaning 'to receive' or 'to endure.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "周末我喜欢在家享受安静的时光。",
-      "pinyin": "Zhōumò wǒ xǐhuan zài jiā xiǎngshòu ānjìng de shíguāng.",
-      "english": "On weekends I like to enjoy quiet time at home.",
-      "fact": "享 alone means \"to partake of, to be granted\" and 受 alone means \"to receive\" — together 享受 frames enjoyment as something received and savored rather than something actively chased, a gentler image than the more effortful 追求 (\"to pursue\").",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+6218-4E89",
-    "word": "战争",
-    "frequencyRank": 558,
-    "pinyin": "zhàn zhēng",
-    "meanings": [
-      "war",
-      "conflict",
-      "CL:場|场[chang2],次[ci4]"
-    ],
-    "characters": [
-      {
-        "char": "战",
-        "components": [
-          {
-            "char": "戈",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "戈 (a dagger-axe, a weapon) — 战 relates to fighting and war."
-          },
-          {
-            "char": "占",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "占 (zhàn) gives the sound — 战 is also pronounced zhàn, an exact match."
-          }
-        ]
-      },
-      {
-        "char": "争",
-        "components": [
-          {
-            "char": "爪",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "爪 and 彐 (two hands, reaching from opposite sides) — a simplified form of 爭, grabbing for the same thing."
-          },
-          {
-            "char": "亅",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "亅 (the object) — what the two hands are struggling over, giving 争 its meaning 'to contend, compete, fight for.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这部电影讲述了一场战争的故事。",
-      "pinyin": "Zhè bù diànyǐng jiǎngshùle yì chǎng zhànzhēng de gùshi.",
-      "english": "This movie tells the story of a war.",
-      "fact": "战争 takes the measure word 场 (chǎng), the same classifier used for large-scale events like sports matches and rainstorms — a reminder that Chinese measure words often group nouns by scale or shape rather than by category.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+606D-559C",
-    "word": "恭喜",
-    "frequencyRank": 559,
-    "pinyin": "gōng xǐ",
-    "meanings": [
-      "to congratulate",
-      "(interj.) congratulations!"
-    ],
-    "characters": [
-      {
-        "char": "恭",
-        "components": [
-          {
-            "char": "⺗",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "Heart — respect and politeness are expressed from the heart."
-          },
-          {
-            "char": "共",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "Gives the sound gòng, related to gōng but drifted apart over time."
-          }
-        ]
-      },
-      {
-        "char": "喜",
-        "components": [
-          {
-            "char": "壴",
-            "role": "ideographic",
-            "note": "壴 (a drum) — beating a drum in celebration",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "口",
-            "role": "ideographic",
-            "note": "口 (mouth) — singing along in celebration",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "恭喜你考上了大学!",
-      "pinyin": "Gōngxǐ nǐ kǎoshàngle dàxué!",
-      "english": "Congratulations on getting into university!",
-      "fact": "恭喜 anchors the standard Chinese New Year greeting 恭喜发财 (\"congratulations, may you prosper\") — one of the clearest everyday windows into 恭喜's specifically celebratory, good-news register, distinct from a plain politeness word.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+6740-6B7B",
-    "word": "杀死",
-    "frequencyRank": 560,
-    "pinyin": "shā sǐ",
-    "meanings": [
-      "to kill"
-    ],
-    "characters": [
-      {
-        "char": "杀",
-        "components": [
-          {
-            "char": "乂",
-            "role": "ideographic",
-            "note": "乂 depicts crossed strokes suggesting a cutting action.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "木",
-            "role": "ideographic",
-            "note": "木 (wood) here represents a wooden stake — giving 杀 its meaning 'to kill.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "死",
-        "components": [
-          {
-            "char": "匕",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "匕 (a kneeling person) — a mourner bowed down in grief."
-          },
-          {
-            "char": "歹",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "歹 (skeletal remains) — the corpse being mourned, the source of 死's meaning 'to die, dead.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "医生想办法杀死癌细胞。",
-      "pinyin": "Yīshēng xiǎng bànfǎ shāsǐ ái xìbāo.",
-      "english": "Doctors look for ways to kill cancer cells.",
-      "fact": "Adding 死 after 杀 makes the killing's outcome explicit — 杀 alone can describe an attack without confirming the target actually died — placing 杀死 in a family of verb + 死 resultative compounds that includes 淹死 (\"to drown\") and 冻死 (\"to freeze to death\").",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+5F71-54CD",
-    "word": "影响",
-    "frequencyRank": 561,
-    "pinyin": "yǐng xiǎng",
-    "meanings": [
-      "influence",
-      "effect",
-      "to influence",
-      "to affect (usually adversely)",
-      "to disturb",
-      "CL:股[gu3]"
-    ],
-    "characters": [
-      {
-        "char": "影",
-        "components": [
-          {
-            "char": "彡",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "彡 (fine lines) — suggests light and shadow, relating to 影's meaning 'shadow, image.'"
-          },
-          {
-            "char": "景",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "景 (jǐng) gives a sound hint — 影 is pronounced yǐng, sharing the same rhyme though the initial consonant differs."
-          }
-        ]
-      },
-      {
-        "char": "响",
-        "components": [
-          {
-            "char": "口",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "口 (mouth) — 响 relates to sound, something that can be heard"
-          },
-          {
-            "char": "向",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "向 (xiàng) gives a loose sound connection to 响's reading xiǎng"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "睡眠不足会影响你的健康。",
-      "pinyin": "Shuìmián bùzú huì yǐngxiǎng nǐ de jiànkāng.",
-      "english": "Lack of sleep can affect your health.",
-      "fact": "影响 literally pairs \"shadow\" (影) with \"echo\" (响) — two things that trail an original cause without ever touching it directly, a fitting image behind a word that describes an effect propagating outward from its source.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+5229-7528",
-    "word": "利用",
-    "frequencyRank": 562,
-    "pinyin": "lì yòng",
-    "meanings": [
-      "to exploit",
-      "to make use of",
-      "to use",
-      "to take advantage of",
-      "to utilize"
-    ],
-    "characters": [
-      {
-        "char": "利",
-        "components": [
-          {
-            "char": "禾",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "禾 (grain, a growing rice or wheat plant) — 利 pictures a harvest."
-          },
-          {
-            "char": "刂",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "刂 (knife) — cutting grain at harvest time was a clear benefit or gain, giving 利 its meaning 'profit' or 'advantage.'"
-          }
-        ]
-      },
-      {
-        "char": "用",
-        "components": []
-      }
-    ],
-    "example": {
-      "hanzi": "他利用假期学习了法语。",
-      "pinyin": "Tā lìyòng jiàqī xuéxíle Fǎyǔ.",
-      "english": "He made use of his vacation to study French.",
-      "fact": "利用 can describe resourcefully making the most of something (利用假期, \"made use of the vacation\") or exploiting someone in a self-serving way (利用别人, \"to use/exploit someone\") — one word covers both the neutral-positive and the negative sense, and only context decides which.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+6740-4EBA",
-    "word": "杀人",
-    "frequencyRank": 563,
-    "pinyin": "shā rén",
-    "meanings": [
-      "to kill a person",
-      "to commit murder"
-    ],
-    "characters": [
-      {
-        "char": "杀",
-        "components": [
-          {
-            "char": "乂",
-            "role": "ideographic",
-            "note": "乂 depicts crossed strokes suggesting a cutting action.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "木",
-            "role": "ideographic",
-            "note": "木 (wood) here represents a wooden stake — giving 杀 its meaning 'to kill.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "人",
-        "components": [
-          {
-            "role": "pictographic",
-            "note": "A simple line drawing of a person's legs seen from the side, used to depict a human being.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "警方正在调查一起杀人案。",
-      "pinyin": "Jǐngfāng zhèngzài diàochá yì qǐ shārén àn.",
-      "english": "Police are investigating a murder case.",
-      "fact": "杀人 is a verb-object compound (杀 \"to kill\" + 人 \"person\") loose enough to still take material worked in, as in 杀人犯 (\"murderer,\" literally \"kill-person offender\") — a flexibility that a fully fused synonym like 谋杀 (\"to murder\") doesn't share.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+5931-8E2A",
-    "word": "失踪",
-    "frequencyRank": 564,
-    "pinyin": "shī zōng",
-    "meanings": [
-      "to be missing",
-      "to disappear",
-      "unaccounted for"
-    ],
-    "characters": [
-      {
-        "char": "失",
-        "components": [
-          {
-            "char": "丿",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "丿 (something falling) — an object slipping away."
-          },
-          {
-            "char": "夫",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "夫 (a hand/person) — the object slipping out of a hand, giving 失 its meaning 'to lose.'"
-          }
-        ]
-      },
-      {
-        "char": "踪",
-        "components": [
-          {
-            "char": "足",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "足 (foot) — 踪 names the footprints or tracks left behind."
-          },
-          {
-            "char": "宗",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "宗 (zōng) gives the sound — an exact match with 踪."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "那艘船在海上失踪了。",
-      "pinyin": "Nà sōu chuán zài hǎishàng shīzōng le.",
-      "english": "That ship went missing at sea.",
-      "fact": "踪 on its own means \"tracks, traces\" (as in 踪迹, \"footprints, trace\") — so 失踪 literally means \"to lose one's tracks,\" painting someone vanishing so completely that not even a trail remains, the vivid image behind the everyday word for \"missing.\"",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+8BA4-771F",
-    "word": "认真",
-    "frequencyRank": 565,
-    "pinyin": "rèn zhēn",
-    "meanings": [
-      "conscientious",
-      "earnest",
-      "serious",
-      "to take seriously",
-      "to take to heart"
-    ],
-    "characters": [
-      {
-        "char": "认",
-        "components": [
-          {
-            "char": "讠",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "讠 (speech) — 认 relates to recognizing or acknowledging something, often expressed through words."
-          },
-          {
-            "char": "人",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "人 (rén) gives the sound — 认 is pronounced rèn, a close variant of the same sound."
-          }
-        ]
-      },
-      {
-        "char": "真",
-        "components": [
-          {
-            "char": "直",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "直 (straight, upright) — 真 relates to something level and true."
-          },
-          {
-            "char": "几",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "几 (a small table) — an object placed level and true on a table gave 真 its meaning 'real' or 'true.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他工作一直很认真。",
-      "pinyin": "Tā gōngzuò yìzhí hěn rènzhēn.",
-      "english": "He has always been very conscientious in his work.",
-      "fact": "认真 usually describes an attitude toward doing a specific task carefully (认真学习, \"study earnestly\") rather than a fixed personality trait, sitting closer to English \"diligent\" or \"earnest\" than to 严重's problem-focused \"serious\" (also in this batch), even though dictionaries sometimes gloss both as \"serious.\"",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+771F-76F8",
-    "word": "真相",
-    "frequencyRank": 566,
-    "pinyin": "zhēn xiàng",
-    "meanings": [
-      "the truth about sth",
-      "the actual facts"
-    ],
-    "characters": [
-      {
-        "char": "真",
-        "components": [
-          {
-            "char": "直",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "直 (straight, upright) — 真 relates to something level and true."
-          },
-          {
-            "char": "几",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "几 (a small table) — an object placed level and true on a table gave 真 its meaning 'real' or 'true.'"
-          }
-        ]
-      },
-      {
-        "char": "相",
-        "components": [
-          {
-            "char": "木",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "木 (tree) — 相 pictures looking closely at a tree."
-          },
-          {
-            "char": "目",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "目 (eye) — staring closely at a tree to examine it gave 相 the meaning 'to observe' or, later, 'each other, mutual.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "记者们想找出事件的真相。",
-      "pinyin": "Jìzhěmen xiǎng zhǎochū shìjiàn de zhēnxiàng.",
-      "english": "The reporters wanted to find out the truth behind the incident.",
-      "fact": "真相 specifically names a hidden or underlying truth waiting to be uncovered — the reason it shows up constantly in detective stories and scandal reporting — rather than a plain factual statement, which is why the set phrase 真相大白 (\"the truth comes to light\") reads almost cinematically.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+6CD5-5F8B",
-    "word": "法律",
-    "frequencyRank": 567,
-    "pinyin": "fǎ lǜ",
-    "meanings": [
-      "law",
-      "CL:條|条[tiao2], 套[tao4], 個|个[ge4]"
-    ],
-    "characters": [
-      {
-        "char": "法",
-        "components": [
-          {
-            "char": "氵",
-            "role": "ideographic",
-            "note": "氵 (water/stream) — water naturally follows a fixed course, an image linked to the idea of 'law' or 'method.'",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "去",
-            "role": "ideographic",
-            "note": "去 (to go/a course) — the path a stream follows suggested a regulated, consistent way of doing things, hence 'law, method.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "律",
-        "components": [
-          {
-            "char": "彳",
-            "role": "ideographic",
-            "note": "彳 (to walk/step) — represents movement or conduct.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "聿",
-            "role": "ideographic",
-            "note": "聿 (an old form related to a writing brush) — conduct guided by written rules gave 律 its meaning 'law, regulation.'",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "每个人都应该遵守法律。",
-      "pinyin": "Měi gè rén dōu yīnggāi zūnshǒu fǎlǜ.",
-      "english": "Everyone should obey the law.",
-      "fact": "律 is properly pronounced with the ü umlaut, lǜ — after l and n the dots can never be dropped the way they are after j/q/x/y, since lu/lü and nu/nü are genuinely different syllables (律 lǜ versus, say, 卢 lú) that would otherwise collide.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+8BAD-7EC3",
-    "word": "训练",
-    "frequencyRank": 568,
-    "pinyin": "xùn liàn",
-    "meanings": [
-      "to train",
-      "to drill",
-      "training",
-      "CL:個|个[ge4]"
-    ],
-    "characters": [
-      {
-        "char": "训",
-        "components": [
-          {
-            "char": "讠",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "讠 (speech) — 训 relates to teaching through spoken instruction."
-          },
-          {
-            "char": "川",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "川 (chuān) gives a sound distantly related to xùn, having drifted apart over time."
-          }
-        ]
-      },
-      {
-        "char": "练",
-        "components": [
-          {
-            "char": "纟",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "纟 (thread) — 练 originally meant to boil and whiten silk thread, extending to 'to practice, to train' through repeated refinement."
-          },
-          {
-            "char": "柬",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "柬 (jiǎn) gives a sound distantly related to liàn, having drifted apart over time."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "运动员每天都要训练。",
-      "pinyin": "Yùndòngyuán měitiān dōu yào xùnliàn.",
-      "english": "Athletes have to train every day.",
-      "fact": "训 alone means \"to instruct\" (as in 教训, \"lesson, to reprimand\") while 练 alone means \"to practice, to drill\" (as in 练习) — 训练 pairs an instructional half with a practice half, describing guided, structured practice rather than solo repetition.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+503C-5F97",
-    "word": "值得",
-    "frequencyRank": 569,
-    "pinyin": "zhí de",
-    "meanings": [
-      "worth the money",
-      "to merit",
-      "to deserve",
-      "to be worth"
-    ],
-    "characters": [
-      {
-        "char": "值",
-        "components": [
-          {
-            "char": "亻",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "亻 (person) — 值 relates to worth or value assigned by a person"
-          },
-          {
-            "char": "直",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "直 (zhí) gives the sound — 值 is also pronounced zhí, an exact match"
-          }
-        ]
-      },
-      {
-        "char": "得",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "寸 (a hand) reaching for 旦 (originally 貝, a shell used as currency) — a picture of grasping something valuable, hence 'to obtain, to get.'",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这部电影很值得一看。",
-      "pinyin": "Zhè bù diànyǐng hěn zhíde yí kàn.",
-      "english": "This movie is well worth watching.",
-      "fact": "值得 slots directly in front of a verb phrase to mean \"worth doing X\" (值得一看, \"worth watching\"; 值得尝试, \"worth trying\") — a compact construction that English can only match by adding a separate gerund after \"worth.\"",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+6709-610F-601D",
-    "word": "有意思",
-    "frequencyRank": 570,
-    "pinyin": "yǒu yì si",
-    "meanings": [
-      "interesting",
-      "meaningful",
-      "enjoyable",
-      "fun"
-    ],
-    "characters": [
-      {
-        "char": "有",
-        "components": [
-          {
-            "char": "月",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "月 (yuè) here actually derives from 肉 (meat) — 有 originally depicted a hand holding meat, meaning 'to possess'; it also lends a loose phonetic connection to yǒu."
-          }
-        ]
-      },
-      {
-        "char": "意",
-        "components": [
-          {
-            "char": "心",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "心 (heart/mind) — 意 relates to thought, intention, and meaning, things of the mind."
-          },
-          {
-            "char": "音",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "音 (yīn) is the historical phonetic element; its modern reading has drifted from yì, though both share a similar vowel."
-          }
-        ]
-      },
-      {
-        "char": "思",
-        "components": [
-          {
-            "char": "囟",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "An altered form of 囟 (the mind/head) — the seat of thought."
-          },
-          {
-            "char": "心",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "心 (heart) — thinking was pictured as an activity of both mind and heart, giving 思 its meaning 'to think.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这本书的故事很有意思。",
-      "pinyin": "Zhè běn shū de gùshi hěn yǒuyìsi.",
-      "english": "The story in this book is very interesting.",
-      "fact": "有意思 literally combines \"to have\" (有) with \"meaning/interest\" (意思) — its negation, casually shortened to 没意思, means \"boring, meaningless,\" the flip side of the same \"has/lacks meaning\" image.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+4F7F-7528",
-    "word": "使用",
-    "frequencyRank": 571,
-    "pinyin": "shǐ yòng",
-    "meanings": [
-      "to use",
-      "to employ",
-      "to apply",
-      "to make use of"
-    ],
-    "characters": [
-      {
-        "char": "使",
-        "components": [
-          {
-            "char": "亻",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "亻 (person) — 使 involves a person carrying out a task."
-          },
-          {
-            "char": "吏",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "吏 (a government official) — 使 originally referred to an official sent to carry out orders, giving rise to the meaning 'to make someone do something' or 'to use.'"
-          }
-        ]
-      },
-      {
-        "char": "用",
-        "components": []
-      }
-    ],
-    "example": {
-      "hanzi": "请按照说明使用这台机器。",
-      "pinyin": "Qǐng ànzhào shuōmíng shǐyòng zhè tái jīqì.",
-      "english": "Please use this machine according to the instructions.",
-      "fact": "使用 is the more formal, often written register for \"to use\" a tool or method, while everyday spoken Mandarin defaults to the plainer 用 for the same idea — a register gap similar to English \"utilize\" versus \"use.\"",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+65B9-9762",
-    "word": "方面",
-    "frequencyRank": 572,
-    "pinyin": "fāng miàn",
-    "meanings": [
-      "respect",
-      "aspect",
-      "field",
-      "side",
-      "CL:個|个[ge4]"
-    ],
-    "characters": [
-      {
-        "char": "方",
-        "components": []
-      },
-      {
-        "char": "面",
-        "components": [
-          {
-            "role": "pictographic",
-            "note": "面 was originally a pictograph of a human face, with an outline around an eye — later broadening to mean 'face, surface, side.'",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "在健康方面,他非常小心。",
-      "pinyin": "Zài jiànkāng fāngmiàn, tā fēicháng xiǎoxīn.",
-      "english": "When it comes to health, he is very careful.",
-      "fact": "方面 typically follows a noun to frame \"in the respect/area of X\" (健康方面, \"health-wise\") — a common sentence-opening move that lets a speaker narrow down which angle of a topic they mean before saying anything else about it.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+94F6-884C",
-    "word": "银行",
-    "frequencyRank": 573,
-    "pinyin": "yín háng",
-    "meanings": [
-      "bank",
-      "CL:家[jia1],個|个[ge4]"
-    ],
-    "characters": [
-      {
-        "char": "银",
-        "components": [
-          {
-            "char": "钅",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "钅 (metal) — 银 refers to silver, a metal"
-          },
-          {
-            "char": "艮",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "艮 (gèn) gives a sound distantly related to 银's reading yín, having drifted apart over time"
-          }
-        ]
-      },
-      {
-        "char": "行",
-        "components": [
-          {
-            "char": "彳",
-            "role": "ideographic",
-            "note": "彳 depicts a step with the left foot; together with 亍 (a step with the right foot), 行 shows a person walking or moving.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "亍",
-            "role": "ideographic",
-            "note": "亍 depicts a step with the right foot, complementing 彳 to form the idea of walking or travel.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "我需要去银行取钱。",
-      "pinyin": "Wǒ xūyào qù yínháng qǔ qián.",
-      "english": "I need to go to the bank to withdraw money.",
-      "fact": "行 is a classic multi-reading character: pronounced xíng it means \"to go, OK, will do\" (as in the stand-alone reply 行!, \"sure, that works\"), but pronounced háng it names an orderly row or a professional trade — the háng reading is the one locked into 银行 (\"bank\") and 行业 (\"industry\").",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+6050-6016",
-    "word": "恐怖",
-    "frequencyRank": 574,
-    "pinyin": "kǒng bù",
-    "meanings": [
-      "terrible",
-      "frightful",
-      "frightening",
-      "terror",
-      "terrorist"
-    ],
-    "characters": [
-      {
-        "char": "恐",
-        "components": [
-          {
-            "char": "心",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "心 (heart) — 恐 describes fear felt in the heart."
-          },
-          {
-            "char": "巩",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "巩 (gǒng) gives a sound close to kǒng, sharing the same rhyme."
-          }
-        ]
-      },
-      {
-        "char": "怖",
-        "components": [
-          {
-            "char": "忄",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "Heart — fear is a feeling in the heart/mind."
-          },
-          {
-            "char": "布",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "Gives the sound bù, matching the character's reading."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "那部恐怖电影把我吓坏了。",
-      "pinyin": "Nà bù kǒngbù diànyǐng bǎ wǒ xiàhuài le.",
-      "english": "That horror movie scared me badly.",
-      "fact": "恐怖 reduplicates the idea of fear across both halves — 恐 alone means \"to dread\" and 怖 alone also means \"terrified\" — the same intensifying, two-near-synonym structure behind 喜欢 (\"to like\") elsewhere in this deck; 恐怖片 specifically names the horror-film genre.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+539F-6765",
-    "word": "原来",
-    "frequencyRank": 575,
-    "pinyin": "yuán lái",
-    "meanings": [
-      "original",
-      "former",
-      "originally",
-      "formerly",
-      "at first",
-      "so, actually, as it turns out"
-    ],
-    "characters": [
-      {
-        "char": "原",
-        "components": [
-          {
-            "char": "厂",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "厂 (a cliff or overhang) — 原 relates to a source high up, such as a spring emerging from rock."
-          },
-          {
-            "char": "泉",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "泉 (quán) gives a hint of the sound — 原 is pronounced yuán, a connection that has shifted somewhat."
-          }
-        ]
-      },
-      {
-        "char": "来",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "Originally depicted a wheat plant; this agricultural picture was borrowed early on to represent the unrelated verb 'to come.'",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "我原来打算八点出发,但是迟到了。",
-      "pinyin": "Wǒ yuánlái dǎsuan bā diǎn chūfā, dànshì chídào le.",
-      "english": "I had originally planned to leave at eight, but I ended up being late.",
-      "fact": "Beyond its literal \"originally,\" 原来 doubles as a mid-sentence realization marker meaning \"oh, so that's how it is\" (原来是这样啊!) — a jump from describing the past to voicing sudden understanding that learners who only memorize the first sense often miss.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+8B66-5B98",
-    "word": "警官",
-    "frequencyRank": 576,
-    "pinyin": "jǐng guān",
-    "meanings": [
-      "constable",
-      "police officer"
-    ],
-    "characters": [
-      {
-        "char": "警",
-        "components": [
-          {
-            "char": "言",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "言 (speech) — 警 relates to speaking out a warning or alarm"
-          },
-          {
-            "char": "敬",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "敬 (jìng) gives a sound close to 警's reading jǐng, sharing a similar historical pronunciation"
-          }
-        ]
-      },
-      {
-        "char": "官",
-        "components": []
-      }
-    ],
-    "example": {
-      "hanzi": "警官,请帮帮我。",
-      "pinyin": "Jǐngguān, qǐng bāngbang wǒ.",
-      "english": "Officer, please help me.",
-      "fact": "警官 typically works as a title used to address or refer to an individual police officer by rank, while 警察 is the broader, more common word for \"police\" as an occupation or institution — roughly the same split as English \"officer\" versus \"police.\"",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+6027-611F",
-    "word": "性感",
-    "frequencyRank": 577,
-    "pinyin": "xìng gǎn",
-    "meanings": [
-      "sex appeal",
-      "eroticism",
-      "sexuality",
-      "sexy"
-    ],
-    "characters": [
-      {
-        "char": "性",
-        "components": [
-          {
-            "char": "忄",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "忄 (heart/mind) — 性 relates to inner nature or character."
-          },
-          {
-            "char": "生",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "生 (shēng) gives a hint of the sound — 性 is pronounced xìng, a related sound though the initial has shifted."
-          }
-        ]
-      },
-      {
-        "char": "感",
-        "components": [
-          {
-            "char": "咸",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "咸 (all, together) — 感 relates to a shared reaction."
-          },
-          {
-            "char": "心",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "心 (heart) — feelings that stir the heart gave 感 its meaning 'to feel' or 'emotion.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "她今天穿的裙子很性感。",
-      "pinyin": "Tā jīntiān chuān de qúnzi hěn xìnggǎn.",
-      "english": "The dress she's wearing today is very sexy.",
-      "fact": "性感 combines 性 (\"sex, nature\") with 感 (\"feeling, sense\") — literally \"a sexual feeling\" — an almost exact structural parallel to how English \"sexy\" grew out of the noun \"sex\" plus the adjective-forming \"-y.\"",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+81EA-6740",
-    "word": "自杀",
-    "frequencyRank": 578,
-    "pinyin": "zì shā",
-    "meanings": [
-      "to kill oneself",
-      "to commit suicide",
-      "to attempt suicide"
-    ],
-    "characters": [
-      {
-        "char": "自",
-        "components": [
-          {
-            "role": "pictographic",
-            "note": "A picture of a nose; because people in ancient China would point to their own nose when referring to themselves, the character came to mean 'self.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "杀",
-        "components": [
-          {
-            "char": "乂",
-            "role": "ideographic",
-            "note": "乂 depicts crossed strokes suggesting a cutting action.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "木",
-            "role": "ideographic",
-            "note": "木 (wood) here represents a wooden stake — giving 杀 its meaning 'to kill.'",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他因为压力太大而选择了自杀。",
-      "pinyin": "Tā yīnwèi yālì tài dà ér xuǎnzéle zìshā.",
-      "english": "He chose to end his own life because the pressure became too much.",
-      "fact": "自杀 is a reflexive verb-object compound, literally \"self-kill\" (自 \"self\" + 杀 \"to kill\") — the same reflexive 自- element that opens 自己 (\"oneself\") and 自我 (\"self, ego\"), all marking that an action's target is the subject itself.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+9152-5427",
-    "word": "酒吧",
-    "frequencyRank": 579,
-    "pinyin": "jiǔ bā",
-    "meanings": [
-      "bar (place to buy drinks)",
-      "CL:家[jia1]"
-    ],
-    "characters": [
-      {
-        "char": "酒",
-        "components": [
-          {
-            "char": "酉",
-            "role": "ideographic",
-            "note": "酉 (a wine jar) — the vessel holding the drink",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "氵",
-            "role": "ideographic",
-            "note": "氵 (liquid) — the wine itself inside the jar",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "吧",
-        "components": [
-          {
-            "char": "口",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "口 (mouth) — 吧 is a spoken particle, tied to speech and the mouth"
-          },
-          {
-            "char": "巴",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "巴 (bā) gives the sound — 吧 is pronounced ba, a related (unstressed) form of the same sound"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "我们晚上去酒吧喝一杯吧。",
-      "pinyin": "Wǒmen wǎnshang qù jiǔbā hē yì bēi ba.",
-      "english": "Let's go to a bar for a drink tonight.",
-      "fact": "吧 in 酒吧 is a phonetic loan borrowed purely for its sound to render English \"bar,\" not for any meaning of its own — the same borrowed 吧 shows up in 迪吧 (dībā, \"disco\") and 网吧 (wǎngbā, \"internet café\"), a small family of \"X-bar\" loanwords.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+8BA8-8BBA",
-    "word": "讨论",
-    "frequencyRank": 580,
-    "pinyin": "tǎo lùn",
-    "meanings": [
-      "to discuss",
-      "to talk over"
-    ],
-    "characters": [
-      {
-        "char": "讨",
-        "components": [
-          {
-            "char": "讠",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "讠 (speech) — 讨 involves speaking, as in asking or discussing."
-          },
-          {
-            "char": "寸",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "寸 (a hand/small measure) — combined with speech, suggests reaching out verbally to ask for something, giving 讨 its meaning 'to ask for, to discuss.'"
-          }
-        ]
-      },
-      {
-        "char": "论",
-        "components": [
-          {
-            "char": "讠",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "讠 (speech) — 论 relates to discussing or explaining something with words."
-          },
-          {
-            "char": "仑",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "仑 (logical order, arrangement) — combined with speech, 论 came to mean 'to discuss' or 'a theory,' explaining ideas in an orderly way."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "我们下午要讨论这个计划。",
-      "pinyin": "Wǒmen xiàwǔ yào tǎolùn zhège jìhuà.",
-      "english": "We're going to discuss this plan in the afternoon.",
-      "fact": "讨论 takes its object directly with no preposition needed (讨论这个问题, \"discuss this problem\") — a common trap for English speakers who reflexively want to add \"about\" after \"discuss,\" a habit that doesn't carry over into Chinese.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+540C-6837",
-    "word": "同样",
-    "frequencyRank": 581,
-    "pinyin": "tóng yàng",
-    "meanings": [
-      "same",
-      "equal",
-      "similar",
-      "similarly",
-      "also",
-      "too"
-    ],
-    "characters": [
-      {
-        "char": "同",
-        "components": [
-          {
-            "char": "凡",
-            "role": "ideographic",
-            "note": "凡 (common/ordinary) — suggests something shared or held in common.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "口",
-            "role": "ideographic",
-            "note": "口 (mouth) — sharing a common mouth/voice with others gave 同 its meaning of 'same, together.'",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "样",
-        "components": [
-          {
-            "char": "木",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "木 (tree/wood) — 样 originally referred to a kind of tree, later broadening to mean 'kind, appearance, way.'"
-          },
-          {
-            "char": "羊",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "羊 (yáng) gives the sound — 样 is pronounced yàng, matching aside from tone."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "我们俩有同样的爱好。",
-      "pinyin": "Wǒmen liǎ yǒu tóngyàng de àihào.",
-      "english": "The two of us have the same hobbies.",
-      "fact": "同样 usually sits directly before a noun as an attributive (\"the same X\") or before a clause meaning \"likewise,\" while its near-synonym 一样 (also in this deck) more often follows a comparison frame like \"A 跟 B 一样\" — both mean \"same\" but favor different positions in the sentence.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+8EAB-4EFD",
-    "word": "身份",
-    "frequencyRank": 582,
-    "pinyin": "shēn fèn",
-    "meanings": [
-      "identity",
-      "aspect of one's identity",
-      "role",
-      "status (social, legal etc)",
-      "position",
-      "rank"
-    ],
-    "characters": [
-      {
-        "char": "身",
-        "components": [
-          {
-            "char": "身",
-            "role": "pictographic",
-            "source": "llm-fallback",
-            "note": "身 depicts a person's torso, originally showing a pregnant woman's body — later broadened to mean 'the body' in general."
-          }
-        ]
-      },
-      {
-        "char": "份",
-        "components": [
-          {
-            "char": "亻",
-            "role": "ideographic",
-            "note": "亻 (person) — the person receiving a share",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "分",
-            "role": "ideographic",
-            "note": "分 (to divide) — the portion allotted to that person",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "请出示您的身份证。",
-      "pinyin": "Qǐng chūshì nín de shēnfènzhèng.",
-      "english": "Please show your ID card.",
-      "fact": "身份 shows up constantly in the compound 身份证 (shēnfènzhèng, literally \"identity-proof-certificate\") — one of the most important pieces of paperwork in daily life in China, required for everything from buying train tickets to checking into a hotel.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+8BF4-660E",
-    "word": "说明",
-    "frequencyRank": 583,
-    "pinyin": "shuō míng",
-    "meanings": [
+      "explanation",
       "to explain",
-      "to illustrate",
-      "to indicate",
-      "to show",
-      "to prove",
-      "explanation"
+      "to interpret",
+      "to resolve",
+      "CL:個|个[ge4]"
     ],
     "characters": [
       {
-        "char": "说",
+        "char": "解",
+        "components": [
+          {
+            "char": "角",
+            "role": "semantic",
+            "source": "makemeahanzi",
+            "note": "角 (horn) — an ox's horn; with 刀 (knife) the picture is cutting up an ox, so \"to take apart\", then to loosen and explain."
+          },
+          {
+            "char": "刀",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "刀 (knife) — cutting, as in 分, 切, 到; a blade separates the parts."
+          }
+        ]
+      },
+      {
+        "char": "释",
+        "components": [
+          {
+            "char": "釆",
+            "role": "semantic",
+            "source": "makemeahanzi",
+            "note": "釆 (distinguish) — sorting things out: 释 is to untangle and explain."
+          },
+          {
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "圣 stands in for 睪 in the traditional 釋; the same part is in 译 yì, 泽 zé and 择 zé."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "请你解释一下这个词的意思。",
+      "pinyin": "Qǐng nǐ jiěshì yíxià zhège cí de yìsi.",
+      "english": "Please explain the meaning of this word.",
+      "fact": "解 alone already carries the sense \"to untie, to loosen\" (as in 解开, \"to undo a knot\"), and 解释 extends that image figuratively — \"untying\" a confusing idea into something clear — the same root 解 that appears in 解决 (also in this batch), Mandarin’s verb for \"resolving\" a problem.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我来向你解释这个问题。",
+        "pinyin": "Wǒ lái xiàng nǐ jiěshì zhège wèntí.",
+        "english": "Let me explain this problem to you."
+      },
+      {
+        "hanzi": "他的解释很清楚。",
+        "pinyin": "Tā de jiěshì hěn qīngchu.",
+        "english": "His explanation is very clear."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+79BB",
+    "word": "离",
+    "frequencyRank": 553,
+    "pinyin": "lí",
+    "meanings": [
+      "to leave",
+      "to be apart from",
+      "away from"
+    ],
+    "characters": [
+      {
+        "char": "离",
+        "components": [
+          {
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "離 (traditional) — 隹 (bird) plus 离 as sound (lí). 离 was an old name for a mythical beast, so the 'leave' sense comes from 離; 离 kept only the sound part."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我家离学校很近。",
+      "pinyin": "Wǒ jiā lí xuéxiào hěn jìn.",
+      "english": "My home is close to school.",
+      "fact": "离 is the word for distance: A 离 B 很远 / 很近 means A is far from or near to B. It also means to leave or separate, as in 离开 (leave) and 离婚 (divorce), and is used in 离不开 (can't do without).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "你家离公司远不远？",
+        "pinyin": "Nǐ jiā lí gōngsī yuǎn bu yuǎn?",
+        "english": "Is your home far from the office?"
+      },
+      {
+        "hanzi": "离开车还有十分钟。",
+        "pinyin": "Lí kāichē hái yǒu shí fēnzhōng.",
+        "english": "There are ten minutes left before the departure."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5F80",
+    "word": "往",
+    "frequencyRank": 554,
+    "pinyin": "wǎng",
+    "meanings": [
+      "towards",
+      "to go",
+      "to"
+    ],
+    "characters": [
+      {
+        "char": "往",
+        "components": [
+          {
+            "char": "彳",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "彳 (step, walk) — 彳 is the left-step radical, as in 行, 径, 德; 往 is going toward."
+          },
+          {
+            "char": "王",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "王 (wáng) — near sound — 往 is wǎng, same syllable with a different tone."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "请往前走。",
+      "pinyin": "Qǐng wǎng qián zǒu.",
+      "english": "Please walk forward.",
+      "fact": "往 is a preposition meaning 'towards' and is used with directions: 往左 (to the left), 往前 (forward), 往南 (south). It also forms 往往 ('often, frequently') and 以往 (in the past).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "你往前走一百米就到了。",
+        "pinyin": "Nǐ wǎng qián zǒu yìbǎi mǐ jiù dào le.",
+        "english": "Walk straight ahead a hundred meters and you're there."
+      },
+      {
+        "hanzi": "这辆车开往机场。",
+        "pinyin": "Zhè liàng chē kāi wǎng jīchǎng.",
+        "english": "This bus goes to the airport."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+4E07",
+    "word": "万",
+    "frequencyRank": 555,
+    "pinyin": "wàn",
+    "meanings": [
+      "ten thousand",
+      "a great many"
+    ],
+    "characters": [
+      {
+        "char": "万",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "萬 (traditional ten thousand) — 万 is the simplified form of 萬, which pictured a scorpion borrowed for the number 10,000; 万 also sounds out 迈 mài."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这里有一万个人。",
+      "pinyin": "Zhèlǐ yǒu yí wàn gè rén.",
+      "english": "There are ten thousand people here.",
+      "fact": "万 is the unit of ten thousand, which makes Chinese big numbers different from English: 十万 is 'one hundred thousand', 一百万 is 'a million'. It also means 'extremely' in 万分 and 万一 ('in case').",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这辆汽车要十万块。",
+        "pinyin": "Zhè liàng qìchē yào shí wàn kuài.",
+        "english": "This car costs a hundred thousand yuan."
+      },
+      {
+        "hanzi": "万一下雨怎么办？",
+        "pinyin": "Wànyī xiàyǔ zěnme bàn?",
+        "english": "What if it rains?"
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+8054-7CFB",
+    "word": "联系",
+    "frequencyRank": 556,
+    "pinyin": "lián xì",
+    "meanings": [
+      "variant of 聯繫|联系[lian2 xi4]",
+      "connection",
+      "contact",
+      "relation",
+      "to get in touch with",
+      "to integrate"
+    ],
+    "characters": [
+      {
+        "char": "联",
+        "components": [
+          {
+            "char": "耳",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "耳 (ear) — hearing and joining, as in 听, 聪, 闻: 联 first meant ears joined, so to link. The part 关 stands in for the traditional shape."
+          }
+        ]
+      },
+      {
+        "char": "系",
+        "components": [
+          {
+            "char": "糸",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "糸 (silk thread; 纟 on the left) — ties and connections, as in 红, 给, 经. 系 is a link or relation."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "有事请随时联系我。",
+      "pinyin": "Yǒushì qǐng suíshí liánxì wǒ.",
+      "english": "If anything comes up, please contact me anytime.",
+      "fact": "联系 works equally well as a verb (\"to get in touch with someone,\" 联系我) and a noun (\"a connection, a relationship,\" 保持联系, \"keep in touch\") with no change in form — common enough in Mandarin that it’s worth checking both the verb and noun gloss whenever a new two-character word like this shows up.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "请保持联系。",
+        "pinyin": "Qǐng bǎochí liánxì.",
+        "english": "Please keep in touch."
+      },
+      {
+        "hanzi": "这两件事没有联系。",
+        "pinyin": "Zhè liǎng jiàn shì méiyǒu liánxì.",
+        "english": "These two things aren't related."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+6D3E",
+    "word": "派",
+    "frequencyRank": 557,
+    "pinyin": "pài",
+    "meanings": [
+      "to send",
+      "to dispatch",
+      "faction"
+    ],
+    "characters": [
+      {
+        "char": "派",
+        "components": [
+          {
+            "char": "氵",
+            "role": "semantic",
+            "radical": true,
+            "source": "llm-fallback",
+            "note": "氵 (water radical) — 派 first meant a stream branching off a river, which grew into branch, faction and to send out."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "公司派他去北京。",
+      "pinyin": "Gōngsī pài tā qù Běijīng.",
+      "english": "The company is sending him to Beijing.",
+      "fact": "派 is a verb for assigning or dispatching someone, as in 派人 and 派出所 (local police station). It also means a faction, school or style, as in 学派, 党派 and 派对 (party, borrowed from English).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "老板派我去上海出差。",
+        "pinyin": "Lǎobǎn pài wǒ qù Shànghǎi chūchāi.",
+        "english": "The boss is sending me to Shanghai on a business trip."
+      },
+      {
+        "hanzi": "学校派了一位老师来接你。",
+        "pinyin": "Xuéxiào pàile yí wèi lǎoshī lái jiē nǐ.",
+        "english": "The school sent a teacher to pick you up."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5173",
+    "word": "关",
+    "frequencyRank": 558,
+    "pinyin": "guān",
+    "meanings": [
+      "to close",
+      "to shut",
+      "to turn off"
+    ],
+    "characters": [
+      {
+        "char": "关",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "关 (close) — simplified from 關, a gate 门 with a bolt across it; 关 also means \"concern\", as in 关系."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "请把门关上。",
+      "pinyin": "Qǐng bǎ mén guānshang.",
+      "english": "Please close the door.",
+      "fact": "关 means to close or turn off: 关门, 关灯 (turn off the light), 关机 (shut down). It also means a customs checkpoint (海关) and is the word in 关系 (relationship) and 关心 (care about).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "出门前别忘了关灯。",
+        "pinyin": "Chūmén qián bié wàngle guān dēng.",
+        "english": "Don't forget to turn off the lights before leaving."
+      },
+      {
+        "hanzi": "你把电脑关了吧。",
+        "pinyin": "Nǐ bǎ diànnǎo guān le ba.",
+        "english": "Shut down the computer."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+8BC1-660E",
+    "word": "证明",
+    "frequencyRank": 559,
+    "pinyin": "zhèng míng",
+    "meanings": [
+      "proof",
+      "certificate",
+      "identification",
+      "testimonial",
+      "CL:個|个[ge4]",
+      "to prove"
+    ],
+    "characters": [
+      {
+        "char": "证",
         "components": [
           {
             "char": "讠",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "讠 (speech radical) — shows 说 relates to talking or language"
+            "note": "讠 (speech) — words and language, as in 说, 请, 谢: to prove by saying."
           },
           {
-            "char": "兑",
+            "char": "正",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "兑 (duì) is the phonetic component; historically 说 was also pronounced closer to 兑's sound before shifting to shuō"
+            "note": "正 (zhèng) gives the exact sound; 正 also in 整 zhěng and 政 zhèng."
           }
         ]
       },
@@ -1720,253 +449,2346 @@
           {
             "char": "日",
             "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "日 (sun) — combined with 月 (moon), 明 shows the light of both sun and moon, giving the meaning 'bright' or 'clear.'"
+            "source": "makemeahanzi",
+            "note": "日 (sun) — the sun beside the moon: two light sources, so bright and clear."
           },
           {
             "char": "月",
             "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "月 (moon) — together with 日 (sun), the two brightest things in the sky represent brightness and clarity."
+            "source": "makemeahanzi",
+            "note": "月 (moon) — as in 朋, 期, 有; here it brightens the night."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "请你说明一下这个规则。",
-      "pinyin": "Qǐng nǐ shuōmíng yíxià zhège guīzé.",
-      "english": "Please explain this rule.",
-      "fact": "说明 works as both a verb (\"to explain, indicate\") and a noun (\"explanation, instructions\"), the noun sense showing up on packaging as 说明书 (shuōmíngshū, \"instruction manual\") — one word doing double duty across two different English parts of speech.",
+      "hanzi": "这张照片可以证明他当时在场。",
+      "pinyin": "Zhè zhāng zhàopiàn kěyǐ zhèngmíng tā dāngshí zàichǎng.",
+      "english": "This photo can prove that he was present at the time.",
+      "fact": "证明 functions as both the verb \"to prove\" and the noun \"a certificate, proof document\" (身份证明, \"identity certificate\") — English keeps a similar verb/noun split (\"to prove\" vs. \"proof\"), but 证明 additionally covers the concrete bureaucratic sense of an official paper you must submit, with no single-word English equivalent.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "你需要什么证明吗?",
+        "pinyin": "Nǐ xūyào shénme zhèngmíng ma?",
+        "english": "Do you need any kind of certificate?"
+      },
+      {
+        "hanzi": "他想证明自己是对的。",
+        "pinyin": "Tā xiǎng zhèngmíng zìjǐ shì duì de.",
+        "english": "He wants to prove he's right."
+      }
+    ],
     "batchId": "0551-0600"
   },
   {
-    "id": "W+4EC0-4E48-6837",
-    "word": "什么样",
-    "frequencyRank": 584,
-    "pinyin": "shén me yàng",
+    "id": "W+53E5",
+    "word": "句",
+    "frequencyRank": 560,
+    "pinyin": "jù",
     "meanings": [
-      "what kind?",
-      "what sort?"
+      "sentence"
     ],
     "characters": [
       {
-        "char": "什",
+        "char": "句",
         "components": [
           {
-            "char": "亻",
+            "char": "口",
             "role": "ideographic",
             "source": "llm-fallback",
-            "note": "亻 (person) — 什 originally referred to a group of people."
-          },
+            "note": "口 (mouth) — wrapping 勹 around 口: a mouth-sized group of words, so a sentence, as in 一句话 one sentence."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "请再说一句。",
+      "pinyin": "Qǐng zài shuō yí jù.",
+      "english": "Please say one more sentence.",
+      "fact": "句 is both the word for a sentence and its measure word: 一句话 (one sentence), 句子 (sentence), 句号 (period). Note that the ‘gōu’ reading of this character is a rare variant.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这个句子我不太懂。",
+        "pinyin": "Zhège jùzi wǒ bú tài dǒng.",
+        "english": "I don't quite understand this sentence."
+      },
+      {
+        "hanzi": "他只说了一句话就走了。",
+        "pinyin": "Tā zhǐ shuōle yí jù huà jiù zǒu le.",
+        "english": "He said just one sentence and left."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+4E94",
+    "word": "五",
+    "frequencyRank": 561,
+    "pinyin": "wǔ",
+    "meanings": [
+      "five"
+    ],
+    "characters": [
+      {
+        "char": "五",
+        "components": [
           {
-            "char": "十",
+            "char": "二",
             "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "十 (ten) — combined with 亻 (person), 什 originally described a group of ten; the character later came to be used for the common word 什么 (what)."
+            "source": "makemeahanzi",
+            "note": "二 (two) — the top and bottom bars. Dictionary story: five elements between heaven and earth, with a cross in the middle; memory aid, not firmly attested."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "他今年五岁。",
+      "pinyin": "Tā jīnnián wǔ suì.",
+      "english": "He is five years old.",
+      "fact": "五 is also in 五一 (May 1st, Labour Day) and in classical lists like 五行 (the five elements). It is also used for 'several' loosely, as in 五花八门 ('all kinds of').",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我们五点下班。",
+        "pinyin": "Wǒmen wǔ diǎn xiàbān.",
+        "english": "We get off work at five."
+      },
+      {
+        "hanzi": "桌子上有五本书。",
+        "pinyin": "Zhuōzi shang yǒu wǔ běn shū.",
+        "english": "There are five books on the table."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+751F-547D",
+    "word": "生命",
+    "frequencyRank": 562,
+    "pinyin": "shēng mìng",
+    "meanings": [
+      "life (as the characteristic of living beings)",
+      "living being",
+      "creature (CL:條|条[tiao2])"
+    ],
+    "characters": [
+      {
+        "char": "生",
+        "components": [
+          {
+            "char": "土",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "土 (earth) — a green shoot pushing up from the ground: growth, birth, life. 生 also sounds out 性 xìng, 姓 xìng and 星 xīng."
           }
         ]
       },
       {
-        "char": "么",
-        "components": []
-      },
-      {
-        "char": "样",
+        "char": "命",
         "components": [
           {
-            "char": "木",
+            "char": "口",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "木 (tree/wood) — 样 originally referred to a kind of tree, later broadening to mean 'kind, appearance, way.'"
+            "note": "口 (mouth) — speech, as in 吃, 唱, 问: an order is spoken."
           },
           {
-            "char": "羊",
+            "char": "令",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "羊 (yáng) gives the sound — 样 is pronounced yàng, matching aside from tone."
+            "note": "令 (lìng, order) is a close sound clue for mìng; 令 also in 领 lǐng, 冷 lěng and 零 líng."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "你想找什么样的工作?",
-      "pinyin": "Nǐ xiǎng zhǎo shénmeyàng de gōngzuò?",
-      "english": "What kind of job are you looking for?",
-      "fact": "什么样 attaches 样 (\"kind, appearance\") onto the question word 什么 to ask about type rather than identity, almost always followed by 的 before the noun it modifies — the same \"X样\" structure behind 这样/那样 elsewhere in this deck, just turned into a question.",
+      "hanzi": "每一个生命都值得尊重。",
+      "pinyin": "Měi yí gè shēngmìng dōu zhídé zūnzhòng.",
+      "english": "Every life deserves respect.",
+      "fact": "生命 names life as a biological or philosophical force — \"life\" in the abstract, as something precious or at risk — while the similar-looking 生活 means \"life\" in the sense of daily living and lifestyle; mixing the two up is a common learner slip since English \"life\" covers both.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "生命比金钱重要。",
+        "pinyin": "Shēngmìng bǐ jīnqián zhòngyào.",
+        "english": "Life is more important than money."
+      },
+      {
+        "hanzi": "这只小狗的生命很短。",
+        "pinyin": "Zhè zhī xiǎo gǒu de shēngmìng hěn duǎn.",
+        "english": "This puppy's life is short."
+      }
+    ],
     "batchId": "0551-0600"
   },
   {
-    "id": "W+5B89-9759",
-    "word": "安静",
-    "frequencyRank": 585,
-    "pinyin": "ān jìng",
+    "id": "W+6709-70B9",
+    "word": "有点",
+    "frequencyRank": 563,
+    "pinyin": "yǒu diǎn",
     "meanings": [
-      "quiet",
-      "peaceful",
-      "calm"
+      "a little"
     ],
     "characters": [
       {
-        "char": "安",
+        "char": "有",
+        "components": [
+          {
+            "char": "月",
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "月 (flesh/meat, not moon here) — oldest form is a hand holding a piece of meat, \"to possess\"; 月 as meat also appears in 肉 words like 肚 belly and 脑 brain."
+          }
+        ]
+      },
+      {
+        "char": "点",
+        "components": [
+          {
+            "char": "灬",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "灬 (fire) — heat and burning, as in 热 hot, 照 shine, 黑 black; a dot is a small spot like a spark."
+          },
+          {
+            "char": "占",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "占 (zhàn) is a loose sound clue for diǎn; 占 also sounds out 站 zhàn and 粘 zhān."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我今天有点累。",
+      "pinyin": "Wǒ jīntiān yǒudiǎn lèi.",
+      "english": "I’m a little tired today.",
+      "fact": "有点 sits directly before an adjective to soften it (有点累, \"a bit tired\"; 有点贵, \"a bit pricey\") and tends to modify something negative or undesirable far more often than something positive — native speakers reach for 有点丑 (\"a bit ugly\") much more readily than 有点好看 (\"a bit good-looking\"), an asymmetry that trips up learners who treat 有点 as a neutral intensifier.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这个汤有点咸。",
+        "pinyin": "Zhège tāng yǒudiǎn xián.",
+        "english": "This soup is a bit salty."
+      },
+      {
+        "hanzi": "我有点想家了。",
+        "pinyin": "Wǒ yǒudiǎn xiǎng jiā le.",
+        "english": "I'm a little homesick."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+9760",
+    "word": "靠",
+    "frequencyRank": 564,
+    "pinyin": "kào",
+    "meanings": [
+      "to lean on",
+      "to rely on",
+      "to be near"
+    ],
+    "characters": [
+      {
+        "char": "靠",
+        "components": [
+          {
+            "char": "告",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "告 (gào) — loose hint — 靠 is kào; 告 also sounds out 造 zào and 酷 kù."
+          },
+          {
+            "char": "非",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "非 (not) — two wings pointing away from each other, so back to back; as a memory aid, 靠 is leaning your back on something."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "你可以靠我。",
+      "pinyin": "Nǐ kěyǐ kào wǒ.",
+      "english": "You can rely on me.",
+      "fact": "靠 means to lean on or depend on: 靠窗 (by the window), 靠自己 (rely on oneself), 靠谱 (reliable, colloquial). It also means to be near to, as in 靠近.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "他靠着墙站着。",
+        "pinyin": "Tā kàozhe qiáng zhànzhe.",
+        "english": "He is standing leaning against the wall."
+      },
+      {
+        "hanzi": "这件事你不能只靠别人。",
+        "pinyin": "Zhè jiàn shì nǐ bù néng zhǐ kào biérén.",
+        "english": "On this matter you can't just rely on others."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+89E3-51B3",
+    "word": "解决",
+    "frequencyRank": 565,
+    "pinyin": "jiě jué",
+    "meanings": [
+      "to solve",
+      "to resolve",
+      "to settle (a problem)",
+      "to eliminate",
+      "to wipe out"
+    ],
+    "characters": [
+      {
+        "char": "解",
+        "components": [
+          {
+            "char": "角",
+            "role": "semantic",
+            "source": "makemeahanzi",
+            "note": "角 (horn) — an ox's horn; with 刀 (knife) the picture is cutting up an ox, so \"to take apart\", then to loosen and explain."
+          },
+          {
+            "char": "刀",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "刀 (knife) — cutting, as in 分, 切, 到; a blade separates the parts."
+          }
+        ]
+      },
+      {
+        "char": "决",
+        "components": [
+          {
+            "char": "冫",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "冫 (ice) — here the ice form of 氵 (water): 决 first meant to break a dam, so a decisive break."
+          },
+          {
+            "char": "夬",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "夬 (guài) is a loose sound clue for jué; 夬 also sounds out 快 kuài and 块 kuài."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这个问题很难解决。",
+      "pinyin": "Zhège wèntí hěn nán jiějué.",
+      "english": "This problem is very hard to solve.",
+      "fact": "解决 implies actually resolving a problem down to nothing left to deal with, in contrast to 处理 (also in this batch), which just means attending to or handling something — you can 处理 a complaint without truly 解决-ing the underlying issue, a distinction useful for calibrating how thoroughly something was dealt with.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我们一起解决这个问题。",
+        "pinyin": "Wǒmen yìqǐ jiějué zhège wèntí.",
+        "english": "Let's solve this problem together."
+      },
+      {
+        "hanzi": "他没有解决办法。",
+        "pinyin": "Tā méiyǒu jiějué bànfǎ.",
+        "english": "He has no solution."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+529E-516C-5BA4",
+    "word": "办公室",
+    "frequencyRank": 566,
+    "pinyin": "bàn gōng shì",
+    "meanings": [
+      "office",
+      "business premises"
+    ],
+    "characters": [
+      {
+        "char": "办",
+        "components": [
+          {
+            "char": "力",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "力 (strength) — effort, as in 助, 男, 努: handling things takes effort. The two dots stand in for 辡 of the traditional 辦."
+          }
+        ]
+      },
+      {
+        "char": "公",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "公 (public) — 八 over 厶: dividing 八 what is private 厶; so \"shared, public, fair\"."
+          }
+        ]
+      },
+      {
+        "char": "室",
         "components": [
           {
             "char": "宀",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "宀 (a roof, house) — 安 pictures shelter."
-          },
-          {
-            "char": "女",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "女 (woman) — a woman safely inside a house gave 安 its meaning 'peace' or 'safety.'"
-          }
-        ]
-      },
-      {
-        "char": "静",
-        "components": [
-          {
-            "char": "青",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "青 (blue-green, nature) — 静 relates to a calm stillness, like still water or clear skies"
+            "note": "宀 (roof) — houses and shelter, as in 家, 安, 字: a room under the roof."
           },
           {
-            "char": "争",
+            "char": "至",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "争 (zhēng) gives a sound distantly related to 静's reading jìng, having drifted apart over time"
+            "note": "至 (zhì, arrive) is a loose sound clue for shì; it fits the meaning: where one arrives inside the house."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "图书馆里非常安静。",
-      "pinyin": "Túshūguǎn lǐ fēicháng ānjìng.",
-      "english": "It's very quiet inside the library.",
-      "fact": "安静 describes both an environment free of noise (图书馆很安静, \"the library is quiet\") and, applied to a person, a calm and undemonstrative temperament (安静的孩子, \"a quiet child\") — the same word stretching to cover a hushed room and a reserved personality, much like English \"quiet.\"",
+      "hanzi": "我的办公室在三楼。",
+      "pinyin": "Wǒ de bàngōngshì zài sān lóu.",
+      "english": "My office is on the third floor.",
+      "fact": "办公室 is built from three transparent pieces stacked together — 办 (\"to handle, do\"), 公 (\"public, official\"), and 室 (\"room\") — literally \"a room for handling official business,\" a [verb][domain][place-noun] pattern many three-character Mandarin nouns follow.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "他在办公室开会。",
+        "pinyin": "Tā zài bàngōngshì kāihuì.",
+        "english": "He's having a meeting in the office."
+      },
+      {
+        "hanzi": "请你到办公室来一下。",
+        "pinyin": "Qǐng nǐ dào bàngōngshì lái yíxià.",
+        "english": "Please come to the office for a moment."
+      }
+    ],
     "batchId": "0551-0600"
   },
   {
-    "id": "W+6A21-7279",
-    "word": "模特",
-    "frequencyRank": 586,
-    "pinyin": "mó tè",
+    "id": "W+96BE-9053",
+    "word": "难道",
+    "frequencyRank": 567,
+    "pinyin": "nán dào",
     "meanings": [
-      "(fashion) model (loanword)"
+      "don't tell me ...",
+      "could it be that...?"
     ],
     "characters": [
       {
-        "char": "模",
+        "char": "难",
+        "components": [
+          {
+            "char": "隹",
+            "role": "semantic",
+            "source": "makemeahanzi",
+            "note": "隹 (zhuī, short-tailed bird) — 难 was first the name of a bird; \"hard\" is a borrowed use. The 又 here stands in for the traditional left part."
+          }
+        ]
+      },
+      {
+        "char": "道",
+        "components": [
+          {
+            "char": "辶",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "辶 (walk) — movement and roads, as in 这 this, 过 pass, 近 near; a 道 is a road, then a way or principle."
+          },
+          {
+            "char": "首",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "首 (shǒu, head) is only a loose sound hint for dào; 首 also means \"head/first\", fitting a lead-the-way road."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "难道你忘了今天是我的生日?",
+      "pinyin": "Nándào nǐ wàng le jīntiān shì wǒ de shēngrì?",
+      "english": "Don’t tell me you forgot today is my birthday?",
+      "fact": "难道 doesn’t ask a real question — it’s a rhetorical marker that frames the speaker’s surprise or disbelief, expecting the listener to confirm what the speaker already suspects, closer in function to English \"don’t tell me...\" or \"surely...\" than to a genuine yes/no question word like 吗.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "难道你不知道吗?",
+        "pinyin": "Nándào nǐ bù zhīdào ma?",
+        "english": "Don't tell me you don't know?"
+      },
+      {
+        "hanzi": "难道他不想来?",
+        "pinyin": "Nándào tā bù xiǎng lái?",
+        "english": "Could it be that he doesn't want to come?"
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+4F5C-4E3A",
+    "word": "作为",
+    "frequencyRank": 568,
+    "pinyin": "zuò wéi",
+    "meanings": [
+      "one's conduct",
+      "deed",
+      "activity",
+      "accomplishment",
+      "achievement",
+      "to act as"
+    ],
+    "characters": [
+      {
+        "char": "作",
+        "components": [
+          {
+            "char": "亻",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "亻 (person) — people, as in 你, 他, 做: 作 is something a person does or makes."
+          },
+          {
+            "char": "乍",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "乍 (zuò) gives the exact sound; 乍 also in 昨 zuó, 炸 zhà and 怎 zěn."
+          }
+        ]
+      },
+      {
+        "char": "为",
+        "components": [
+          {
+            "char": "力",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "力 (strength) — visible inside 为. Memory aid: putting strength 力 into doing something; 为 is 'to do, to act' and, in 因为, 为什么, 'because/for'."
+          },
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "為 (traditional) — often explained as a hand leading an elephant to work. 为 is a cursive simplification, so the picture is no longer visible."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "作为一名老师,她非常有耐心。",
+      "pinyin": "Zuòwéi yì míng lǎoshī, tā fēicháng yǒu nàixīn.",
+      "english": "As a teacher, she is very patient.",
+      "fact": "作为 at the head of a phrase means \"in the capacity of, as\" (作为学生, \"as a student\") — a role-framing device distinct from its other, noun-like sense, \"one’s conduct, actions\" (他的作为让人失望, \"his conduct was disappointing\"), two meanings sharing one written form but doing very different grammatical jobs.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "作为朋友,我想帮你。",
+        "pinyin": "Zuòwéi péngyou, wǒ xiǎng bāng nǐ.",
+        "english": "As a friend, I want to help you."
+      },
+      {
+        "hanzi": "他作为学生代表发了言。",
+        "pinyin": "Tā zuòwéi xuésheng dàibiǎo fāle yán.",
+        "english": "He spoke as a student representative."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5947-602A",
+    "word": "奇怪",
+    "frequencyRank": 569,
+    "pinyin": "qí guài",
+    "meanings": [
+      "strange",
+      "odd",
+      "to marvel",
+      "to be baffled"
+    ],
+    "characters": [
+      {
+        "char": "奇",
+        "components": [
+          {
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "奇 (qí) is a sound clue for 骑 qí, 寄 jì, 椅 yǐ and 崎 qí; as a word it means strange or remarkable."
+          }
+        ]
+      },
+      {
+        "char": "怪",
+        "components": [
+          {
+            "char": "忄",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "忄 (heart) — feelings, as in 快, 忙, 情: a strange feeling."
+          },
+          {
+            "char": "圣",
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "圣 here is not the \"sage\" word; it is only a loose sound clue for guài."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "他今天的行为很奇怪。",
+      "pinyin": "Tā jīntiān de xíngwéi hěn qíguài.",
+      "english": "His behavior today is very strange.",
+      "fact": "奇怪 doubles as a plain adjective (\"strange, odd\") and, in the first person, an expression of the speaker’s own puzzlement (我觉得奇怪, or simply 奇怪 said alone as an interjection, \"how odd!\") — much like English \"strange\" can be either a description or a muttered reaction.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这个声音很奇怪。",
+        "pinyin": "Zhège shēngyīn hěn qíguài.",
+        "english": "This sound is very strange."
+      },
+      {
+        "hanzi": "奇怪,我的钥匙去哪儿了?",
+        "pinyin": "Qíguài, wǒ de yàoshi qù nǎr le?",
+        "english": "Strange, where did my keys go?"
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+751F",
+    "word": "生",
+    "frequencyRank": 570,
+    "pinyin": "shēng",
+    "meanings": [
+      "to be born",
+      "to grow",
+      "to give birth",
+      "raw"
+    ],
+    "characters": [
+      {
+        "char": "生",
+        "components": [
+          {
+            "char": "土",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "土 (earth) — a green shoot pushing up from the ground: growth, birth, life. 生 also sounds out 性 xìng, 姓 xìng and 星 xīng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "他生在上海。",
+      "pinyin": "Tā shēng zài Shànghǎi.",
+      "english": "He was born in Shanghai.",
+      "fact": "生 is one of the most versatile characters: 学生 (student), 生日 (birthday), 生活 (life), 生气 (angry), 生病 (to get sick) and 生菜 (lettuce). It means 'raw' or 'unfamiliar' as in 生字 (new character).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我在北京生活了五年。",
+        "pinyin": "Wǒ zài Běijīng shēnghuóle wǔ nián.",
+        "english": "I've lived in Beijing for five years."
+      },
+      {
+        "hanzi": "你的生日是几月几号？",
+        "pinyin": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+        "english": "What is your birthday?"
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+7531",
+    "word": "由",
+    "frequencyRank": 571,
+    "pinyin": "yóu",
+    "meanings": [
+      "from",
+      "by",
+      "because of"
+    ],
+    "characters": [
+      {
+        "char": "由",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "由 (from, reason) — mostly useful as a sound part: 油 yóu, 邮 yóu, 柚 yòu, 抽 chōu all contain it."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这件事由我来做。",
+      "pinyin": "Zhè jiàn shì yóu wǒ lái zuò.",
+      "english": "I'll take care of this.",
+      "fact": "由 is a formal preposition meaning 'by' or 'from': 由你决定 ('it's up to you'), 由北向南 (from north to south). It also forms 理由 (reason), 自由 (freedom) and 由于 (because of).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这个会由经理来主持。",
+        "pinyin": "Zhège huì yóu jīnglǐ lái zhǔchí.",
+        "english": "This meeting will be chaired by the manager."
+      },
+      {
+        "hanzi": "由于下雨，比赛取消了。",
+        "pinyin": "Yóuyú xiàyǔ, bǐsài qǔxiāo le.",
+        "english": "Because of the rain, the match was canceled."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+7537",
+    "word": "男",
+    "frequencyRank": 572,
+    "pinyin": "nán",
+    "meanings": [
+      "male",
+      "man"
+    ],
+    "characters": [
+      {
+        "char": "男",
+        "components": [
+          {
+            "char": "田",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "田 (field) — a field above 力 (strength): a man is one who works the fields with strength."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这是男厕所。",
+      "pinyin": "Zhè shì nán cèsuǒ.",
+      "english": "This is the men's restroom.",
+      "fact": "男 is a bound form seen in 男人 (man), 男孩 (boy), 男朋友 (boyfriend) and on restroom signs. The character shows a field (田) and strength (力), reflecting the old idea that men worked the fields.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "他是我们班的男生。",
+        "pinyin": "Tā shì wǒmen bān de nánshēng.",
+        "english": "He is a boy in our class."
+      },
+      {
+        "hanzi": "男孩子喜欢踢足球。",
+        "pinyin": "Nánháizi xǐhuan tī zúqiú.",
+        "english": "Boys like playing soccer."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+6781-4E86",
+    "word": "极了",
+    "frequencyRank": 573,
+    "pinyin": "jí le",
+    "meanings": [
+      "extremely",
+      "exceedingly"
+    ],
+    "characters": [
+      {
+        "char": "极",
         "components": [
           {
             "char": "木",
             "role": "semantic",
+            "radical": true,
             "source": "makemeahanzi",
-            "note": "木 (wood) — early models and molds were often carved from wood"
+            "note": "木 (tree) — wood, as in 树, 林, 桌: 极 first meant a roof beam, the very top."
           },
           {
-            "char": "莫",
+            "char": "及",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "莫 (mò) gives a sound close to 模's reading mó, sharing a similar historical pronunciation"
+            "note": "及 (jí) gives the exact sound; also in 级 jí and 吸 xī."
           }
         ]
       },
       {
-        "char": "特",
+        "char": "了",
         "components": [
           {
-            "char": "牛",
-            "role": "semantic",
+            "role": "pictographic",
             "source": "makemeahanzi",
-            "note": "牛 (ox) — 特 originally referred to a male ox singled out for sacrifice, a special animal set apart from the herd."
-          },
-          {
-            "char": "寺",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "寺 (sì) gives a hint of the sound — 特 is pronounced tè, a connection that has drifted over time."
+            "note": "子 (child) — 了 is usually read as a swaddled baby, like 子 without the arms. Its meanings 'finish' (了解 liǎo) and the particle le were borrowed later."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "她是一名时装模特。",
-      "pinyin": "Tā shì yì míng shízhuāng mótè.",
-      "english": "She is a fashion model.",
-      "fact": "模特 is a straightforward phonetic transliteration of English \"model,\" built purely to approximate the foreign sound rather than to carry meaning through its individual characters — the same strategy behind loanwords like 咖啡 (kāfēi, \"coffee\").",
+      "hanzi": "这个电影好看极了。",
+      "pinyin": "Zhège diànyǐng hǎokàn jí le.",
+      "english": "This movie is extremely good.",
+      "fact": "极了 always follows the adjective it intensifies rather than preceding it (好看极了, never 极了好看) — the mirror image of English pre-adjective intensifiers like \"extremely,\" and a word-order pattern shared by a small family of post-posed intensifiers including 得很 and 死了.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "今天热极了!",
+        "pinyin": "Jīntiān rè jí le!",
+        "english": "It's extremely hot today!"
+      },
+      {
+        "hanzi": "他高兴极了。",
+        "pinyin": "Tā gāoxìng jí le.",
+        "english": "He was extremely happy."
+      }
+    ],
     "batchId": "0551-0600"
   },
   {
-    "id": "W+591A-4E48",
-    "word": "多么",
-    "frequencyRank": 587,
-    "pinyin": "duō me",
+    "id": "W+540C-610F",
+    "word": "同意",
+    "frequencyRank": 574,
+    "pinyin": "tóng yì",
     "meanings": [
-      "how (wonderful etc)",
-      "what (a great idea etc)",
-      "however (difficult it may be etc)",
-      "(in interrogative sentences) how (much etc)",
-      "to what extent"
+      "to agree",
+      "to consent",
+      "to approve"
     ],
     "characters": [
       {
-        "char": "多",
+        "char": "同",
+        "components": [
+          {
+            "char": "口",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "口 (mouth) — speech, as in 吃, 唱, 问: voices in unison. 同 also gives sound to 铜 tóng, 桶 tǒng, 洞 dòng."
+          }
+        ]
+      },
+      {
+        "char": "意",
+        "components": [
+          {
+            "char": "心",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "心 (heart) — mind and feelings, as in 想, 思, 感: 意 is what one has in mind."
+          },
+          {
+            "char": "音",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "音 (yīn, sound) is a loose sound clue for yì; 意 itself gives 忆 yì and 亿 yì."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "大家都同意这个计划。",
+      "pinyin": "Dàjiā dōu tóngyì zhège jìhuà.",
+      "english": "Everyone agrees with this plan.",
+      "fact": "同 contributes \"same, together\" and 意 contributes \"opinion, intention\" — 同意 reads almost transparently as \"sharing the same opinion,\" a compositional logic clear enough that a learner who already knows both characters separately can often guess the compound’s meaning on first encounter.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我同意你的看法。",
+        "pinyin": "Wǒ tóngyì nǐ de kànfǎ.",
+        "english": "I agree with your view."
+      },
+      {
+        "hanzi": "妈妈不同意我去。",
+        "pinyin": "Māma bù tóngyì wǒ qù.",
+        "english": "Mom doesn't agree to my going."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5982",
+    "word": "如",
+    "frequencyRank": 575,
+    "pinyin": "rú",
+    "meanings": [
+      "as",
+      "like",
+      "if"
+    ],
+    "characters": [
+      {
+        "char": "如",
+        "components": [
+          {
+            "char": "女",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "女 (woman) — women and family terms, as in 妈 mom, 好 good, 姐 sister; 女 (nǚ) also loosely echoes the rú sound."
+          },
+          {
+            "char": "口",
+            "role": "semantic",
+            "source": "llm-fallback",
+            "note": "口 (mouth) — speech; 如 originally meant \"to follow, accord with\", later \"as, like\"; also in 汝 rǔ and 茹 rú."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "如果明天下雨，我们不去。",
+      "pinyin": "Rúguǒ míngtiān xiàyǔ, wǒmen bú qù.",
+      "english": "If it rains tomorrow, we won't go.",
+      "fact": "如 on its own is literary ('like', 'as'), but it's the core of many common words: 如果 (if), 比如 (for example), 如何 (how) and 不如 (not as good as).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "如果你有时间，请来看我。",
+        "pinyin": "Rúguǒ nǐ yǒu shíjiān, qǐng lái kàn wǒ.",
+        "english": "If you have time, please come see me."
+      },
+      {
+        "hanzi": "他说得如此清楚，我都听懂了。",
+        "pinyin": "Tā shuō de rúcǐ qīngchu, wǒ dōu tīngdǒng le.",
+        "english": "He explained so clearly that I understood it all."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+6E38-620F",
+    "word": "游戏",
+    "frequencyRank": 576,
+    "pinyin": "yóu xì",
+    "meanings": [
+      "game (CL:場|场[chang3])",
+      "to play"
+    ],
+    "characters": [
+      {
+        "char": "游",
+        "components": [
+          {
+            "char": "氵",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "氵 (water) — water and swimming, as in 河, 海, 泳: swimming and drifting."
+          },
+          {
+            "char": "斿",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "斿 (yóu) gives the exact sound: a flag with streamers that floats freely."
+          }
+        ]
+      },
+      {
+        "char": "戏",
+        "components": [
+          {
+            "char": "戈",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "戈 (halberd) — weapons, as in 战 war and 成; the traditional 戲 was a play or contest."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我们来玩一个游戏吧。",
+      "pinyin": "Wǒmen lái wán yí gè yóuxì ba.",
+      "english": "Let’s play a game.",
+      "fact": "游戏 covers everything from a children’s playground game to a board game to a video game (电子游戏/网络游戏) — English needs the qualifier \"video\" or \"computer\" to narrow \"game\" down to the digital sense, while Chinese speakers usually just say 游戏 and let context supply which kind is meant.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "孩子们喜欢玩电脑游戏。",
+        "pinyin": "Háizimen xǐhuan wán diànnǎo yóuxì.",
+        "english": "Kids like playing computer games."
+      },
+      {
+        "hanzi": "这个游戏很简单。",
+        "pinyin": "Zhège yóuxì hěn jiǎndān.",
+        "english": "This game is very simple."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5E2E-5FD9",
+    "word": "帮忙",
+    "frequencyRank": 577,
+    "pinyin": "bāng máng",
+    "meanings": [
+      "to help",
+      "to lend a hand",
+      "to do a favor",
+      "to do a good turn"
+    ],
+    "characters": [
+      {
+        "char": "帮",
+        "components": [
+          {
+            "char": "巾",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "巾 (cloth) — cloth, as in 布, 带, 帽: 帮 first meant the side of a shoe."
+          },
+          {
+            "char": "邦",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "邦 (bāng, nation) gives the exact sound; 邦 itself means state or country."
+          }
+        ]
+      },
+      {
+        "char": "忙",
+        "components": [
+          {
+            "char": "忄",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "忄 (heart) — feelings, as in 快, 怕, 情: a heart with no rest."
+          },
+          {
+            "char": "亡",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "亡 (wáng) is a close sound clue for máng; 亡 also in 忘 wàng, 望 wàng and 盲 máng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "你能帮忙拿一下这个箱子吗?",
+      "pinyin": "Nǐ néng bāngmáng ná yíxià zhège xiāngzi ma?",
+      "english": "Can you help carry this box?",
+      "fact": "帮忙 is a verb-object compound (帮 \"to help\" + 忙 \"a task, a favor\") that generally cannot take a person as its direct object — \"help someone\" needs 帮 alone with the person slotted in (帮我, \"help me\") since 帮忙他 is not standard, the same kind of built-in object restriction seen in 结婚 (also in this batch).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "你能帮忙看一下孩子吗?",
+        "pinyin": "Nǐ néng bāngmáng kàn yíxià háizi ma?",
+        "english": "Can you help keep an eye on the kids?"
+      },
+      {
+        "hanzi": "谢谢你来帮忙。",
+        "pinyin": "Xièxie nǐ lái bāngmáng.",
+        "english": "Thanks for coming to help."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+6307",
+    "word": "指",
+    "frequencyRank": 578,
+    "pinyin": "zhǐ",
+    "meanings": [
+      "finger",
+      "to point at",
+      "to refer to"
+    ],
+    "characters": [
+      {
+        "char": "指",
+        "components": [
+          {
+            "char": "扌",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "扌 (hand radical, 提手旁) — actions by hand: 打, 拉, 抱; 指 is the finger or to point."
+          },
+          {
+            "char": "旨",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "旨 (zhǐ) sounds exactly like 指; also in 脂 zhī."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "他指着地图说话。",
+      "pinyin": "Tā zhǐzhe dìtú shuōhuà.",
+      "english": "He talks while pointing at the map.",
+      "fact": "指 is both 'finger' (手指) and the verb 'to point'. It is also used in 指的是 ('what is meant is'), 指导 (to guide) and 指南 (guide, as in a handbook).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "他用手指着前面。",
+        "pinyin": "Tā yòng shǒu zhǐzhe qiánmiàn.",
+        "english": "He points ahead with his hand."
+      },
+      {
+        "hanzi": "他手指上戴着一个戒指。",
+        "pinyin": "Tā shǒuzhǐ shang dàizhe yí ge jièzhi.",
+        "english": "He is wearing a ring on his finger."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5371-9669",
+    "word": "危险",
+    "frequencyRank": 579,
+    "pinyin": "wēi xiǎn",
+    "meanings": [
+      "danger",
+      "dangerous"
+    ],
+    "characters": [
+      {
+        "char": "危",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "危 (danger) — a person at the top of a cliff, with another person kneeling below: a precarious spot."
+          }
+        ]
+      },
+      {
+        "char": "险",
+        "components": [
+          {
+            "char": "阝",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "阝 on the left is 阜 (mound, hill) — as in 院, 阳, 阴: a steep place, a risky pass."
+          },
+          {
+            "char": "佥",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "佥 (qiān) is a loose sound clue for xiǎn; 佥 also in 检 jiǎn, 剑 jiàn, 脸 liǎn and 验 yàn."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "小心,这条路很危险。",
+      "pinyin": "Xiǎoxīn, zhè tiáo lù hěn wēixiǎn.",
+      "english": "Be careful, this road is very dangerous.",
+      "fact": "危 by itself is traditionally analyzed as a person crouched at the edge of a steep overhang — a vivid, almost literal image of precariousness that survives intact in the modern compound 危险, \"danger.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这里很危险,别过来。",
+        "pinyin": "Zhèlǐ hěn wēixiǎn, bié guòlái.",
+        "english": "It's dangerous here, don't come over."
+      },
+      {
+        "hanzi": "开车太快很危险。",
+        "pinyin": "Kāichē tài kuài hěn wēixiǎn.",
+        "english": "Driving too fast is dangerous."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+8BA8-538C",
+    "word": "讨厌",
+    "frequencyRank": 580,
+    "pinyin": "tǎo yàn",
+    "meanings": [
+      "to dislike",
+      "to loathe",
+      "disagreeable",
+      "troublesome",
+      "annoying"
+    ],
+    "characters": [
+      {
+        "char": "讨",
+        "components": [
+          {
+            "char": "讠",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "讠 (speech) — words and language, as in 说, 请, 谢: to ask or discuss."
+          }
+        ]
+      },
+      {
+        "char": "厌",
+        "components": [
+          {
+            "char": "厂",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "厂 (cliff) — the frame on the left and top, as in 原, 厚, 压. In 厌 it is just the old cliff-like frame of 厭."
+          },
+          {
+            "char": "犬",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "犬 (quǎn, dog) — looks like a sound part but quǎn vs yàn is only a loose hint. The old 厭 got its sound from 猒 (yàn)."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我讨厌下雨天。",
+      "pinyin": "Wǒ tǎoyàn xiàyǔ tiān.",
+      "english": "I dislike rainy days.",
+      "fact": "讨厌 doubles as a verb (\"to dislike, loathe\") and an adjective describing an annoying person or thing (真讨厌!, \"so annoying!\") — in the adjective use it’s also commonly said fondly or teasingly among close friends and couples, similar to how English \"you’re terrible\" can be an affectionate jab rather than a real complaint.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "他很讨厌吃青菜。",
+        "pinyin": "Tā hěn tǎoyàn chī qīngcài.",
+        "english": "He really dislikes eating greens."
+      },
+      {
+        "hanzi": "这只蚊子真讨厌!",
+        "pinyin": "Zhè zhī wénzi zhēn tǎoyàn!",
+        "english": "This mosquito is so annoying!"
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+66FE-7ECF",
+    "word": "曾经",
+    "frequencyRank": 581,
+    "pinyin": "céng jīng",
+    "meanings": [
+      "once",
+      "already",
+      "former",
+      "previously",
+      "ever",
+      "(past tense marker used before verb or clause)"
+    ],
+    "characters": [
+      {
+        "char": "曾",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "曾 (céng) began as a picture of a steamer (甑 zèng adds 瓦); the past-time meaning is borrowed. 曾 also gives 增 zēng, 层 céng and 赠 zèng."
+          }
+        ]
+      },
+      {
+        "char": "经",
+        "components": [
+          {
+            "char": "纟",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "纟 (silk thread, simplified 糸) — threads and cloth, as in 红 red, 给 give, 级 level; 经 first meant a warp thread, then \"classics, pass through\"."
+          },
+          {
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "巠 (jīng), here simplified to look like 圣, gives the same sound; also in 茎 jīng, 径 jìng and 轻 qīng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我曾经在北京住过三年。",
+      "pinyin": "Wǒ céngjīng zài Běijīng zhù guo sān nián.",
+      "english": "I once lived in Beijing for three years.",
+      "fact": "曾经 marks a past experience that no longer holds true now — it typically pairs with the experiential aspect particle 过 on the verb (住过, \"have lived [there] at some point\") rather than the completion particle 了, signaling that this happened once, but that chapter is now closed.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "他曾经是我的老师。",
+        "pinyin": "Tā céngjīng shì wǒ de lǎoshī.",
+        "english": "He was once my teacher."
+      },
+      {
+        "hanzi": "我曾经去过那个地方。",
+        "pinyin": "Wǒ céngjīng qùguo nàge dìfang.",
+        "english": "I've been to that place before."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+773C-775B",
+    "word": "眼睛",
+    "frequencyRank": 582,
+    "pinyin": "yǎn jing",
+    "meanings": [
+      "eye",
+      "CL:隻|只[zhi1],雙|双[shuang1]"
+    ],
+    "characters": [
+      {
+        "char": "眼",
+        "components": [
+          {
+            "char": "目",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "目 (eye) — sight, as in 看, 睛, 睡."
+          },
+          {
+            "char": "艮",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "艮 (gèn) is a loose sound clue for yǎn; 艮 also sounds out 跟 gēn, 很 hěn and 根 gēn."
+          }
+        ]
+      },
+      {
+        "char": "睛",
+        "components": [
+          {
+            "char": "目",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "目 (eye) — sight, as in 看, 眼, 睡."
+          },
+          {
+            "char": "青",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "青 (qīng) is a close sound clue for jīng; 青 also in 清, 请, 情 and 晴."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "她的眼睛很漂亮。",
+      "pinyin": "Tā de yǎnjing hěn piàoliang.",
+      "english": "Her eyes are very pretty.",
+      "fact": "睛 (the \"eyeball\" half of the compound) almost never appears on its own — outside 眼睛 and a few technical terms it's a bound morpheme that needs 眼 to form a usable word, while 眼 alone works fine by itself in compounds like 眼镜 (\"glasses\") and 眼泪 (\"tears\").",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我的眼睛有点累。",
+        "pinyin": "Wǒ de yǎnjing yǒudiǎn lèi.",
+        "english": "My eyes are a bit tired."
+      },
+      {
+        "hanzi": "请闭上眼睛,想一想。",
+        "pinyin": "Qǐng bìshàng yǎnjing, xiǎng yi xiǎng.",
+        "english": "Please close your eyes and think."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5916-9762",
+    "word": "外面",
+    "frequencyRank": 583,
+    "pinyin": "wài miàn",
+    "meanings": [
+      "outside (also pr. [wai4 mian5] for this sense)",
+      "surface",
+      "exterior",
+      "external appearance"
+    ],
+    "characters": [
+      {
+        "char": "外",
         "components": [
           {
             "char": "夕",
             "role": "ideographic",
-            "note": "夕 (evening/night), doubled — two nights stacked together suggested the idea of accumulation, giving 多 its meaning of 'many, much.'",
-            "source": "llm-fallback"
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "夕 (evening) — the left part, the time-of-day family as in 夜, 多, 梦. Memory aid: things done at night are outside the ordinary."
+          },
+          {
+            "char": "卜",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "卜 (divination) — Dictionary story: night 夕 divination 卜, strange and 'outside'. A hedged mnemonic: 外面 outside, 另外 in addition."
           }
         ]
       },
       {
-        "char": "么",
-        "components": []
-      }
-    ],
-    "example": {
-      "hanzi": "这里的风景多么美丽啊!",
-      "pinyin": "Zhèlǐ de fēngjǐng duōme měilì a!",
-      "english": "How beautiful the scenery here is!",
-      "fact": "多么 is an exclamatory intensifier that almost always closes its sentence with a particle like 啊 for emotional emphasis (多么...啊!) — a fixed frame that mirrors English \"How wonderful it is!\", both languages front-loading the intensifier ahead of the adjective.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+8DB3-591F",
-    "word": "足够",
-    "frequencyRank": 588,
-    "pinyin": "zú gòu",
-    "meanings": [
-      "enough",
-      "sufficient"
-    ],
-    "characters": [
-      {
-        "char": "足",
+        "char": "面",
         "components": [
           {
             "role": "pictographic",
-            "note": "足 depicts a leg (the upper shape) above a foot — a simple picture of the human leg and foot, giving 足 its meaning 'foot, to be sufficient.'",
-            "source": "llm-fallback"
+            "source": "makemeahanzi",
+            "note": "面 (face) — a picture of a face; extended to the surface or side of things, as in 外面 outside."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "外面在下雨,你要带伞。",
+      "pinyin": "Wàimiàn zài xiàyǔ, nǐ yào dài sǎn.",
+      "english": "It's raining outside, you should bring an umbrella.",
+      "fact": "外面 and its near-synonym 外边 both mean \"outside\" — paralleling the 这里/这儿 split for \"here\" — 外面 leans slightly more standard and written, 外边 slightly more colloquial and Beijing-flavored, though both are heard nationwide.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "他在外面等你。",
+        "pinyin": "Tā zài wàimiàn děng nǐ.",
+        "english": "He's waiting for you outside."
+      },
+      {
+        "hanzi": "外面的世界很大。",
+        "pinyin": "Wàimiàn de shìjiè hěn dà.",
+        "english": "The world outside is big."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5904",
+    "word": "处",
+    "frequencyRank": 584,
+    "pinyin": "chù",
+    "meanings": [
+      "place",
+      "office",
+      "to deal with"
+    ],
+    "characters": [
+      {
+        "char": "处",
+        "components": [
+          {
+            "char": "夂",
+            "role": "semantic",
+            "source": "makemeahanzi",
+            "note": "夂 (foot) — stopping or going: 处 first meant to stay or settle, then a place or to deal with."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我们有很多相同之处。",
+      "pinyin": "Wǒmen yǒu hěn duō xiāngtóng zhī chù.",
+      "english": "We have many things in common.",
+      "fact": "处 has two readings: chù ('place, aspect', as in 好处 'benefit', 到处 'everywhere') and chǔ ('to deal with, to be in', as in 处理). Here it appears as a noun for places and aspects.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这个地方有很多好处。",
+        "pinyin": "Zhège dìfang yǒu hěn duō hǎochù.",
+        "english": "This place has a lot of advantages."
+      },
+      {
+        "hanzi": "我们相处得很好。",
+        "pinyin": "Wǒmen xiāngchǔ de hěn hǎo.",
+        "english": "We get along very well."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+56FD-5BB6",
+    "word": "国家",
+    "frequencyRank": 585,
+    "pinyin": "guó jiā",
+    "meanings": [
+      "country",
+      "nation",
+      "state"
+    ],
+    "characters": [
+      {
+        "char": "国",
+        "components": [
+          {
+            "char": "囗",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "囗 (enclosure) — borders and walls, as in 园 garden, 圆 round, 回 return; 囗 is the country's boundary."
+          },
+          {
+            "char": "玉",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "玉 (jade) — treasure within the border; the traditional 國 had 或 (defended territory) inside."
+          }
+        ]
+      },
+      {
+        "char": "家",
+        "components": [
+          {
+            "char": "宀",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "宀 (roof) — houses and shelter, as in 室 room, 安 safe, 字 character; 家 is home."
+          },
+          {
+            "char": "豕",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "豕 (pig) — a pig under a roof: pigs were kept in the home, hence home and family."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "中国是一个历史悠久的国家。",
+      "pinyin": "Zhōngguó shì yí gè lìshǐ yōujiǔ de guójiā.",
+      "english": "China is a country with a long history.",
+      "fact": "国家 literally combines 国 (\"state\") with 家 (\"family, home\") — a pairing that echoes classical Confucian political thought, which often pictured the state as an extension of the family, with the ruler cast as a kind of father figure over the realm.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我爱我的国家。",
+        "pinyin": "Wǒ ài wǒ de guójiā.",
+        "english": "I love my country."
+      },
+      {
+        "hanzi": "你去过几个国家?",
+        "pinyin": "Nǐ qùguo jǐ ge guójiā?",
+        "english": "How many countries have you been to?"
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+770B-4E0A-53BB",
+    "word": "看上去",
+    "frequencyRank": 586,
+    "pinyin": "kàn shang qu",
+    "meanings": [
+      "it would appear",
+      "it seems (that)"
+    ],
+    "characters": [
+      {
+        "char": "看",
+        "components": [
+          {
+            "char": "手",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "手 (hand) — over 目 (eye): a hand shading the eyes to look into the distance. 目 marks seeing words, as in 眼, 睡."
+          }
+        ]
+      },
+      {
+        "char": "上",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "上 (above) — a mark above a line, the mirror of 下 below."
+          }
+        ]
+      },
+      {
+        "char": "去",
+        "components": [
+          {
+            "char": "土",
+            "role": "ideographic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "土 (earth) — the top part, the ground family as in 地, 场, 块. Memory aid: leave the ground 土 and go off on your own 厶 path."
+          },
+          {
+            "char": "厶",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "厶 (private, small loop) — the bottom part. Old forms show a person leaving a place, so the 土 story is only a mnemonic."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这个蛋糕看上去很好吃。",
+      "pinyin": "Zhège dàngāo kàn shàng qù hěn hǎochī.",
+      "english": "This cake looks delicious.",
+      "fact": "看上去 is nearly interchangeable with 看起来 — both mean \"it appears, it seems\" and are built the same way: verb 看 plus a directional complement (上去 \"up and away\" vs 起来 \"up\") that has faded into pure grammatical function and no longer describes literal direction.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "他看上去很累。",
+        "pinyin": "Tā kànshangqu hěn lèi.",
+        "english": "He looks tired."
+      },
+      {
+        "hanzi": "天看上去要下雨了。",
+        "pinyin": "Tiān kànshangqu yào xiàyǔ le.",
+        "english": "It looks like it's going to rain."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+603B-7EDF",
+    "word": "总统",
+    "frequencyRank": 587,
+    "pinyin": "zǒng tǒng",
+    "meanings": [
+      "president (of a country)"
+    ],
+    "characters": [
+      {
+        "char": "总",
+        "components": [
+          {
+            "char": "心",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "心 (heart) — mind and feelings, as in 想, 思, 感: 总 is simplified from 總, whose threads gathered everything together."
+          }
+        ]
+      },
+      {
+        "char": "统",
+        "components": [
+          {
+            "char": "纟",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "纟 (silk thread, simplified 糸) — threads and links, as in 红, 经, 系: thread gathered into one."
+          },
+          {
+            "char": "充",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "充 (chōng) is only a loose sound clue for tǒng."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "美国总统住在白宫。",
+      "pinyin": "Měiguó zǒngtǒng zhù zài Báigōng.",
+      "english": "The US president lives in the White House.",
+      "fact": "总统 is reserved for the head of a republic — translating \"president\" as in the US or France — while China's own head of state carries the separate title 主席 (\"chairman\"), so 总统 essentially never refers to a Chinese leader.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "总统今天会发表讲话。",
+        "pinyin": "Zǒngtǒng jīntiān huì fābiǎo jiǎnghuà.",
+        "english": "The president will give a speech today."
+      },
+      {
+        "hanzi": "他想当总统。",
+        "pinyin": "Tā xiǎng dāng zǒngtǒng.",
+        "english": "He wants to be president."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+95F4",
+    "word": "间",
+    "frequencyRank": 588,
+    "pinyin": "jiān",
+    "meanings": [
+      "between",
+      "among",
+      "room"
+    ],
+    "characters": [
+      {
+        "char": "间",
+        "components": [
+          {
+            "char": "门",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "门 (gate) — doors and openings, as in 问 ask, 开 open, 关 close."
+          },
+          {
+            "char": "日",
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "日 (sun) — a gap in the gate lets daylight through (the traditional 間 had 月 moon): the space between."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这两个人之间有误会。",
+      "pinyin": "Zhè liǎng gè rén zhījiān yǒu wùhuì.",
+      "english": "There is a misunderstanding between these two.",
+      "fact": "间 is also the measure word for rooms: 一间房 (a room). It is also found in 时间 (time), 空间 (space), 中间 (middle), 房间 (room) and 之间 (between).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这个房间很干净。",
+        "pinyin": "Zhège fángjiān hěn gānjìng.",
+        "english": "This room is very clean."
+      },
+      {
+        "hanzi": "我们之间没有秘密。",
+        "pinyin": "Wǒmen zhījiān méiyǒu mìmì.",
+        "english": "There are no secrets between us."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+4F24-5BB3",
+    "word": "伤害",
+    "frequencyRank": 589,
+    "pinyin": "shāng hài",
+    "meanings": [
+      "to injure",
+      "to harm"
+    ],
+    "characters": [
+      {
+        "char": "伤",
+        "components": [
+          {
+            "char": "亻",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "亻 (person) — people, as in 你, 他, 做: a person hurt. The traditional 傷 took its sound from 昜 yáng (also in 汤 and 场)."
+          }
+        ]
+      },
+      {
+        "char": "害",
+        "components": [
+          {
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "害 (hài) is a loose sound clue for 割 gē and 辖 xiá; as a word it means to harm, as in 厉害."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "他的话深深伤害了她。",
+      "pinyin": "Tā de huà shēnshēn shānghài le tā.",
+      "english": "His words deeply hurt her.",
+      "fact": "伤害 is transitive — it needs an object, someone or something being harmed (伤害她, \"hurt her\") — while its near-relative 受伤 (\"to get injured,\" literally \"receive injury\") is intransitive and describes the person harmed, a transitivity contrast that trips up many learners translating English \"hurt\" and \"injured.\"",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "别伤害那只小鸟。",
+        "pinyin": "Bié shānghài nà zhī xiǎo niǎo.",
+        "english": "Don't hurt that little bird."
+      },
+      {
+        "hanzi": "太多的糖会伤害你的牙齿。",
+        "pinyin": "Tài duō de táng huì shānghài nǐ de yáchǐ.",
+        "english": "Too much sugar harms your teeth."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+63A7-5236",
+    "word": "控制",
+    "frequencyRank": 590,
+    "pinyin": "kòng zhì",
+    "meanings": [
+      "to control"
+    ],
+    "characters": [
+      {
+        "char": "控",
+        "components": [
+          {
+            "char": "扌",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "扌 (hand) — hand actions, as in 打, 拿, 抱: holding the reins."
+          },
+          {
+            "char": "空",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "空 (kōng) is a close sound clue for kòng; 空 also in 腔 qiāng and 孔 kǒng."
+          }
+        ]
+      },
+      {
+        "char": "制",
+        "components": [
+          {
+            "char": "刂",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "刂 (knife) — cutting, as in 到, 分, 别: 制 is cutting to shape, then to make and to control."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "她很难控制自己的情绪。",
+      "pinyin": "Tā hěn nán kòngzhì zìjǐ de qíngxù.",
+      "english": "She finds it hard to control her emotions.",
+      "fact": "控 (built from 扌 \"hand\") contributes a sense of restraining or holding back, while 制 (built from 刂 \"knife\") contributes a sense of cutting, shaping, or regulating — together 控制 layers \"restrain\" onto \"regulate\" for its modern sense of control.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "老师很会控制课堂。",
+        "pinyin": "Lǎoshī hěn huì kòngzhì kètáng.",
+        "english": "The teacher is good at controlling the class."
+      },
+      {
+        "hanzi": "医生控制了他的病情。",
+        "pinyin": "Yīshēng kòngzhìle tā de bìngqíng.",
+        "english": "The doctor got his illness under control."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+6700-8FD1",
+    "word": "最近",
+    "frequencyRank": 591,
+    "pinyin": "zuì jìn",
+    "meanings": [
+      "recently",
+      "soon",
+      "nearest"
+    ],
+    "characters": [
+      {
+        "char": "最",
+        "components": [
+          {
+            "char": "取",
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "取 (qǔ, take) is the base; the loose sound clue also appears in 趣 qù and 娶 qǔ. The top 日 here is an old cap shape, not the sun."
+          }
+        ]
+      },
+      {
+        "char": "近",
+        "components": [
+          {
+            "char": "辶",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "辶 (walk) — movement, as in 过, 远, 送: coming closer."
+          },
+          {
+            "char": "斤",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "斤 (jīn) is a close sound clue for jìn."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "你最近怎么样?",
+      "pinyin": "Nǐ zuìjìn zěnmeyàng?",
+      "english": "How have you been recently?",
+      "fact": "Unlike English \"recently,\" which points only to the past, 最近 can describe the near future too (最近可能会下雨, \"it may rain in the next while\") — its literal meaning is just \"nearest [in time],\" and context decides which direction from now it points.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我最近很忙。",
+        "pinyin": "Wǒ zuìjìn hěn máng.",
+        "english": "I've been very busy lately."
+      },
+      {
+        "hanzi": "最近的地铁站在哪儿?",
+        "pinyin": "Zuìjìn de dìtiězhàn zài nǎr?",
+        "english": "Where is the nearest subway station?"
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+58F0-97F3",
+    "word": "声音",
+    "frequencyRank": 592,
+    "pinyin": "shēng yīn",
+    "meanings": [
+      "sound",
+      "voice"
+    ],
+    "characters": [
+      {
+        "char": "声",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "聲 (traditional) — a hanging stone chime struck, with 耳 (ear) below: a sound you hear. 声 keeps only the top, so the picture is mostly lost."
+          },
+          {
+            "char": "士",
+            "role": "ideographic",
+            "source": "makemeahanzi",
+            "note": "士 (scholar) — the top of 声 is only a leftover of the old chime, not 'scholar'. Do not read meaning into it."
+          }
+        ]
+      },
+      {
+        "char": "音",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "音 (sound) — 言 (speech) with a stroke inside the mouth: a note within speech. 音 also gives 意 yì and 暗 àn."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "我喜欢她说话的声音。",
+      "pinyin": "Wǒ xǐhuan tā shuōhuà de shēngyīn.",
+      "english": "I like the sound of her voice.",
+      "fact": "Like 喜欢 in the companion character-deck's pilot batch, 声音 pairs two already near-synonymous roots — 声 (\"sound, voice,\" as in 大声 \"loudly\") and 音 (\"sound, tone,\" as in 音乐 \"music\") — reinforcing each other into one common noun.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "我听到了一个熟悉的声音。",
+        "pinyin": "Wǒ tīngdàole yí ge shúxī de shēngyīn.",
+        "english": "I heard a familiar voice."
+      },
+      {
+        "hanzi": "请把声音关小一点。",
+        "pinyin": "Qǐng bǎ shēngyīn guān xiǎo yìdiǎn.",
+        "english": "Please turn the volume down a little."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+7CDF",
+    "word": "糟",
+    "frequencyRank": 593,
+    "pinyin": "zāo",
+    "meanings": [
+      "rotten",
+      "messy",
+      "bad"
+    ],
+    "characters": [
+      {
+        "char": "糟",
+        "components": [
+          {
+            "char": "米",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "米 (rice) — grain and food, as in 粉 powder, 糕 cake, 精 refined: 糟 is dregs of fermented rice, then spoiled."
+          },
+          {
+            "char": "曹",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "曹 (cáo) is a close sound clue for zāo; 曹 also in 遭 zāo and 槽 cáo."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "今天真糟糕！",
+      "pinyin": "Jīntiān zhēn zāogāo!",
+      "english": "Today is really terrible!",
+      "fact": "糟 is mostly used in 糟糕 (terrible, how awful) and 乱七八糟 (a complete mess). The original sense is the dregs of fermented grain, as in 酒糟.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "你的房间太糟了。",
+        "pinyin": "Nǐ de fángjiān tài zāo le.",
+        "english": "Your room is a mess."
+      },
+      {
+        "hanzi": "糟糕，我忘了带钥匙！",
+        "pinyin": "Zāogāo, wǒ wàngle dài yàoshi!",
+        "english": "Oh no, I forgot my keys!"
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5FEB-4E50",
+    "word": "快乐",
+    "frequencyRank": 594,
+    "pinyin": "kuài lè",
+    "meanings": [
+      "happy",
+      "joyful"
+    ],
+    "characters": [
+      {
+        "char": "快",
+        "components": [
+          {
+            "char": "忄",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "忄 (heart) — feelings, as in 怕, 忙, 情: a quick, glad heart."
+          },
+          {
+            "char": "夬",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "夬 (guài) is a close sound clue for kuài; 夬 also in 块 kuài, 筷 kuài and 决 jué."
+          }
+        ]
+      },
+      {
+        "char": "乐",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "乐 (music, joy) — simplified from 樂, a stringed instrument on a wooden stand. Read yuè \"music\" or lè \"joy\"."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "祝你生日快乐!",
+      "pinyin": "Zhù nǐ shēngrì kuàilè!",
+      "english": "Happy birthday to you!",
+      "fact": "快乐 tends to describe a lasting state of happiness or well-being — it's the word behind nearly every Chinese festival greeting (生日快乐 \"happy birthday,\" 新年快乐 \"happy new year\") — while 高兴 describes a more momentary feeling of being pleased about something happening right now.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "新年快乐!",
+        "pinyin": "Xīnnián kuàilè!",
+        "english": "Happy New Year!"
+      },
+      {
+        "hanzi": "孩子们过得很快乐。",
+        "pinyin": "Háizimen guò de hěn kuàilè.",
+        "english": "The children are living happily."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+5077",
+    "word": "偷",
+    "frequencyRank": 595,
+    "pinyin": "tōu",
+    "meanings": [
+      "to steal",
+      "secretly"
+    ],
+    "characters": [
+      {
+        "char": "偷",
+        "components": [
+          {
+            "char": "亻",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "亻 (person) — marks people and their actions, as in 你, 做, 住; 偷 is a person stealing."
+          },
+          {
+            "char": "俞",
+            "role": "phonetic",
+            "source": "makemeahanzi",
+            "note": "俞 (yú) is a loose hint for tōu; 愉 yú and 输 shū share it."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "有人偷了我的钱包。",
+      "pinyin": "Yǒu rén tōule wǒ de qiánbāo.",
+      "english": "Someone stole my wallet.",
+      "fact": "偷 also means 'secretly': 偷看 (peek), 偷听 (eavesdrop) and 偷懒 (slack off). The thief is 小偷, and 偷东西 is the phrase for 'to steal things'.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "小偷偷了他的手机。",
+        "pinyin": "Xiǎotōu tōule tā de shǒujī.",
+        "english": "The thief stole his phone."
+      },
+      {
+        "hanzi": "孩子偷偷地笑了。",
+        "pinyin": "Háizi tōutōu de xiào le.",
+        "english": "The child laughed secretly."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+9996",
+    "word": "首",
+    "frequencyRank": 596,
+    "pinyin": "shǒu",
+    "meanings": [
+      "head",
+      "first",
+      "classifier for songs and poems"
+    ],
+    "characters": [
+      {
+        "char": "首",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "首 (head, first) — a picture of a head with hair on top, which became the word for first and chief: 首先, 元首, also a measure for songs."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这是一首好听的歌。",
+      "pinyin": "Zhè shì yì shǒu hǎotīng de gē.",
+      "english": "This is a nice-sounding song.",
+      "fact": "首 is the measure word for songs and poems (一首歌, 一首诗), and its basic meaning is 'head' or 'first': 首都 (capital), 首先 (first of all), 首次 (first time).",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这首歌真好听。",
+        "pinyin": "Zhè shǒu gē zhēn hǎotīng.",
+        "english": "This song sounds great."
+      },
+      {
+        "hanzi": "他背了一首古诗。",
+        "pinyin": "Tā bèile yì shǒu gǔshī.",
+        "english": "He recited an ancient poem."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+53EF-7231",
+    "word": "可爱",
+    "frequencyRank": 597,
+    "pinyin": "kě ài",
+    "meanings": [
+      "adorable",
+      "cute",
+      "lovely"
+    ],
+    "characters": [
+      {
+        "char": "可",
+        "components": [
+          {
+            "char": "口",
+            "role": "semantic",
+            "source": "llm-fallback",
+            "note": "口 (mouth) — speech or assent: to say \"OK\". 可 is also a famous sound part: 河 hé, 歌 gē, 哥 gē, 何 hé all take their sound from it."
+          }
+        ]
+      },
+      {
+        "char": "爱",
+        "components": [
+          {
+            "char": "友",
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "友 (friend) replaces the heart-and-foot lower part of the traditional 愛, which had 心 (heart); so 爱 lost its heart in simplification."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "这只小猫真可爱。",
+      "pinyin": "Zhè zhī xiǎomāo zhēn kě'ài.",
+      "english": "This kitten is really cute.",
+      "fact": "可爱 follows a productive pattern where 可 (\"able to be, worthy of\") attaches to a verb to form an adjective — the same template builds 可怕 (\"worthy of fear\" → \"scary\") and 可惜 (\"worthy of pity\" → \"a pity, unfortunately\"), so spotting 可+verb is a shortcut to guessing a whole family of adjectives.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "这个小孩子很可爱。",
+        "pinyin": "Zhège xiǎo háizi hěn kě'ài.",
+        "english": "This little kid is very cute."
+      },
+      {
+        "hanzi": "她笑起来特别可爱。",
+        "pinyin": "Tā xiào qǐlai tèbié kě'ài.",
+        "english": "She's especially lovely when she smiles."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+8FDB-5165",
+    "word": "进入",
+    "frequencyRank": 598,
+    "pinyin": "jìn rù",
+    "meanings": [
+      "to enter",
+      "to join",
+      "to go into"
+    ],
+    "characters": [
+      {
+        "char": "进",
+        "components": [
+          {
+            "char": "辶",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "辶 (walk) — movement, as in 过, 近, 送: to go forward."
+          },
+          {
+            "char": "井",
+            "role": "phonetic",
+            "source": "llm-fallback",
+            "note": "井 stands in for 隹 of 進, a loose clue only."
+          }
+        ]
+      },
+      {
+        "char": "入",
+        "components": [
+          {
+            "role": "ideographic",
+            "source": "llm-fallback",
+            "note": "入 (enter) — a pointed shape pushing in; not 人 (person), whose strokes spread outward."
+          }
+        ]
+      }
+    ],
+    "example": {
+      "hanzi": "运动员们进入了体育场。",
+      "pinyin": "Yùndòngyuánmen jìnrù le tǐyùchǎng.",
+      "english": "The athletes entered the stadium.",
+      "fact": "进 and 入 both independently mean \"to enter\" — 进入 doubles up two synonymous verbs into one word, though 入 alone now reads as more literary or technical (as in 入口 \"entrance,\" 收入 \"income\") while 进 alone is the everyday, spoken version.",
+      "source": "llm-generated",
+      "reviewStatus": "needs-review"
+    },
+    "examples": [
+      {
+        "hanzi": "请大家进入教室。",
+        "pinyin": "Qǐng dàjiā jìnrù jiàoshì.",
+        "english": "Everyone, please enter the classroom."
+      },
+      {
+        "hanzi": "比赛已经进入最后阶段。",
+        "pinyin": "Bǐsài yǐjīng jìnrù zuìhòu jiēduàn.",
+        "english": "The match has entered its final stage."
+      }
+    ],
+    "batchId": "0551-0600"
+  },
+  {
+    "id": "W+80FD-591F",
+    "word": "能够",
+    "frequencyRank": 599,
+    "pinyin": "néng gòu",
+    "meanings": [
+      "to be capable of",
+      "to be able to",
+      "can"
+    ],
+    "characters": [
+      {
+        "char": "能",
+        "components": [
+          {
+            "role": "pictographic",
+            "source": "llm-fallback",
+            "note": "能 (can) — originally a picture of a bear, a strong animal (熊 xióng adds fire 灬); \"strong, able\" gave \"can\"."
           }
         ]
       },
@@ -1974,625 +2796,115 @@
         "char": "够",
         "components": [
           {
-            "char": "多",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "多 (more/many) — 够 relates to having a sufficient amount"
-          },
-          {
             "char": "句",
             "role": "phonetic",
             "source": "makemeahanzi",
-            "note": "句 (jù) gives a loose sound connection to 够's reading gòu"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "我们的食物足够吃一个星期。",
-      "pinyin": "Wǒmen de shíwù zúgòu chī yí gè xīngqī.",
-      "english": "Our food is enough to last a week.",
-      "fact": "足够 covers the same ground as its shorter, more casual cousin 够 (够了!, \"That's enough!\") but leans toward the more formal or written end of the register — plain 够 dominates in everyday speech.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+5B66-751F",
-    "word": "学生",
-    "frequencyRank": 589,
-    "pinyin": "xué sheng",
-    "meanings": [
-      "student",
-      "schoolchild"
-    ],
-    "characters": [
-      {
-        "char": "学",
-        "components": [
-          {
-            "char": "冖",
-            "role": "ideographic",
-            "note": "冖 (a covering/roof) — represents the building or schoolhouse where learning happens.",
-            "source": "llm-fallback"
+            "note": "句 (jù, sentence) is a close sound clue for gòu; also in 构 gòu, 沟 gōu and 钩 gōu."
           },
           {
-            "char": "子",
-            "role": "ideographic",
-            "note": "子 (child) — 学 depicts children gathered to study.",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "⺍",
-            "role": "ideographic",
-            "note": "⺍ is a small graphic element at the top of the character; its original pictorial meaning, if any, has been lost over time.",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "生",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "屮 (a young shoot) growing up out of 土 (earth/soil) — a picture of new life emerging from the ground.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "教室里坐着二十个学生。",
-      "pinyin": "Jiàoshì lǐ zuòzhe èrshí gè xuésheng.",
-      "english": "Twenty students are sitting in the classroom.",
-      "fact": "生 alone carries the core sense \"to be born, to grow, life\" (as in 先生, also in this deck) — 学生 literally pairs \"study\" (学) with that \"life/growing\" root, framing a student as someone still growing through learning, the same 生 behind 医生 (\"doctor\") and 陌生 (\"unfamiliar\").",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+4E0B-5348",
-    "word": "下午",
-    "frequencyRank": 590,
-    "pinyin": "xià wǔ",
-    "meanings": [
-      "afternoon",
-      "CL:個|个[ge4]",
-      "p.m."
-    ],
-    "characters": [
-      {
-        "char": "下",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "A short stroke placed below a longer one — the mirror image of 上 (up), together forming a simple, opposite pair.",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "午",
-        "components": []
-      }
-    ],
-    "example": {
-      "hanzi": "我们下午三点见面。",
-      "pinyin": "Wǒmen xiàwǔ sān diǎn jiànmiàn.",
-      "english": "Let's meet at three in the afternoon.",
-      "fact": "午 alone names midday (as in 午饭, \"lunch\"), and Mandarin builds its whole day-part vocabulary directionally around it: 上午 (\"before noon, morning\"), 下午 (\"after noon, afternoon\"), and 中午 (\"exactly noon\") — a tidy three-way system anchored on a single character.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+4ECD-7136",
-    "word": "仍然",
-    "frequencyRank": 591,
-    "pinyin": "réng rán",
-    "meanings": [
-      "still",
-      "as before",
-      "yet"
-    ],
-    "characters": [
-      {
-        "char": "仍",
-        "components": [
-          {
-            "char": "乃",
+            "char": "多",
             "role": "semantic",
             "source": "makemeahanzi",
-            "note": "乃 (then, thus) — 仍 relates to continuity, 'still, as before'"
-          },
-          {
-            "char": "亻",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "亻 gives a loose sound connection to 仍's reading réng"
-          }
-        ]
-      },
-      {
-        "char": "然",
-        "components": [
-          {
-            "char": "灬",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "灬 (fire) — 然 originally described burning; the meaning later shifted to 'so, correct' as 然 became a grammatical particle."
-          },
-          {
-            "char": "肰",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "肰 (rán) gives the sound — 然 is also pronounced rán, an exact match."
+            "note": "多 (many) — meaning \"more than enough\"."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "虽然他道歉了,但她仍然很生气。",
-      "pinyin": "Suīrán tā dàoqiànle, dàn tā réngrán hěn shēngqì.",
-      "english": "Even though he apologized, she was still very angry.",
-      "fact": "仍然 is the fuller, more formal-sounding two-syllable form built by adding 然 onto the shorter adverb 仍 — the same 然-suffixing pattern that produces 忽然 (\"suddenly\") and 显然 (\"obviously\") from their own single-syllable roots.",
+      "hanzi": "我们一定能够解决这个问题。",
+      "pinyin": "Wǒmen yídìng nénggòu jiějué zhège wèntí.",
+      "english": "We will definitely be able to solve this problem.",
+      "fact": "能够 is essentially a more formal, slightly emphatic version of the plain modal verb 能 (\"can, to be able to\") — the two are largely interchangeable, but 能够 shows up more in writing and formal speech, while bare 能 dominates everyday conversation.",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
+    "examples": [
+      {
+        "hanzi": "你能够帮我一下吗?",
+        "pinyin": "Nǐ nénggòu bāng wǒ yíxià ma?",
+        "english": "Can you help me for a moment?"
+      },
+      {
+        "hanzi": "他还不能够自己走路。",
+        "pinyin": "Tā hái bù nénggòu zìjǐ zǒulù.",
+        "english": "He can't walk by himself yet."
+      }
+    ],
     "batchId": "0551-0600"
   },
   {
-    "id": "W+4E00-65E6",
-    "word": "一旦",
-    "frequencyRank": 592,
-    "pinyin": "yī dàn",
+    "id": "W+4E8B-5B9E-4E0A",
+    "word": "事实上",
+    "frequencyRank": 600,
+    "pinyin": "shì shí shàng",
     "meanings": [
-      "in case (sth happens)",
-      "if",
-      "once (sth happens, then...)",
-      "when",
-      "in a short time",
-      "in one day"
+      "in fact",
+      "in reality",
+      "actually",
+      "as a matter of fact",
+      "de facto",
+      "ipso facto"
     ],
     "characters": [
       {
-        "char": "一",
+        "char": "事",
         "components": [
           {
+            "char": "彐",
             "role": "ideographic",
-            "note": "A single horizontal stroke — the simplest possible way to represent the number one; some traditional interpretations link it to heaven or earth as the very first stroke of creation.",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "旦",
-        "components": [
-          {
-            "char": "日",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "日 (the sun) — rising above."
+            "source": "makemeahanzi",
+            "note": "彐 (hand-like part) — 事 is usually explained as a hand holding a tool or tally, 'handling business' — a hedged reading, not certain."
           },
-          {
-            "char": "一",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "一 (a horizontal line) — the horizon, together giving 旦 its meaning 'dawn, daybreak.'"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "一旦你做出决定,就要坚持下去。",
-      "pinyin": "Yīdàn nǐ zuòchū juédìng, jiù yào jiānchí xiàqù.",
-      "english": "Once you make a decision, you should stick with it.",
-      "fact": "一旦 keeps its plain number-one tone yī rather than shifting to yí before the 4th-tone 旦, unlike many other everyday \"一+X\" words that have fully lexicalized the tone-sandhi shift (一定 yídìng, \"certainly\"; 一样 yíyàng, \"same\") — a reminder that pinyin tone-sandhi rules have real, dictionary-listed exceptions.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+52A8-4F5C",
-    "word": "动作",
-    "frequencyRank": 593,
-    "pinyin": "dòng zuò",
-    "meanings": [
-      "movement",
-      "motion",
-      "action",
-      "to act",
-      "to move"
-    ],
-    "characters": [
-      {
-        "char": "动",
-        "components": [
-          {
-            "char": "力",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "力 (strength/force) — 动 relates to movement produced by exertion or force."
-          }
-        ]
-      },
-      {
-        "char": "作",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "亻 (person) plus 乍 (suddenly/for the first time) — together suggesting a person making or doing something for the first time.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这个舞蹈的动作很难。",
-      "pinyin": "Zhège wǔdǎo de dòngzuò hěn nán.",
-      "english": "The movements in this dance are very difficult.",
-      "fact": "动作 names a discrete, often visible physical movement or gesture — a dance move, a martial-arts strike — while the more abstract 行动 (\"action, to take action\") describes a broader course of action; 动作片 specifically labels the action-movie genre.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+610F-5473-7740",
-    "word": "意味着",
-    "frequencyRank": 594,
-    "pinyin": "yì wèi zhe",
-    "meanings": [
-      "to signify",
-      "to mean",
-      "to imply"
-    ],
-    "characters": [
-      {
-        "char": "意",
-        "components": [
-          {
-            "char": "心",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "心 (heart/mind) — 意 relates to thought, intention, and meaning, things of the mind."
-          },
-          {
-            "char": "音",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "音 (yīn) is the historical phonetic element; its modern reading has drifted from yì, though both share a similar vowel."
-          }
-        ]
-      },
-      {
-        "char": "味",
-        "components": [
-          {
-            "char": "口",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "口 (mouth) — 味 relates to taste, sensed in the mouth."
-          },
-          {
-            "char": "未",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "未 (wèi) gives the sound — an exact match with 味."
-          }
-        ]
-      },
-      {
-        "char": "着",
-        "components": []
-      }
-    ],
-    "example": {
-      "hanzi": "他的沉默并不意味着他同意。",
-      "pinyin": "Tā de chénmò bìng bú yìwèizhe tā tóngyì.",
-      "english": "His silence doesn't necessarily mean that he agrees.",
-      "fact": "The 着 attached after 意味 casts the verb as an ongoing state of signification, \"carries the meaning of\" — the same grammatical 着 that marks continuous action elsewhere (吃着, \"eating\"), here applied to an abstract logical relationship instead of a physical activity.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+53D7-5230",
-    "word": "受到",
-    "frequencyRank": 595,
-    "pinyin": "shòu dào",
-    "meanings": [
-      "to receive",
-      "to be ...ed"
-    ],
-    "characters": [
-      {
-        "char": "受",
-        "components": [
-          {
-            "char": "爫",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "爫 (a hand, from above) — 受 pictures something being passed."
-          },
-          {
-            "char": "又",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "又 (a hand, from below) — one hand giving and another receiving gave 受 its meaning 'to receive' or 'to endure.'"
-          }
-        ]
-      },
-      {
-        "char": "到",
-        "components": [
-          {
-            "char": "至",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "至 (zhì, to arrive) — carries 到's core meaning, 'to reach, to arrive'"
-          },
-          {
-            "char": "刂",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "刂 (a form of 刀, dāo) gives a sound close to 到's pronunciation dào"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "这部电影受到了观众的欢迎。",
-      "pinyin": "Zhè bù diànyǐng shòudàole guānzhòng de huānyíng.",
-      "english": "This movie was well received by audiences.",
-      "fact": "受到 is one of Mandarin's most common ways to build a passive-like sentence without the marker 被 — 受到欢迎 (\"to be well received\") and 受到影响 (\"to be affected\") both cast the subject as the recipient of some noun-form action, a smoother alternative to a literal 被-passive.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+4E4B-4E00",
-    "word": "之一",
-    "frequencyRank": 596,
-    "pinyin": "zhī yī",
-    "meanings": [
-      "one of (sth)",
-      "one out of a multitude",
-      "one (third, quarter, percent etc)"
-    ],
-    "characters": [
-      {
-        "char": "之",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "A stylized foot (related to 止, 'to stop/foot') — originally meant 'to go,' later grammaticalized into a literary possessive/linking particle, similar to 的.",
-            "source": "llm-fallback"
-          }
-        ]
-      },
-      {
-        "char": "一",
-        "components": [
-          {
-            "role": "ideographic",
-            "note": "A single horizontal stroke — the simplest possible way to represent the number one; some traditional interpretations link it to heaven or earth as the very first stroke of creation.",
-            "source": "llm-fallback"
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "长城是世界七大奇迹之一。",
-      "pinyin": "Chángchéng shì shìjiè qī dà qíjì zhīyī.",
-      "english": "The Great Wall is one of the world's seven great wonders.",
-      "fact": "之一 always trails at the very end of its noun phrase (X之一, \"one of X\") rather than leading it the way English \"one of\" does — 之 is a literary, classical-Chinese linking particle that survives today mainly in set written-register phrases like this one, alongside 之前 (\"before\") and 百分之 (\"percent\").",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+7B2C-4E09",
-    "word": "第三",
-    "frequencyRank": 597,
-    "pinyin": "dì sān",
-    "meanings": [
-      "third"
-    ],
-    "characters": [
-      {
-        "char": "第",
-        "components": [
-          {
-            "char": "⺮",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "⺮ (bamboo) — ancient texts were written on bound bamboo strips, and 第 originally referred to the sequential order of such strips, giving rise to its meaning 'ordinal number' (as in 第一, first)."
-          }
-        ]
-      },
-      {
-        "char": "三",
-        "components": [
-          {
-            "char": "三",
-            "role": "ideographic",
-            "source": "llm-fallback",
-            "note": "三 is made of three simple horizontal strokes stacked together — the most direct way to picture the number three, following the same pattern as 一 (one) and 二 (two)."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他在班里排名第三。",
-      "pinyin": "Tā zài bān lǐ páimíng dìsān.",
-      "english": "He ranks third in his class.",
-      "fact": "第 turns a bare cardinal number into an ordinal — 三 alone just means \"three,\" while 第三 means \"third\" — and the same 第 prefix works uniformly across the entire number system (第一, 第二, 第三 ... 第一百), unlike English's irregular ordinals (\"two\" becoming \"second\").",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+9762-5BF9",
-    "word": "面对",
-    "frequencyRank": 598,
-    "pinyin": "miàn duì",
-    "meanings": [
-      "to face",
-      "to confront"
-    ],
-    "characters": [
-      {
-        "char": "面",
-        "components": [
           {
             "role": "pictographic",
-            "note": "面 was originally a pictograph of a human face, with an outline around an eye — later broadening to mean 'face, surface, side.'",
-            "source": "llm-fallback"
+            "source": "llm-fallback",
+            "note": "史 (history, scribe) — shares an ancient root with 事: a hand holding a recording tool. Both are about handling official 'matters'."
           }
         ]
       },
       {
-        "char": "对",
+        "char": "实",
+        "components": [
+          {
+            "char": "宀",
+            "role": "semantic",
+            "radical": true,
+            "source": "makemeahanzi",
+            "note": "宀 (roof) — houses and shelter, as in 家, 字, 室: a house stocked with goods, so solid and real."
+          }
+        ]
+      },
+      {
+        "char": "上",
         "components": [
           {
             "role": "ideographic",
-            "note": "又 (hand) and 寸 (also derived from a hand shape) — together suggesting two hands matching or corresponding, related to 对's meaning 'correct, matching.'",
-            "source": "llm-fallback"
+            "source": "llm-fallback",
+            "note": "上 (above) — a mark above a line, the mirror of 下 below."
           }
         ]
       }
     ],
     "example": {
-      "hanzi": "我们必须面对现实。",
-      "pinyin": "Wǒmen bìxū miànduì xiànshí.",
-      "english": "We must face reality.",
-      "fact": "面对 literally means \"to turn one's face toward\" (面 \"face\" + 对 \"toward, facing\") — used both for physically facing something and, more often in everyday speech, for confronting an abstract difficulty, the same metaphorical stretch English makes when it says someone must \"face\" a problem.",
+      "hanzi": "事实上,他根本不知道这件事。",
+      "pinyin": "Shìshíshàng, tā gēnběn bù zhīdào zhè jiàn shì.",
+      "english": "In fact, he didn't know about this at all.",
+      "fact": "事实上 is built from 事实 (\"fact,\" also in this batch at rank 340) plus the locative suffix 上 (\"on, in terms of\") — the same 上 productively turns other abstract nouns into \"in terms of X\" adverbials, as in 理论上 (\"theoretically\") and 基本上 (\"basically\").",
       "source": "llm-generated",
       "reviewStatus": "needs-review"
     },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+6000-7591",
-    "word": "怀疑",
-    "frequencyRank": 599,
-    "pinyin": "huái yí",
-    "meanings": [
-      "to doubt (sth)",
-      "to be skeptical of",
-      "to have one's doubts",
-      "to harbor suspicions",
-      "to suspect that"
-    ],
-    "characters": [
+    "examples": [
       {
-        "char": "怀",
-        "components": [
-          {
-            "char": "忄",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "忄 (heart) — 怀 relates to feelings held close to the heart"
-          },
-          {
-            "char": "不",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "不 (bù) gives a sound distantly related to 怀's reading huái, having drifted apart over time"
-          }
-        ]
+        "hanzi": "事实上,我不喜欢这个工作。",
+        "pinyin": "Shìshí shàng, wǒ bù xǐhuan zhège gōngzuò.",
+        "english": "In fact, I don't like this job."
       },
       {
-        "char": "疑",
-        "components": [
-          {
-            "char": "疋",
-            "role": "ideographic",
-            "note": "疋 — a person walking, shown pausing and looking back uncertainly",
-            "source": "llm-fallback"
-          },
-          {
-            "char": "矢",
-            "role": "ideographic",
-            "note": "矢 (an arrow/cane) — an old man's walking stick, held while hesitating",
-            "source": "llm-fallback"
-          }
-        ]
+        "hanzi": "他看起来很年轻,事实上已经四十岁了。",
+        "pinyin": "Tā kàn qǐlai hěn niánqīng, shìshí shàng yǐjīng sìshí suì le.",
+        "english": "He looks young, but he's actually forty."
       }
     ],
-    "example": {
-      "hanzi": "我怀疑他说的是不是真的。",
-      "pinyin": "Wǒ huáiyí tā shuō de shì bu shì zhēn de.",
-      "english": "I doubt whether what he said is true.",
-      "fact": "怀疑 covers both English \"to doubt\" (uncertain something is true) and \"to suspect\" (believing something bad may be true) in a single word — its first half, 怀, literally means \"to hold in one's bosom,\" an old image of carrying an unresolved feeling close to the chest.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
-    "batchId": "0551-0600"
-  },
-  {
-    "id": "W+5C45-7136",
-    "word": "居然",
-    "frequencyRank": 600,
-    "pinyin": "jū rán",
-    "meanings": [
-      "unexpectedly",
-      "to one's surprise",
-      "go so far as to"
-    ],
-    "characters": [
-      {
-        "char": "居",
-        "components": [
-          {
-            "char": "户",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "户 (door) — 居 relates to where one lives, behind a door"
-          },
-          {
-            "char": "古",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "古 (gǔ) gives a sound related to 居's reading jū, from an older, closer pronunciation link"
-          }
-        ]
-      },
-      {
-        "char": "然",
-        "components": [
-          {
-            "char": "灬",
-            "role": "semantic",
-            "source": "makemeahanzi",
-            "note": "灬 (fire) — 然 originally described burning; the meaning later shifted to 'so, correct' as 然 became a grammatical particle."
-          },
-          {
-            "char": "肰",
-            "role": "phonetic",
-            "source": "makemeahanzi",
-            "note": "肰 (rán) gives the sound — 然 is also pronounced rán, an exact match."
-          }
-        ]
-      }
-    ],
-    "example": {
-      "hanzi": "他居然一个人爬上了那座山。",
-      "pinyin": "Tā jūrán yí gè rén páshàngle nà zuò shān.",
-      "english": "Surprisingly, he climbed that mountain all by himself.",
-      "fact": "居然 explicitly colors a sentence with the speaker's own surprise at an unexpected outcome, in the same family as the slightly more formal near-synonym 竟然 — a coloring English usually has to add separately with a word like \"surprisingly,\" rather than baking it into the main verb's neighborhood.",
-      "source": "llm-generated",
-      "reviewStatus": "needs-review"
-    },
     "batchId": "0551-0600"
   }
 ]

@@ -18,9 +18,9 @@ const SOURCES_DIR = path.resolve(__dirname, '../sources')
 const DRAFTS_DIR = path.resolve(__dirname, '../drafts')
 const CARDS_DIR = path.resolve(__dirname, '../../cards')
 
-const HAN_ONLY_RE = /^[一-鿿]+$/
+export const HAN_ONLY_RE = /^[一-鿿]+$/
 
-interface CedictEntry {
+export interface CedictEntry {
   pinyinSyllables: string[]
   meanings: string[]
 }
@@ -65,7 +65,7 @@ function numberedPinyinToDiacritic(syllable: string): string {
   return applyToneMark(base, Number(toneStr))
 }
 
-function loadCedictAllLengths(): Map<string, CedictEntry> {
+export function loadCedictAllLengths(): Map<string, CedictEntry> {
   const raw = readFileSync(path.join(SOURCES_DIR, 'cedict.txt'), 'utf8')
   // CC-CEDICT lists the same headword on multiple lines when it has more than
   // one reading/sense (e.g. 大学 appears as "Da4 xue2" / "the Great Learning"
@@ -125,14 +125,14 @@ function loadCedictAllLengths(): Map<string, CedictEntry> {
   return map
 }
 
-interface ExistingComponent {
+export interface ExistingComponent {
   char: string
   role: string
   note?: string
   source: string
 }
 
-function loadExistingCharacterComponents(): Map<string, ExistingComponent[]> {
+export function loadExistingCharacterComponents(): Map<string, ExistingComponent[]> {
   const map = new Map<string, ExistingComponent[]>()
   for (const file of readdirSync(CARDS_DIR)) {
     if (!file.endsWith('.json')) continue
@@ -152,7 +152,7 @@ function loadExistingCharacterComponents(): Map<string, ExistingComponent[]> {
 // English-name transliteration conventions (not guessed from pattern-match
 // alone). Excluding these means the Nth-ranked word is a real word, not a
 // character name that happened to be spoken often on screen.
-const EXCLUDED_PROPER_NOUNS_AND_ARTIFACTS = new Set([
+export const EXCLUDED_PROPER_NOUNS_AND_ARTIFACTS = new Set([
   '查理', '乔伊', '福尔摩斯', '威尔', '皮特', '鲍勃', '汤米', '迈克', '比利',
   '克里斯', '西蒙', '维加斯', '吉姆', '华生', '安迪', '鲍尔', '麦克斯', '沃尔特',
   '珍妮', '凯尔', '戴夫', '鲍比', '克鲁', '莉莉', '斯坦', '亚历克斯', '克罗伊',
@@ -163,7 +163,9 @@ const EXCLUDED_PROPER_NOUNS_AND_ARTIFACTS = new Set([
   '全美超', '哈哈哈', '巴迪',
 ])
 
-function parseSubtlexWords(): Array<{ word: string; wcount: number }> {
+export function parseSubtlexEntries(
+  keep: (word: string) => boolean,
+): Array<{ word: string; wcount: number }> {
   const raw = readFileSync(path.join(SOURCES_DIR, 'subtlex-ch-wf.tsv'), 'utf8')
   const lines = raw.split('\n')
   const out: Array<{ word: string; wcount: number }> = []
@@ -171,11 +173,15 @@ function parseSubtlexWords(): Array<{ word: string; wcount: number }> {
     if (!line.trim()) continue
     const [word, wcountStr] = line.split('\t')
     if (!word || !HAN_ONLY_RE.test(word)) continue
-    if (Array.from(word).length < 2) continue
+    if (!keep(word)) continue
     if (EXCLUDED_PROPER_NOUNS_AND_ARTIFACTS.has(word)) continue
     out.push({ word, wcount: Number(wcountStr) })
   }
   return out
+}
+
+function parseSubtlexWords(): Array<{ word: string; wcount: number }> {
+  return parseSubtlexEntries((word) => Array.from(word).length >= 2)
 }
 
 // A meaning that runs long is often a short gloss plus a parenthetical aside
@@ -184,7 +190,7 @@ function parseSubtlexWords(): Array<{ word: string; wcount: number }> {
 // being too long, which for a word whose only CEDICT sense reads long left
 // it with zero meanings (e.g. 高中's only sense is "senior high school
 // (abbr. for 高級中學|高级中学[gao1 ji2 zhong1 xue2])").
-function shortenMeaning(meaning: string): string {
+export function shortenMeaning(meaning: string): string {
   const parenIdx = meaning.indexOf('(')
   if (parenIdx > 10) {
     const truncated = meaning.slice(0, parenIdx).trim()
@@ -193,7 +199,7 @@ function shortenMeaning(meaning: string): string {
   return meaning
 }
 
-function toId(word: string): string {
+export function toId(word: string): string {
   return (
     'W+' +
     Array.from(word)
@@ -260,4 +266,4 @@ function main() {
   console.log(`  ${charsNeedingFreshComponents} character occurrences need fresh component generation (not in our existing character cards)`)
 }
 
-main()
+if (process.argv[1] === fileURLToPath(import.meta.url)) main()

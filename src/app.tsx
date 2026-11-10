@@ -204,6 +204,7 @@ export function App() {
                 srsState={words.srs}
                 queueIds={words.queue}
                 onLearn={words.handlePromote}
+                onKnown={words.handleMarkKnown}
               />}
 
             {view === 'settings' && (
